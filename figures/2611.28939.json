@@ -2,67 +2,67 @@
   "version": "v1",
   "figures": [
     {
-      "src": "https://arxiv.org/html/2611.28939v1/2611.28939v1/device_design.png",
+      "src": "https://arxiv.org/html/2611.28939v1/device_design.png",
       "caption": "Fig. 1",
       "anchor": "S1.F1"
     },
     {
-      "src": "https://arxiv.org/html/2611.28939v1/2611.28939v1/device_fabrication.png",
+      "src": "https://arxiv.org/html/2611.28939v1/device_fabrication.png",
       "caption": "Fig. 2",
       "anchor": "S2.F2"
     },
     {
-      "src": "https://arxiv.org/html/2611.28939v1/2611.28939v1/hardware_design.png",
+      "src": "https://arxiv.org/html/2611.28939v1/hardware_design.png",
       "caption": "Fig. 3",
       "anchor": "S2.F3"
     },
     {
-      "src": "https://arxiv.org/html/2611.28939v1/2611.28939v1/principle_of_thermal_heater.png",
+      "src": "https://arxiv.org/html/2611.28939v1/principle_of_thermal_heater.png",
       "caption": "Fig. 4",
       "anchor": "S3.F4"
     },
     {
-      "src": "https://arxiv.org/html/2611.28939v1/2611.28939v1/principle_of_thermal_sensor_and_mechanism_of_transient_thermal_response.png",
+      "src": "https://arxiv.org/html/2611.28939v1/principle_of_thermal_sensor_and_mechanism_of_transient_thermal_response.png",
       "caption": "Fig. 5",
       "anchor": "S3.F5"
     },
     {
-      "src": "https://arxiv.org/html/2611.28939v1/2611.28939v1/simulation_of_transient_thermal_response.png",
+      "src": "https://arxiv.org/html/2611.28939v1/simulation_of_transient_thermal_response.png",
       "caption": "Fig. 6",
       "anchor": "S3.F6"
     },
     {
-      "src": "https://arxiv.org/html/2611.28939v1/2611.28939v1/calibration_and_performance_of_thermal_heater.png",
+      "src": "https://arxiv.org/html/2611.28939v1/calibration_and_performance_of_thermal_heater.png",
       "caption": "Fig. 7",
       "anchor": "S4.F7"
     },
     {
-      "src": "https://arxiv.org/html/2611.28939v1/2611.28939v1/calibration_and_performance_of_thermal_sensor.png",
+      "src": "https://arxiv.org/html/2611.28939v1/calibration_and_performance_of_thermal_sensor.png",
       "caption": "Fig. 8",
       "anchor": "S4.F8"
     },
     {
-      "src": "https://arxiv.org/html/2611.28939v1/2611.28939v1/repeat500.png",
+      "src": "https://arxiv.org/html/2611.28939v1/repeat500.png",
       "caption": "Fig. 9",
       "anchor": "S4.F9"
     },
     {
-      "src": "https://arxiv.org/html/2611.28939v1/2611.28939v1/experimental_platform.png",
+      "src": "https://arxiv.org/html/2611.28939v1/experimental_platform.png",
       "caption": "Fig. 10",
       "anchor": "S5.F10"
     },
     {
-      "src": "https://arxiv.org/html/2611.28939v1/2611.28939v1/algorithm_framework.png",
+      "src": "https://arxiv.org/html/2611.28939v1/algorithm_framework.png",
       "caption": "Fig. 11",
       "anchor": "S5.F11"
     },
     {
-      "src": "https://arxiv.org/html/2611.28939v1/2611.28939v1/classification_result.png",
+      "src": "https://arxiv.org/html/2611.28939v1/classification_result.png",
       "caption": "Fig. 12",
       "anchor": "S5.F12"
     },
     {
-      "src": "https://arxiv.org/html/2611.28939v1/2611.28939v1/validation_on_material_identification.png",
+      "src": "https://arxiv.org/html/2611.28939v1/validation_on_material_identification.png",
       "caption": "Fig. 13",
       "anchor": "S5.F13"
     }

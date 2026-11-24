@@ -2,17 +2,17 @@
   "version": "v1",
   "figures": [
     {
-      "src": "https://arxiv.org/html/2611.27648v1/2611.27648v1/fig_rollouts.png",
+      "src": "https://arxiv.org/html/2611.27648v1/fig_rollouts.png",
       "caption": "Fig. 4",
       "anchor": "S6.F4"
     },
     {
-      "src": "https://arxiv.org/html/2611.27648v1/2611.27648v1/fig_rollouts_fail.png",
+      "src": "https://arxiv.org/html/2611.27648v1/fig_rollouts_fail.png",
       "caption": "Fig. 6",
       "anchor": "S7.F6"
     },
     {
-      "src": "https://arxiv.org/html/2611.27648v1/2611.27648v1/fig_app_resets.png",
+      "src": "https://arxiv.org/html/2611.27648v1/fig_app_resets.png",
       "caption": "Fig. 9",
       "anchor": "A2.F9"
     }

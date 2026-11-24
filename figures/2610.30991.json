@@ -2,27 +2,27 @@
   "version": "v1",
   "figures": [
     {
-      "src": "https://arxiv.org/html/2610.30991v1/2610.30991v1/UniFlowWAM-teaser.png",
+      "src": "https://arxiv.org/html/2610.30991v1/UniFlowWAM-teaser.png",
       "caption": "Figure 1",
       "anchor": "S0.F1"
     },
     {
-      "src": "https://arxiv.org/html/2610.30991v1/2610.30991v1/UniFlowWAM-pipeline.png",
+      "src": "https://arxiv.org/html/2610.30991v1/UniFlowWAM-pipeline.png",
       "caption": "Figure 2",
       "anchor": "S3.F2"
     },
     {
-      "src": "https://arxiv.org/html/2610.30991v1/2610.30991v1/ppt-3-aligned.png",
+      "src": "https://arxiv.org/html/2610.30991v1/ppt-3-aligned.png",
       "caption": "Figure 3",
       "anchor": "S4.F3"
     },
     {
-      "src": "https://arxiv.org/html/2610.30991v1/2610.30991v1/chili_orientation_background.png",
+      "src": "https://arxiv.org/html/2610.30991v1/chili_orientation_background.png",
       "caption": "Figure 5",
       "anchor": "S4.F5"
     },
     {
-      "src": "https://arxiv.org/html/2610.30991v1/2610.30991v1/pen_ood_figure.png",
+      "src": "https://arxiv.org/html/2610.30991v1/pen_ood_figure.png",
       "caption": "Figure 5",
       "anchor": "S4.F5"
     }

@@ -2,32 +2,32 @@
   "version": "v1",
   "figures": [
     {
-      "src": "https://arxiv.org/html/2611.29897v1/2611.29897v1/introduction.png",
+      "src": "https://arxiv.org/html/2611.29897v1/introduction.png",
       "caption": "Fig. 2",
       "anchor": "S1.F2"
     },
     {
-      "src": "https://arxiv.org/html/2611.29897v1/2611.29897v1/fusion_retargeting.png",
+      "src": "https://arxiv.org/html/2611.29897v1/fusion_retargeting.png",
       "caption": "Fig. 3",
       "anchor": "S2.F3"
     },
     {
-      "src": "https://arxiv.org/html/2611.29897v1/2611.29897v1/overview.png",
+      "src": "https://arxiv.org/html/2611.29897v1/overview.png",
       "caption": "Fig. 4",
       "anchor": "S4.F4"
     },
     {
-      "src": "https://arxiv.org/html/2611.29897v1/2611.29897v1/exp5-g1.png",
+      "src": "https://arxiv.org/html/2611.29897v1/exp5-g1.png",
       "caption": "Fig. 8",
       "anchor": "S6.F8"
     },
     {
-      "src": "https://arxiv.org/html/2611.29897v1/2611.29897v1/sonic-interaction.png",
+      "src": "https://arxiv.org/html/2611.29897v1/sonic-interaction.png",
       "caption": "Fig. 9",
       "anchor": "S6.F9"
     },
     {
-      "src": "https://arxiv.org/html/2611.29897v1/2611.29897v1/distant_goal_comparison.png",
+      "src": "https://arxiv.org/html/2611.29897v1/distant_goal_comparison.png",
       "caption": "Fig. 10",
       "anchor": "A3.F10"
     }

@@ -2,42 +2,42 @@
   "version": "v1",
   "figures": [
     {
-      "src": "https://arxiv.org/html/2611.26414v1/2611.26414v1/fig_agent_architecture.png",
+      "src": "https://arxiv.org/html/2611.26414v1/fig_agent_architecture.png",
       "caption": "Figure 2",
       "anchor": "S2.F2"
     },
     {
-      "src": "https://arxiv.org/html/2611.26414v1/2611.26414v1/fig_action_expert_architecture.png",
+      "src": "https://arxiv.org/html/2611.26414v1/fig_action_expert_architecture.png",
       "caption": "Figure 3",
       "anchor": "S2.F3"
     },
     {
-      "src": "https://arxiv.org/html/2611.26414v1/2611.26414v1/fig_open_loop_training.png",
+      "src": "https://arxiv.org/html/2611.26414v1/fig_open_loop_training.png",
       "caption": "Figure 4",
       "anchor": "S3.F4"
     },
     {
-      "src": "https://arxiv.org/html/2611.26414v1/2611.26414v1/fig_zero_training_mechanism.png",
+      "src": "https://arxiv.org/html/2611.26414v1/fig_zero_training_mechanism.png",
       "caption": "Figure 6",
       "anchor": "S5.F6"
     },
     {
-      "src": "https://arxiv.org/html/2611.26414v1/2611.26414v1/fig_zero_capability_degradation.png",
+      "src": "https://arxiv.org/html/2611.26414v1/fig_zero_capability_degradation.png",
       "caption": "Figure 7",
       "anchor": "S5.F7"
     },
     {
-      "src": "https://arxiv.org/html/2611.26414v1/2611.26414v1/fig_navigation_case_study_1.png",
+      "src": "https://arxiv.org/html/2611.26414v1/fig_navigation_case_study_1.png",
       "caption": "Figure 10",
       "anchor": "S5.F10"
     },
     {
-      "src": "https://arxiv.org/html/2611.26414v1/2611.26414v1/fig_turn_ablation_overview.png",
+      "src": "https://arxiv.org/html/2611.26414v1/fig_turn_ablation_overview.png",
       "caption": "Figure 13",
       "anchor": "S5.F13"
     },
     {
-      "src": "https://arxiv.org/html/2611.26414v1/2611.26414v1/fig_teacher_goal_consistency.png",
+      "src": "https://arxiv.org/html/2611.26414v1/fig_teacher_goal_consistency.png",
       "caption": "Figure 14",
       "anchor": "S5.F14"
     }

@@ -2,177 +2,177 @@
   "version": "v1",
   "figures": [
     {
-      "src": "https://arxiv.org/html/2610.31845v1/2610.31845v1/pipeline_page1.png",
+      "src": "https://arxiv.org/html/2610.31845v1/pipeline_page1.png",
       "caption": "Figure 1",
       "anchor": "S3.F1"
     },
     {
-      "src": "https://arxiv.org/html/2610.31845v1/2610.31845v1/pretraining_data.png",
+      "src": "https://arxiv.org/html/2610.31845v1/pretraining_data.png",
       "caption": "Figure 2",
       "anchor": "S3.F2"
     },
     {
-      "src": "https://arxiv.org/html/2610.31845v1/2610.31845v1/figures/compressed/real_world_assets/display/bottle.jpg",
+      "src": "https://arxiv.org/html/2610.31845v1/figures/compressed/real_world_assets/display/bottle.jpg",
       "caption": "Figure 3",
       "anchor": "S4.F3"
     },
     {
-      "src": "https://arxiv.org/html/2610.31845v1/2610.31845v1/figures/compressed/real_world_assets/display/handover.jpg",
+      "src": "https://arxiv.org/html/2610.31845v1/figures/compressed/real_world_assets/display/handover.jpg",
       "caption": "Figure 3",
       "anchor": "S4.F3"
     },
     {
-      "src": "https://arxiv.org/html/2610.31845v1/2610.31845v1/figures/compressed/real_world_assets/display/pnp.jpg",
+      "src": "https://arxiv.org/html/2610.31845v1/figures/compressed/real_world_assets/display/pnp.jpg",
       "caption": "Figure 3",
       "anchor": "S4.F3"
     },
     {
-      "src": "https://arxiv.org/html/2610.31845v1/2610.31845v1/figures/compressed/real_world_assets/display/syringe.jpg",
+      "src": "https://arxiv.org/html/2610.31845v1/figures/compressed/real_world_assets/display/syringe.jpg",
       "caption": "Figure 3",
       "anchor": "S4.F3"
     },
     {
-      "src": "https://arxiv.org/html/2610.31845v1/2610.31845v1/input_format.png",
+      "src": "https://arxiv.org/html/2610.31845v1/input_format.png",
       "caption": "Figure 6",
       "anchor": "A3.F6"
     },
     {
-      "src": "https://arxiv.org/html/2610.31845v1/2610.31845v1/human_action_errors.png",
+      "src": "https://arxiv.org/html/2610.31845v1/human_action_errors.png",
       "caption": "Figure 7",
       "anchor": "A3.F7"
     },
     {
-      "src": "https://arxiv.org/html/2610.31845v1/2610.31845v1/figures/compressed/real_world_setup_assets/robot.jpg",
+      "src": "https://arxiv.org/html/2610.31845v1/figures/compressed/real_world_setup_assets/robot.jpg",
       "caption": "Figure 8",
       "anchor": "A4.F8"
     },
     {
-      "src": "https://arxiv.org/html/2610.31845v1/2610.31845v1/figures/compressed/real_world_setup_assets/operator_anonymized.jpg",
+      "src": "https://arxiv.org/html/2610.31845v1/figures/compressed/real_world_setup_assets/operator_anonymized.jpg",
       "caption": "Figure 8",
       "anchor": "A4.F8"
     },
     {
-      "src": "https://arxiv.org/html/2610.31845v1/2610.31845v1/figures/compressed/real_world_sequence_assets/display/bottle/01.jpg",
+      "src": "https://arxiv.org/html/2610.31845v1/figures/compressed/real_world_sequence_assets/display/bottle/01.jpg",
       "caption": "Figure 9",
       "anchor": "A4.F9"
     },
     {
-      "src": "https://arxiv.org/html/2610.31845v1/2610.31845v1/figures/compressed/real_world_sequence_assets/display/bottle/02.jpg",
+      "src": "https://arxiv.org/html/2610.31845v1/figures/compressed/real_world_sequence_assets/display/bottle/02.jpg",
       "caption": "Figure 9",
       "anchor": "A4.F9"
     },
     {
-      "src": "https://arxiv.org/html/2610.31845v1/2610.31845v1/figures/compressed/real_world_sequence_assets/display/bottle/03.jpg",
+      "src": "https://arxiv.org/html/2610.31845v1/figures/compressed/real_world_sequence_assets/display/bottle/03.jpg",
       "caption": "Figure 9",
       "anchor": "A4.F9"
     },
     {
-      "src": "https://arxiv.org/html/2610.31845v1/2610.31845v1/figures/compressed/real_world_sequence_assets/display/bottle/04.jpg",
+      "src": "https://arxiv.org/html/2610.31845v1/figures/compressed/real_world_sequence_assets/display/bottle/04.jpg",
       "caption": "Figure 9",
       "anchor": "A4.F9"
     },
     {
-      "src": "https://arxiv.org/html/2610.31845v1/2610.31845v1/figures/compressed/real_world_sequence_assets/display/bottle/05.jpg",
+      "src": "https://arxiv.org/html/2610.31845v1/figures/compressed/real_world_sequence_assets/display/bottle/05.jpg",
       "caption": "Figure 9",
       "anchor": "A4.F9"
     },
     {
-      "src": "https://arxiv.org/html/2610.31845v1/2610.31845v1/figures/compressed/real_world_sequence_assets/display/bottle/06.jpg",
+      "src": "https://arxiv.org/html/2610.31845v1/figures/compressed/real_world_sequence_assets/display/bottle/06.jpg",
       "caption": "Figure 9",
       "anchor": "A4.F9"
     },
     {
-      "src": "https://arxiv.org/html/2610.31845v1/2610.31845v1/figures/compressed/real_world_sequence_assets/display/handover/01.jpg",
+      "src": "https://arxiv.org/html/2610.31845v1/figures/compressed/real_world_sequence_assets/display/handover/01.jpg",
       "caption": "Figure 9",
       "anchor": "A4.F9"
     },
     {
-      "src": "https://arxiv.org/html/2610.31845v1/2610.31845v1/figures/compressed/real_world_sequence_assets/display/handover/02.jpg",
+      "src": "https://arxiv.org/html/2610.31845v1/figures/compressed/real_world_sequence_assets/display/handover/02.jpg",
       "caption": "Figure 9",
       "anchor": "A4.F9"
     },
     {
-      "src": "https://arxiv.org/html/2610.31845v1/2610.31845v1/figures/compressed/real_world_sequence_assets/display/handover/03.jpg",
+      "src": "https://arxiv.org/html/2610.31845v1/figures/compressed/real_world_sequence_assets/display/handover/03.jpg",
       "caption": "Figure 9",
       "anchor": "A4.F9"
     },
     {
-      "src": "https://arxiv.org/html/2610.31845v1/2610.31845v1/figures/compressed/real_world_sequence_assets/display/handover/04.jpg",
+      "src": "https://arxiv.org/html/2610.31845v1/figures/compressed/real_world_sequence_assets/display/handover/04.jpg",
       "caption": "Figure 9",
       "anchor": "A4.F9"
     },
     {
-      "src": "https://arxiv.org/html/2610.31845v1/2610.31845v1/figures/compressed/real_world_sequence_assets/display/handover/05.jpg",
+      "src": "https://arxiv.org/html/2610.31845v1/figures/compressed/real_world_sequence_assets/display/handover/05.jpg",
       "caption": "Figure 9",
       "anchor": "A4.F9"
     },
     {
-      "src": "https://arxiv.org/html/2610.31845v1/2610.31845v1/figures/compressed/real_world_sequence_assets/display/handover/06.jpg",
+      "src": "https://arxiv.org/html/2610.31845v1/figures/compressed/real_world_sequence_assets/display/handover/06.jpg",
       "caption": "Figure 9",
       "anchor": "A4.F9"
     },
     {
-      "src": "https://arxiv.org/html/2610.31845v1/2610.31845v1/figures/compressed/real_world_sequence_assets/display/pnp/01.jpg",
+      "src": "https://arxiv.org/html/2610.31845v1/figures/compressed/real_world_sequence_assets/display/pnp/01.jpg",
       "caption": "Figure 9",
       "anchor": "A4.F9"
     },
     {
-      "src": "https://arxiv.org/html/2610.31845v1/2610.31845v1/figures/compressed/real_world_sequence_assets/display/pnp/02.jpg",
+      "src": "https://arxiv.org/html/2610.31845v1/figures/compressed/real_world_sequence_assets/display/pnp/02.jpg",
       "caption": "Figure 9",
       "anchor": "A4.F9"
     },
     {
-      "src": "https://arxiv.org/html/2610.31845v1/2610.31845v1/figures/compressed/real_world_sequence_assets/display/pnp/03.jpg",
+      "src": "https://arxiv.org/html/2610.31845v1/figures/compressed/real_world_sequence_assets/display/pnp/03.jpg",
       "caption": "Figure 9",
       "anchor": "A4.F9"
     },
     {
-      "src": "https://arxiv.org/html/2610.31845v1/2610.31845v1/figures/compressed/real_world_sequence_assets/display/pnp/04.jpg",
+      "src": "https://arxiv.org/html/2610.31845v1/figures/compressed/real_world_sequence_assets/display/pnp/04.jpg",
       "caption": "Figure 9",
       "anchor": "A4.F9"
     },
     {
-      "src": "https://arxiv.org/html/2610.31845v1/2610.31845v1/figures/compressed/real_world_sequence_assets/display/pnp/05.jpg",
+      "src": "https://arxiv.org/html/2610.31845v1/figures/compressed/real_world_sequence_assets/display/pnp/05.jpg",
       "caption": "Figure 9",
       "anchor": "A4.F9"
     },
     {
-      "src": "https://arxiv.org/html/2610.31845v1/2610.31845v1/figures/compressed/real_world_sequence_assets/display/pnp/06.jpg",
+      "src": "https://arxiv.org/html/2610.31845v1/figures/compressed/real_world_sequence_assets/display/pnp/06.jpg",
       "caption": "Figure 9",
       "anchor": "A4.F9"
     },
     {
-      "src": "https://arxiv.org/html/2610.31845v1/2610.31845v1/figures/compressed/real_world_sequence_assets/display/syringe/01.jpg",
+      "src": "https://arxiv.org/html/2610.31845v1/figures/compressed/real_world_sequence_assets/display/syringe/01.jpg",
       "caption": "Figure 9",
       "anchor": "A4.F9"
     },
     {
-      "src": "https://arxiv.org/html/2610.31845v1/2610.31845v1/figures/compressed/real_world_sequence_assets/display/syringe/02.jpg",
+      "src": "https://arxiv.org/html/2610.31845v1/figures/compressed/real_world_sequence_assets/display/syringe/02.jpg",
       "caption": "Figure 9",
       "anchor": "A4.F9"
     },
     {
-      "src": "https://arxiv.org/html/2610.31845v1/2610.31845v1/figures/compressed/real_world_sequence_assets/display/syringe/03.jpg",
+      "src": "https://arxiv.org/html/2610.31845v1/figures/compressed/real_world_sequence_assets/display/syringe/03.jpg",
       "caption": "Figure 9",
       "anchor": "A4.F9"
     },
     {
-      "src": "https://arxiv.org/html/2610.31845v1/2610.31845v1/figures/compressed/real_world_sequence_assets/display/syringe/04.jpg",
+      "src": "https://arxiv.org/html/2610.31845v1/figures/compressed/real_world_sequence_assets/display/syringe/04.jpg",
       "caption": "Figure 9",
       "anchor": "A4.F9"
     },
     {
-      "src": "https://arxiv.org/html/2610.31845v1/2610.31845v1/figures/compressed/real_world_sequence_assets/display/syringe/05.jpg",
+      "src": "https://arxiv.org/html/2610.31845v1/figures/compressed/real_world_sequence_assets/display/syringe/05.jpg",
       "caption": "Figure 9",
       "anchor": "A4.F9"
     },
     {
-      "src": "https://arxiv.org/html/2610.31845v1/2610.31845v1/figures/compressed/real_world_sequence_assets/display/syringe/06.jpg",
+      "src": "https://arxiv.org/html/2610.31845v1/figures/compressed/real_world_sequence_assets/display/syringe/06.jpg",
       "caption": "Figure 9",
       "anchor": "A4.F9"
     },
     {
-      "src": "https://arxiv.org/html/2610.31845v1/2610.31845v1/qualitative_forecasts.png",
+      "src": "https://arxiv.org/html/2610.31845v1/qualitative_forecasts.png",
       "caption": "Figure 10",
       "anchor": "A5.F10"
     }

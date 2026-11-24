@@ -2,37 +2,37 @@
   "version": "v1",
   "figures": [
     {
-      "src": "https://arxiv.org/html/2610.30876v1/2610.30876v1/figure1_overview.png",
+      "src": "https://arxiv.org/html/2610.30876v1/figure1_overview.png",
       "caption": "Figure 1",
       "anchor": "S0.F1"
     },
     {
-      "src": "https://arxiv.org/html/2610.30876v1/2610.30876v1/real_sim_task_sequences.png",
+      "src": "https://arxiv.org/html/2610.30876v1/real_sim_task_sequences.png",
       "caption": "Figure 5",
       "anchor": "S4.F5"
     },
     {
-      "src": "https://arxiv.org/html/2610.30876v1/2610.30876v1/appendix_task_sequences.png",
+      "src": "https://arxiv.org/html/2610.30876v1/appendix_task_sequences.png",
       "caption": "Figure 6",
       "anchor": "S7.F6"
     },
     {
-      "src": "https://arxiv.org/html/2610.30876v1/2610.30876v1/appendix_rooms_objects.png",
+      "src": "https://arxiv.org/html/2610.30876v1/appendix_rooms_objects.png",
       "caption": "Figure 7",
       "anchor": "S7.F7"
     },
     {
-      "src": "https://arxiv.org/html/2610.30876v1/2610.30876v1/Kimodo_pics.png",
+      "src": "https://arxiv.org/html/2610.30876v1/Kimodo_pics.png",
       "caption": "Figure 8",
       "anchor": "S10.F9"
     },
     {
-      "src": "https://arxiv.org/html/2610.30876v1/2610.30876v1/figures/robot_head_front.png",
+      "src": "https://arxiv.org/html/2610.30876v1/figures/robot_head_front.png",
       "caption": "Figure 10",
       "anchor": "S11.F10"
     },
     {
-      "src": "https://arxiv.org/html/2610.30876v1/2610.30876v1/figures/robot_head_side.png",
+      "src": "https://arxiv.org/html/2610.30876v1/figures/robot_head_side.png",
       "caption": "Figure 10",
       "anchor": "S11.F10"
     }

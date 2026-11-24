@@ -2,27 +2,27 @@
   "version": "v4",
   "figures": [
     {
-      "src": "https://arxiv.org/html/2209.07753v4/2209.07753v4/overview_v2.png",
+      "src": "https://arxiv.org/html/2209.07753v4/overview_v2.png",
       "caption": "Fig. 2",
       "anchor": "S1.F2"
     },
     {
-      "src": "https://arxiv.org/html/2209.07753v4/2209.07753v4/ims/generalization_types_flat.png",
+      "src": "https://arxiv.org/html/2209.07753v4/ims/generalization_types_flat.png",
       "caption": "Fig. 4",
       "anchor": "A0.F4"
     },
     {
-      "src": "https://arxiv.org/html/2209.07753v4/2209.07753v4/ims/generalization_types_hier.png",
+      "src": "https://arxiv.org/html/2209.07753v4/ims/generalization_types_hier.png",
       "caption": "Fig. 4",
       "anchor": "A0.F4"
     },
     {
-      "src": "https://arxiv.org/html/2209.07753v4/2209.07753v4/ims/generalization_types_improvements.png",
+      "src": "https://arxiv.org/html/2209.07753v4/ims/generalization_types_improvements.png",
       "caption": "Fig. 4",
       "anchor": "A0.F4"
     },
     {
-      "src": "https://arxiv.org/html/2209.07753v4/2209.07753v4/ims/additional_capabilities.png",
+      "src": "https://arxiv.org/html/2209.07753v4/ims/additional_capabilities.png",
       "caption": "Fig. 7",
       "anchor": "A0.F7"
     }

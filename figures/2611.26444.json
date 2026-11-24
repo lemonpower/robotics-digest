@@ -2,422 +2,422 @@
   "version": "v1",
   "figures": [
     {
-      "src": "https://arxiv.org/html/2611.26444v1/2611.26444v1/figures/capability_map/background.jpg",
+      "src": "https://arxiv.org/html/2611.26444v1/figures/capability_map/background.jpg",
       "caption": "Figure 1",
       "anchor": "S3.F1"
     },
     {
-      "src": "https://arxiv.org/html/2611.26444v1/2611.26444v1/m2a_wordmark.png",
+      "src": "https://arxiv.org/html/2611.26444v1/m2a_wordmark.png",
       "caption": "Figure 1",
       "anchor": "S3.F1"
     },
     {
-      "src": "https://arxiv.org/html/2611.26444v1/2611.26444v1/figures/process_difficulty/background.jpg",
+      "src": "https://arxiv.org/html/2611.26444v1/figures/process_difficulty/background.jpg",
       "caption": "Figure 2",
       "anchor": "S3.F2"
     },
     {
-      "src": "https://arxiv.org/html/2611.26444v1/2611.26444v1/figures/difficulty_levels/background.jpg",
+      "src": "https://arxiv.org/html/2611.26444v1/figures/difficulty_levels/background.jpg",
       "caption": "Figure 3",
       "anchor": "S3.F3"
     },
     {
-      "src": "https://arxiv.org/html/2611.26444v1/2611.26444v1/figures/clean_random/CP05_0.jpg",
+      "src": "https://arxiv.org/html/2611.26444v1/figures/clean_random/CP05_0.jpg",
       "caption": "Figure 4",
       "anchor": "S3.F4"
     },
     {
-      "src": "https://arxiv.org/html/2611.26444v1/2611.26444v1/figures/clean_random/CP05_1.jpg",
+      "src": "https://arxiv.org/html/2611.26444v1/figures/clean_random/CP05_1.jpg",
       "caption": "Figure 4",
       "anchor": "S3.F4"
     },
     {
-      "src": "https://arxiv.org/html/2611.26444v1/2611.26444v1/figures/clean_random/CP05_2.jpg",
+      "src": "https://arxiv.org/html/2611.26444v1/figures/clean_random/CP05_2.jpg",
       "caption": "Figure 4",
       "anchor": "S3.F4"
     },
     {
-      "src": "https://arxiv.org/html/2611.26444v1/2611.26444v1/figures/clean_random/CP05_3.jpg",
+      "src": "https://arxiv.org/html/2611.26444v1/figures/clean_random/CP05_3.jpg",
       "caption": "Figure 4",
       "anchor": "S3.F4"
     },
     {
-      "src": "https://arxiv.org/html/2611.26444v1/2611.26444v1/figures/clean_random/CP05_4.jpg",
+      "src": "https://arxiv.org/html/2611.26444v1/figures/clean_random/CP05_4.jpg",
       "caption": "Figure 4",
       "anchor": "S3.F4"
     },
     {
-      "src": "https://arxiv.org/html/2611.26444v1/2611.26444v1/figures/clean_random/CP05_5.jpg",
+      "src": "https://arxiv.org/html/2611.26444v1/figures/clean_random/CP05_5.jpg",
       "caption": "Figure 4",
       "anchor": "S3.F4"
     },
     {
-      "src": "https://arxiv.org/html/2611.26444v1/2611.26444v1/figures/clean_random/CP02_0.jpg",
+      "src": "https://arxiv.org/html/2611.26444v1/figures/clean_random/CP02_0.jpg",
       "caption": "Figure 4",
       "anchor": "S3.F4"
     },
     {
-      "src": "https://arxiv.org/html/2611.26444v1/2611.26444v1/figures/clean_random/CP02_1.jpg",
+      "src": "https://arxiv.org/html/2611.26444v1/figures/clean_random/CP02_1.jpg",
       "caption": "Figure 4",
       "anchor": "S3.F4"
     },
     {
-      "src": "https://arxiv.org/html/2611.26444v1/2611.26444v1/figures/clean_random/CP02_2.jpg",
+      "src": "https://arxiv.org/html/2611.26444v1/figures/clean_random/CP02_2.jpg",
       "caption": "Figure 4",
       "anchor": "S3.F4"
     },
     {
-      "src": "https://arxiv.org/html/2611.26444v1/2611.26444v1/figures/clean_random/CP02_3.jpg",
+      "src": "https://arxiv.org/html/2611.26444v1/figures/clean_random/CP02_3.jpg",
       "caption": "Figure 4",
       "anchor": "S3.F4"
     },
     {
-      "src": "https://arxiv.org/html/2611.26444v1/2611.26444v1/figures/clean_random/CP02_4.jpg",
+      "src": "https://arxiv.org/html/2611.26444v1/figures/clean_random/CP02_4.jpg",
       "caption": "Figure 4",
       "anchor": "S3.F4"
     },
     {
-      "src": "https://arxiv.org/html/2611.26444v1/2611.26444v1/figures/clean_random/CP02_5.jpg",
+      "src": "https://arxiv.org/html/2611.26444v1/figures/clean_random/CP02_5.jpg",
       "caption": "Figure 4",
       "anchor": "S3.F4"
     },
     {
-      "src": "https://arxiv.org/html/2611.26444v1/2611.26444v1/figures/clean_random/DR1_0.jpg",
+      "src": "https://arxiv.org/html/2611.26444v1/figures/clean_random/DR1_0.jpg",
       "caption": "Figure 4",
       "anchor": "S3.F4"
     },
     {
-      "src": "https://arxiv.org/html/2611.26444v1/2611.26444v1/figures/clean_random/DR1_1.jpg",
+      "src": "https://arxiv.org/html/2611.26444v1/figures/clean_random/DR1_1.jpg",
       "caption": "Figure 4",
       "anchor": "S3.F4"
     },
     {
-      "src": "https://arxiv.org/html/2611.26444v1/2611.26444v1/figures/clean_random/DR1_2.jpg",
+      "src": "https://arxiv.org/html/2611.26444v1/figures/clean_random/DR1_2.jpg",
       "caption": "Figure 4",
       "anchor": "S3.F4"
     },
     {
-      "src": "https://arxiv.org/html/2611.26444v1/2611.26444v1/figures/clean_random/DR1_3.jpg",
+      "src": "https://arxiv.org/html/2611.26444v1/figures/clean_random/DR1_3.jpg",
       "caption": "Figure 4",
       "anchor": "S3.F4"
     },
     {
-      "src": "https://arxiv.org/html/2611.26444v1/2611.26444v1/figures/clean_random/DR1_4.jpg",
+      "src": "https://arxiv.org/html/2611.26444v1/figures/clean_random/DR1_4.jpg",
       "caption": "Figure 4",
       "anchor": "S3.F4"
     },
     {
-      "src": "https://arxiv.org/html/2611.26444v1/2611.26444v1/figures/clean_random/DR1_5.jpg",
+      "src": "https://arxiv.org/html/2611.26444v1/figures/clean_random/DR1_5.jpg",
       "caption": "Figure 4",
       "anchor": "S3.F4"
     },
     {
-      "src": "https://arxiv.org/html/2611.26444v1/2611.26444v1/figures/evaluation_loop/demo_1.jpg",
+      "src": "https://arxiv.org/html/2611.26444v1/figures/evaluation_loop/demo_1.jpg",
       "caption": "Figure 5",
       "anchor": "S4.F5"
     },
     {
-      "src": "https://arxiv.org/html/2611.26444v1/2611.26444v1/figures/evaluation_loop/demo_2.jpg",
+      "src": "https://arxiv.org/html/2611.26444v1/figures/evaluation_loop/demo_2.jpg",
       "caption": "Figure 5",
       "anchor": "S4.F5"
     },
     {
-      "src": "https://arxiv.org/html/2611.26444v1/2611.26444v1/figures/evaluation_loop/demo_3.jpg",
+      "src": "https://arxiv.org/html/2611.26444v1/figures/evaluation_loop/demo_3.jpg",
       "caption": "Figure 5",
       "anchor": "S4.F5"
     },
     {
-      "src": "https://arxiv.org/html/2611.26444v1/2611.26444v1/figures/evaluation_loop/strip_s1_1.jpg",
+      "src": "https://arxiv.org/html/2611.26444v1/figures/evaluation_loop/strip_s1_1.jpg",
       "caption": "Figure 5",
       "anchor": "S4.F5"
     },
     {
-      "src": "https://arxiv.org/html/2611.26444v1/2611.26444v1/figures/evaluation_loop/strip_s1_2.jpg",
+      "src": "https://arxiv.org/html/2611.26444v1/figures/evaluation_loop/strip_s1_2.jpg",
       "caption": "Figure 5",
       "anchor": "S4.F5"
     },
     {
-      "src": "https://arxiv.org/html/2611.26444v1/2611.26444v1/figures/evaluation_loop/strip_s1_3.jpg",
+      "src": "https://arxiv.org/html/2611.26444v1/figures/evaluation_loop/strip_s1_3.jpg",
       "caption": "Figure 5",
       "anchor": "S4.F5"
     },
     {
-      "src": "https://arxiv.org/html/2611.26444v1/2611.26444v1/figures/evaluation_loop/hero_s1.jpg",
+      "src": "https://arxiv.org/html/2611.26444v1/figures/evaluation_loop/hero_s1.jpg",
       "caption": "Figure 5",
       "anchor": "S4.F5"
     },
     {
-      "src": "https://arxiv.org/html/2611.26444v1/2611.26444v1/figures/task_apparatus/shared_platform.png",
+      "src": "https://arxiv.org/html/2611.26444v1/figures/task_apparatus/shared_platform.png",
       "caption": "Figure 6",
       "anchor": "S4.F6"
     },
     {
-      "src": "https://arxiv.org/html/2611.26444v1/2611.26444v1/figures/task_apparatus/cake_apparatus.png",
+      "src": "https://arxiv.org/html/2611.26444v1/figures/task_apparatus/cake_apparatus.png",
       "caption": "Figure 6",
       "anchor": "S4.F6"
     },
     {
-      "src": "https://arxiv.org/html/2611.26444v1/2611.26444v1/figures/task_apparatus/cooking_apparatus.png",
+      "src": "https://arxiv.org/html/2611.26444v1/figures/task_apparatus/cooking_apparatus.png",
       "caption": "Figure 6",
       "anchor": "S4.F6"
     },
     {
-      "src": "https://arxiv.org/html/2611.26444v1/2611.26444v1/figures/task_apparatus/steamer.png",
+      "src": "https://arxiv.org/html/2611.26444v1/figures/task_apparatus/steamer.png",
       "caption": "Figure 6",
       "anchor": "S4.F6"
     },
     {
-      "src": "https://arxiv.org/html/2611.26444v1/2611.26444v1/figures/task_apparatus/plates_rack.png",
+      "src": "https://arxiv.org/html/2611.26444v1/figures/task_apparatus/plates_rack.png",
       "caption": "Figure 6",
       "anchor": "S4.F6"
     },
     {
-      "src": "https://arxiv.org/html/2611.26444v1/2611.26444v1/figures/task_apparatus/mapping_apparatus.png",
+      "src": "https://arxiv.org/html/2611.26444v1/figures/task_apparatus/mapping_apparatus.png",
       "caption": "Figure 6",
       "anchor": "S4.F6"
     },
     {
-      "src": "https://arxiv.org/html/2611.26444v1/2611.26444v1/figures/task_apparatus/e2_keypad.png",
+      "src": "https://arxiv.org/html/2611.26444v1/figures/task_apparatus/e2_keypad.png",
       "caption": "Figure 6",
       "anchor": "S4.F6"
     },
     {
-      "src": "https://arxiv.org/html/2611.26444v1/2611.26444v1/figures/task_apparatus/pr2_voltage.png",
+      "src": "https://arxiv.org/html/2611.26444v1/figures/task_apparatus/pr2_voltage.png",
       "caption": "Figure 6",
       "anchor": "S4.F6"
     },
     {
-      "src": "https://arxiv.org/html/2611.26444v1/2611.26444v1/figures/task_apparatus/pr1_rheostat.png",
+      "src": "https://arxiv.org/html/2611.26444v1/figures/task_apparatus/pr1_rheostat.png",
       "caption": "Figure 6",
       "anchor": "S4.F6"
     },
     {
-      "src": "https://arxiv.org/html/2611.26444v1/2611.26444v1/figures/task_apparatus/cp06_balance.png",
+      "src": "https://arxiv.org/html/2611.26444v1/figures/task_apparatus/cp06_balance.png",
       "caption": "Figure 6",
       "anchor": "S4.F6"
     },
     {
-      "src": "https://arxiv.org/html/2611.26444v1/2611.26444v1/figures/task_apparatus/gate_apparatus.png",
+      "src": "https://arxiv.org/html/2611.26444v1/figures/task_apparatus/gate_apparatus.png",
       "caption": "Figure 6",
       "anchor": "S4.F6"
     },
     {
-      "src": "https://arxiv.org/html/2611.26444v1/2611.26444v1/figures/task_apparatus/dr4_tray.png",
+      "src": "https://arxiv.org/html/2611.26444v1/figures/task_apparatus/dr4_tray.png",
       "caption": "Figure 6",
       "anchor": "S4.F6"
     },
     {
-      "src": "https://arxiv.org/html/2611.26444v1/2611.26444v1/figures/task_apparatus/pr6_domino.png",
+      "src": "https://arxiv.org/html/2611.26444v1/figures/task_apparatus/pr6_domino.png",
       "caption": "Figure 6",
       "anchor": "S4.F6"
     },
     {
-      "src": "https://arxiv.org/html/2611.26444v1/2611.26444v1/figures/task_apparatus/bridge_panel.png",
+      "src": "https://arxiv.org/html/2611.26444v1/figures/task_apparatus/bridge_panel.png",
       "caption": "Figure 6",
       "anchor": "S4.F6"
     },
     {
-      "src": "https://arxiv.org/html/2611.26444v1/2611.26444v1/figures/task_apparatus/toy_car.png",
+      "src": "https://arxiv.org/html/2611.26444v1/figures/task_apparatus/toy_car.png",
       "caption": "Figure 6",
       "anchor": "S4.F6"
     },
     {
-      "src": "https://arxiv.org/html/2611.26444v1/2611.26444v1/figures/task_apparatus/cp08_blueprint.png",
+      "src": "https://arxiv.org/html/2611.26444v1/figures/task_apparatus/cp08_blueprint.png",
       "caption": "Figure 6",
       "anchor": "S4.F6"
     },
     {
-      "src": "https://arxiv.org/html/2611.26444v1/2611.26444v1/figures/task_apparatus/hazard_apparatus.png",
+      "src": "https://arxiv.org/html/2611.26444v1/figures/task_apparatus/hazard_apparatus.png",
       "caption": "Figure 6",
       "anchor": "S4.F6"
     },
     {
-      "src": "https://arxiv.org/html/2611.26444v1/2611.26444v1/figures/task_apparatus/m2_cards.png",
+      "src": "https://arxiv.org/html/2611.26444v1/figures/task_apparatus/m2_cards.png",
       "caption": "Figure 6",
       "anchor": "S4.F6"
     },
     {
-      "src": "https://arxiv.org/html/2611.26444v1/2611.26444v1/figures/task_apparatus/f2_feedback.png",
+      "src": "https://arxiv.org/html/2611.26444v1/figures/task_apparatus/f2_feedback.png",
       "caption": "Figure 6",
       "anchor": "S4.F6"
     },
     {
-      "src": "https://arxiv.org/html/2611.26444v1/2611.26444v1/figures/task_apparatus/piano.png",
+      "src": "https://arxiv.org/html/2611.26444v1/figures/task_apparatus/piano.png",
       "caption": "Figure 6",
       "anchor": "S4.F6"
     },
     {
-      "src": "https://arxiv.org/html/2611.26444v1/2611.26444v1/figures/task_apparatus/cp10_court.png",
+      "src": "https://arxiv.org/html/2611.26444v1/figures/task_apparatus/cp10_court.png",
       "caption": "Figure 6",
       "anchor": "S4.F6"
     },
     {
-      "src": "https://arxiv.org/html/2611.26444v1/2611.26444v1/assets/m2a_planet.png",
+      "src": "https://arxiv.org/html/2611.26444v1/assets/m2a_planet.png",
       "caption": "Figure 14",
       "anchor": "A5.F14"
     },
     {
-      "src": "https://arxiv.org/html/2611.26444v1/2611.26444v1/figures/profile_cards/icons/g05.png",
+      "src": "https://arxiv.org/html/2611.26444v1/figures/profile_cards/icons/g05.png",
       "caption": "Figure 12",
       "anchor": "A5.F12"
     },
     {
-      "src": "https://arxiv.org/html/2611.26444v1/2611.26444v1/figures/profile_cards/icons/internw0.png",
+      "src": "https://arxiv.org/html/2611.26444v1/figures/profile_cards/icons/internw0.png",
       "caption": "Figure 13",
       "anchor": "A5.F13"
     },
     {
-      "src": "https://arxiv.org/html/2611.26444v1/2611.26444v1/figures/profile_cards/icons/openai.png",
+      "src": "https://arxiv.org/html/2611.26444v1/figures/profile_cards/icons/openai.png",
       "caption": "Figure 14",
       "anchor": "A5.F14"
     },
     {
-      "src": "https://arxiv.org/html/2611.26444v1/2611.26444v1/figures/realworld_mapping/thumbs/P1.jpg",
+      "src": "https://arxiv.org/html/2611.26444v1/figures/realworld_mapping/thumbs/P1.jpg",
       "caption": "Figure 16",
       "anchor": "A6.F16"
     },
     {
-      "src": "https://arxiv.org/html/2611.26444v1/2611.26444v1/figures/realworld_mapping/thumbs/P2.jpg",
+      "src": "https://arxiv.org/html/2611.26444v1/figures/realworld_mapping/thumbs/P2.jpg",
       "caption": "Figure 16",
       "anchor": "A6.F16"
     },
     {
-      "src": "https://arxiv.org/html/2611.26444v1/2611.26444v1/figures/realworld_mapping/thumbs/S1.jpg",
+      "src": "https://arxiv.org/html/2611.26444v1/figures/realworld_mapping/thumbs/S1.jpg",
       "caption": "Figure 16",
       "anchor": "A6.F16"
     },
     {
-      "src": "https://arxiv.org/html/2611.26444v1/2611.26444v1/figures/realworld_mapping/thumbs/PR4.jpg",
+      "src": "https://arxiv.org/html/2611.26444v1/figures/realworld_mapping/thumbs/PR4.jpg",
       "caption": "Figure 16",
       "anchor": "A6.F16"
     },
     {
-      "src": "https://arxiv.org/html/2611.26444v1/2611.26444v1/figures/realworld_mapping/thumbs/CP01.jpg",
+      "src": "https://arxiv.org/html/2611.26444v1/figures/realworld_mapping/thumbs/CP01.jpg",
       "caption": "Figure 16",
       "anchor": "A6.F16"
     },
     {
-      "src": "https://arxiv.org/html/2611.26444v1/2611.26444v1/figures/realworld_mapping/thumbs/CP02.jpg",
+      "src": "https://arxiv.org/html/2611.26444v1/figures/realworld_mapping/thumbs/CP02.jpg",
       "caption": "Figure 16",
       "anchor": "A6.F16"
     },
     {
-      "src": "https://arxiv.org/html/2611.26444v1/2611.26444v1/figures/realworld_mapping/thumbs/CP03.jpg",
+      "src": "https://arxiv.org/html/2611.26444v1/figures/realworld_mapping/thumbs/CP03.jpg",
       "caption": "Figure 16",
       "anchor": "A6.F16"
     },
     {
-      "src": "https://arxiv.org/html/2611.26444v1/2611.26444v1/figures/realworld_mapping/thumbs/CP04.jpg",
+      "src": "https://arxiv.org/html/2611.26444v1/figures/realworld_mapping/thumbs/CP04.jpg",
       "caption": "Figure 16",
       "anchor": "A6.F16"
     },
     {
-      "src": "https://arxiv.org/html/2611.26444v1/2611.26444v1/figures/realworld_mapping/thumbs/E1.jpg",
+      "src": "https://arxiv.org/html/2611.26444v1/figures/realworld_mapping/thumbs/E1.jpg",
       "caption": "Figure 16",
       "anchor": "A6.F16"
     },
     {
-      "src": "https://arxiv.org/html/2611.26444v1/2611.26444v1/figures/realworld_mapping/thumbs/M1.jpg",
+      "src": "https://arxiv.org/html/2611.26444v1/figures/realworld_mapping/thumbs/M1.jpg",
       "caption": "Figure 16",
       "anchor": "A6.F16"
     },
     {
-      "src": "https://arxiv.org/html/2611.26444v1/2611.26444v1/figures/realworld_mapping/thumbs/DR1.jpg",
+      "src": "https://arxiv.org/html/2611.26444v1/figures/realworld_mapping/thumbs/DR1.jpg",
       "caption": "Figure 16",
       "anchor": "A6.F16"
     },
     {
-      "src": "https://arxiv.org/html/2611.26444v1/2611.26444v1/figures/realworld_mapping/thumbs/DR3.jpg",
+      "src": "https://arxiv.org/html/2611.26444v1/figures/realworld_mapping/thumbs/DR3.jpg",
       "caption": "Figure 16",
       "anchor": "A6.F16"
     },
     {
-      "src": "https://arxiv.org/html/2611.26444v1/2611.26444v1/figures/realworld_mapping/thumbs/DR4.jpg",
+      "src": "https://arxiv.org/html/2611.26444v1/figures/realworld_mapping/thumbs/DR4.jpg",
       "caption": "Figure 16",
       "anchor": "A6.F16"
     },
     {
-      "src": "https://arxiv.org/html/2611.26444v1/2611.26444v1/figures/realworld_mapping/thumbs/E2.jpg",
+      "src": "https://arxiv.org/html/2611.26444v1/figures/realworld_mapping/thumbs/E2.jpg",
       "caption": "Figure 16",
       "anchor": "A6.F16"
     },
     {
-      "src": "https://arxiv.org/html/2611.26444v1/2611.26444v1/figures/realworld_mapping/thumbs/F1.jpg",
+      "src": "https://arxiv.org/html/2611.26444v1/figures/realworld_mapping/thumbs/F1.jpg",
       "caption": "Figure 16",
       "anchor": "A6.F16"
     },
     {
-      "src": "https://arxiv.org/html/2611.26444v1/2611.26444v1/figures/realworld_mapping/thumbs/DR2.jpg",
+      "src": "https://arxiv.org/html/2611.26444v1/figures/realworld_mapping/thumbs/DR2.jpg",
       "caption": "Figure 16",
       "anchor": "A6.F16"
     },
     {
-      "src": "https://arxiv.org/html/2611.26444v1/2611.26444v1/figures/realworld_mapping/thumbs/PR1.jpg",
+      "src": "https://arxiv.org/html/2611.26444v1/figures/realworld_mapping/thumbs/PR1.jpg",
       "caption": "Figure 16",
       "anchor": "A6.F16"
     },
     {
-      "src": "https://arxiv.org/html/2611.26444v1/2611.26444v1/figures/realworld_mapping/thumbs/PR2.jpg",
+      "src": "https://arxiv.org/html/2611.26444v1/figures/realworld_mapping/thumbs/PR2.jpg",
       "caption": "Figure 16",
       "anchor": "A6.F16"
     },
     {
-      "src": "https://arxiv.org/html/2611.26444v1/2611.26444v1/figures/realworld_mapping/thumbs/PR3.jpg",
+      "src": "https://arxiv.org/html/2611.26444v1/figures/realworld_mapping/thumbs/PR3.jpg",
       "caption": "Figure 16",
       "anchor": "A6.F16"
     },
     {
-      "src": "https://arxiv.org/html/2611.26444v1/2611.26444v1/figures/realworld_mapping/thumbs/PR5.jpg",
+      "src": "https://arxiv.org/html/2611.26444v1/figures/realworld_mapping/thumbs/PR5.jpg",
       "caption": "Figure 16",
       "anchor": "A6.F16"
     },
     {
-      "src": "https://arxiv.org/html/2611.26444v1/2611.26444v1/figures/realworld_mapping/thumbs/CP06.jpg",
+      "src": "https://arxiv.org/html/2611.26444v1/figures/realworld_mapping/thumbs/CP06.jpg",
       "caption": "Figure 16",
       "anchor": "A6.F16"
     },
     {
-      "src": "https://arxiv.org/html/2611.26444v1/2611.26444v1/figures/realworld_mapping/thumbs/CP09.jpg",
+      "src": "https://arxiv.org/html/2611.26444v1/figures/realworld_mapping/thumbs/CP09.jpg",
       "caption": "Figure 16",
       "anchor": "A6.F16"
     },
     {
-      "src": "https://arxiv.org/html/2611.26444v1/2611.26444v1/figures/realworld_mapping/thumbs/PR6.jpg",
+      "src": "https://arxiv.org/html/2611.26444v1/figures/realworld_mapping/thumbs/PR6.jpg",
       "caption": "Figure 16",
       "anchor": "A6.F16"
     },
     {
-      "src": "https://arxiv.org/html/2611.26444v1/2611.26444v1/figures/realworld_mapping/thumbs/CP07.jpg",
+      "src": "https://arxiv.org/html/2611.26444v1/figures/realworld_mapping/thumbs/CP07.jpg",
       "caption": "Figure 16",
       "anchor": "A6.F16"
     },
     {
-      "src": "https://arxiv.org/html/2611.26444v1/2611.26444v1/figures/realworld_mapping/thumbs/CP08.jpg",
+      "src": "https://arxiv.org/html/2611.26444v1/figures/realworld_mapping/thumbs/CP08.jpg",
       "caption": "Figure 16",
       "anchor": "A6.F16"
     },
     {
-      "src": "https://arxiv.org/html/2611.26444v1/2611.26444v1/figures/realworld_mapping/thumbs/F2.jpg",
+      "src": "https://arxiv.org/html/2611.26444v1/figures/realworld_mapping/thumbs/F2.jpg",
       "caption": "Figure 16",
       "anchor": "A6.F16"
     },
     {
-      "src": "https://arxiv.org/html/2611.26444v1/2611.26444v1/figures/realworld_mapping/thumbs/M2.jpg",
+      "src": "https://arxiv.org/html/2611.26444v1/figures/realworld_mapping/thumbs/M2.jpg",
       "caption": "Figure 16",
       "anchor": "A6.F16"
     },
     {
-      "src": "https://arxiv.org/html/2611.26444v1/2611.26444v1/figures/realworld_mapping/thumbs/S2.jpg",
+      "src": "https://arxiv.org/html/2611.26444v1/figures/realworld_mapping/thumbs/S2.jpg",
       "caption": "Figure 16",
       "anchor": "A6.F16"
     },
     {
-      "src": "https://arxiv.org/html/2611.26444v1/2611.26444v1/figures/realworld_mapping/thumbs/CP05.jpg",
+      "src": "https://arxiv.org/html/2611.26444v1/figures/realworld_mapping/thumbs/CP05.jpg",
       "caption": "Figure 16",
       "anchor": "A6.F16"
     },
     {
-      "src": "https://arxiv.org/html/2611.26444v1/2611.26444v1/figures/realworld_mapping/thumbs/CP10.jpg",
+      "src": "https://arxiv.org/html/2611.26444v1/figures/realworld_mapping/thumbs/CP10.jpg",
       "caption": "Figure 16",
       "anchor": "A6.F16"
     }

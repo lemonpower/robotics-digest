@@ -2,32 +2,32 @@
   "version": "v1",
   "figures": [
     {
-      "src": "https://arxiv.org/html/2610.31423v1/2610.31423v1/overview.png",
+      "src": "https://arxiv.org/html/2610.31423v1/overview.png",
       "caption": "Figure 1",
       "anchor": "S0.F1"
     },
     {
-      "src": "https://arxiv.org/html/2610.31423v1/2610.31423v1/focusvla-analysis.png",
+      "src": "https://arxiv.org/html/2610.31423v1/focusvla-analysis.png",
       "caption": "Figure 3",
       "anchor": "S3.F3"
     },
     {
-      "src": "https://arxiv.org/html/2610.31423v1/2610.31423v1/methods.png",
+      "src": "https://arxiv.org/html/2610.31423v1/methods.png",
       "caption": "Figure 4",
       "anchor": "S3.F4"
     },
     {
-      "src": "https://arxiv.org/html/2610.31423v1/2610.31423v1/realworld.png",
+      "src": "https://arxiv.org/html/2610.31423v1/realworld.png",
       "caption": "Figure 5",
       "anchor": "S4.F5"
     },
     {
-      "src": "https://arxiv.org/html/2610.31423v1/2610.31423v1/spatial.png",
+      "src": "https://arxiv.org/html/2610.31423v1/spatial.png",
       "caption": "Figure 6",
       "anchor": "S4.F6"
     },
     {
-      "src": "https://arxiv.org/html/2610.31423v1/2610.31423v1/visualize.png",
+      "src": "https://arxiv.org/html/2610.31423v1/visualize.png",
       "caption": "Figure 7",
       "anchor": "S4.F7"
     }

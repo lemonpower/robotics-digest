@@ -2,82 +2,82 @@
   "version": "v1",
   "figures": [
     {
-      "src": "https://arxiv.org/html/2506.14754v1/2506.14754v1/figures/teaser/sparsh-x-teaser.png",
+      "src": "https://arxiv.org/html/2506.14754v1/figures/teaser/sparsh-x-teaser.png",
       "caption": "Figure 1",
       "anchor": "S0.F1"
     },
     {
-      "src": "https://arxiv.org/html/2506.14754v1/2506.14754v1/architecture.png",
+      "src": "https://arxiv.org/html/2506.14754v1/architecture.png",
       "caption": "Figure 2",
       "anchor": "S3.F2"
     },
     {
-      "src": "https://arxiv.org/html/2506.14754v1/2506.14754v1/figures/method/pre-training-setup2.png",
+      "src": "https://arxiv.org/html/2506.14754v1/figures/method/pre-training-setup2.png",
       "caption": "Figure 3",
       "anchor": "S3.F3"
     },
     {
-      "src": "https://arxiv.org/html/2506.14754v1/2506.14754v1/plots_classification.png",
+      "src": "https://arxiv.org/html/2506.14754v1/plots_classification.png",
       "caption": "Figure 4",
       "anchor": "S4.F4"
     },
     {
-      "src": "https://arxiv.org/html/2506.14754v1/2506.14754v1/figures/plug_insertion/plug-insertion-d360.png",
+      "src": "https://arxiv.org/html/2506.14754v1/figures/plug_insertion/plug-insertion-d360.png",
       "caption": "Figure 5",
       "anchor": "S4.F5"
     },
     {
-      "src": "https://arxiv.org/html/2506.14754v1/2506.14754v1/figures/plug_insertion/sparshx_plug_insertion_sr_serif.png",
+      "src": "https://arxiv.org/html/2506.14754v1/figures/plug_insertion/sparshx_plug_insertion_sr_serif.png",
       "caption": "Figure 5",
       "anchor": "S4.F5"
     },
     {
-      "src": "https://arxiv.org/html/2506.14754v1/2506.14754v1/controlnet_diagram.png",
+      "src": "https://arxiv.org/html/2506.14754v1/controlnet_diagram.png",
       "caption": "Figure 6",
       "anchor": "S4.F6"
     },
     {
-      "src": "https://arxiv.org/html/2506.14754v1/2506.14754v1/hora_controlnet_all.png",
+      "src": "https://arxiv.org/html/2506.14754v1/hora_controlnet_all.png",
       "caption": "Figure 7",
       "anchor": "S4.F7"
     },
     {
-      "src": "https://arxiv.org/html/2506.14754v1/2506.14754v1/data_ssl.png",
+      "src": "https://arxiv.org/html/2506.14754v1/data_ssl.png",
       "caption": "Figure 8",
       "anchor": "A1.F8"
     },
     {
-      "src": "https://arxiv.org/html/2506.14754v1/2506.14754v1/viz_ssl_data.png",
+      "src": "https://arxiv.org/html/2506.14754v1/viz_ssl_data.png",
       "caption": "Figure 9",
       "anchor": "A1.F9"
     },
     {
-      "src": "https://arxiv.org/html/2506.14754v1/2506.14754v1/viz_material_dataset.png",
+      "src": "https://arxiv.org/html/2506.14754v1/viz_material_dataset.png",
       "caption": "Figure 10",
       "anchor": "A1.F10"
     },
     {
-      "src": "https://arxiv.org/html/2506.14754v1/2506.14754v1/viz_force_dataset.png",
+      "src": "https://arxiv.org/html/2506.14754v1/viz_force_dataset.png",
       "caption": "Figure 11",
       "anchor": "A1.F11"
     },
     {
-      "src": "https://arxiv.org/html/2506.14754v1/2506.14754v1/cm_obj_act_surf.png",
+      "src": "https://arxiv.org/html/2506.14754v1/cm_obj_act_surf.png",
       "caption": "Figure 12",
       "anchor": "A2.F12"
     },
     {
-      "src": "https://arxiv.org/html/2506.14754v1/2506.14754v1/cm_grains.png",
+      "src": "https://arxiv.org/html/2506.14754v1/cm_grains.png",
       "caption": "Figure 13",
       "anchor": "A2.F13"
     },
     {
-      "src": "https://arxiv.org/html/2506.14754v1/2506.14754v1/appendix/figures/policy_implementation.png",
+      "src": "https://arxiv.org/html/2506.14754v1/appendix/figures/policy_implementation.png",
       "caption": "Figure 14",
       "anchor": "A3.F14"
     },
     {
-      "src": "https://arxiv.org/html/2506.14754v1/2506.14754v1/appendix/figures/sparshx-plug-insertion.png",
+      "src": "https://arxiv.org/html/2506.14754v1/appendix/figures/sparshx-plug-insertion.png",
       "caption": "Figure 15",
       "anchor": "A3.F15"
     }
