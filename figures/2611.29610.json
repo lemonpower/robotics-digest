@@ -1,0 +1,35 @@
+{
+  "version": "v1",
+  "figures": [
+    {
+      "src": "https://arxiv.org/html/2611.29610v1/2611.29610v1/teaser_fig.png",
+      "caption": "Figure 1",
+      "anchor": "S0.F1"
+    },
+    {
+      "src": "https://arxiv.org/html/2611.29610v1/2611.29610v1/main-method.png",
+      "caption": "Figure 2",
+      "anchor": "S2.F2"
+    },
+    {
+      "src": "https://arxiv.org/html/2611.29610v1/2611.29610v1/V0_function_fig.png",
+      "caption": "Figure 3",
+      "anchor": "S4.F3"
+    },
+    {
+      "src": "https://arxiv.org/html/2611.29610v1/2611.29610v1/distribution_12_row.png",
+      "caption": "Figure 4",
+      "anchor": "S4.F4"
+    },
+    {
+      "src": "https://arxiv.org/html/2611.29610v1/2611.29610v1/figs/real_quality.png",
+      "caption": "Figure 6",
+      "anchor": "S4.F6"
+    },
+    {
+      "src": "https://arxiv.org/html/2611.29610v1/2611.29610v1/train_test_diversity.png",
+      "caption": "Figure S1",
+      "anchor": "Ax1.F1"
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "version": "v1",
+  "figures": [
+    {
+      "src": "https://arxiv.org/html/2611.28752v1/2611.28752v1/figures/exports/fig1_overview.png",
+      "caption": "Figure 1",
+      "anchor": "S0.F1"
+    },
+    {
+      "src": "https://arxiv.org/html/2611.28752v1/2611.28752v1/figures/exports/fig2_architecture.png",
+      "caption": "Figure 2",
+      "anchor": "S3.F2"
+    },
+    {
+      "src": "https://arxiv.org/html/2611.28752v1/2611.28752v1/fig3_alignment.png",
+      "caption": "Figure 3",
+      "anchor": "S3.F3"
+    },
+    {
+      "src": "https://arxiv.org/html/2611.28752v1/2611.28752v1/fig4_objects.png",
+      "caption": "Figure 4",
+      "anchor": "S4.F4"
+    },
+    {
+      "src": "https://arxiv.org/html/2611.28752v1/2611.28752v1/fig5_slip_timeline.png",
+      "caption": "Figure 5",
+      "anchor": "S4.F5"
+    },
+    {
+      "src": "https://arxiv.org/html/2611.28752v1/2611.28752v1/supp_goal_region.png",
+      "caption": "Figure S1",
+      "anchor": "A3.F1"
+    },
+    {
+      "src": "https://arxiv.org/html/2611.28752v1/2611.28752v1/figures/exports/supp_sensor_friction.png",
+      "caption": "Figure S2",
+      "anchor": "A7.F2"
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "version": "v1",
+  "figures": [
+    {
+      "src": "https://arxiv.org/html/2611.24011v1/2611.24011v1/transfer.png",
+      "caption": "Figure 2",
+      "anchor": "S3.F2"
+    },
+    {
+      "src": "https://arxiv.org/html/2611.24011v1/2611.24011v1/opd.png",
+      "caption": "Figure 3",
+      "anchor": "S3.F3"
+    },
+    {
+      "src": "https://arxiv.org/html/2611.24011v1/2611.24011v1/qlm_bench_tasks.png",
+      "caption": "Figure 4",
+      "anchor": "S3.F4"
+    },
+    {
+      "src": "https://arxiv.org/html/2611.24011v1/2611.24011v1/three_tasks_key_frames_sim_real.png",
+      "caption": "Figure 5",
+      "anchor": "S5.F5"
+    },
+    {
+      "src": "https://arxiv.org/html/2611.24011v1/2611.24011v1/real_robot_setup.png",
+      "caption": "Figure S3",
+      "anchor": "S4.F3"
+    }
+  ]
+}

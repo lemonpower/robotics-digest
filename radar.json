@@ -2995,7 +2995,14 @@
       ],
       "upvotes": 61,
       "brief": "We present Motion Mamba 2.0, a Mamba-based root-body diffusion architecture that integrates local attention, resumable recurrent states, and persistent content memory (PCM) for long-horizon controllable motion generation. On an RTX 4090, the optimized execution reduces median complete-window latency from 1685.35 to 276.14 ms, achieving a median paired speedup of 6.138$\\times$ while preserving identical outputs and committed states in the tested rollouts.",
-      "topics": []
+      "reading": {
+        "method": "We present Motion Mamba 2.0, a Mamba-based root-body diffusion architecture that integrates local attention, resumable recurrent states, and persistent content memory (PCM) for long-horizon controllable motion generation.",
+        "results": "On an RTX 4090, the optimized execution reduces median complete-window latency from 1685.35 to 276.14 ms, achieving a median paired speedup of 6.138$\\times$ while preserving identical outputs and committed states in the tested rollouts.",
+        "depth": "Abstract brief"
+      },
+      "topics": [],
+      "picture": "https://arxiv.org/html/2611.29897v1/2611.29897v1/introduction.png",
+      "caption": "Fig. 2"
     },
     {
       "id": "2611.28752",
@@ -3014,7 +3021,14 @@
         "Renjing Xu"
       ],
       "brief": "We present VTLA-RL to study visuotactile grasping policies and their reinforcement learning (RL) post-training under varying loads. The full method achieves higher grasping success than the supervised initialization, while RL post-training gains differ across approaches, providing empirical evidence for choosing representations and training approaches for this task.",
-      "topics": []
+      "reading": {
+        "method": "We present VTLA-RL to study visuotactile grasping policies and their reinforcement learning (RL) post-training under varying loads.",
+        "results": "The full method achieves higher grasping success than the supervised initialization, while RL post-training gains differ across approaches, providing empirical evidence for choosing representations and training approaches for this task.",
+        "depth": "Abstract brief"
+      },
+      "topics": [],
+      "picture": "https://arxiv.org/html/2611.28752v1/2611.28752v1/figures/exports/fig1_overview.png",
+      "caption": "Figure 1"
     },
     {
       "id": "2611.28939",
@@ -3033,7 +3047,13 @@
         "Wen Jung Li"
       ],
       "brief": "Accurate material identification is important for robotic manipulation, yet vision-based methods face challenges when materials have similar appearances. Experiments on 12 materials achieve a mean classification accuracy of 92.69\\% using a 3 s heating pulse and a 10 s observation window.",
-      "topics": []
+      "reading": {
+        "results": "Experiments on 12 materials achieve a mean classification accuracy of 92.69\\% using a 3 s heating pulse and a 10 s observation window.",
+        "depth": "Abstract brief"
+      },
+      "topics": [],
+      "picture": "https://arxiv.org/html/2611.28939v1/2611.28939v1/device_design.png",
+      "caption": "Fig. 1"
     },
     {
       "id": "2611.29240",
@@ -3065,7 +3085,13 @@
         "Junjie Lai"
       ],
       "brief": "We present Tacinf, a low-cost, modular infrastructure that enables policies to predict robot actions and fingertip forces from task language, vision, and touch.",
-      "topics": []
+      "reading": {
+        "method": "We present Tacinf, a low-cost, modular infrastructure that enables policies to predict robot actions and fingertip forces from task language, vision, and touch.",
+        "depth": "Abstract brief"
+      },
+      "topics": [],
+      "picture": "https://arxiv.org/html/2611.29240v1/2611.29240v1/figs/fig01_overview.png",
+      "caption": "Figure 1"
     },
     {
       "id": "2611.29610",
@@ -3079,7 +3105,14 @@
         "Xueyan Zou"
       ],
       "brief": "We introduce a time-reversed curriculum with a coordinated reset mechanism that enables a simple MLP policy trained with PPO to capture multiple modes of the grasp-pose distribution while maintaining closed-loop control. Experiments demonstrate both diverse grasping behaviors and robust closed-loop execution.",
-      "topics": []
+      "reading": {
+        "method": "We introduce a time-reversed curriculum with a coordinated reset mechanism that enables a simple MLP policy trained with PPO to capture multiple modes of the grasp-pose distribution while maintaining closed-loop control.",
+        "results": "Experiments demonstrate both diverse grasping behaviors and robust closed-loop execution.",
+        "depth": "Abstract brief"
+      },
+      "topics": [],
+      "picture": "https://arxiv.org/html/2611.29610v1/2611.29610v1/teaser_fig.png",
+      "caption": "Figure 1"
     }
   ],
   "communityPicks": [
@@ -3089,7 +3122,11 @@
       "upvotes": 57,
       "date": "2026-11-19",
       "brief": "We introduce Mind2Act World, a diagnostic benchmark of 30 simulated manipulation tasks from five real-world application domains.",
-      "batch": null
+      "abstract": "",
+      "reading": {},
+      "batch": null,
+      "picture": "https://arxiv.org/html/2611.26444v1/2611.26444v1/figures/capability_map/background.jpg",
+      "caption": "Figure 1"
     },
     {
       "id": "2611.26414",
@@ -3097,7 +3134,11 @@
       "upvotes": 24,
       "date": "2026-11-19",
       "brief": "We introduce ZeroVLN, a slow-fast navigation framework that achieves effective navigation with zero navigation-domain SFT of the VLM brain. Trained on the same navigation episodes, ZeroVLN substantially outperforms representative SFT-based hierarchical VLN methods on standard VLN-CE (continuous environments) benchmarks, while inducing only minor changes to the brain's weights and largely preserving its general capabilities.",
-      "batch": null
+      "abstract": "",
+      "reading": {},
+      "batch": null,
+      "picture": "https://arxiv.org/html/2611.26414v1/2611.26414v1/fig_agent_architecture.png",
+      "caption": "Figure 2"
     },
     {
       "id": "2611.24011",
@@ -3105,11 +3146,16 @@
       "upvotes": 20,
       "date": "2026-11-18",
       "brief": "Arm-free quadrupeds can perform loco-manipulation, walking on three legs while manipulating with a front leg, yet no existing policy for it follows language instructions. WAM-Policy thus achieves a stronger quadrupedal policy at a fraction of the inference cost.",
-      "batch": null
+      "abstract": "",
+      "reading": {},
+      "batch": null,
+      "picture": "https://arxiv.org/html/2611.24011v1/2611.24011v1/transfer.png",
+      "caption": "Figure 2"
     }
   ],
   "roboticaUpdated": "2026-11-24T07:11:40.880000+00:00",
   "roboticaStatus": "live",
   "topics": [],
-  "archivedTopics": []
+  "archivedTopics": [],
+  "editions": {}
 }
