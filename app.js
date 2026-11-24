@@ -16,7 +16,7 @@ const translations = {
   "2611.20452":"一分钟内学习人形运动跟踪和地形移动",
   "2611.27648":"用梯度截断改进人形运动跟踪"
 };
-const names = {all:"全部方向", agentic:tracks.agentic, robots:tracks.robots, rl:tracks.rl};
+const names = {all:"全部论文", agentic:tracks.agentic, rl:tracks.rl};
 const byRecent = [...issues].sort((a,b)=>b.date.localeCompare(a.date));
 const url = new URL(location.href);
 let selectedIssue = issues.find(issue=>issue.key===url.searchParams.get("issue"))?.key ?? byRecent.find(issue=>issue.batch).key;
@@ -179,7 +179,7 @@ function openPaper(p){
 function showComparison(){
   const table=node("table");
   const header=node("thead"), row=node("tr");
-  for(const label of ["论文","主线","核心方法","代表性结果","证据边界"]){
+  for(const label of ["论文","分类","核心方法","代表性结果","证据边界"]){
     const th=node("th",label);th.scope="col";row.append(th);
   }
   header.append(row);
