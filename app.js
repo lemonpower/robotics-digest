@@ -181,7 +181,10 @@ const observer=new IntersectionObserver(entries=>{
 motion.addEventListener("change",refreshVideo);
 document.addEventListener("visibilitychange",refreshVideo);
 
-function mediaSource(path){return safeHTTPS(path)?path:new URL(path,appUrl).href;}
+function mediaSource(path){
+  if(!safeHTTPS(path))return new URL(path,appUrl).href;
+  return path.replace(/^(https:\/\/arxiv\.org\/html\/(\d{4}\.\d{4,5}v\d+)\/)\2\//,"$1");
+}
 function media(p,{clip,index=0,compact=false,auto=true}={}){
   const f=el("figure",null,compact?"media media-compact":"media");
   const picture=index===0?p.picture:null;
@@ -495,8 +498,8 @@ function figure(item){
 }
 function fillGallery(p,gallery){
   const data=detail(p), collected=new Map();
-  for(const item of data.figures??[])collected.set(item.src,item);
-  if(p.picture&&!collected.has(p.picture))collected.set(p.picture,{src:p.picture,caption:p.caption});
+  for(const item of data.figures??[])collected.set(mediaSource(item.src),item);
+  if(p.picture&&!collected.has(mediaSource(p.picture)))collected.set(mediaSource(p.picture),{src:p.picture,caption:p.caption});
   const fallback=a("View figures in the PDF",pdf(p)+(p.pdfPage?"#page="+p.pdfPage:""),"subtle-link",true);
   const render=()=>gallery.replaceChildren(...[...collected.values()].map(figure),fallback);
   render();
@@ -504,8 +507,8 @@ function fillGallery(p,gallery){
     if(manifest?.version!==version(p)||!Array.isArray(manifest.figures))return;
     let changed=false;
     for(const item of manifest.figures){
-      if(typeof item.src==="string"&&item.src.startsWith(html(p)+"/")&&!collected.has(item.src)){
-        collected.set(item.src,item);changed=true;
+      if(typeof item.src==="string"&&item.src.startsWith(html(p)+"/")&&!collected.has(mediaSource(item.src))){
+        collected.set(mediaSource(item.src),item);changed=true;
       }
     }
     if(changed)render();

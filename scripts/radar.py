@@ -287,7 +287,7 @@ class Figures(HTMLParser):
         if tag == 'figcaption':
             self.in_caption = True
         if tag == 'img' and not self.in_caption and 'ltx_Math' not in attrs.get('class', ''):
-            src = urljoin(self.root + '/', attrs.get('src', ''))
+            src = figure_url(urljoin(self.root + '/', attrs.get('src', '')))
             if src.startswith(self.root + '/') and re.search(r'\.(png|jpg|jpeg|webp|svg|gif)$', src, re.I):
                 self.current['images'].append(src)
 
@@ -314,6 +314,10 @@ class Figures(HTMLParser):
         self.current = None
 
 
+def figure_url(value):
+    return re.sub(r'^(https://arxiv\.org/html/(\d{4}\.\d{4,5}v\d+)/)\2/', r'\1', value)
+
+
 def dump(target, obj):
     target.parent.mkdir(parents=True, exist_ok=True)
     target.write_text(json.dumps(obj, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
@@ -327,6 +331,10 @@ def acquire_figures(target, source_root, selected=()):
         revision = 'v4' if ident == '2209.07753' else 'v1'
         path = target/'figures'/f'{ident}.json'
         if path.exists():
+            cached = json.loads(path.read_text(encoding='utf-8'))
+            amended = [{**fig, 'src':figure_url(fig['src'])} for fig in cached.get('figures',[])]
+            if amended != cached.get('figures',[]):
+                dump(path, {**cached,'figures':amended})
             continue
         url = f'https://arxiv.org/html/{ident}{revision}'
         limited = False
@@ -358,7 +366,7 @@ def acquire_figures(target, source_root, selected=()):
         content = json.loads(manifest.read_text(encoding='utf-8'))
         if content.get('figures'):
             item = content['figures'][0]
-            row.update(picture=item['src'],caption=item['caption'])
+            row.update(picture=figure_url(item['src']),caption=item['caption'])
         elif content.get('pdfPreview'):
             row['pdfPreview'] = content['pdfPreview']
 
