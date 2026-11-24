@@ -1,0 +1,43 @@
+name: Robotics trend radar
+on:
+  schedule:
+    # RSS is regenerated at midnight US Eastern, including after DST changes.
+    - cron: '27 7 * * *'
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths: ['scripts/radar.py', '.github/workflows/robotics-radar.yml', 'data.js', 'editorial.js']
+
+permissions:
+  contents: write
+
+concurrency:
+  group: robotics-radar
+  cancel-in-progress: false
+
+jobs:
+  collect:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - name: Read and update the data branch
+        shell: bash
+        run: |
+          set -euo pipefail
+          source_checkout="$PWD"
+          radar_checkout="$RUNNER_TEMP/radar-checkout"
+          radar_head="$(git ls-remote --heads origin refs/heads/radar-data)"
+          if [[ -n "$radar_head" ]]; then
+            git fetch --depth=1 origin radar-data
+            git worktree add --detach "$radar_checkout" FETCH_HEAD
+          else
+            git worktree add --detach "$radar_checkout" HEAD
+            git -C "$radar_checkout" switch --orphan radar-data
+          fi
+          python3 "$source_checkout/scripts/radar.py" "$radar_checkout" --figures
+          git -C "$radar_checkout" add --all
+          if ! git -C "$radar_checkout" diff --cached --quiet; then
+            git -C "$radar_checkout" -c user.name='github-actions[bot]' -c user.email='41898282+github-actions[bot]@users.noreply.github.com' commit -m 'Refresh arXiv robotics radar'
+            git -C "$radar_checkout" push origin HEAD:refs/heads/radar-data
+          fi

@@ -3,13 +3,14 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="具身智能论文日报：追踪 Agentic Robots（智能体驱动的机器人控制）与 Robot RL，查阅热点、方法、实验与证据边界。">
+  <meta name="description" content="具身智能论文日报：重点追踪触觉感知、机器人强化学习和机器人智能体，并发现新的研究热点。">
   <meta name="theme-color" content="#f8f7ff">
   <title>具身智能论文日报 · Embodied Research</title>
   <link rel="icon" href="mark.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="style.css">
-  <script defer src="data.js?v=2"></script>
-  <script defer src="app.js?v=2"></script>
+  <link rel="stylesheet" href="style.css?v=3">
+  <script defer src="data.js?v=3"></script>
+  <script defer src="editorial.js?v=3"></script>
+  <script defer src="app.js?v=3"></script>
 </head>
 <body>
   <a class="skip" href="#reading">跳到论文库</a>
@@ -17,7 +18,7 @@
     <div class="frame top-inner">
       <a class="brand" href="#top"><img src="mark.svg" alt="" width="35" height="35"><span>具身智能<span class="brand-suffix">论文日报</span></span></a>
       <nav aria-label="站内导航">
-        <a href="#overview">研究概览</a><a href="#reading">论文库</a><a href="#history">往期归档</a>
+        <a href="#reading">论文库</a><a href="#topics">专题</a><a href="#radar">热点雷达</a><a href="#history">归档</a>
       </nav>
       <a class="source-link" href="https://arxiv.org/list/cs.RO/new" target="_blank" rel="noopener">arXiv <span aria-hidden="true">↗</span></a>
     </div>
@@ -27,8 +28,8 @@
       <div class="hero-copy">
         <div class="eyebrow"><span></span> EMBODIED RESEARCH / 研究简报</div>
         <h1 id="hero-title">具身智能<br><em>论文日报</em></h1>
-        <p>追踪 Agentic Robots 与 Robot RL：从智能体驱动的机器人控制，<br class="wide">到以 SuperMimic 为代表的机器人强化学习。</p>
-        <div class="hero-actions"><a class="primary" href="#reading">浏览论文</a><a class="secondary" href="#history">查看归档</a></div>
+        <p>每天发现值得读的机器人论文。持续追踪触觉感知、强化学习和机器人智能体，也关注正在出现的新方向。</p>
+        <div class="hero-actions"><a class="primary" href="#reading">阅读论文</a><a class="secondary" href="#radar">查看热点雷达</a></div>
       </div>
       <div class="hero-art" aria-hidden="true">
         <svg id="field" viewBox="0 0 640 440" fill="none">
@@ -47,6 +48,11 @@
         <span class="art-code">Perception · Policy · Control</span>
       </div>
     </section>
+    <section class="frame topics" id="topics" aria-labelledby="topics-title">
+      <div class="section-title"><div><div class="eyebrow simple">RESEARCH TOPICS</div><h2 id="topics-title">研究专题</h2></div></div>
+      <p class="section-note">三个长期追踪方向。其他研究照常收录，专题可交叉。</p>
+      <div id="topic-list" class="topic-list"></div>
+    </section>
     <section class="frame overview" id="overview" aria-labelledby="overview-title">
       <div class="section-title"><div><div class="eyebrow simple">RESEARCH BRIEF</div><h2 id="overview-title">研究概览</h2></div><div id="issue-label" class="batch"></div></div>
       <p id="scope" class="scope"></p>
@@ -54,7 +60,7 @@
       <p class="inference" id="inference"></p>
     </section>
     <section class="frame library" id="reading" aria-labelledby="library-title">
-      <div class="section-title"><div><div class="eyebrow simple">PAPER LIBRARY</div><h2 id="library-title">论文库</h2></div><form role="search" id="search-form"><label class="sr" for="search">搜索论文</label><input id="search" type="search" placeholder="搜论文、作者或 arXiv 编号" autocomplete="off"></form></div>
+      <div class="section-title"><div><div class="eyebrow simple">PAPER LIBRARY</div><h2 id="library-title">论文库</h2></div><form role="search" id="search-form"><label class="sr" for="search">搜索论文</label><input id="search" type="search" placeholder="搜关键词、论文或作者" autocomplete="off"></form></div>
       <div class="tools">
         <div id="filters" class="filters" role="group" aria-label="研究主线筛选"></div>
         <div class="period"><label for="issue">期次</label><select id="issue"></select></div>
@@ -63,10 +69,17 @@
       <div id="papers" class="paper-grid"></div>
       <noscript><p>请启用 JavaScript 以使用期次切换、搜索和论文精读。</p></noscript>
     </section>
+    <section class="frame radar" id="radar" aria-labelledby="radar-title">
+      <div class="section-title"><div><div class="eyebrow simple">TREND RADAR</div><h2 id="radar-title">热点雷达</h2></div><span class="batch">arXiv · cs.RO</span></div>
+      <p class="section-note">按最近 14 天的 arXiv 公布记录识别重复出现的研究方向。至少 3 篇、2 个公布日且有不同作者信号，才建立动态专题；社区点赞不计入。</p>
+      <p class="scope" id="radar-status" role="status">正在读取热点快照…</p>
+      <div id="radar-topics" class="radar-topics"></div>
+      <p class="archive-note">在这里推荐的论文来自标题和摘要筛选，不等同于人工精读，也不代表质量或下载量排名。</p>
+    </section>
     <section class="frame archive" id="history" aria-labelledby="archive-title">
       <div class="section-title"><div><div class="eyebrow simple">ARCHIVE</div><h2 id="archive-title">往期归档</h2></div></div>
       <div id="archive-list" class="archive-list"></div>
-      <p class="archive-note">往期的导航、VLA 和数据基础设施等仍可检索，未达到两条主线标准的论文标为「相关研究」。本站不实时抓取 arXiv。</p>
+      <p class="archive-note">导航、VLA、世界模型和数据基础设施等往期内容仍可搜索；「专题选读」不算作当日首发。</p>
     </section>
   </main>
   <footer><div class="frame foot"><span>具身智能论文日报</span><span>按 arXiv 公布批次整理 · 以论文原文与官方项目页为准</span><a href="#top">回到顶部</a></div></footer>

@@ -1,24 +1,17 @@
 # 具身智能论文日报
 
-GitHub Pages 静态站。浅紫主题、移动端适配、期次切换、跨期搜索、研究方向筛选、论文精读与当前结果对比。
+GitHub Pages 静态站。三个长期专题：触觉感知、机器人强化学习（含 SuperMimic）、机器人智能体（控制链中的规划、执行或纠错）。VLA、世界模型、导航等仍可收录。
 
-两条主线：**Agentic Robots**（智能体基于观察规划、执行并调整机器人动作）与 **Robot RL**（以 SuperMimic 为代表的机器人强化学习）。往期不符合这两条主线的论文保留为「相关研究」。
+## 论文精读与媒体
 
-## 本地打开
+- 数据由 `data.js` 保存；`editorial.js` 补充关键词、动机、官方视频与原图。历史或专题选读不算当日首发。
+- 视频进入视区时尝试静音循环，支持暂停和系统减少动态效果设置。没有可嵌入视频时显示论文图或项目链接。自动任务可提取 arXiv HTML 中的原图；未提供可提取 HTML 的论文仍可打开 PDF。
+- 本地可打开 `index.html`；远程媒体、热点和完整图集需要联网。Pages 继续使用 `main / (root)`。
 
-解压后双击 `index.html`。无需安装 Node.js 或启动服务器。论文中的在线图片需要联网；加载失败时仍可打开原文。
+## 自动收录
 
-## 部署到 GitHub Pages
+`Robotics trend radar` 每天读取官方 arXiv cs.RO RSS，可在 GitHub Actions 手动运行。收录 `new`、`cross` 的 v1 条目，按真实公布日和编号去重，保留空批次之前的有效快照。
 
-1. 在 GitHub 创建一个公开仓库，建议名为 `robotics-digest`。不要上传私人笔记或凭证。
-2. 把解压目录**里面的文件**提交到 `main` 分支根目录，包括隐藏文件 `.nojekyll`；确认在仓库根目录可见 `index.html`。
-3. 在仓库打开 **Settings → Pages → Build and deployment**，选择 **Deploy from a branch**，然后选择 **main / (root)** 并保存。
-4. 发布完成后，网页地址为 `https://<用户名>.github.io/robotics-digest/`。以后把变更推到该分支会触发重新发布。
+在滚动 14 天内，方向至少有 3 篇、2 个公布日、3 组无重叠署名的论文才成专题。既有标题和摘要规则，也提取不同论文标题中重复出现的新术语。归类是粗筛，作者组不是机构数；往期动态专题单独归档。第一次只有一个公布批次时先显示新论文，不硬凑热点。自动采集不撰写中文精读，不使用点赞或下载排名。
 
-[GitHub Pages 官方快速上手](https://docs.github.com/en/pages/quickstart)
-
-## 更新内容
-
-- 在 `data.js` 的 `issues` 中新增一期，使用独立期次 key，并分别填写检索日期和 arXiv 公布批次。非首发批次专题令 `batch` 为 `null`。
-- 在 `app.js` 中的 `translations` 增加每篇论文的中文题名。图片用原文或官方主页地址，并注明图意；来源和链接要核实。
-- 现有两期是历史日报，另有 SuperMimic 路线专题。**本站不会自行抓取 arXiv 或生成日报**。定时更新需要另行配置内容生成与提交到仓库的流程。
+工作流把公开 JSON 写入 `radar-data` 分支，前端直接读取，不依赖机器人触发 Pages 重新发布。无需 PAT；需允许 Actions 使用 `contents: write`。本地可运行 `python3 scripts/radar.py <输出目录> --rss-file <测试源>`。
