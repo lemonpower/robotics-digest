@@ -15,6 +15,7 @@ from urllib.error import HTTPError, URLError
 from urllib.parse import urljoin
 from urllib.request import Request, urlopen
 import xml.etree.ElementTree as ET
+from week_backfill import EXPECTED, RECENT_URL, SOURCE_OFFSETS, WINDOW, enrich_atom, parse_recent, select_week
 
 FEED = 'https://rss.arxiv.org/rss/cs.RO'
 ROBOTICA_API = 'https://robotica.dev/api/articles.json'
@@ -107,6 +108,10 @@ def independent_count(rows):
 
 def public_paper(paper, community=None):
     result = {key: paper[key] for key in ('id', 'title', 'abstract', 'batch', 'kind')}
+    if paper.get('first'):
+        result['first']=paper['first']
+    if paper.get('primary'):
+        result['primary']=paper['primary']
     if paper.get('displayAuthors'):
         result['authors'] = paper['displayAuthors']
     if community:
@@ -421,12 +426,56 @@ def acquire_pdf_figure(target, ident, revision):
     return None
 
 
+def read_abstract(row):
+    try:
+        time.sleep(3)
+        parser = AbstractMeta()
+        parser.feed(read_source('https://arxiv.org/abs/'+row['id']+'v1',2_000_000).decode('utf-8','replace'))
+        body = clean(''.join(parser.parts)).removeprefix('Abstract:').strip()
+        if body:
+            row['abstract']=body[:3000]
+    except (HTTPError,URLError,TimeoutError,ValueError) as e:
+        print(f'No verified abstract for {row["id"]}: {e}',flush=True)
+        return not isinstance(e,HTTPError) or e.code not in (429,503)
+    return True
+
+
+def backfill_week(history):
+    missing={day for day,n in EXPECTED.items() if len(history.get(day,[]))!=n}
+    if not missing:
+        return
+    try:
+        found=parse_recent(read_source(RECENT_URL))
+        for day in missing.intersection(found):
+            papers=found[day]
+            for p in papers:
+                p['authors']=[norm(n) for n in p['displayAuthors'] if n]
+            history[day]=papers
+        print(f'Official recent listing recovered {sorted(missing.intersection(found))}',flush=True)
+    except (ValueError,URLError,TimeoutError) as e:
+        print(f'Official historical listing unavailable: {e}',flush=True)
+
+
+def edition_record(papers, picks, community, source=None):
+    day=papers[0]['batch'] if papers else None
+    assert not papers or all(p['batch']==day for p in papers), 'paper date differs from batch'
+    counts={kind:sum(p['kind']==kind for p in papers) for kind in ('new','cross','listed')}
+    ranking=[]
+    for name,pattern in KNOWN.values():
+        count=sum(bool(re.search(pattern,norm(p['title']))) for p in papers)
+        if count:
+            ranking.append({'name':name,'count':count})
+    return {'picks':picks,'communityPicks':community,'total':len(papers),'counts':counts,'source':source,
+            'signals':sorted(ranking,key=lambda slot:-slot['count'])[:3]}
+
+
 def main():
     cli = argparse.ArgumentParser()
     cli.add_argument('output', type=Path)
     cli.add_argument('--rss-file', type=Path, help='Read a local RSS fixture instead of the live source')
     cli.add_argument('--robotica-file', type=Path, help='Read a Robotica fixture; skipped by default with local --rss-file')
     cli.add_argument('--figures', action='store_true', help='Fetch official HTML figure indexes for editorial papers')
+    cli.add_argument('--backfill-week', action='store_true', help='Restore the verified Nov 18–24 archive if missing')
     args = cli.parse_args()
     root = args.output
     batch, records = parse_feed(args.rss_file.read_bytes() if args.rss_file else read_source(FEED))
@@ -434,6 +483,8 @@ def main():
     history = json.loads(state_file.read_text()) if state_file.exists() else {}
     if records:
         history[batch] = records
+    if args.backfill_week and not args.rss_file and batch <= '2026-12-15':
+        backfill_week(history)
     if history:
         latest = max(history)
         latest_day = date.fromisoformat(latest)
@@ -479,9 +530,34 @@ def main():
         prior_day = last_snapshot.get('latestBatch')
         if prior_day and prior_day != latest:
             editions[prior_day] = {key:last_snapshot.get(key,[]) for key in ('picks','communityPicks')}
-        snapshot['editions'] = {day:item for day,item in editions.items() if day >= past and day != latest}
+        archive_days={}
+        targets={}
+        for day,papers in sorted(history.items()):
+            if not papers:
+                continue
+            source=RECENT_URL if day in SOURCE_OFFSETS else None
+            archive_days[day]=edition_record(papers,[],[],source)
+            dump(root/'batches'/f'{day}.json',{'batch':day,'papers':[public_paper(p) for p in papers]})
+            if day!=latest and day in EXPECTED and not editions.get(day,{}).get('picks'):
+                targets[day]=select_week(papers,day,KNOWN,norm)
+        if targets and not args.rss_file:
+            flat=[paper for picks in targets.values() for paper in picks]
+            enrich_atom(flat,read_source,norm,clean)
+            for row in flat:
+                if not row.get('abstract') and not read_abstract(row):
+                    break
+            for day,picks in targets.items():
+                edition_picks=[{**public_paper(p),'brief':abstract_brief(p['abstract']) if p['abstract'] else '',
+                                'reading':abstract_sections(p['abstract'])} for p in picks]
+                editions[day]=edition_record(history[day],edition_picks,[],archive_days[day]['source'])
+        snapshot['editionInfo']={key:value for key,value in archive_days.get(latest,{}).items() if key not in ('picks','communityPicks')}
+        snapshot['editions'] = {day:{**archive_days.get(day,{}),**item} for day,item in editions.items() if day >= past and day != latest}
+        if all(len(history.get(day,[]))==count for day,count in EXPECTED.items()):
+            snapshot['week']={'start':WINDOW[0],'end':WINDOW[1],'published':EXPECTED,
+                              'noAnnouncements':['2026-11-21','2026-11-22'],'source':RECENT_URL}
         if args.figures:
-            acquire_figures(root,Path(__file__).resolve().parents[1],snapshot['picks']+snapshot['communityPicks'])
+            new_past=[p for day in targets for p in snapshot['editions'][day]['picks']]
+            acquire_figures(root,Path(__file__).resolve().parents[1],snapshot['picks']+snapshot['communityPicks']+new_past)
         dump(state_file, history)
         dump(snapshot_file, snapshot)
         print(f'{latest}: {len(recent)} unique papers, {len(snapshot["topics"])} topics')

@@ -107,7 +107,7 @@ function automaticPaper(row){
   const track=Object.keys(focusTopics).find(key=>tags.includes(focusTopics[key].name))??"shared";
   return {
     id:row.id,name:notes.name??row.title,en:row.title,track,keywords:tags.slice(0,6),
-    first:notes.first??"",batch:row.batch,date:row.date,kind:row.kind,upvotes:row.upvotes,
+    first:notes.first??row.first??"",batch:row.batch,date:row.date,kind:row.kind,upvotes:row.upvotes,
     authors:notes.authors??row.authors??[],project:notes.project??row.project,
     picture:notes.picture??row.picture??(row.pdfPreview?.file?radarDataUrl(row.pdfPreview.file):null),
     caption:notes.caption??row.caption??(row.pdfPreview?"Original paper · PDF page "+row.pdfPreview.page:""),
@@ -128,7 +128,11 @@ function sameBatch(){
   if(!edition)return papers;
   const ids=new Set(papers.map(p=>p.id));
   const extra=(edition.picks??[]).filter(p=>validId(p.id)&&!ids.has(p.id)).slice(0,Math.max(0,5-papers.length));
-  return [...papers,...extra.map(automaticPaper)];
+  return [...papers,...extra.map(recordForCard)];
+}
+function recordForCard(row){
+  const saved=byId.get(row.id)?.p;
+  return saved?{...saved,batch:row.batch,kind:row.kind,upvotes:row.upvotes??saved.upvotes}:automaticPaper(row);
 }
 function communityPapers(){
   const edition=batchData(selectedIssue.batch);
@@ -139,6 +143,10 @@ function communityPapers(){
 function batchData(day){
   if(!day||!liveSnapshot)return null;
   return day===liveSnapshot.latestBatch?liveSnapshot:liveSnapshot.editions?.[day];
+}
+function infoFor(day){
+  if(!day||!liveSnapshot)return null;
+  return day===liveSnapshot.latestBatch?liveSnapshot.editionInfo:liveSnapshot.editions?.[day];
 }
 function snapshotRows(data){
   return [...(data?.picks??[]),...(data?.communityPicks??[]),
@@ -300,9 +308,15 @@ function updateIndex(sync=false){
   if(selectedTopic)filter.append(a(selectedTopic+" ×",searchUrl({issue:selectedIssue.key===issueDefault.key?"":selectedIssue.key,q:raw}),"chip"));
   const cross=!!(selectedTopic||raw);
   $("issue-title").textContent=selectedTopic || (raw ? "Search results" : titleOf(selectedIssue));
-  $("issue-label").textContent=cross?"":selectedIssue.batch?"arXiv batch · "+formatDate(selectedIssue.batch):"Selected readings";
-  $("brief").hidden=cross||!selectedIssue.insights?.length||selectedIssue.papers.length<2;
-  $("insights").replaceChildren(...(selectedIssue.insights??[]).map(([, ,blurb])=>lang("p",blurb)));
+  const meta=infoFor(selectedIssue.batch);
+  $("issue-label").textContent=cross?"":selectedIssue.batch?"arXiv batch · "+formatDate(selectedIssue.batch):selectedIssue.noAnnouncements?formatDate(selectedIssue.date):"Selected readings";
+  const insights=(selectedIssue.insights??[]).map(([, ,blurb])=>lang("p",blurb));
+  if(meta?.signals?.length){
+    const signal=meta.signals.map(k=>k.name+" "+k.count).join(" · ");
+    insights.unshift(lang("p","题名中反复出现的方向："+signal+"。同一论文可以命中多个方向；这不是点赞或质量排序。"));
+  }
+  $("brief").hidden=cross||!insights.length;
+  $("insights").replaceChildren(...insights);
   const needles=norm(raw).split(/\s+/).filter(Boolean);
   const source=cross?studyPapers().sort((a,b)=>(b.first||b.batch||b.date||"").localeCompare(a.first||a.batch||a.date||"")):sameBatch();
   const shown=source.filter(p=>{
@@ -312,7 +326,10 @@ function updateIndex(sync=false){
     return needles.every(token=>text.includes(token));
   });
   $("count").textContent=shown.length+(shown.length===1?" paper":" papers");
-  if(!cross&&shown.length)$("issue-label").textContent+=" · "+$("count").textContent;
+  if(!cross){
+    if(meta?.total)$("issue-label").textContent+=" · "+meta.total+" listed"+(shown.length?" · "+shown.length+" selected":"");
+    else if(shown.length)$("issue-label").textContent+=" · "+$("count").textContent;
+  }
   const buckets=new Map();
   for(const p of shown){
     const key=selectedTopic||group(p);
@@ -326,9 +343,10 @@ function updateIndex(sync=false){
     block.append(h,...items.map(p=>renderCard(p,raw)));
     return block;
   });
-  $("papers").replaceChildren(...(groups.length?groups:selectedIssue.automated&&!cross?[]:[el("p","No matching papers.","muted empty")]));
+  $("papers").replaceChildren(...(groups.length?groups:selectedIssue.noAnnouncements&&!cross?[el("p","arXiv Robotics published no new batch on this date.","muted empty")]:selectedIssue.automated&&!cross?[]:[el("p","No matching papers.","muted empty")]));
   renderCompare(shown);
   renderCommunity(cross?[]:communityPapers(),raw);
+  renderBatchIndex(cross?null:meta);
   pruneMedia();
 }
 function renderCompare(rows){
@@ -396,6 +414,9 @@ function showIndex(){
     for(const day of [data?.latestBatch,...Object.keys(data?.editions??{})]){
       if(validEdition(day)&&!descending.some(i=>i.batch===day))descending.push({key:day,batch:day,date:day,title:"Daily Papers",automated:true,papers:[]});
     }
+    for(const day of data?.week?.noAnnouncements??[]){
+      if(validEdition(day)&&!descending.some(i=>i.key===day))descending.push({key:day,date:day,title:"No arXiv Batch",noAnnouncements:true,papers:[]});
+    }
     descending.sort((a,b)=>b.date.localeCompare(a.date));
     const requested=descending.find(i=>i.key===params.get("issue"));
     const latest=descending.find(i=>i.batch===data?.latestBatch);
@@ -407,15 +428,72 @@ function showIndex(){
 }
 function renderEditions(){
   const options=[], archive=[];
-  for(const issue of [...descending].sort((a,b)=>Number(Boolean(b.batch))-Number(Boolean(a.batch))||b.date.localeCompare(a.date))){
-    const option=el("option",editionName(issue));option.value=issue.key;options.push(option);
+  for(const issue of [...descending].sort((a,b)=>Number(Boolean(b.batch||b.noAnnouncements))-Number(Boolean(a.batch||a.noAnnouncements))||b.date.localeCompare(a.date))){
+    const option=el("option",issue.noAnnouncements?formatDate(issue.date)+" · No batch":editionName(issue));option.value=issue.key;options.push(option);
     const entry=a("",searchUrl({issue:issue.key}),"archive-entry");
     const edition=batchData(issue.batch);
     const count=Math.min(5,new Set([...issue.papers.map(p=>p.id),...(edition?.picks??[]).map(p=>p.id)]).size);
-    entry.append(el("time",formatDate(issue.batch??issue.date)),el("strong",titleOf(issue)),el("span",count+(count===1?" paper":" papers")));
+    const meta=infoFor(issue.batch);
+    const caption=issue.noAnnouncements?"No new papers":meta?.total?meta.total+" listed · "+count+" selected":count+(count===1?" paper":" papers");
+    entry.append(el("time",formatDate(issue.batch??issue.date)),el("strong",titleOf(issue)),el("span",caption));
     archive.push(entry);
   }
   $("issue").replaceChildren(...options);$("archive-list").replaceChildren(...archive);
+}
+const batchLoads=new Map();
+function loadBatch(day){
+  if(!validEdition(day))return Promise.resolve(null);
+  if(!batchLoads.has(day))batchLoads.set(day,readJSON("batches/"+day+".json").catch(()=>null));
+  return batchLoads.get(day);
+}
+function renderBatchIndex(meta){
+  const display=$("batch-index"), label=$("batch-index-label"), list=$("batch-index-list");
+  if(!display)return;
+  if(!meta?.total || !selectedIssue.batch){display.hidden=true;display.open=false;display.dataset.batch="";return;}
+  const day=selectedIssue.batch;
+  display.hidden=false;
+  label.textContent="All Papers in This Batch · "+meta.total;
+  if(display.dataset.batch===day)return;
+  display.open=false;display.dataset.batch=day;
+  list.replaceChildren();
+  $("batch-search").value="";
+  const counts=meta.counts??{};
+  $("batch-index-count").textContent=[counts.new?counts.new+" new":null,counts.cross?counts.cross+" cross-lists":null,
+       counts.listed?counts.listed+" unclassified":null].filter(Boolean).join(" · ");
+  if(!display.dataset.bound){
+    display.dataset.bound="true";
+    display.addEventListener("toggle",async ()=>{
+      if(!display.open)return;
+      const opened=display.dataset.batch;
+      list.replaceChildren(el("li","Loading listing…","muted"));
+      const batch=await loadBatch(opened);
+      if(display.dataset.batch!==opened)return;
+      displayPapers(batch,opened);
+    });
+    $("batch-search").addEventListener("input",async ()=>{
+      const opened=display.dataset.batch;
+      const batch=await loadBatch(opened);
+      if(display.dataset.batch===opened)displayPapers(batch,opened);
+    });
+  }
+}
+function displayPapers(data,day){
+  const dest=$("batch-index-list");
+  if(data?.batch!==day||!Array.isArray(data.papers)){
+    const error=el("li","Index unavailable. ");
+    error.append(a("Open arXiv Robotics","https://arxiv.org/list/cs.RO/recent",null,true));
+    dest.replaceChildren(error);return;
+  }
+  const terms=norm($("batch-search").value).split(/\s+/).filter(Boolean);
+  const visible=data.papers.filter(row=>validId(row.id)&&terms.every(term=>norm([row.title,row.id,...(row.authors??[])].join(" ")).includes(term)));
+  dest.replaceChildren(...(visible.length?visible.map(row=>{
+    const line=el("li",null,"batch-entry");
+    const body=el("div");
+    body.append(a(row.title,paperUrl(row.id,day),"paper-title"));
+    const who=[row.kind==="new"?"New":row.kind==="cross"?"Cross-list":"Listed",authors(row,true),row.id].filter(Boolean);
+    body.append(el("p",who.join(" · "),"muted"));
+    line.append(body,a("arXiv",arxiv(row),"subtle-link",true));return line;
+  }):[el("li","No matching papers.","muted")]));
 }
 const validEdition = day => /^\d{4}-\d{2}-\d{2}$/.test(day??"");
 async function showPaper(){
@@ -427,8 +505,12 @@ async function showPaper(){
   if(!p){
     body.append(el("p","Loading paper…","muted"));
     const snapshot=await getSnapshot();
-    const listed=[...snapshotRows(snapshot),...(snapshot?.latestPapers??[]),
+    let listed=[...snapshotRows(snapshot),...(snapshot?.latestPapers??[]),
       ...[...(snapshot?.topics??[]),...(snapshot?.archivedTopics??[])].flatMap(t=>t.papers??[])].find(p=>p.id===id);
+    if(!listed&&validEdition(params.get("issue"))){
+      const batch=await loadBatch(params.get("issue"));
+      listed=batch?.papers?.find(p=>p.id===id);
+    }
     body.replaceChildren();
     if(!listed){
       body.append(el("h1","Paper details"),summaryLink("Open on arXiv",arxiv({id})));

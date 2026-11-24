@@ -7,11 +7,11 @@
   <meta name="description" content="A robotics paper digest covering tactile sensing, robot reinforcement learning, agentic robots, and emerging research.">
   <title>Robotics Digest</title>
   <link rel="icon" href="mark.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="style.css?v=5">
+  <link rel="stylesheet" href="style.css?v=6">
   <script defer src="data.js?v=4"></script>
   <script defer src="editorial.js?v=4"></script>
-  <script defer src="reviews.js?v=5"></script>
-  <script defer src="app.js?v=5.1"></script>
+  <script defer src="reviews.js?v=6"></script>
+  <script defer src="app.js?v=6"></script>
 </head>
 <body>
   <a class="skip" href="#main">Skip to content</a>
@@ -53,6 +53,13 @@
       </details>
       <p class="sr" id="count" role="status"></p>
       <div id="papers"></div>
+      <details id="batch-index" class="batch-index" hidden>
+        <summary id="batch-index-label">All Papers in This Batch</summary>
+        <p id="batch-index-count" class="muted"></p>
+        <label class="sr" for="batch-search">Filter this batch</label>
+        <input id="batch-search" type="search" placeholder="Filter the whole batch by title, author or ID">
+        <ol id="batch-index-list"></ol>
+      </details>
       <div id="daily-picks" hidden></div>
       <details class="compare" id="compare" hidden>
         <summary>Compare papers</summary>

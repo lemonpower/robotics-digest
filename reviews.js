@@ -1,5 +1,41 @@
 // Notes supplement the original arXiv/Robotica metadata; the reader always links to the paper.
 const reviewNotes = {
+  "2611.23143":{
+    name:"TCP4D",first:"2026-11-17",depth:"Reviewed paper",keywords:["Robot Data","Pose Tracking","Cross-Embodiment"],
+    project:"https://livioni.github.io/TCP4D/",picture:"https://arxiv.org/html/2611.23143v1/teaser.png",caption:"Figure 1 · Shared 4D scene representation",
+    summary:"TCP4D 从单目视频恢复工具中心位姿和夹爪状态，再复用同一套时空特征生成新轨迹。在 DROID 和 RoboLab 上的绝对轨迹误差分别为 7.60 和 16.07 mm。",
+    method:"以第一帧中的二维工具点为查询，从四维场景特征估计尺度化 SE(3) 位姿、夹爪状态和相机参数；再结合语言和机器人观测预测未来工具轨迹。",
+    results:"RoboTwin 的 48 项任务各评测 100 次，clean-to-clean 平均成功率为 69.19%，EventVLA 为 65.71%；clean-to-hard 降至 10.94%。",
+    metric:"RoboTwin clean-to-clean · 69.19%",
+    caveat:"洁净场景的成功率不能代表较难域偏移设置；跨具身数据还受目标机器人可达性约束。"
+  },
+  "2611.24789":{
+    name:"HINT-WAM",first:"2026-11-18",depth:"Reviewed paper",keywords:["World Models","Policy Distillation","Flow Matching"],
+    picture:"https://arxiv.org/html/2611.24789v1/opsd_wam.png",caption:"Figure 2 · Hindsight-conditioned self-distillation",
+    summary:"HINT-WAM 用示范里的未来视频作为教师特权信息，让学生在自己的去噪轨迹上学习教师动作分布，而不是只对专家动作做监督。LIBERO-90 成功率为 85.18%，高于全量监督微调的 81.24%。",
+    method:"同一个模型承担师生角色：教师多看未来视频，学生只看部署时能获得的信息；用 energy score 对齐动作分布，不依赖环境奖励。",
+    results:"LIBERO-90：85.18%，全量 SFT 81.24%，打乱未来示范后 80.28%。RoboTwin 2.0 的 Clean/Random 为 87.04%/83.68%，Fast-WAM 为 86.48%/83.44%。",
+    metric:"LIBERO-90 · 85.18% vs 81.24%",
+    caveat:"RoboTwin 上的提升小于 LIBERO-90；这些数字来自论文列出的模拟基准，不应解读为普遍的真机收益。"
+  },
+  "2611.27338":{
+    name:"Latent Jacobian Steer",first:"2026-11-20",depth:"Reviewed paper",keywords:["Humanoid Control","Latent Control","Contact-Rich Manipulation"],
+    project:"https://latent-jacobian-steer.github.io/",
+    summary:"Latent Jacobian Steer 把关节空间中的定向试探映射成冻结人形控制器能接收的潜变量指令。仿真中，10 次随机种子跑通 7 次抬卷帘门并通过，而直接搜索潜变量跑通 0 次。",
+    method:"在关节动作空间采样扰动，用冻结策略雅可比的阻尼逆得到候选潜变量；在模拟器中对物理目标打分，每次执行短步并重规划。",
+    results:"BFM-Zero 抬卷帘门任务：CEM-LJS 7/10，直接潜变量搜索 0/10；灵巧手装配 31/40 对直接目标搜索的 21/40。",
+    metric:"Simulated shutter traversal · 7/10 vs 0/10",
+    caveat:"主要证据来自仿真搜索；作者需指定物理效果和搜索条件，不能当作零样本真机验证。"
+  },
+  "2611.26916":{
+    name:"RoboCap-10k",first:"2026-11-20",depth:"Reviewed paper",keywords:["Robot Data","Egocentric Video","Hand Pose Estimation"],
+    project:"https://robocap10k.com/",
+    summary:"RoboCap-10k 汇集 11 个国家、共 10,000 小时的第一视角操作视频，使用同款六相机头戴设备采集，并为动作序列提供有尺度的头部轨迹、手部姿态和语言标注。",
+    method:"通过在线相机校准和视觉惯性 SLAM 恢复头部六自由度轨迹，再用多视角追踪估计手部运动。",
+    results:"覆盖 18 类任务家族、约 200 种任务类型。论文在校准环节报告极线误差小于 1 像素；这是设备校准指标，不是策略任务成功率。",
+    metric:"10,000 hours · 11 countries",
+    caveat:"数据规模与标注精度不等同于任意机器人策略的性能；跨具身部署还需要验证手部动作如何映射到机器人。"
+  },
   "2611.29897": {
     name:"Motion Mamba 2.0",first:"2026-11-23",depth:"Reviewed paper",
     keywords:["Humanoid Control","Autoregressive Diffusion","Motion Generation"],
