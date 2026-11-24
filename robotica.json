@@ -1,0 +1,41 @@
+{
+  "fetchedAt": "2026-11-24T07:11:40.880000+00:00",
+  "papers": {
+    "2611.29897": {
+      "id": "2611.29897",
+      "title": "Motion Mamba 2.0: Autoregressive Diffusion Mamba for Long-Horizon Humanoid Control",
+      "upvotes": 61,
+      "date": "2026-11-23"
+    },
+    "2611.26444": {
+      "id": "2611.26444",
+      "title": "Mind2Act World: A Diagnostic Benchmark for Embodied Mind, Physical Action, and Mind-Action Composition in Robotic Manipulation",
+      "upvotes": 57,
+      "date": "2026-11-19"
+    },
+    "2611.26414": {
+      "id": "2611.26414",
+      "title": "ZeroVLN: Learning to Navigate without Supervised Fine-Tuning of the VLM Brain",
+      "upvotes": 24,
+      "date": "2026-11-19"
+    },
+    "2611.24011": {
+      "id": "2611.24011",
+      "title": "WAM-Policy: World Action Models with On-Policy Distillation for Quadrupedal Loco-Manipulation",
+      "upvotes": 20,
+      "date": "2026-11-18"
+    },
+    "2611.25980": {
+      "id": "2611.25980",
+      "title": "Learning What Actions Change: Action Effect Matching for Dynamics-Faithful World Models",
+      "upvotes": 17,
+      "date": "2026-11-19"
+    },
+    "2611.26617": {
+      "id": "2611.26617",
+      "title": "One Prior, Two Dynamics: Repurposing Video Diffusion Transformers for Self-Supervised Latent Action Learning",
+      "upvotes": 14,
+      "date": "2026-11-19"
+    }
+  }
+}

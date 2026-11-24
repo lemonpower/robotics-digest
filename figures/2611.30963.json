@@ -1,0 +1,45 @@
+{
+  "version": "v1",
+  "figures": [
+    {
+      "src": "https://arxiv.org/html/2611.30963v1/2611.30963v1/teaser.png",
+      "caption": "Figure 1",
+      "anchor": "S0.F1"
+    },
+    {
+      "src": "https://arxiv.org/html/2611.30963v1/2611.30963v1/method_overview.png",
+      "caption": "Figure 2",
+      "anchor": "S1.F2"
+    },
+    {
+      "src": "https://arxiv.org/html/2611.30963v1/2611.30963v1/zdelta_feature_readout_compact.png",
+      "caption": "论文插图",
+      "anchor": "S4.F4"
+    },
+    {
+      "src": "https://arxiv.org/html/2611.30963v1/2611.30963v1/zdelta_point_readout_compact.png",
+      "caption": "论文插图",
+      "anchor": "S4.F4"
+    },
+    {
+      "src": "https://arxiv.org/html/2611.30963v1/2611.30963v1/robotwin_attention_single_column.png",
+      "caption": "Figure 5",
+      "anchor": "S4.F5"
+    },
+    {
+      "src": "https://arxiv.org/html/2611.30963v1/2611.30963v1/real_world_overview.png",
+      "caption": "Figure 6",
+      "anchor": "S4.F6"
+    },
+    {
+      "src": "https://arxiv.org/html/2611.30963v1/2611.30963v1/attention_mask.png",
+      "caption": "Figure 7",
+      "anchor": "A1.F7"
+    },
+    {
+      "src": "https://arxiv.org/html/2611.30963v1/2611.30963v1/real_world_progressions.png",
+      "caption": "Figure 8",
+      "anchor": "A5.F8"
+    }
+  ]
+}

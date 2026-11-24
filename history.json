@@ -12,6 +12,14 @@
         "camillo gentile",
         "nada golmie"
       ],
+      "displayAuthors": [
+        "Neeraj Varshney",
+        "Anuraag Bodi",
+        "Steve Blandino",
+        "Jian Wang",
+        "Camillo Gentile",
+        "Nada Golmie"
+      ],
       "batch": "2026-11-24",
       "kind": "new"
     },
@@ -27,6 +35,14 @@
         "jiang xu",
         "wei zhang"
       ],
+      "displayAuthors": [
+        "Jintao Cheng",
+        "Yipu Zhang",
+        "Haozhe Wang",
+        "Lin Jiang",
+        "Jiang Xu",
+        "Wei Zhang"
+      ],
       "batch": "2026-11-24",
       "kind": "new"
     },
@@ -38,6 +54,10 @@
         "youwei yu",
         "lantao liu"
       ],
+      "displayAuthors": [
+        "Youwei Yu",
+        "Lantao Liu"
+      ],
       "batch": "2026-11-24",
       "kind": "new"
     },
@@ -48,6 +68,10 @@
       "authors": [
         "youwei yu",
         "lantao liu"
+      ],
+      "displayAuthors": [
+        "Youwei Yu",
+        "Lantao Liu"
       ],
       "batch": "2026-11-24",
       "kind": "new"
@@ -67,6 +91,17 @@
         "kenneth marino",
         "sandra hirche"
       ],
+      "displayAuthors": [
+        "Tzu-Yuan Huang",
+        "Shao-Hsuan Chang",
+        "Dai-Jie Wu",
+        "Ralf R\\\"omer",
+        "Yung-Hui Li",
+        "Stefan Sosnowski",
+        "Angela P. Schoellig",
+        "Kenneth Marino",
+        "Sandra Hirche"
+      ],
       "batch": "2026-11-24",
       "kind": "new"
     },
@@ -79,6 +114,12 @@
         "hui xie",
         "qinfeng feng",
         "joaquin vanschoren"
+      ],
+      "displayAuthors": [
+        "Jie Liu",
+        "Hui Xie",
+        "Qinfeng Feng",
+        "Joaquin Vanschoren"
       ],
       "batch": "2026-11-24",
       "kind": "new"
@@ -95,6 +136,14 @@
         "rajat bhageria",
         "luis rayas"
       ],
+      "displayAuthors": [
+        "Inkyu Sa",
+        "Gaurav Kuppa",
+        "Steve Van der Hoeven",
+        "Konstantin Stulov",
+        "Rajat Bhageria",
+        "Luis Rayas"
+      ],
       "batch": "2026-11-24",
       "kind": "new"
     },
@@ -106,6 +155,11 @@
         "jiahao wang",
         "ming f li",
         "han xu"
+      ],
+      "displayAuthors": [
+        "Jiahao Wang",
+        "Ming F. Li",
+        "Han Xu"
       ],
       "batch": "2026-11-24",
       "kind": "new"
@@ -121,6 +175,13 @@
         "tao li",
         "zilin bian"
       ],
+      "displayAuthors": [
+        "Yicheng Zhu",
+        "Linfeng Tian",
+        "Yang Chen",
+        "Tao Li",
+        "Zilin Bian"
+      ],
       "batch": "2026-11-24",
       "kind": "new"
     },
@@ -132,6 +193,11 @@
         "damla leblebicio u g lu",
         "ege ozg ul",
         "ta c s k i n pad i r"
+      ],
+      "displayAuthors": [
+        "Damla Leblebicio\\u{g}lu",
+        "Ege \\\"Ozg\\\"ul",
+        "Ta\\c{s}k{\\i}n Pad{\\i}r"
       ],
       "batch": "2026-11-24",
       "kind": "new"
@@ -149,6 +215,15 @@
         "ayoung kim",
         "maurice fallon"
       ],
+      "displayAuthors": [
+        "Jiahao Wang",
+        "Chaehyeon Song",
+        "Dongjiao He",
+        "Jan Quenzel",
+        "Lintong Zhang",
+        "Ayoung Kim",
+        "Maurice Fallon"
+      ],
       "batch": "2026-11-24",
       "kind": "new"
     },
@@ -165,6 +240,15 @@
         "nadun ranawaka",
         "you liang tan"
       ],
+      "displayAuthors": [
+        "Amitoj Sandhu",
+        "Ethan Sick",
+        "Omkaar Buddhikot",
+        "Nadia Laswi",
+        "Wesley Durbano",
+        "Nadun Ranawaka",
+        "You Liang Tan"
+      ],
       "batch": "2026-11-24",
       "kind": "new"
     },
@@ -175,6 +259,10 @@
       "authors": [
         "murtuza lemonwala",
         "laxima niure kandel"
+      ],
+      "displayAuthors": [
+        "Murtuza Lemonwala",
+        "Laxima Niure Kandel"
       ],
       "batch": "2026-11-24",
       "kind": "new"
@@ -189,6 +277,12 @@
         "l merino",
         "f caballero"
       ],
+      "displayAuthors": [
+        "Guillermo Gil-Garcia",
+        "J. A. Cobano",
+        "L. Merino",
+        "F. Caballero"
+      ],
       "batch": "2026-11-24",
       "kind": "new"
     },
@@ -201,6 +295,11 @@
         "mingyu guo",
         "weisong shi"
       ],
+      "displayAuthors": [
+        "Qiren Wang",
+        "Mingyu Guo",
+        "Weisong Shi"
+      ],
       "batch": "2026-11-24",
       "kind": "new"
     },
@@ -211,6 +310,10 @@
       "authors": [
         "wei chen li",
         "glen chou"
+      ],
+      "displayAuthors": [
+        "Wei-Chen Li",
+        "Glen Chou"
       ],
       "batch": "2026-11-24",
       "kind": "new"
@@ -231,6 +334,18 @@
         "tania k morimoto",
         "jessica burgner kahrs"
       ],
+      "displayAuthors": [
+        "Aedan Mangan",
+        "Spencer Teetaert",
+        "Chengnan Shentu",
+        "Michael G. Brandel",
+        "Jeremy J. Heit",
+        "Alexander Norbash",
+        "Timothy D. Barfoot",
+        "Nikolay Atanasov",
+        "Tania K. Morimoto",
+        "Jessica Burgner-Kahrs"
+      ],
       "batch": "2026-11-24",
       "kind": "new"
     },
@@ -242,6 +357,11 @@
         "philip byrne",
         "john drazan",
         "nidhi seethapathi"
+      ],
+      "displayAuthors": [
+        "Philip Byrne",
+        "John Drazan",
+        "Nidhi Seethapathi"
       ],
       "batch": "2026-11-24",
       "kind": "new"
@@ -261,6 +381,17 @@
         "haokui zhang",
         "chunhua shen"
       ],
+      "displayAuthors": [
+        "Junjie Li",
+        "Dawei Yan",
+        "Guoting Wei",
+        "Ruike Song",
+        "Lu Wang",
+        "Qingguo Chen",
+        "Zhenbo Luo",
+        "Haokui Zhang",
+        "Chunhua Shen"
+      ],
       "batch": "2026-11-24",
       "kind": "new"
     },
@@ -279,6 +410,17 @@
         "changhao yan",
         "keren zhu"
       ],
+      "displayAuthors": [
+        "Boxiang Song",
+        "Zhihong Chen",
+        "Xiaoyu Hao",
+        "Jinhong Huang",
+        "Chengkai Zhu",
+        "Jiaqi Yang",
+        "Hongyang Pan",
+        "Changhao Yan",
+        "Keren Zhu"
+      ],
       "batch": "2026-11-24",
       "kind": "new"
     },
@@ -293,6 +435,14 @@
         "nazmul takbir",
         "arshia aravinthan",
         "nikil dutt"
+      ],
+      "displayAuthors": [
+        "Tamoghno Das",
+        "Keyon Jazayeri",
+        "Yerin Cho",
+        "Nazmul Takbir",
+        "Arshia Aravinthan",
+        "Nikil Dutt"
       ],
       "batch": "2026-11-24",
       "kind": "new"
@@ -312,6 +462,17 @@
         "tianyi zhou",
         "huajie shao"
       ],
+      "displayAuthors": [
+        "Jiangtao Kong",
+        "Yuchen Wang",
+        "Yandong Luo",
+        "Rongchao Xu",
+        "Guang Wang",
+        "Yanbing Mao",
+        "Lu Gan",
+        "Tianyi Zhou",
+        "Huajie Shao"
+      ],
       "batch": "2026-11-24",
       "kind": "new"
     },
@@ -322,6 +483,10 @@
       "authors": [
         "hyung gon shin",
         "sanghoon jung"
+      ],
+      "displayAuthors": [
+        "Hyung Gon Shin",
+        "Sanghoon Jung"
       ],
       "batch": "2026-11-24",
       "kind": "new"
@@ -342,6 +507,18 @@
         "jiansheng fan",
         "chen wang"
       ],
+      "displayAuthors": [
+        "Chen Yang",
+        "Linhao Wang",
+        "Linzhe Shi",
+        "Guohui Zhang",
+        "Changjie Wu",
+        "Hang Zhang",
+        "Haoyu Li",
+        "Mu Xu",
+        "Jiansheng Fan",
+        "Chen Wang"
+      ],
       "batch": "2026-11-24",
       "kind": "new"
     },
@@ -356,6 +533,13 @@
         "linfang zheng",
         "wei zhang"
       ],
+      "displayAuthors": [
+        "Xiaoxiong Zhang",
+        "Zhiqiang Zhou",
+        "Tze Ho Elden Tse",
+        "Linfang Zheng",
+        "Wei Zhang"
+      ],
       "batch": "2026-11-24",
       "kind": "new"
     },
@@ -368,6 +552,12 @@
         "ana theodora balaci",
         "matthew cleaveland",
         "roberto tron"
+      ],
+      "displayAuthors": [
+        "Danyang Li",
+        "Ana Theodora Balaci",
+        "Matthew Cleaveland",
+        "Roberto Tron"
       ],
       "batch": "2026-11-24",
       "kind": "new"
@@ -388,6 +578,18 @@
         "hengkai tan",
         "jun zhu"
       ],
+      "displayAuthors": [
+        "Chendong Xiang",
+        "Chengwen Zhang",
+        "Ruowen Zhao",
+        "Zeyuan Wang",
+        "Shuhe Huang",
+        "Rongxu Cui",
+        "Min Zhao",
+        "Fan Bao",
+        "Hengkai Tan",
+        "Jun Zhu"
+      ],
       "batch": "2026-11-24",
       "kind": "new"
     },
@@ -404,6 +606,16 @@
         "daochen shi",
         "ruihua zhang",
         "renjing xu"
+      ],
+      "displayAuthors": [
+        "Qiwei Wu",
+        "Qixuan Li",
+        "Xin Xiang",
+        "Xiangyu Chen",
+        "Xiang Xiao",
+        "Daochen Shi",
+        "Ruihua Zhang",
+        "Renjing Xu"
       ],
       "batch": "2026-11-24",
       "kind": "new"
@@ -426,6 +638,20 @@
         "li jiang",
         "zhuotao tian"
       ],
+      "displayAuthors": [
+        "Yitong Hong",
+        "Xiangdong Feng",
+        "Xiaoxi Sun",
+        "Senqiao Yang",
+        "Boyao Han",
+        "Zhejian Yang",
+        "Shiyang Zhou",
+        "Yongcai Wang",
+        "Pengguang Chen",
+        "Shu Liu",
+        "Li Jiang",
+        "Zhuotao Tian"
+      ],
       "batch": "2026-11-24",
       "kind": "new"
     },
@@ -442,6 +668,15 @@
         "shikui tu",
         "lei xu"
       ],
+      "displayAuthors": [
+        "Qihang Chen",
+        "Tengjie Li",
+        "Hongwei Lu",
+        "Jason Wu",
+        "Chyna Qu",
+        "Shikui Tu",
+        "Lei Xu"
+      ],
       "batch": "2026-11-24",
       "kind": "new"
     },
@@ -453,6 +688,11 @@
         "ahad jawaid",
         "alexander swerdlow",
         "yu xiang"
+      ],
+      "displayAuthors": [
+        "Ahad Jawaid",
+        "Alexander Swerdlow",
+        "Yu Xiang"
       ],
       "batch": "2026-11-24",
       "kind": "new"
@@ -470,6 +710,16 @@
         "guanglie zhang",
         "jianshu zhou",
         "wen jung li"
+      ],
+      "displayAuthors": [
+        "Jiankun Li",
+        "Yu Feng",
+        "Yehui Liu",
+        "Meng Chen",
+        "Rui Luo",
+        "Guanglie Zhang",
+        "Jianshu Zhou",
+        "Wen Jung Li"
       ],
       "batch": "2026-11-24",
       "kind": "new"
@@ -492,6 +742,20 @@
         "zhijian liu",
         "song han"
       ],
+      "displayAuthors": [
+        "Yuyang Zhao",
+        "Zekai Li",
+        "Yicheng Pan",
+        "Jiaming Tang",
+        "Zhuoyang Zhang",
+        "Jiaxu Xing",
+        "Moritz Reuss",
+        "Quanquan Peng",
+        "Junsong Chen",
+        "Enze Xie",
+        "Zhijian Liu",
+        "Song Han"
+      ],
       "batch": "2026-11-24",
       "kind": "new"
     },
@@ -505,6 +769,13 @@
         "luiz m g goncalves",
         "paolo spagnolo",
         "cosimo distante"
+      ],
+      "displayAuthors": [
+        "Basma Dokkara",
+        "Esteban W. G. Cluab",
+        "Luiz M. G. Goncalves",
+        "Paolo Spagnolo",
+        "Cosimo Distante"
       ],
       "batch": "2026-11-24",
       "kind": "new"
@@ -520,6 +791,13 @@
         "chang liu",
         "pingping zhu"
       ],
+      "displayAuthors": [
+        "Jacob Lee",
+        "Samuel Sutphin",
+        "Haroon Malik",
+        "Chang Liu",
+        "Pingping Zhu"
+      ],
       "batch": "2026-11-24",
       "kind": "new"
     },
@@ -532,6 +810,11 @@
         "john s baras",
         "calin belta"
       ],
+      "displayAuthors": [
+        "Clinton Enwerem",
+        "John S. Baras",
+        "Calin Belta"
+      ],
       "batch": "2026-11-24",
       "kind": "new"
     },
@@ -542,6 +825,10 @@
       "authors": [
         "daniel m cherenson",
         "dimitra panagou"
+      ],
+      "displayAuthors": [
+        "Daniel M. Cherenson",
+        "Dimitra Panagou"
       ],
       "batch": "2026-11-24",
       "kind": "new"
@@ -558,6 +845,15 @@
         "shigang yue",
         "tao zou",
         "jigen peng"
+      ],
+      "displayAuthors": [
+        "Cheng Hu",
+        "Haotian Wu",
+        "Qi Lin",
+        "Manrui Zheng",
+        "Shigang Yue",
+        "Tao Zou",
+        "Jigen Peng"
       ],
       "batch": "2026-11-24",
       "kind": "new"
@@ -577,6 +873,17 @@
         "yi ma",
         "shenghua gao"
       ],
+      "displayAuthors": [
+        "Chenglang Tu",
+        "Feng Chen",
+        "Ruizhe Liu",
+        "Pei Zhou",
+        "Binbin Huang",
+        "Chen Xu",
+        "Yanchao Yang",
+        "Yi Ma",
+        "Shenghua Gao"
+      ],
       "batch": "2026-11-24",
       "kind": "new"
     },
@@ -591,6 +898,14 @@
         "changhyun choi",
         "yang katie zhao",
         "yi liu"
+      ],
+      "displayAuthors": [
+        "Jingxiang Qu",
+        "Tian Xie",
+        "Youngjin Hong",
+        "Changhyun Choi",
+        "Yang Katie Zhao",
+        "Yi Liu"
       ],
       "batch": "2026-11-24",
       "kind": "new"
@@ -609,6 +924,16 @@
         "dian wang",
         "stefanie tellex"
       ],
+      "displayAuthors": [
+        "Mingxi Jia",
+        "Patton Jiyang Yin",
+        "Haojie Huang",
+        "Ivy Xiao He",
+        "Xuanru Liu",
+        "Gefei Liu",
+        "Dian Wang",
+        "Stefanie Tellex"
+      ],
       "batch": "2026-11-24",
       "kind": "new"
     },
@@ -626,6 +951,16 @@
         "jakob nicolaus foerster",
         "shimon whiteson"
       ],
+      "displayAuthors": [
+        "Zilin Wang",
+        "Guozheng Ma",
+        "Saeed Rahmani",
+        "Jiong Yang",
+        "Antyanta Bangunharcana",
+        "Yiluan Guo",
+        "Jakob Nicolaus Foerster",
+        "Shimon Whiteson"
+      ],
       "batch": "2026-11-24",
       "kind": "new"
     },
@@ -635,6 +970,9 @@
       "abstract": "Autonomous UAV guidance in emergency response, infrastructure monitoring, and cargo transportation requires reliable navigation. However, satellite-based positioning may become unavailable or unreliable in enclosed spaces, blind spots caused by natural obstacles and structures, and environments affected by radio interference and signal spoofing during electronic warfare. This study designs, implements, and evaluates a system based on a Trans-Domain Digital Twin (TDDT) for autonomous guidance of the Phoenix VTOL UAV. Independent navigation, flight dynamics, and meteorological models are coordinated within a cycle of state estimation, prediction, decision-making, command execution, and feedback. Data from inertial, magnetic, pressure, and airspeed sensors, together with environmental information, form the basis for estimation and prediction. Furthermore, a shared state, temporal synchronization, preservation of information provenance, and command traceability establish continuity between models and decisions. The system was tested with a simulated physical twin in a software-in-the-loop environment. Vertical takeoff, movement toward the destination, landing, and autonomous stopping were recorded, and the dynamic model was adjusted to a limited extent based on sensor-derived feedback. Separating the evaluation reference from navigation inputs enabled independent assessment of positioning error and computational performance. The results confirm operational coordination, decision traceability, and closed-loop guidance under the tested conditions, providing a reproducible platform for the development and evaluation of navigation without satellite-based positioning.",
       "authors": [
         "mansoorali amiri"
+      ],
+      "displayAuthors": [
+        "Mansoorali Amiri"
       ],
       "batch": "2026-11-24",
       "kind": "new"
@@ -655,6 +993,18 @@
         "ancong wu",
         "wei shi zheng"
       ],
+      "displayAuthors": [
+        "Yanhan Lin",
+        "Yuliang Wu",
+        "Yihao Guo",
+        "Wei-Jin Huang",
+        "Jianwen Li",
+        "Jiawei Tang",
+        "Xiaolong Huang",
+        "Yuquan Wang",
+        "Ancong Wu",
+        "Wei-Shi Zheng"
+      ],
       "batch": "2026-11-24",
       "kind": "new"
     },
@@ -671,6 +1021,15 @@
         "xun cao",
         "wei li"
       ],
+      "displayAuthors": [
+        "Xinyao Rao",
+        "Zecheng Tang",
+        "Zheyuan Lai",
+        "Liuxuan Sun",
+        "Minjun Yu",
+        "Xun Cao",
+        "Wei Li"
+      ],
       "batch": "2026-11-24",
       "kind": "new"
     },
@@ -683,6 +1042,11 @@
         "fangguo zhao",
         "jiafei duan"
       ],
+      "displayAuthors": [
+        "Keerthi Vasan Murugan",
+        "Fangguo Zhao",
+        "Jiafei Duan"
+      ],
       "batch": "2026-11-24",
       "kind": "new"
     },
@@ -693,6 +1057,10 @@
       "authors": [
         "huan lyu",
         "yawei luo"
+      ],
+      "displayAuthors": [
+        "Huan Lyu",
+        "Yawei Luo"
       ],
       "batch": "2026-11-24",
       "kind": "new"
@@ -723,6 +1091,29 @@
         "weihua zhang",
         "renjing xu",
         "junjie lai"
+      ],
+      "displayAuthors": [
+        "Qiwei Wu",
+        "Xiangyu Chen",
+        "Xin Xiang",
+        "Rui Zhang",
+        "Yihang Kang",
+        "Weiran Chen",
+        "Zikang Xie",
+        "Yangfan Li",
+        "Tao Wang",
+        "Xiangzheng Wang",
+        "Tianyi Bi",
+        "Zhiyan Zhang",
+        "Xianpeng Wang",
+        "Mingqian Zhou",
+        "Yan Yu",
+        "Chuanyu Li",
+        "Wenjie Zhang",
+        "Tao Li",
+        "Weihua Zhang",
+        "Renjing Xu",
+        "Junjie Lai"
       ],
       "batch": "2026-11-24",
       "kind": "new"
@@ -755,6 +1146,30 @@
         "jiangwei zhong",
         "yue gao"
       ],
+      "displayAuthors": [
+        "Yizhi Chen",
+        "Zhanxiang Cao",
+        "Yitong Wang",
+        "Junyu Liu",
+        "Hongchu Zeng",
+        "Xinyi Peng",
+        "Chuxuan Huang",
+        "Yicheng Su",
+        "Zihao Zhou",
+        "Shengcheng Fu",
+        "Haoyang Li",
+        "Liyun Yan",
+        "Tianyue Zhan",
+        "Jianming Ma",
+        "Yang Zhang",
+        "Keqi Zhu",
+        "Xiaxi Si",
+        "Jinming Yao",
+        "Qiao Sun",
+        "Shizeng Zhang",
+        "Jiangwei Zhong",
+        "Yue Gao"
+      ],
       "batch": "2026-11-24",
       "kind": "new"
     },
@@ -775,6 +1190,19 @@
         "tao xie",
         "wenming tan"
       ],
+      "displayAuthors": [
+        "Kun Dai",
+        "Tianqi Wang",
+        "Haibo Lei",
+        "Chaoyang Li",
+        "Kai Zhang",
+        "Fuyuan Qiu",
+        "Lijun Zhao",
+        "Ruifeng Li",
+        "Chuqing Cao",
+        "Tao Xie",
+        "Wenming Tan"
+      ],
       "batch": "2026-11-24",
       "kind": "new"
     },
@@ -789,6 +1217,14 @@
         "zhongxiang feng",
         "zeyang cheng",
         "said m easa"
+      ],
+      "displayAuthors": [
+        "Yang Ma",
+        "Yichen Sun",
+        "Yubing Zheng",
+        "Zhongxiang Feng",
+        "Zeyang Cheng",
+        "Said M. Easa"
       ],
       "batch": "2026-11-24",
       "kind": "new"
@@ -813,6 +1249,22 @@
         "yongming rao",
         "shi min hu"
       ],
+      "displayAuthors": [
+        "Meng-Hao Guo",
+        "Yi Zhang",
+        "Zhe-Han Mo",
+        "Han-Zheng Wang",
+        "Jia-Jun Wang",
+        "Xin-Sheng Chen",
+        "Jiaxi Song",
+        "Yi-Xuan Deng",
+        "Jia-Ning Li",
+        "Xuanyu Chu",
+        "Hengrui Zhang",
+        "Huan-ang Gao",
+        "Yongming Rao",
+        "Shi-Min Hu"
+      ],
       "batch": "2026-11-24",
       "kind": "new"
     },
@@ -830,6 +1282,16 @@
         "jiawei du",
         "joey tianyi zhou"
       ],
+      "displayAuthors": [
+        "Xin Zhang",
+        "Yushuo Hou",
+        "Anqi Zhao",
+        "Moyun Liu",
+        "Xingwei Zhao",
+        "Bo Tao",
+        "Jiawei Du",
+        "Joey Tianyi Zhou"
+      ],
       "batch": "2026-11-24",
       "kind": "new"
     },
@@ -842,6 +1304,12 @@
         "ryan matheu",
         "john s baras",
         "calin belta"
+      ],
+      "displayAuthors": [
+        "Sai Sandeep Damera",
+        "Ryan Matheu",
+        "John S. Baras",
+        "Calin Belta"
       ],
       "batch": "2026-11-24",
       "kind": "new"
@@ -861,6 +1329,17 @@
         "jiahua dong",
         "jianfei yang"
       ],
+      "displayAuthors": [
+        "Shilin Shan",
+        "Yuxuan Hu",
+        "Chuhao Zhou",
+        "Yimeng Dong",
+        "Bohan Hou",
+        "Jiaqi Bai",
+        "Boyu Ma",
+        "Jiahua Dong",
+        "Jianfei Yang"
+      ],
       "batch": "2026-11-24",
       "kind": "new"
     },
@@ -873,6 +1352,12 @@
         "arjun sharma",
         "jennifer cruden",
         "vansh tibrewal"
+      ],
+      "displayAuthors": [
+        "Jeff Duan",
+        "Arjun Sharma",
+        "Jennifer Cruden",
+        "Vansh Tibrewal"
       ],
       "batch": "2026-11-24",
       "kind": "new"
@@ -890,6 +1375,15 @@
         "kai huang",
         "weiru liu"
       ],
+      "displayAuthors": [
+        "Jiaxi You",
+        "Yiwei Shi",
+        "Yanlin Li",
+        "Rihui Song",
+        "Weibing Li",
+        "Kai Huang",
+        "Weiru Liu"
+      ],
       "batch": "2026-11-24",
       "kind": "new"
     },
@@ -906,6 +1400,15 @@
         "yinan zhang",
         "cyril leung"
       ],
+      "displayAuthors": [
+        "Shuaicheng Niu",
+        "Guohao Chen",
+        "Kevin Z. Shen",
+        "Yunbei Zhang",
+        "Peilin Zhao",
+        "Yinan Zhang",
+        "Cyril Leung"
+      ],
       "batch": "2026-11-24",
       "kind": "new"
     },
@@ -919,6 +1422,13 @@
         "manuel morteo",
         "roberto tron",
         "john baillieul"
+      ],
+      "displayAuthors": [
+        "Chiara Boretti",
+        "Philippe Bich",
+        "Manuel Morteo",
+        "Roberto Tron",
+        "John Baillieul"
       ],
       "batch": "2026-11-24",
       "kind": "new"
@@ -935,6 +1445,15 @@
         "zhenglin wan",
         "wangbo zhao",
         "pengfei zhou"
+      ],
+      "displayAuthors": [
+        "Zhengfeiyang Zhang",
+        "Haoyuan Chen",
+        "Hexin Wang",
+        "Hanyu Zhou",
+        "Zhenglin Wan",
+        "Wangbo Zhao",
+        "Pengfei Zhou"
       ],
       "batch": "2026-11-24",
       "kind": "new"
@@ -956,6 +1475,19 @@
         "yong li",
         "zhibo chen"
       ],
+      "displayAuthors": [
+        "Rongze Tang",
+        "Chenyu Zhou",
+        "Jianjie Fang",
+        "Ziming Liu",
+        "Zhaolu Wang",
+        "Ziyou Wang",
+        "Xvyuan Liu",
+        "Wei Wu",
+        "Chen Gao",
+        "Yong Li",
+        "Zhibo Chen"
+      ],
       "batch": "2026-11-24",
       "kind": "new"
     },
@@ -970,6 +1502,13 @@
         "tejasvi alladi",
         "fei richard yu"
       ],
+      "displayAuthors": [
+        "Anubhav Pandey",
+        "Harshit Nagpal",
+        "Aditya Agarwal",
+        "Tejasvi Alladi",
+        "Fei Richard Yu"
+      ],
       "batch": "2026-11-24",
       "kind": "new"
     },
@@ -981,6 +1520,11 @@
         "kevin qiu",
         "zhao yang",
         "marek cygan"
+      ],
+      "displayAuthors": [
+        "Kevin Qiu",
+        "Zhao Yang",
+        "Marek Cygan"
       ],
       "batch": "2026-11-24",
       "kind": "new"
@@ -997,6 +1541,14 @@
         "hongming fu",
         "zhimu zhou"
       ],
+      "displayAuthors": [
+        "Jiaxun Sun",
+        "Yuqi Yang",
+        "Senlan Yao",
+        "Hengyu Xue",
+        "Hongming Fu",
+        "Zhimu Zhou"
+      ],
       "batch": "2026-11-24",
       "kind": "new"
     },
@@ -1009,6 +1561,11 @@
         "runyu zhang",
         "gioele zardini"
       ],
+      "displayAuthors": [
+        "Jiarui Li",
+        "Runyu Zhang",
+        "Gioele Zardini"
+      ],
       "batch": "2026-11-24",
       "kind": "new"
     },
@@ -1018,6 +1575,9 @@
       "abstract": "Vision-language-action (VLA) policies complete most benchmark tasks but often violate safety constraints. Since they are stochastic, one remedy is to sample several candidate action chunks and execute one that a world model predicts is safe. We ask what such a model must do. In simulation, a lookahead safety filter with the simulator as an exact world model raises the safety rate of three VLA policies on LIBERO and of pi0.5 on LIBERO-Plus by 11.5 to 25.7 points. It also helps pi0.5 on three RoboCasa tasks. Learned critics trained on one policy's data detect dangerous states (pooled AUROC up to 0.864) but rank candidates at one state close to chance (within-decision AUROC 0.551-0.560), and the learned dynamics and video models we test do no better. When the simulator's state is perturbed, selection degrades long before detection. In the loop, a median position error of 3.18 mm removes 70% of the gain on LIBERO-Spatial, partly because the error also corrupts the displacement check. On LIBERO-10 the loss is smaller, and the intervals overlap. The median does not predict the cost: a pixel reader with a 0.56 mm median error keeps 6.5 points less of the gain than Gaussian error of a similar median. A world model for safety should thus be judged by within-state ranking, and its state must be accurate in the tail and on handled objects, not only in the median.",
       "authors": [
         "thanish bolla"
+      ],
+      "displayAuthors": [
+        "Thanish Bolla"
       ],
       "batch": "2026-11-24",
       "kind": "new"
@@ -1031,6 +1591,12 @@
         "haoqin hong",
         "congcong zhu",
         "jingrun chen"
+      ],
+      "displayAuthors": [
+        "Haoxiang Zhan",
+        "Haoqin Hong",
+        "Congcong Zhu",
+        "Jingrun Chen"
       ],
       "batch": "2026-11-24",
       "kind": "new"
@@ -1047,6 +1613,14 @@
         "dimitra panagou",
         "bardh hoxha"
       ],
+      "displayAuthors": [
+        "Taekyung Kim",
+        "Ege Yuceel",
+        "Steven Hong",
+        "Georgios Fainekos",
+        "Dimitra Panagou",
+        "Bardh Hoxha"
+      ],
       "batch": "2026-11-24",
       "kind": "new"
     },
@@ -1058,6 +1632,11 @@
         "kunqi xu",
         "xiaokang sun",
         "xueyan zou"
+      ],
+      "displayAuthors": [
+        "Kunqi Xu",
+        "Xiaokang Sun",
+        "Xueyan Zou"
       ],
       "batch": "2026-11-24",
       "kind": "new"
@@ -1072,6 +1651,12 @@
         "mohammad reza kolani",
         "alois knoll"
       ],
+      "displayAuthors": [
+        "Mohammadhossein Malmir",
+        "Mohammadali Rahmati",
+        "Mohammad Reza Kolani",
+        "Alois Knoll"
+      ],
       "batch": "2026-11-24",
       "kind": "new"
     },
@@ -1085,6 +1670,12 @@
         "amirhossein mollaali",
         "guang lin"
       ],
+      "displayAuthors": [
+        "Jiyong Kwon",
+        "Yikun Bai",
+        "Amirhossein Mollaali",
+        "Guang Lin"
+      ],
       "batch": "2026-11-24",
       "kind": "new"
     },
@@ -1097,6 +1688,12 @@
         "mohanraj devendran shanthi",
         "joseph c liechty",
         "tucker hermans"
+      ],
+      "displayAuthors": [
+        "Siyeon Kim",
+        "Mohanraj Devendran Shanthi",
+        "Joseph C. Liechty",
+        "Tucker Hermans"
       ],
       "batch": "2026-11-24",
       "kind": "new"
@@ -1116,6 +1713,17 @@
         "yuxiang gao",
         "jiayuan gu"
       ],
+      "displayAuthors": [
+        "Siyuan Xie",
+        "Jinxi Xiao",
+        "Ran Ji",
+        "Yikai Liu",
+        "Mingxi Li",
+        "Xuebing Li",
+        "Ye Shi",
+        "Yuxiang Gao",
+        "Jiayuan Gu"
+      ],
       "batch": "2026-11-24",
       "kind": "new"
     },
@@ -1128,6 +1736,11 @@
         "ali asadi",
         "moosa ayati"
       ],
+      "displayAuthors": [
+        "Erfun Bayat Sarmadi",
+        "Ali Asadi",
+        "Moosa Ayati"
+      ],
       "batch": "2026-11-24",
       "kind": "new"
     },
@@ -1138,6 +1751,10 @@
       "authors": [
         "wenjie lin",
         "jin wei kocsis"
+      ],
+      "displayAuthors": [
+        "Wenjie Lin",
+        "Jin Wei-Kocsis"
       ],
       "batch": "2026-11-24",
       "kind": "new"
@@ -1160,6 +1777,20 @@
         "oisin mac aodha",
         "sethu vijayakumar"
       ],
+      "displayAuthors": [
+        "Elle Miller",
+        "Reem Almheiri",
+        "Takuma Tsukakoshi",
+        "Ben Sanati",
+        "Tamon Miyake",
+        "Yushi Wang",
+        "Namiko Saito",
+        "Shigeki Sugano",
+        "Tetsuya Ogata",
+        "Rika Antonova",
+        "Oisin Mac Aodha",
+        "Sethu Vijayakumar"
+      ],
       "batch": "2026-11-24",
       "kind": "new"
     },
@@ -1175,6 +1806,14 @@
         "feng liu",
         "zheng hu"
       ],
+      "displayAuthors": [
+        "Zifan Zeng",
+        "Qunli Zhang",
+        "Peng Wang",
+        "Shiming Liu",
+        "Feng Liu",
+        "Zheng Hu"
+      ],
       "batch": "2026-11-24",
       "kind": "new"
     },
@@ -1186,6 +1825,10 @@
         "yang liu",
         "farshid alambeigi"
       ],
+      "displayAuthors": [
+        "Yang Liu",
+        "Farshid Alambeigi"
+      ],
       "batch": "2026-11-24",
       "kind": "new"
     },
@@ -1196,6 +1839,10 @@
       "authors": [
         "oliver wang",
         "mani srivastava"
+      ],
+      "displayAuthors": [
+        "Oliver Wang",
+        "Mani Srivastava"
       ],
       "batch": "2026-11-24",
       "kind": "new"
@@ -1212,6 +1859,14 @@
         "chen qian",
         "yanran ding"
       ],
+      "displayAuthors": [
+        "Zelin Shen",
+        "Gabriel Ramos Salinas",
+        "Qiyu Zhang",
+        "Yue Qin",
+        "Chen Qian",
+        "Yanran Ding"
+      ],
       "batch": "2026-11-24",
       "kind": "new"
     },
@@ -1223,6 +1878,11 @@
         "qie sima",
         "wei xue",
         "yike guo"
+      ],
+      "displayAuthors": [
+        "Qie Sima",
+        "Wei Xue",
+        "Yike Guo"
       ],
       "batch": "2026-11-24",
       "kind": "new"
@@ -1241,6 +1901,16 @@
         "dacheng tao",
         "hao tang"
       ],
+      "displayAuthors": [
+        "Yue Huang",
+        "Tianshan Zhang",
+        "Zeyu Zhang",
+        "Jayeon Kang",
+        "Akide Liu",
+        "Sungjoon Choi",
+        "Dacheng Tao",
+        "Hao Tang"
+      ],
       "batch": "2026-11-24",
       "kind": "new"
     },
@@ -1255,6 +1925,14 @@
         "zuowei chen",
         "hao wen",
         "qing shi"
+      ],
+      "displayAuthors": [
+        "Zhiwen Song",
+        "Ruidi Liu",
+        "Guanglu Jia",
+        "Zuowei Chen",
+        "Hao Wen",
+        "Qing Shi"
       ],
       "batch": "2026-11-24",
       "kind": "new"
@@ -1273,6 +1951,16 @@
         "sida peng",
         "xiaowei zhou"
       ],
+      "displayAuthors": [
+        "Jiarui Guo",
+        "Jinkai Zhang",
+        "Yuanhong Yu",
+        "Yongchen Zai",
+        "Futang Zhu",
+        "Ruizhen Hu",
+        "Sida Peng",
+        "Xiaowei Zhou"
+      ],
       "batch": "2026-11-24",
       "kind": "new"
     },
@@ -1287,6 +1975,13 @@
         "kenneth shaw",
         "deepak pathak"
       ],
+      "displayAuthors": [
+        "Adam Kan",
+        "Jason Jingzhou Liu",
+        "Jiahui Yang",
+        "Kenneth Shaw",
+        "Deepak Pathak"
+      ],
       "batch": "2026-11-24",
       "kind": "new"
     },
@@ -1300,6 +1995,13 @@
         "shubao fan",
         "chenyu niu",
         "erqi wu"
+      ],
+      "displayAuthors": [
+        "Jiahui Qian",
+        "Tiandong Wang",
+        "Shubao Fan",
+        "Chenyu Niu",
+        "Erqi Wu"
       ],
       "batch": "2026-11-24",
       "kind": "new"
@@ -1317,6 +2019,15 @@
         "sheng jin",
         "cheng xu"
       ],
+      "displayAuthors": [
+        "Donglei Rong",
+        "Wenbin Yao",
+        "Congcong Bai",
+        "Xi Gao",
+        "Qiaoqiao Ren",
+        "Sheng Jin",
+        "Cheng Xu"
+      ],
       "batch": "2026-11-24",
       "kind": "new"
     },
@@ -1333,6 +2044,15 @@
         "wei xin",
         "li li"
       ],
+      "displayAuthors": [
+        "Chenchen Lv",
+        "Lingchen Hu",
+        "Yaosai Zhang",
+        "Chunlan Li",
+        "Gengkui Wei",
+        "Wei Xin",
+        "Li Li"
+      ],
       "batch": "2026-11-24",
       "kind": "new"
     },
@@ -1347,6 +2067,14 @@
         "yeong sang park",
         "maurice fallon",
         "ayoung kim"
+      ],
+      "displayAuthors": [
+        "Minwoo Jung",
+        "Dongjae Lee",
+        "DongGuw Lee",
+        "Yeong Sang Park",
+        "Maurice Fallon",
+        "Ayoung Kim"
       ],
       "batch": "2026-11-24",
       "kind": "new"
@@ -1368,6 +2096,19 @@
         "huiliang shen",
         "zaixing he"
       ],
+      "displayAuthors": [
+        "Mingyu Mei",
+        "Haojie Xu",
+        "Zibo Dai",
+        "Hongjie Fang",
+        "Shirun Tang",
+        "Zhengrui Lv",
+        "Yang Liu",
+        "Chen Guang",
+        "Xingyue Zhao",
+        "Huiliang Shen",
+        "Zaixing He"
+      ],
       "batch": "2026-11-24",
       "kind": "new"
     },
@@ -1379,6 +2120,11 @@
         "zhuowen li",
         "qiyuan fu",
         "auke ijspeert"
+      ],
+      "displayAuthors": [
+        "Zhuowen Li",
+        "Qiyuan Fu",
+        "Auke Ijspeert"
       ],
       "batch": "2026-11-24",
       "kind": "new"
@@ -1394,6 +2140,14 @@
         "shuai wang",
         "simo wu",
         "malu zhang"
+      ],
+      "displayAuthors": [
+        "Mingquan Liu",
+        "Peng Zhou",
+        "Shanming Yao",
+        "Shuai Wang",
+        "Simo Wu",
+        "Malu Zhang"
       ],
       "batch": "2026-11-24",
       "kind": "new"
@@ -1413,6 +2167,17 @@
         "ding zhao",
         "jihun hamm"
       ],
+      "displayAuthors": [
+        "Yunbei Zhang",
+        "Yuyou Zhang",
+        "Janet Wang",
+        "Ming Liu",
+        "Yijiang Li",
+        "Yikai Wang",
+        "Weirui Ye",
+        "Ding Zhao",
+        "Jihun Hamm"
+      ],
       "batch": "2026-11-24",
       "kind": "new"
     },
@@ -1431,6 +2196,17 @@
         "jun ma",
         "boyu zhou"
       ],
+      "displayAuthors": [
+        "Xulin Xiao",
+        "Shengyi Liang",
+        "Mingjie Zhang",
+        "Chengkai Wu",
+        "Chen Chen",
+        "Zhigang Li",
+        "Jinni Zhou",
+        "Jun Ma",
+        "Boyu Zhou"
+      ],
       "batch": "2026-11-24",
       "kind": "new"
     },
@@ -1444,6 +2220,12 @@
         "jingyu liu",
         "yanran ding"
       ],
+      "displayAuthors": [
+        "Yulun Zhuang",
+        "Hanyu Zhang",
+        "Jingyu Liu",
+        "Yanran Ding"
+      ],
       "batch": "2026-11-24",
       "kind": "new"
     },
@@ -1455,6 +2237,11 @@
         "zikang wen",
         "yuning zhang",
         "dong yuan"
+      ],
+      "displayAuthors": [
+        "Zikang Wen",
+        "Yuning Zhang",
+        "Dong Yuan"
       ],
       "batch": "2026-11-24",
       "kind": "new"
@@ -1468,6 +2255,12 @@
         "geunhyeok yu",
         "dowoon lee",
         "hyoseok hwang"
+      ],
+      "displayAuthors": [
+        "Sunjae Jeong",
+        "Geunhyeok Yu",
+        "Dowoon Lee",
+        "Hyoseok Hwang"
       ],
       "batch": "2026-11-24",
       "kind": "new"
@@ -1488,6 +2281,18 @@
         "xiaojun chang",
         "zhihui li"
       ],
+      "displayAuthors": [
+        "Gengming Cui",
+        "Mingfei Han",
+        "Jiawei Zhang",
+        "Mozheng Liao",
+        "Yunkai Guo",
+        "Minghao Jin",
+        "Tingwen Du",
+        "Salman Khan",
+        "Xiaojun Chang",
+        "Zhihui Li"
+      ],
       "batch": "2026-11-24",
       "kind": "new"
     },
@@ -1504,6 +2309,15 @@
         "weirui ye",
         "yilun du"
       ],
+      "displayAuthors": [
+        "Yunbei Zhang",
+        "Zijian Jin",
+        "Janet Wang",
+        "Xingchen Zhao",
+        "Zhenyu Zhang",
+        "Weirui Ye",
+        "Yilun Du"
+      ],
       "batch": "2026-11-24",
       "kind": "new"
     },
@@ -1515,6 +2329,11 @@
         "janani s k",
         "manan tayal",
         "shishir n y kolathaya"
+      ],
+      "displayAuthors": [
+        "Janani S K",
+        "Manan Tayal",
+        "Shishir N. Y Kolathaya"
       ],
       "batch": "2026-11-24",
       "kind": "new"
@@ -1533,6 +2352,16 @@
         "yonggen ling",
         "hong zhang"
       ],
+      "displayAuthors": [
+        "Tianle Zeng",
+        "Hanjing Ye",
+        "Bingyi Xia",
+        "Yuchen Zhou",
+        "Zibo Zhang",
+        "Yufei Huang",
+        "Yonggen Ling",
+        "Hong Zhang"
+      ],
       "batch": "2026-11-24",
       "kind": "new"
     },
@@ -1542,6 +2371,9 @@
       "abstract": "Room scanning with consumer LiDAR today depends on ARKit, whose tracking and map update are a black box: an application receives depth and poses but cannot inspect how they were produced, so an error in a scan cannot be traced to its cause. This paper examines whether an open alternative, one whose every stage can be inspected, is feasible on the device. Mobile-LIO is a depth-inertial odometry pipeline that uses the phone's depth and inertial data and no ARKit poses. On seven ScanNet++ iPhone recordings it completed every scene with 0.2-2.0 m deviation from the ARKit-derived reference, where six open-source LiDAR-inertial estimators run as configured for dedicated scanners had at least 4.46 m in 41 of 42 runs (two of the six also failed a noise-free adapter check, and Mobile-LIO has a speed cap they lack; the comparison is not controlled and does not rone 15 Pro Max, a buildwith corrected phone code kept up with the sensor in 14 of 15 replay runs of three 7-13 s recordings; e estimator before thosecorrections. Laser-scanned meshes give the accuracy. Within 3 m, recorded depth differed from the m on three held-out scenes,maps fused with ARKit poses that the dataset scales and aligns to the mesh la a median 1.8-2.3 cm from 17 cm. Because thepipeline is open, the gap could be examined: in the scene with the largest error, noise-free renderefrom 1.97 m to 0.04 m, sorecorded depth, whose error reached 20-54 cm at 5-7 m, contributed alongside the estimator. An open de tracked on phone depth and kept up with the sensor in short phone replays, but it is not yet as accurate as ARKit-pose maps, whicheach only the coarsestUSIBD accuracy level (LOA10); its accuracy on the device was not measured.",
       "authors": [
         "minsuk jang"
+      ],
+      "displayAuthors": [
+        "Minsuk Jang"
       ],
       "batch": "2026-11-24",
       "kind": "new"
@@ -1554,6 +2386,11 @@
         "shrikrishna bhagirath rajule",
         "srinath neelamagam",
         "aniket bera"
+      ],
+      "displayAuthors": [
+        "Shrikrishna Bhagirath Rajule",
+        "Srinath Neelamagam",
+        "Aniket Bera"
       ],
       "batch": "2026-11-24",
       "kind": "new"
@@ -1571,6 +2408,15 @@
         "addison lin wang",
         "yawei li"
       ],
+      "displayAuthors": [
+        "Yanlong Chen",
+        "Thongthornpatch Chamadol",
+        "Yichen Guo",
+        "Yunfei Gao",
+        "Mohan Liu",
+        "Addison Lin Wang",
+        "Yawei Li"
+      ],
       "batch": "2026-11-24",
       "kind": "new"
     },
@@ -1583,6 +2429,12 @@
         "bingchuan wei",
         "yingkai cai",
         "zhaokui wang"
+      ],
+      "displayAuthors": [
+        "Bingqi Huang",
+        "Bingchuan Wei",
+        "Yingkai Cai",
+        "Zhaokui Wang"
       ],
       "batch": "2026-11-24",
       "kind": "new"
@@ -1598,6 +2450,14 @@
         "liang li",
         "zhaosong li",
         "lifeng liu"
+      ],
+      "displayAuthors": [
+        "Haoxiang Jie",
+        "Yaoyuan Yan",
+        "Zhiyou Heng",
+        "Liang Li",
+        "Zhaosong Li",
+        "Lifeng Liu"
       ],
       "batch": "2026-11-24",
       "kind": "new"
@@ -1616,6 +2476,16 @@
         "fei wang",
         "chang xu"
       ],
+      "displayAuthors": [
+        "Wenhao Li",
+        "Yu Han",
+        "Xiu Su",
+        "Dehao Wu",
+        "Keke Huang",
+        "Shan You",
+        "Fei Wang",
+        "Chang Xu"
+      ],
       "batch": "2026-11-24",
       "kind": "new"
     },
@@ -1630,6 +2500,14 @@
         "haibin huang",
         "chi zhang",
         "xuelong li"
+      ],
+      "displayAuthors": [
+        "Xufeng Zhan",
+        "Yuanzhi Liang",
+        "Ye Lu",
+        "Haibin Huang",
+        "Chi Zhang",
+        "Xuelong Li"
       ],
       "batch": "2026-11-24",
       "kind": "new"
@@ -1646,6 +2524,15 @@
         "weirui ye",
         "jihun hamm",
         "yilun du"
+      ],
+      "displayAuthors": [
+        "Yunbei Zhang",
+        "Zijian Jin",
+        "Shuaicheng Niu",
+        "Baian Chen",
+        "Weirui Ye",
+        "Jihun Hamm",
+        "Yilun Du"
       ],
       "batch": "2026-11-24",
       "kind": "new"
@@ -1697,6 +2584,49 @@
         "zhongyuan wang",
         "huan yang"
       ],
+      "displayAuthors": [
+        "Innata Team",
+        "Yu Bai",
+        "Ziyi Bai",
+        "Yuxuan Cai",
+        "Chenrui He",
+        "Wenhao Li",
+        "Zhe Lin",
+        "Heng Wang",
+        "Hai Yuan",
+        "Zhiwei Yu",
+        "Yuanhang Zhang",
+        "Luyou Chen",
+        "Tiezhu Gao",
+        "Zheng Geng",
+        "Jinbang Guo",
+        "Dongxu Han",
+        "Diqi He",
+        "B\\\"orje F. Karlsson",
+        "Jintao Li",
+        "Zhiyu Li",
+        "Xiongkun Linghu",
+        "Guang Liu",
+        "You Liu",
+        "Zhen Luo",
+        "Mengsi Lyu",
+        "Yufeng Lyu",
+        "Zheng Lyu",
+        "Quanyue Ma",
+        "Chunlei Men",
+        "Ziqiang Ni",
+        "Tengfei Pan",
+        "Yijun Shen",
+        "Liang Sun",
+        "Shaoxuan Xie",
+        "Xiang Yang",
+        "Guocai Yao",
+        "Hongjun Zhang",
+        "Yingli Zhao",
+        "Yonghua Lin",
+        "Zhongyuan Wang",
+        "Huan Yang"
+      ],
       "batch": "2026-11-24",
       "kind": "new"
     },
@@ -1709,6 +2639,12 @@
         "gwangpyo yoo",
         "eunyoung park",
         "honguk woo"
+      ],
+      "displayAuthors": [
+        "Woo Kyung Kim",
+        "Gwangpyo Yoo",
+        "Eunyoung Park",
+        "Honguk Woo"
       ],
       "batch": "2026-11-24",
       "kind": "new"
@@ -1726,6 +2662,15 @@
         "chang wu",
         "songyuheng gao"
       ],
+      "displayAuthors": [
+        "Yunhe Zhang",
+        "Long Gao",
+        "Yuedong Fu",
+        "Gang He",
+        "Li Xu",
+        "Chang Wu",
+        "Songyuheng Gao"
+      ],
       "batch": "2026-11-24",
       "kind": "new"
     },
@@ -1737,6 +2682,11 @@
         "sixu li",
         "swaroop darbha",
         "yang zhou"
+      ],
+      "displayAuthors": [
+        "Sixu Li",
+        "Swaroop Darbha",
+        "Yang Zhou"
       ],
       "batch": "2026-11-24",
       "kind": "new"
@@ -1753,6 +2703,15 @@
         "li xu",
         "chang wu",
         "pengyu li"
+      ],
+      "displayAuthors": [
+        "Yunhe Zhang",
+        "Long Gao",
+        "Yuedong Fu",
+        "Gang He",
+        "Li Xu",
+        "Chang Wu",
+        "Pengyu Li"
       ],
       "batch": "2026-11-24",
       "kind": "new"
@@ -1773,6 +2732,18 @@
         "salman khan",
         "xiaojun chang"
       ],
+      "displayAuthors": [
+        "Haihong Hao",
+        "Lei Chen",
+        "Mingfei Han",
+        "Chenglong Yan",
+        "Dong An",
+        "Yuqiang Yang",
+        "Changlin Li",
+        "Minghao Guo",
+        "Salman Khan",
+        "Xiaojun Chang"
+      ],
       "batch": "2026-11-24",
       "kind": "new"
     },
@@ -1787,6 +2758,14 @@
         "chenyangguang zhang",
         "stelian coros",
         "marco hutter"
+      ],
+      "displayAuthors": [
+        "Zhihao Cao",
+        "Tianxu An",
+        "Chenhao Li",
+        "Chenyangguang Zhang",
+        "Stelian Coros",
+        "Marco Hutter"
       ],
       "batch": "2026-11-24",
       "kind": "new"
@@ -1805,6 +2784,16 @@
         "xiaojun chang",
         "zhihui li"
       ],
+      "displayAuthors": [
+        "Di Xin",
+        "Mingfei Han",
+        "Genming Cui",
+        "Yuanxiang Chen",
+        "Xiaolong Wu",
+        "Siyu Ning",
+        "Xiaojun Chang",
+        "Zhihui Li"
+      ],
       "batch": "2026-11-24",
       "kind": "new"
     },
@@ -1821,6 +2810,16 @@
         "haoran xu",
         "zirui li",
         "chen lv"
+      ],
+      "displayAuthors": [
+        "Qihang Huang",
+        "Collister Chua",
+        "YuJie Yan",
+        "Shiyu Fang",
+        "Zhan Chen",
+        "Haoran Xu",
+        "Zirui Li",
+        "Chen Lv"
       ],
       "batch": "2026-11-24",
       "kind": "new"
@@ -1840,6 +2839,17 @@
         "zhan chen",
         "chen lv"
       ],
+      "displayAuthors": [
+        "Qihang Huang",
+        "Zhidong Wang",
+        "Zirui Li",
+        "YuJie Yan",
+        "Jingsong Liang",
+        "Shiyu Fang",
+        "Collister Chua",
+        "Zhan Chen",
+        "Chen Lv"
+      ],
       "batch": "2026-11-24",
       "kind": "new"
     },
@@ -1857,6 +2867,17 @@
         "bohao zhang",
         "heng zhou",
         "wei sui"
+      ],
+      "displayAuthors": [
+        "Lijun Han",
+        "Muyuan Ma",
+        "Zichen Wang",
+        "Siyuan Liu",
+        "Yuxi Liu",
+        "Yutong Wang",
+        "Bohao Zhang",
+        "Heng Zhou",
+        "Wei Sui"
       ],
       "batch": "2026-11-24",
       "kind": "new"
@@ -1878,6 +2899,19 @@
         "xing hu",
         "yunji chen"
       ],
+      "displayAuthors": [
+        "Rongzheng Yang",
+        "Jiaming Guo",
+        "Yuxuan Guo",
+        "Zihao Zhang",
+        "Yunkai Gao",
+        "Siming Lan",
+        "Shaohui Peng",
+        "Rui Zhang",
+        "Tianyun Ma",
+        "Xing Hu",
+        "Yunji Chen"
+      ],
       "batch": "2026-11-24",
       "kind": "new"
     },
@@ -1897,6 +2931,18 @@
         "zhide zhong",
         "jianyu chen"
       ],
+      "displayAuthors": [
+        "Puzhen Yuan",
+        "Yanjiang Guo",
+        "Yichen Liu",
+        "Xiang Zhu",
+        "Qingzhou Lu",
+        "Chenxin Liu",
+        "Tun Ban",
+        "Haodong Yan",
+        "Zhide Zhong",
+        "Jianyu Chen"
+      ],
       "batch": "2026-11-24",
       "kind": "new"
     },
@@ -1911,6 +2957,14 @@
         "zuxing lu",
         "heng zhang",
         "xingxing zuo"
+      ],
+      "displayAuthors": [
+        "Haoran Zhang",
+        "Haokai Ding",
+        "Han Zhou",
+        "Zuxing Lu",
+        "Heng Zhang",
+        "Xingxing Zuo"
       ],
       "batch": "2026-11-24",
       "kind": "new"
@@ -1944,6 +2998,31 @@
         "moogeun park",
         "dongsuk kum"
       ],
+      "displayAuthors": [
+        "Joonhee Lim",
+        "Seonmyeong Lee",
+        "Sihwan Hwang",
+        "Hanbin Jang",
+        "Hiwon Shin",
+        "Dogun Kim",
+        "Hyelin Jo",
+        "Hyeonjun Jeong",
+        "Yongjae Lee",
+        "Junseong Kwak",
+        "Junhyeok Park",
+        "Satyam Mishra",
+        "Juyeb Shin",
+        "Uisung Kim",
+        "Hyeonseo Kim",
+        "Saparkhan Kassymbekov",
+        "Hailemichael Molla Gashaw",
+        "Abi Rahman Syamil",
+        "Mingyu Kim",
+        "Hyeongjun Kim",
+        "Yeina Lee",
+        "Moogeun Park",
+        "Dongsuk Kum"
+      ],
       "batch": "2026-11-24",
       "kind": "new"
     },
@@ -1962,6 +3041,17 @@
         "zhihui li",
         "xiaojun chang"
       ],
+      "displayAuthors": [
+        "Tingjun Dai",
+        "Jianxiang He",
+        "Mingfei Han",
+        "Qihao Yu",
+        "Longtao Jiang",
+        "Changlin Li",
+        "Minghao Jin",
+        "Zhihui Li",
+        "Xiaojun Chang"
+      ],
       "batch": "2026-11-24",
       "kind": "new"
     },
@@ -1979,6 +3069,16 @@
         "kyumin choi",
         "jong chul ye"
       ],
+      "displayAuthors": [
+        "Hyeonjae Kim",
+        "Jeongsol Kim",
+        "Sunwoo Park",
+        "Chanyu Moon",
+        "Yoojin Oh",
+        "Youngjun Jun",
+        "Kyumin Choi",
+        "Jong Chul Ye"
+      ],
       "batch": "2026-11-24",
       "kind": "new"
     },
@@ -1994,6 +3094,14 @@
         "weijian luo",
         "tianyang hu"
       ],
+      "displayAuthors": [
+        "Yihao Shen",
+        "Yuxuan Chen",
+        "Xuantong Liu",
+        "Jun Gao",
+        "Weijian Luo",
+        "Tianyang Hu"
+      ],
       "batch": "2026-11-24",
       "kind": "new"
     },
@@ -2008,6 +3116,14 @@
         "yue liu",
         "peiran ren",
         "wei shen"
+      ],
+      "displayAuthors": [
+        "Jiawei Guo",
+        "Yu Huang",
+        "Dijiang Dong",
+        "Yue Liu",
+        "Peiran Ren",
+        "Wei Shen"
       ],
       "batch": "2026-11-24",
       "kind": "new"
@@ -2029,6 +3145,19 @@
         "liang su",
         "linchao zhu"
       ],
+      "displayAuthors": [
+        "Shuxun Wang",
+        "Xiaonan Jiang",
+        "Zhaoyu Wang",
+        "Ziyuan Chu",
+        "Xihang Yue",
+        "Pengfei Liu",
+        "Haodong Zhu",
+        "Shiqi Liu",
+        "Mingzhi Zheng",
+        "Liang Su",
+        "Linchao Zhu"
+      ],
       "batch": "2026-11-24",
       "kind": "new"
     },
@@ -2046,6 +3175,16 @@
         "yutao yue",
         "xiaochun cao"
       ],
+      "displayAuthors": [
+        "Le Yang",
+        "Haoyang Lyu",
+        "Honglei Jin",
+        "Wenshuo Chen",
+        "Jiawei Liang",
+        "Wenqiang Wang",
+        "Yutao Yue",
+        "Xiaochun Cao"
+      ],
       "batch": "2026-11-24",
       "kind": "new"
     },
@@ -2061,6 +3200,14 @@
         "xing gao",
         "chunhua shen"
       ],
+      "displayAuthors": [
+        "Yifei Yao",
+        "Yude Zou",
+        "Guanbo Jiao",
+        "Jianming Ma",
+        "Xing Gao",
+        "Chunhua Shen"
+      ],
       "batch": "2026-11-24",
       "kind": "new"
     },
@@ -2074,6 +3221,13 @@
         "shu morikuni",
         "yusuke iwasawa",
         "taiki miyanishi"
+      ],
+      "displayAuthors": [
+        "Hiroaki Honda",
+        "Koya Sakamoto",
+        "Shu Morikuni",
+        "Yusuke Iwasawa",
+        "Taiki Miyanishi"
       ],
       "batch": "2026-11-24",
       "kind": "new"
@@ -2089,6 +3243,13 @@
         "wenpan li",
         "weiming shen"
       ],
+      "displayAuthors": [
+        "Zhilun Hu",
+        "Yuqi Cheng",
+        "Yuxiang Tan",
+        "Wenpan Li",
+        "Weiming Shen"
+      ],
       "batch": "2026-11-24",
       "kind": "new"
     },
@@ -2100,6 +3261,11 @@
         "nilay kushawaha",
         "abdalla swikir",
         "fares abu dakka"
+      ],
+      "displayAuthors": [
+        "Nilay Kushawaha",
+        "Abdalla Swikir",
+        "Fares Abu-Dakka"
       ],
       "batch": "2026-11-24",
       "kind": "new"
@@ -2119,6 +3285,17 @@
         "chen lv",
         "jian sun"
       ],
+      "displayAuthors": [
+        "Shiyu Fang",
+        "Yiming Cui",
+        "Qihang Huang",
+        "Zhan Chen",
+        "Collister Chua",
+        "Wenhui Huang",
+        "Peng Hang",
+        "Chen Lv",
+        "Jian Sun"
+      ],
       "batch": "2026-11-24",
       "kind": "new"
     },
@@ -2130,6 +3307,11 @@
         "jianzhu huai",
         "yujia zhang",
         "grzegorz jozkow"
+      ],
+      "displayAuthors": [
+        "Jianzhu Huai",
+        "Yujia Zhang",
+        "Grzegorz Jozkow"
       ],
       "batch": "2026-11-24",
       "kind": "new"
@@ -2144,6 +3326,13 @@
         "denis shcherba",
         "wojciech samek",
         "marc toussaint"
+      ],
+      "displayAuthors": [
+        "Paul Mattes",
+        "Ayman Abdeldayem",
+        "Denis Shcherba",
+        "Wojciech Samek",
+        "Marc Toussaint"
       ],
       "batch": "2026-11-24",
       "kind": "new"
@@ -2160,6 +3349,15 @@
         "jiaqi song",
         "hua chen",
         "nikos tsagarakis"
+      ],
+      "displayAuthors": [
+        "Rui Dai",
+        "Shunpeng Yang",
+        "Zhen Fu",
+        "Maolin Lei",
+        "Jiaqi Song",
+        "Hua Chen",
+        "Nikos Tsagarakis"
       ],
       "batch": "2026-11-24",
       "kind": "new"
@@ -2186,6 +3384,24 @@
         "daolin ma",
         "renjing xu"
       ],
+      "displayAuthors": [
+        "Qiwei Liang",
+        "Zhengtu Liang",
+        "Minghao Lai",
+        "Yikeng Chen",
+        "Yiming Wang",
+        "Boyang Cai",
+        "Yuetong Fang",
+        "Taowen Wang",
+        "Baiqiao Yin",
+        "Tianxing Chen",
+        "Yue Chen",
+        "Jiaming Liang",
+        "Guangyu Chen",
+        "Shaolong Zhu",
+        "Daolin Ma",
+        "Renjing Xu"
+      ],
       "batch": "2026-11-24",
       "kind": "new"
     },
@@ -2200,6 +3416,14 @@
         "roberto olmi",
         "sven koenig",
         "mariagrazia dotoli"
+      ],
+      "displayAuthors": [
+        "Federico Signorile",
+        "Raffaele Carli",
+        "Alessandro Bertogli",
+        "Roberto Olmi",
+        "Sven Koenig",
+        "Mariagrazia Dotoli"
       ],
       "batch": "2026-11-24",
       "kind": "new"
@@ -2216,6 +3440,14 @@
         "jun peng jiang",
         "han jia ye"
       ],
+      "displayAuthors": [
+        "Zhen Xu",
+        "Hao-Run Cai",
+        "Heng-Zhuang Li",
+        "Si-Yang Liu",
+        "Jun-Peng Jiang",
+        "Han-Jia Ye"
+      ],
       "batch": "2026-11-24",
       "kind": "new"
     },
@@ -2227,6 +3459,11 @@
         "vinay udit mohan",
         "xuchuan huang",
         "rolandos alexandros potamias"
+      ],
+      "displayAuthors": [
+        "Vinay Udit Mohan",
+        "Xuchuan Huang",
+        "Rolandos Alexandros Potamias"
       ],
       "batch": "2026-11-24",
       "kind": "new"
@@ -2241,6 +3478,13 @@
         "zhipeng bao",
         "wenjie zhao",
         "qianwen li"
+      ],
+      "displayAuthors": [
+        "Yiping Li",
+        "Haohua Que",
+        "Zhipeng Bao",
+        "Wenjie Zhao",
+        "Qianwen Li"
       ],
       "batch": "2026-11-24",
       "kind": "new"
@@ -2257,6 +3501,14 @@
         "varun nalam",
         "he huang"
       ],
+      "displayAuthors": [
+        "Xinyi Liu",
+        "Atli \\\"Orn Sverrisson",
+        "David Langlois",
+        "Ming Liu",
+        "Varun Nalam",
+        "He Huang"
+      ],
       "batch": "2026-11-24",
       "kind": "new"
     },
@@ -2266,6 +3518,9 @@
       "abstract": "Frontier vision-language models (VLMs) are increasingly used as high-level robot controllers, yet their safety is evaluated almost entirely in text. We introduce SayDo, a benchmark that assesses the propensity of frontier models to cause harm in embodied contexts. SayDo comprises eleven laboratory and household tasks that pair a benign instruction with a hazard latent in the scene. Tasks are implemented in six settings along an embodiment gradient, from chat questions about an imagined robot to closed-loop control of a simulated robot arm. Benign controls, safe-alternative variants and scripted operator pushback complement each task. Across six open- and closed-weight VLMs and 11,480 episodes, hazardous-action rates rise from 14% in chat to 47% in the simulator, and from 2% to 80% for the most affected model. The increase is largely driven by open-weight models. We find that models flag hazards before acting in 73% of unsafe episodes and give way to pushback about twice as often when controlling robots as in chat. The safest models also show signs of overcaution on benign controls. Safety evaluations run in text therefore do not predict the safety behavior of the same models when used as robot controllers.",
       "authors": [
         "benjamin alt"
+      ],
+      "displayAuthors": [
+        "Benjamin Alt"
       ],
       "batch": "2026-11-24",
       "kind": "new"
@@ -2289,6 +3544,21 @@
         "chuan wen",
         "cewu lu"
       ],
+      "displayAuthors": [
+        "Mishuo Han",
+        "Zhixuan Liang",
+        "Zhaoyuan Wan",
+        "Wendi Chen",
+        "Jiarui Chen",
+        "Xinkai Wang",
+        "Yue Ma",
+        "Yu Zhou",
+        "Junting Chen",
+        "Yao Mu",
+        "Jun Lv",
+        "Chuan Wen",
+        "Cewu Lu"
+      ],
       "batch": "2026-11-24",
       "kind": "new"
     },
@@ -2300,6 +3570,11 @@
         "xinyang zhou",
         "qi li",
         "xinchao wang"
+      ],
+      "displayAuthors": [
+        "Xinyang Zhou",
+        "Qi Li",
+        "Xinchao Wang"
       ],
       "batch": "2026-11-24",
       "kind": "new"
@@ -2317,6 +3592,16 @@
         "ming li",
         "chen chen",
         "yuzhang shang"
+      ],
+      "displayAuthors": [
+        "Xinxin Liu",
+        "Anh Dao",
+        "Wenrui Bao",
+        "Rafid Ahmed",
+        "Bingxin Xu",
+        "Ming Li",
+        "Chen Chen",
+        "Yuzhang Shang"
       ],
       "batch": "2026-11-24",
       "kind": "new"
@@ -2351,6 +3636,32 @@
         "tiga altman",
         "huan ang gao"
       ],
+      "displayAuthors": [
+        "Jinkun Liu",
+        "Yingze Wang",
+        "Situ Wang",
+        "Deyao Hong",
+        "Mingju Gao",
+        "Wenyi Li",
+        "Yizhe Chi",
+        "Youjie Zheng",
+        "Kaisen Yang",
+        "Xiangyang Wang",
+        "Bingxiang He",
+        "Yuxin Zuo",
+        "Boyuan Chen",
+        "Yue Chen",
+        "Cheng Qian",
+        "Tianxing Chen",
+        "Huichi Zhou",
+        "Huaxiu Yao",
+        "Hao Tang",
+        "Hao Zhou",
+        "Ya-Qin Zhang",
+        "Calvin Xiao",
+        "Tiga Altman",
+        "Huan-ang Gao"
+      ],
       "batch": "2026-11-24",
       "kind": "new"
     },
@@ -2363,6 +3674,12 @@
         "xiaoman zhang",
         "xucheng wang",
         "pranav rajpurkar"
+      ],
+      "displayAuthors": [
+        "Sung Eun Kim",
+        "Xiaoman Zhang",
+        "Xucheng Wang",
+        "Pranav Rajpurkar"
       ],
       "batch": "2026-11-24",
       "kind": "new"
@@ -2383,6 +3700,18 @@
         "yong liu zhejiang university",
         "jiangning zhang zhejiang university"
       ],
+      "displayAuthors": [
+        "Yicheng Xu (Zhejiang University)",
+        "Wencan Jiang (Zhejiang University)",
+        "Zihao Zhu (Stanford University",
+        "AGIBOT Innovation)",
+        "Keru Zhou (Tsinghua University)",
+        "Chang Zhou (AGIBOT Innovation)",
+        "Li Liu (AGIBOT Innovation)",
+        "Maoqing Yao (AGIBOT Innovation)",
+        "Yong Liu (Zhejiang University)",
+        "Jiangning Zhang (Zhejiang University)"
+      ],
       "batch": "2026-11-24",
       "kind": "new"
     },
@@ -2394,6 +3723,11 @@
         "oleg yu sumenkov",
         "danil d kulminskiy",
         "sergei v gusev"
+      ],
+      "displayAuthors": [
+        "Oleg Yu. Sumenkov",
+        "Danil D. Kulminskiy",
+        "Sergei V. Gusev"
       ],
       "batch": "2026-11-24",
       "kind": "new"
@@ -2409,6 +3743,14 @@
         "zexin he",
         "xingang pan",
         "zhi hou"
+      ],
+      "displayAuthors": [
+        "Jingyuan Liu",
+        "Yongwei Chen",
+        "Yishan Yang",
+        "Zexin He",
+        "Xingang Pan",
+        "Zhi Hou"
       ],
       "batch": "2026-11-24",
       "kind": "new"
@@ -2434,6 +3776,23 @@
         "masayoshi tomizuka",
         "ruihai wu"
       ],
+      "displayAuthors": [
+        "Jinzhong Gu",
+        "Jiakai Chen",
+        "Xinyi Cao",
+        "Yan Shen",
+        "Hangke Sui",
+        "Shutian Zheng",
+        "Xiang Xiao",
+        "Haoran Lu",
+        "Fan Xu",
+        "Lu Shi",
+        "Daochen Shi",
+        "Ruihua Zhang",
+        "Wei Zhan",
+        "Masayoshi Tomizuka",
+        "Ruihai Wu"
+      ],
       "batch": "2026-11-24",
       "kind": "new"
     },
@@ -2443,6 +3802,9 @@
       "abstract": "Flow-matching vision-language-action (VLA) models such as $\\pi_{0.5}$ re-encode the camera images and the instruction with a 2B-parameter backbone at every control step, and the feed-forward layers of this prefix account for most of its compute. A natural way to save this compute is to send most tokens through a low-rank MLP and compute exactly only the tokens whose approximation error is large. We find that this intuition is wrong. Even a verifier that knows every token's exact error picks the wrong tokens, producing 1.3--1.7$\\times$ larger action deviation than a simple test of whether a token's input is novel, that is, whether it falls outside the subspace seen during calibration. Large errors concentrate in tokens the policy relies on little, such as the third-person camera, while the novelty test favors the wrist camera, a view the action depends on heavily. We call this the error--reliance gap. Building on it, we propose NoveltyGate, a training-free method that routes each prefix token, once per layer and before any multiplication, to either a low-rank or the original MLP. Deciding once per layer instead of once per matrix product avoids moving wide intermediate tensors and keeps every shape static, so the whole prefix runs as a single CUDA graph. On LIBERO, NoveltyGate accelerates the $\\pi_{0.5}$ prefix by up to 1.61$\\times$, stays 2.7--2.9$\\times$ closer to the original policy than channel pruning and low-rank compression at equal compute, and preserves closed-loop task success.",
       "authors": [
         "lemeng qi"
+      ],
+      "displayAuthors": [
+        "Lemeng Qi"
       ],
       "batch": "2026-11-24",
       "kind": "new"
@@ -2464,6 +3826,19 @@
         "kevin qinghong lin",
         "mike zheng shou"
       ],
+      "displayAuthors": [
+        "Yanzhe Chen",
+        "Zhijun Cao",
+        "Zechen Bai",
+        "Wenzheng Zeng",
+        "Kevin Yuchen Ma",
+        "Yiqi Lin",
+        "Guoqiang Liang",
+        "Xiaokang Liu",
+        "Ke Sun",
+        "Kevin Qinghong Lin",
+        "Mike Zheng Shou"
+      ],
       "batch": "2026-11-24",
       "kind": "new"
     },
@@ -2478,6 +3853,14 @@
         "nan cheng",
         "xin xia",
         "wenchao xu"
+      ],
+      "displayAuthors": [
+        "Zien Wang",
+        "Yuhao Pan",
+        "Yunfeng Fan",
+        "Nan Cheng",
+        "Xin Xia",
+        "Wenchao Xu"
       ],
       "batch": "2026-11-24",
       "kind": "new"
@@ -2500,6 +3883,20 @@
         "xian wu",
         "wanli ouyang"
       ],
+      "displayAuthors": [
+        "Fan Xu",
+        "Zhongtao Wang",
+        "Hao Wu",
+        "Yitong Zhu",
+        "Wenzhuo Ma",
+        "Long Li",
+        "Zhuohao Li",
+        "Zhisheng Chen",
+        "Rui Su",
+        "Kun Wang",
+        "Xian Wu",
+        "Wanli Ouyang"
+      ],
       "batch": "2026-11-24",
       "kind": "new"
     },
@@ -2513,6 +3910,13 @@
         "hanchu zhou",
         "hang wang",
         "junshan zhang"
+      ],
+      "displayAuthors": [
+        "Boqi Zhao",
+        "Dechen Gao",
+        "Hanchu Zhou",
+        "Hang Wang",
+        "Junshan Zhang"
       ],
       "batch": "2026-11-24",
       "kind": "new"
@@ -2538,6 +3942,23 @@
         "zhi hou",
         "chen change loy"
       ],
+      "displayAuthors": [
+        "Xiao-Ming Wu",
+        "Kang Liao",
+        "Yuexiao Ma",
+        "Taolin Zhang",
+        "Mingqian Zhou",
+        "Nuo Chen",
+        "Ziming Li",
+        "Yihang Luo",
+        "Rui Li",
+        "Zhonghua Wu",
+        "Tianyu Xie",
+        "Xiawu Zheng",
+        "Zhongang Cai",
+        "Zhi Hou",
+        "Chen Change Loy"
+      ],
       "batch": "2026-11-24",
       "kind": "new"
     },
@@ -2553,6 +3974,14 @@
         "zhi hou",
         "xingang pan"
       ],
+      "displayAuthors": [
+        "Zexin He",
+        "Rui Li",
+        "Yushi Lan",
+        "Chengkai Jin",
+        "Zhi Hou",
+        "Xingang Pan"
+      ],
       "batch": "2026-11-24",
       "kind": "new"
     },
@@ -2567,6 +3996,13 @@
         "jincheng xu",
         "yukun lu"
       ],
+      "displayAuthors": [
+        "Xintong Jiang",
+        "Shucheng Huang",
+        "Qiaoxuan Zhang",
+        "Jincheng Xu",
+        "Yukun Lu"
+      ],
       "batch": "2026-11-24",
       "kind": "cross"
     },
@@ -2580,6 +4016,12 @@
         "miguel sepulcre",
         "javier gozalvez"
       ],
+      "displayAuthors": [
+        "Shahab Salehi",
+        "Luca Lusvarghi",
+        "Miguel Sepulcre",
+        "Javier Gozalvez"
+      ],
       "batch": "2026-11-24",
       "kind": "cross"
     },
@@ -2590,6 +4032,10 @@
       "authors": [
         "binay kumar singh",
         "niels da vitoria lobo"
+      ],
+      "displayAuthors": [
+        "Binay Kumar Singh",
+        "Niels Da Vitoria Lobo"
       ],
       "batch": "2026-11-24",
       "kind": "cross"
@@ -2602,6 +4048,11 @@
         "willi poh",
         "kevin r osch",
         "christoph stiller"
+      ],
+      "displayAuthors": [
+        "Willi Poh",
+        "Kevin R\\\"osch",
+        "Christoph Stiller"
       ],
       "batch": "2026-11-24",
       "kind": "cross"
@@ -2616,6 +4067,13 @@
         "shridhar velhal",
         "m sethumadhavan",
         "suresh sundaram"
+      ],
+      "displayAuthors": [
+        "Anisha Mohapatra",
+        "Prasanna Ramamurthy",
+        "Shridhar Velhal",
+        "M. Sethumadhavan",
+        "Suresh Sundaram"
       ],
       "batch": "2026-11-24",
       "kind": "cross"
@@ -2635,6 +4093,17 @@
         "yan zhao",
         "xiaoshuai hao"
       ],
+      "displayAuthors": [
+        "Feiyang Jia",
+        "Lin Liu",
+        "Zhicheng Bao",
+        "Caiyan Jia",
+        "Ziying Song",
+        "Shengkai Zhang",
+        "Lina Han",
+        "Yan Zhao",
+        "Xiaoshuai Hao"
+      ],
       "batch": "2026-11-24",
       "kind": "cross"
     },
@@ -2651,6 +4120,15 @@
         "shikui tu",
         "lei xu"
       ],
+      "displayAuthors": [
+        "Qihang Chen",
+        "Tengjie Li",
+        "Hongwei Lu",
+        "Jason Wu",
+        "Chyna Qu",
+        "Shikui Tu",
+        "Lei Xu"
+      ],
       "batch": "2026-11-24",
       "kind": "cross"
     },
@@ -2662,6 +4140,10 @@
         "haomeng zhang",
         "raymond a yeh"
       ],
+      "displayAuthors": [
+        "Haomeng Zhang",
+        "Raymond A. Yeh"
+      ],
       "batch": "2026-11-24",
       "kind": "cross"
     },
@@ -2671,6 +4153,9 @@
       "abstract": "Embodied assistants and wearable devices need 3D spatial reasoning, and their limited hardware restricts them to small vision-language models (VLMs). Small spatial VLMs acquire different abilities from their training: a model trained on large spatial question sets estimates object and room sizes well, whereas a model with a 3D geometry encoder is better at relative directions and absolute distances. Instead of training a single model for all spatial tasks, as published methods do, we build one system that uses each frozen model for the tasks it handles best. We propose SpatialDuet, which pairs a metric expert with a geometry expert under a Bayesian task router. The metric expert is a data-driven spatial VLM run with three training-free modules: training-aligned sampling, metric-aware minimum Bayes risk decoding and per-type metric calibration. The geometry expert is a VLM with a 3D geometry encoder. For each question type, the router estimates from labelled development questions how likely each expert is to be better, and pools their answers with that probability as weight, in log space for numeric answers and over the option distributions for multiple-choice answers. Extensive experiments on four spatial benchmarks covering video and single images validate SpatialDuet; it outperforms the best published small VLMs by 3.17% on VSI-Bench and, excluding a model trained on CV-Bench-style data, by 1.44% on CV-Bench, without training any model weight.",
       "authors": [
         "duy tran thanh"
+      ],
+      "displayAuthors": [
+        "Duy Tran Thanh"
       ],
       "batch": "2026-11-24",
       "kind": "cross"
@@ -2684,6 +4169,12 @@
         "keshu wu",
         "bin ran",
         "xiaopeng li"
+      ],
+      "displayAuthors": [
+        "Jiaxi Liu",
+        "Keshu Wu",
+        "Bin Ran",
+        "Xiaopeng Li"
       ],
       "batch": "2026-11-24",
       "kind": "cross"
@@ -2699,6 +4190,13 @@
         "oskar juhlin",
         "xiaodan shi"
       ],
+      "displayAuthors": [
+        "Qi Dang",
+        "Luis Quintero",
+        "Shibo Zhu",
+        "Oskar Juhlin",
+        "Xiaodan Shi"
+      ],
       "batch": "2026-11-24",
       "kind": "cross"
     },
@@ -2709,6 +4207,10 @@
       "authors": [
         "jaesung hong",
         "dong won lee"
+      ],
+      "displayAuthors": [
+        "Jaesung Hong",
+        "Dong Won Lee"
       ],
       "batch": "2026-11-24",
       "kind": "cross"
@@ -2722,6 +4224,11 @@
         "amitesh sahoo",
         "qing tian"
       ],
+      "displayAuthors": [
+        "Aditya Makineni",
+        "Amitesh Sahoo",
+        "Qing Tian"
+      ],
       "batch": "2026-11-24",
       "kind": "cross"
     },
@@ -2732,6 +4239,10 @@
       "authors": [
         "xin zhou",
         "cong miao"
+      ],
+      "displayAuthors": [
+        "Xin Zhou",
+        "Cong Miao"
       ],
       "batch": "2026-11-24",
       "kind": "cross"
@@ -2747,6 +4258,13 @@
         "bradley hayes",
         "zachary sunberg"
       ],
+      "displayAuthors": [
+        "Himanshu Gupta",
+        "Brendan Crowe",
+        "Christoffer Heckman",
+        "Bradley Hayes",
+        "Zachary Sunberg"
+      ],
       "batch": "2026-11-24",
       "kind": "cross"
     },
@@ -2757,6 +4275,10 @@
       "authors": [
         "neeli tummala",
         "mitra j hartmann"
+      ],
+      "displayAuthors": [
+        "Neeli Tummala",
+        "Mitra J. Hartmann"
       ],
       "batch": "2026-11-24",
       "kind": "cross"
@@ -2774,6 +4296,15 @@
         "huarui zhang",
         "yifan wang"
       ],
+      "displayAuthors": [
+        "Zehao Liu",
+        "Huashuo Lei",
+        "Xi Lin",
+        "Haoang Li",
+        "Yuliang Chen",
+        "Huarui Zhang",
+        "Yifan Wang"
+      ],
       "batch": "2026-11-24",
       "kind": "cross"
     },
@@ -2789,6 +4320,14 @@
         "qixing huang",
         "zhaomiao guo"
       ],
+      "displayAuthors": [
+        "Xiangyu Li",
+        "Yu Jiang",
+        "Tianyi Wang",
+        "Liang He",
+        "Qixing Huang",
+        "Zhaomiao Guo"
+      ],
       "batch": "2026-11-24",
       "kind": "cross"
     },
@@ -2800,6 +4339,11 @@
         "xuanya zhu",
         "da li",
         "xiatian zhu"
+      ],
+      "displayAuthors": [
+        "Xuanya Zhu",
+        "Da Li",
+        "Xiatian Zhu"
       ],
       "batch": "2026-11-24",
       "kind": "cross"
@@ -2817,6 +4361,15 @@
         "simon julier",
         "kevin chetty"
       ],
+      "displayAuthors": [
+        "Yuan Fang",
+        "Long Zhuang",
+        "Xijia Wei",
+        "Jingqi Jiang",
+        "Fangzhan Shi",
+        "Simon Julier",
+        "Kevin Chetty"
+      ],
       "batch": "2026-11-24",
       "kind": "cross"
     },
@@ -2833,6 +4386,15 @@
         "zecheng tang",
         "jian zhang"
       ],
+      "displayAuthors": [
+        "Yiheng Du",
+        "Jingqi Tian",
+        "Xu Jiang",
+        "Jiexuan Zhang",
+        "Shuyu Wang",
+        "Zecheng Tang",
+        "Jian Zhang"
+      ],
       "batch": "2026-11-24",
       "kind": "cross"
     },
@@ -2845,6 +4407,11 @@
         "nan zhang",
         "yang cong"
       ],
+      "displayAuthors": [
+        "Yifan Liu",
+        "Nan Zhang",
+        "Yang Cong"
+      ],
       "batch": "2026-11-24",
       "kind": "cross"
     },
@@ -2855,6 +4422,10 @@
       "authors": [
         "yawar rehman",
         "min young kim"
+      ],
+      "displayAuthors": [
+        "Yawar Rehman",
+        "Min Young Kim"
       ],
       "batch": "2026-11-24",
       "kind": "cross"
@@ -2867,6 +4438,10 @@
         "nikolaos stathoulopoulos",
         "george nikolakopoulos"
       ],
+      "displayAuthors": [
+        "Nikolaos Stathoulopoulos",
+        "George Nikolakopoulos"
+      ],
       "batch": "2026-11-24",
       "kind": "cross"
     },
@@ -2877,6 +4452,10 @@
       "authors": [
         "danilo saccani",
         "lorenzo fagiano"
+      ],
+      "displayAuthors": [
+        "Danilo Saccani",
+        "Lorenzo Fagiano"
       ],
       "batch": "2026-11-24",
       "kind": "cross"
@@ -2893,6 +4472,15 @@
         "xueliang guo",
         "zhuohan li",
         "yihao wang"
+      ],
+      "displayAuthors": [
+        "Yuan Gao",
+        "Dongchen Wei",
+        "Xinyang Lin",
+        "Shuhua Cao",
+        "Xueliang Guo",
+        "Zhuohan Li",
+        "Yihao Wang"
       ],
       "batch": "2026-11-24",
       "kind": "cross"
@@ -2913,6 +4501,18 @@
         "yu lun liu",
         "hsun ping hsieh"
       ],
+      "displayAuthors": [
+        "Cheng-Ru Chou",
+        "Shih-Yu Lai",
+        "Pei-Lin Chiang",
+        "Shou-Po Tsai",
+        "Jing-Zhe Huang",
+        "Fukuharu Tanaka",
+        "Hirozumi Yamaguchi",
+        "Bing-Yu Chen",
+        "Yu-Lun Liu",
+        "Hsun-Ping Hsieh"
+      ],
       "batch": "2026-11-24",
       "kind": "cross"
     },
@@ -2932,6 +4532,18 @@
         "zhonghua wu",
         "chen change loy"
       ],
+      "displayAuthors": [
+        "Qinyue Li",
+        "Weijie Qiao",
+        "Qingyi Tao",
+        "Zerui Gong",
+        "Zhe Yang",
+        "Quanzhou Li",
+        "Taolin Zhang",
+        "Jinglin He",
+        "Zhonghua Wu",
+        "Chen Change Loy"
+      ],
       "batch": "2026-11-24",
       "kind": "cross"
     },
@@ -2946,6 +4558,14 @@
         "tuyen pham le",
         "quan nguyen",
         "yuzhang shang"
+      ],
+      "displayAuthors": [
+        "Anh Dao",
+        "Quan-Dung Pham",
+        "Danh Vinh Le",
+        "Tuyen Pham Le",
+        "Quan Nguyen",
+        "Yuzhang Shang"
       ],
       "batch": "2026-11-24",
       "kind": "cross"
@@ -2967,6 +4587,20 @@
         "dongyeon son",
         "woongchan nam",
         "seungryong kim"
+      ],
+      "displayAuthors": [
+        "Seongchan Kim",
+        "Soowon Son",
+        "Sangoh Kim",
+        "Hyunah Ko",
+        "Eunbeen Hong",
+        "Hyunkoo Lee",
+        "Sanghyun Lee",
+        "WonJun Moon",
+        "Kihong Kim",
+        "Dongyeon Son",
+        "Woongchan Nam",
+        "Seungryong Kim"
       ],
       "batch": "2026-11-24",
       "kind": "cross"
