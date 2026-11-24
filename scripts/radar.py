@@ -1,7 +1,7 @@
 """Collect arXiv announcement batches and expose evidence-backed topic clusters."""
 import argparse
 from collections import defaultdict
-from datetime import date, timedelta
+from datetime import date, datetime, timedelta, timezone
 from email.utils import parsedate_to_datetime
 import hashlib
 from html import unescape
@@ -17,19 +17,20 @@ from urllib.request import Request, urlopen
 import xml.etree.ElementTree as ET
 
 FEED = 'https://rss.arxiv.org/rss/cs.RO'
+ROBOTICA_API = 'https://robotica.dev/api/articles.json'
 ID = re.compile(r'(?<![\d.])(\d{4}\.\d{4,5})(?:v(\d+))?(?![\d.])')
 DAYS = 14
 KNOWN = {
-    'tactile': ('触觉感知', r'\btactile\b|\bvisuotactile\b|tactile sensing'),
-    'robot-rl': ('机器人强化学习', r'\breinforcement learning\b|\bsupermimic\b|\bpolicy gradient\b'),
-    'agentic-robots': ('机器人智能体：待人工核对', r'robot(?:ic)? (?:control|manipulation|execution) with (?:llm|language model)|robot(?:ic)? agent|embodied agent|agentic (?:robot|control)|code as policies'),
-    'vla': ('视觉语言动作模型（VLA）', r'\bvlas?\b|\bvision language action\b'),
-    'world-models': ('世界模型与动作建模', r'\bworld (?:action )?models?\b'),
-    'sim-real': ('仿真到现实', r'\bsim to real\b|\bsimulation to real\b|\bdomain randomization\b'),
-    'navigation': ('具身导航', r'\bvision language navigation\b|\bembodied navigation\b|\bvisual navigation\b'),
-    'dexterous': ('灵巧操作', r'\bdexterous manipulation\b|\bin hand manipulation\b'),
-    'teleoperation': ('遥操作与示教', r'\bteleoperation\b|\bteleoperated\b'),
-    'multi-robot': ('多机器人协作', r'\bmulti robot (?:collaboration|coordination|cooperation|planning)\b'),
+    'tactile': ('Tactile Sensing', r'\btactile\b|\bvisuotactile\b|multisensory touch'),
+    'robot-rl': ('Robot RL', r'\breinforcement learning\b|\bsupermimic\b|\bpolicy gradient\b'),
+    'agentic-robots': ('Agentic Robots', r'robot(?:ic)? (?:control|manipulation|execution) with (?:llm|language model)|coding agents? (?:as|for) (?:policy|robot control)|agentic (?:robot|control)|robot(?:ic)? agent|model as policy|code as policies'),
+    'vla': ('Vision-Language-Action', r'\bvlas?\b|\bvision language action\b'),
+    'world-models': ('World Models', r'\bworld (?:action )?models?\b'),
+    'sim-real': ('Sim-to-Real', r'\bsim to real\b|\bsimulation to real\b|\bdomain randomization\b'),
+    'navigation': ('Embodied Navigation', r'\bvision language navigation\b|\bembodied navigation\b|\bvisual navigation\b'),
+    'dexterous': ('Dexterous Manipulation', r'\bdexterous manipulation\b|\bin hand manipulation\b'),
+    'teleoperation': ('Teleoperation', r'\bteleoperation\b|\bteleoperated\b'),
+    'multi-robot': ('Multi-Robot Collaboration', r'\bmulti robot (?:collaboration|coordination|cooperation|planning)\b'),
 }
 STOP = set('a an the of to in for from by with via as on under over using based towards is are and or robot robots robotic robotics task tasks policy policies model models framework approach learning method system systems intelligent novel new efficient improved robust autonomous based'.split())
 
@@ -74,9 +75,10 @@ def parse_feed(content):
         title = clean(child_text(entry, 'title'))
         if not title or paper in out:
             continue
+        author_names = [n.strip() for n in child_text(entry, 'creator').split(',') if n.strip()]
         out[paper] = {'id': paper, 'title': title,
                       'abstract': clean(description.partition('Abstract:')[2] or description)[:3000],
-                      'authors': [norm(n) for n in child_text(entry, 'creator').split(',') if norm(n)],
+                      'authors': [norm(n) for n in author_names], 'displayAuthors': author_names,
                       'batch': parsedate_to_datetime(item_date).date().isoformat() if item_date else batch,
                       'kind': kind}
     return batch, list(out.values())
@@ -103,18 +105,24 @@ def independent_count(rows):
     return len(groups) or authorless
 
 
-def public_paper(paper):
-    return {key: paper[key] for key in ('id', 'title', 'abstract', 'batch', 'kind')}
+def public_paper(paper, community=None):
+    result = {key: paper[key] for key in ('id', 'title', 'abstract', 'batch', 'kind')}
+    if paper.get('displayAuthors'):
+        result['authors'] = paper['displayAuthors']
+    if community:
+        result['upvotes'] = community['upvotes']
+    return result
 
 
-def make_topics(rows, previous_rows=()):
+def make_topics(rows, previous_rows=(), community=None):
+    community = community or {}
     matchers = {key: re.compile(rule) for key, (_, rule) in KNOWN.items()}
     indexed = []
     known_ids = set()
     for key, pattern in matchers.items():
         matches = [r for r in rows if pattern.search(norm(r['title'])) or len(pattern.findall(norm(r['abstract']))) >= 2]
         old = sum(bool(pattern.search(norm(r['title']))) or len(pattern.findall(norm(r['abstract']))) >= 2 for r in previous_rows)
-        indexed.append((key, KNOWN[key][0], matches, old, '标题关键词或摘要重复命中'))
+        indexed.append((key, KNOWN[key][0], matches, old, 'Title and abstract matches'))
         known_ids.add(key)
     phrases = defaultdict(list)
     historical_phrases = defaultdict(int)
@@ -126,7 +134,7 @@ def make_topics(rows, previous_rows=()):
             historical_phrases[phrase] += 1
     for phrase, matches in sorted(phrases.items()):
         if len(matches) >= 3:
-            indexed.append(('phrase-' + hashlib.sha256(phrase.encode()).hexdigest()[:12], phrase, matches, historical_phrases[phrase], '多篇标题重复使用的术语，名称与归类待人工确认'))
+            indexed.append(('phrase-' + hashlib.sha256(phrase.encode()).hexdigest()[:12], phrase.title(), matches, historical_phrases[phrase], 'Recurring title phrase'))
     ranked = []
     for ident, name, matches, previous, rule in indexed:
         days = len({p['batch'] for p in matches})
@@ -136,18 +144,119 @@ def make_topics(rows, previous_rows=()):
         if teams < 3:
             continue
         growth = len(matches) - previous if previous_rows else 0
-        ranked.append((ident not in known_ids, -growth, -len(matches), ident, name, matches, previous, rule, teams, days))
+        votes = sum(community.get(p['id'], {}).get('upvotes', 0) for p in matches)
+        supported = sum(p['id'] in community for p in matches)
+        ranked.append((ident not in known_ids, -growth, -supported, -votes, -len(matches), ident, name, matches, previous, rule, teams, days))
     output = []
     sets = []
-    for _, _, _, ident, name, matches, previous, rule, teams, days in sorted(ranked):
+    for _, _, covered, votes, _, ident, name, matches, previous, rule, teams, days in sorted(ranked):
         evidence = {p['id'] for p in matches}
         if any(len(evidence & prior) / len(evidence | prior) >= .72 for prior in sets):
             continue
         sets.append(evidence)
         output.append({'id': ident, 'name': name, 'rule': rule, 'count': len(matches), 'batches': days,
                        'teams': teams, 'previous': previous if previous_rows else None,
-                       'papers': [public_paper(p) for p in sorted(matches, key=lambda p: p['batch'], reverse=True)[:20]]})
+                       'communityCount': -covered, 'communityUpvotes': -votes,
+                       'papers': [public_paper(p, community.get(p['id'])) for p in sorted(matches, key=lambda p: (p['batch'], community.get(p['id'], {}).get('upvotes', 0)), reverse=True)[:20]]})
     return output[:16]
+
+
+def parse_robotica(body):
+    data = json.loads(body)
+    entries = data['modules']['papers']
+    if not isinstance(entries, list):
+        raise ValueError('Robotica did not return a papers list')
+    timestamp = datetime.fromisoformat(data['fetchedAt'].replace('Z', '+00:00')).astimezone(timezone.utc)
+    papers = {}
+    for item in entries:
+        ident = item.get('id', '')
+        if not ID.fullmatch(ident) or not item.get('url', '').startswith('https://arxiv.org/abs/'):
+            continue
+        date_part = item.get('createdAt', '')[:10]
+        title = clean(item.get('title') or '')
+        vote = item.get('score')
+        if not title or not re.fullmatch(r'\d{4}-\d{2}-\d{2}', date_part) or type(vote) is not int or vote < 0:
+            continue
+        papers[ident] = {'id': ident, 'title': title, 'upvotes': vote, 'date': date_part}
+    return timestamp.isoformat(), papers
+
+
+class AbstractMeta(HTMLParser):
+    def __init__(self):
+        super().__init__(convert_charrefs=True)
+        self.abstract = ''
+        self.authors = []
+        self.block_depth = 0
+        self.parts = []
+
+    def handle_starttag(self, tag, attrs):
+        a = dict(attrs)
+        if tag == 'blockquote' and 'abstract' in a.get('class','').split():
+            self.block_depth = 1
+        if tag != 'meta':
+            return
+        if a.get('name') == 'citation_author':
+            self.authors.append(clean(a.get('content', '')))
+        if a.get('name') == 'description' and a.get('content', '').startswith('Abstract page for arXiv paper'):
+            return
+        if a.get('name') == 'citation_abstract' or a.get('property') == 'og:description':
+            body = clean(a.get('content', ''))
+            if body and len(body) > len(self.abstract):
+                self.abstract = body
+
+    def handle_endtag(self, tag):
+        if tag == 'blockquote':
+            self.block_depth = 0
+
+    def handle_data(self, text):
+        if self.block_depth:
+            self.parts.append(text)
+
+
+def abstract_brief(value):
+    sentences = re.split(r'(?<=[.!?])\s+(?=[A-Z])', value)
+    method = next((s for s in sentences if re.search(r'\b(?:we (?:propose|introduce|present|develop)|our (?:method|approach))\b', s, re.I)), sentences[0])
+    evidence = next((s for s in reversed(sentences) if s != method and re.search(r'\b(?:achiev\w+|outperform\w+|experiments? (?:show|demonstrate)|success rate)\b', s, re.I)), '')
+    return clean(method + ' ' + evidence)[:560]
+
+
+def make_picks(latest, community, topics):
+    topical = defaultdict(int)
+    paper_topics = defaultdict(list)
+    for topic in topics:
+        for paper in topic['papers']:
+            topical[paper['id']] += 1
+            paper_topics[paper['id']].append(topic['name'])
+    curated_rules = [re.compile(pattern) for _, pattern in list(KNOWN.values())[:3]]
+    relevance = {p['id']: sum(bool(pattern.search(norm(p['title']))) for pattern in curated_rules) for p in latest}
+    ranked = sorted(latest, key=lambda p: (p['id'] in community, community.get(p['id'], {}).get('upvotes', 0),
+                                           relevance[p['id']], topical[p['id']], p['kind'] == 'new'), reverse=True)
+    return [{**public_paper(p, community.get(p['id'])), 'brief': abstract_brief(p['abstract']),
+             'topics': paper_topics[p['id']][:3]} for p in ranked[:5] if p['abstract']]
+
+
+def make_community_picks(community, history_by_id, latest_day, cached=None, live=False):
+    cutoff = (latest_day - timedelta(days=7)).isoformat()
+    recent = [p for p in community.values() if cutoff <= p['date'] <= latest_day.isoformat()
+              and history_by_id.get(p['id'], {}).get('batch') != latest_day.isoformat()]
+    picks = []
+    for p in sorted(recent, key=lambda p: (p['upvotes'], p['date']), reverse=True)[:3]:
+        found = history_by_id.get(p['id'])
+        brief = abstract_brief(found['abstract']) if found and found['abstract'] else (cached or {}).get(p['id'], '')
+        if not brief and live:
+            try:
+                time.sleep(3)
+                parser = AbstractMeta()
+                parser.feed(read_source('https://arxiv.org/abs/'+p['id'], 2_000_000).decode('utf-8','replace'))
+                excerpt = clean(''.join(parser.parts)).removeprefix('Abstract:').strip() or parser.abstract
+                if excerpt:
+                    brief = abstract_brief(excerpt)
+            except (HTTPError, URLError, TimeoutError, ValueError) as error:
+                print(f'Community pick abstract unavailable for {p["id"]}: {error}', flush=True)
+                if isinstance(error, HTTPError) and error.code in (429,503):
+                    live = False
+        picks.append({**p,'brief':brief,'batch':found['batch'] if found else None})
+    return picks
 
 
 class Figures(HTMLParser):
@@ -223,6 +332,7 @@ def main():
     cli = argparse.ArgumentParser()
     cli.add_argument('output', type=Path)
     cli.add_argument('--rss-file', type=Path, help='Read a local RSS fixture instead of the live source')
+    cli.add_argument('--robotica-file', type=Path, help='Read a Robotica fixture; skipped by default with local --rss-file')
     cli.add_argument('--figures', action='store_true', help='Fetch official HTML figure indexes for editorial papers')
     args = cli.parse_args()
     root = args.output
@@ -242,14 +352,35 @@ def main():
         previous = [p for p in unique.values() if past <= p['batch'] < cutoff]
         snapshot_file = root/'radar.json'
         last_snapshot = json.loads(snapshot_file.read_text()) if snapshot_file.exists() else {}
-        current = [{**topic, 'lastSeen': latest} for topic in make_topics(recent, previous)]
+        community_file = root/'robotica.json'
+        cached = json.loads(community_file.read_text()) if community_file.exists() else {}
+        community, community_at = cached.get('papers', {}), cached.get('fetchedAt')
+        robotica_ok = False
+        if not args.rss_file or args.robotica_file:
+            try:
+                fetched, community_now = parse_robotica(args.robotica_file.read_bytes() if args.robotica_file else read_source(ROBOTICA_API, 3_000_000))
+                if datetime.fromisoformat(fetched).date() >= latest_day - timedelta(days=3):
+                    community, community_at = community_now, fetched
+                    robotica_ok = True
+                    dump(community_file, {'fetchedAt': community_at, 'papers': community})
+            except (HTTPError, URLError, TimeoutError, ValueError, KeyError, TypeError) as exc:
+                print(f'Robotica unavailable; primary arXiv batch is still published: {exc}', flush=True)
+        if not community_at or datetime.fromisoformat(community_at).date() < latest_day - timedelta(days=3):
+            community = {}
+        old_evidence = {p['id']: p for p in recent}
+        current = [{**topic, 'lastSeen': latest} for topic in make_topics(recent, previous, community)]
         old_topics = {topic['id']: topic for topic in last_snapshot.get('archivedTopics', []) + last_snapshot.get('topics', []) if topic.get('lastSeen')}
         for topic in current:
             old_topics.pop(topic['id'], None)
         archive = sorted(old_topics.values(), key=lambda t:t['lastSeen'], reverse=True)[:25]
+        cached_briefs = {p['id']:p['brief'] for p in last_snapshot.get('communityPicks',[]) if p.get('brief')}
         snapshot = {'latestBatch': latest, 'paperCount': len(recent),
                     'batchCount': sum(day >= cutoff for day in history),
-                    'latestPapers': [public_paper(p) for p in history[latest]],
+                    'latestPapers': [public_paper(p, community.get(p['id'])) for p in history[latest]],
+                    'picks': make_picks(history[latest], community, current),
+                    'communityPicks': make_community_picks(community, old_evidence, latest_day, cached_briefs, not args.rss_file),
+                    'roboticaUpdated': community_at if community else None,
+                    'roboticaStatus': 'live' if robotica_ok else 'cached' if community else 'unavailable',
                     'topics': current, 'archivedTopics': archive}
         dump(state_file, history)
         dump(snapshot_file, snapshot)

@@ -1,88 +1,81 @@
 <!doctype html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="具身智能论文日报：重点追踪触觉感知、机器人强化学习和机器人智能体，并发现新的研究热点。">
-  <meta name="theme-color" content="#f8f7ff">
-  <title>具身智能论文日报 · Embodied Research</title>
+  <meta name="theme-color" content="#f7f9fc">
+  <meta name="description" content="A robotics paper digest covering tactile sensing, robot reinforcement learning, agentic robots, and emerging research.">
+  <title>Robotics Digest</title>
   <link rel="icon" href="mark.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="style.css?v=3">
-  <script defer src="data.js?v=3"></script>
-  <script defer src="editorial.js?v=3"></script>
-  <script defer src="app.js?v=3"></script>
+  <link rel="stylesheet" href="style.css?v=4">
+  <script defer src="data.js?v=4"></script>
+  <script defer src="editorial.js?v=4"></script>
+  <script defer src="app.js?v=4"></script>
 </head>
 <body>
-  <a class="skip" href="#reading">跳到论文库</a>
-  <header class="topbar">
-    <div class="frame top-inner">
-      <a class="brand" href="#top"><img src="mark.svg" alt="" width="35" height="35"><span>具身智能<span class="brand-suffix">论文日报</span></span></a>
-      <nav aria-label="站内导航">
-        <a href="#reading">论文库</a><a href="#topics">专题</a><a href="#radar">热点雷达</a><a href="#history">归档</a>
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="masthead">
+    <div class="frame header-inner">
+      <a href="./" class="brand">Robotics Digest</a>
+      <nav aria-label="Main navigation">
+        <a href="#reading" data-nav="reading">Daily</a>
+        <a href="#topics" data-nav="topics">Topics</a>
+        <a href="#radar" data-nav="radar">Trends</a>
+        <details id="trending-nav" class="nav-dropdown" hidden>
+          <summary>Trending Topics</summary>
+          <div id="trending-menu" class="nav-menu"></div>
+        </details>
+        <a href="#history" data-nav="history">Archive</a>
       </nav>
-      <a class="source-link" href="https://arxiv.org/list/cs.RO/new" target="_blank" rel="noopener">arXiv <span aria-hidden="true">↗</span></a>
     </div>
   </header>
-  <main id="top">
-    <section class="frame hero" aria-labelledby="hero-title">
-      <div class="hero-copy">
-        <div class="eyebrow"><span></span> EMBODIED RESEARCH / 研究简报</div>
-        <h1 id="hero-title">具身智能<br><em>论文日报</em></h1>
-        <p>每天发现值得读的机器人论文。持续追踪触觉感知、强化学习和机器人智能体，也关注正在出现的新方向。</p>
-        <div class="hero-actions"><a class="primary" href="#reading">阅读论文</a><a class="secondary" href="#radar">查看热点雷达</a></div>
+  <main class="frame dashboard" id="main">
+    <section id="reading" data-panel aria-labelledby="daily-title">
+      <div class="hero-line">
+        <h1 id="daily-title">Paper Digest</h1>
+        <form id="search-form" role="search">
+          <label class="sr" for="search">Search papers</label>
+          <input id="search" type="search" placeholder="Search papers, authors, topics" autocomplete="off">
+        </form>
       </div>
-      <div class="hero-art" aria-hidden="true">
-        <svg id="field" viewBox="0 0 640 440" fill="none">
-          <defs>
-            <linearGradient id="filament" x1="70" x2="530" y1="400" y2="50" gradientUnits="userSpaceOnUse">
-              <stop stop-color="#e1dafe"/><stop offset=".48" stop-color="#8f81ed"/><stop offset=".8" stop-color="#a69df6"/><stop offset="1" stop-color="#f0eaff"/>
-            </linearGradient>
-            <radialGradient id="halo"><stop stop-color="#bfb1ff" stop-opacity=".77"/><stop offset="1" stop-color="#e9e3ff" stop-opacity="0"/></radialGradient>
-          </defs>
-          <ellipse cx="370" cy="224" rx="257" ry="192" fill="url(#halo)"/>
-          <g id="traces"></g>
-          <circle cx="372" cy="134" r="4" fill="#6d56de" stroke="white" stroke-width="2"/>
-          <circle cx="420" cy="289" r="5" fill="#a591fb" stroke="white" stroke-width="2"/>
-          <circle cx="247" cy="214" r="3" fill="#8069e9" stroke="white" stroke-width="1.5"/>
-        </svg>
-        <span class="art-code">Perception · Policy · Control</span>
+      <div class="toolbar">
+        <label for="issue">Edition <select id="issue"></select></label>
+        <div id="active-filter"></div>
       </div>
+      <div class="issue-heading">
+        <h2 id="issue-title"></h2>
+        <p id="issue-label" class="muted"></p>
+      </div>
+      <details class="issue-brief" id="brief">
+        <summary>In this edition</summary>
+        <div id="insights" lang="zh-CN"></div>
+      </details>
+      <p class="sr" id="count" role="status"></p>
+      <div id="papers"></div>
+      <div id="daily-picks" hidden></div>
+      <details class="compare" id="compare" hidden>
+        <summary>Compare papers</summary>
+        <div class="table-wrap" id="comparison"></div>
+      </details>
     </section>
-    <section class="frame topics" id="topics" aria-labelledby="topics-title">
-      <div class="section-title"><div><div class="eyebrow simple">RESEARCH TOPICS</div><h2 id="topics-title">研究专题</h2></div></div>
-      <p class="section-note">三个长期追踪方向。其他研究照常收录，专题可交叉。</p>
+    <section id="topics" data-panel hidden aria-labelledby="topics-title">
+      <h1 id="topics-title">Topics</h1>
       <div id="topic-list" class="topic-list"></div>
     </section>
-    <section class="frame overview" id="overview" aria-labelledby="overview-title">
-      <div class="section-title"><div><div class="eyebrow simple">RESEARCH BRIEF</div><h2 id="overview-title">研究概览</h2></div><div id="issue-label" class="batch"></div></div>
-      <p id="scope" class="scope"></p>
-      <div id="insights" class="insights"></div>
-      <p class="inference" id="inference"></p>
-    </section>
-    <section class="frame library" id="reading" aria-labelledby="library-title">
-      <div class="section-title"><div><div class="eyebrow simple">PAPER LIBRARY</div><h2 id="library-title">论文库</h2></div><form role="search" id="search-form"><label class="sr" for="search">搜索论文</label><input id="search" type="search" placeholder="搜关键词、论文或作者" autocomplete="off"></form></div>
-      <div class="tools">
-        <div id="filters" class="filters" role="group" aria-label="研究主线筛选"></div>
-        <div class="period"><label for="issue">期次</label><select id="issue"></select></div>
+    <section id="radar" data-panel hidden aria-labelledby="radar-title">
+      <div class="hero-line">
+        <h1 id="radar-title">Trends</h1>
+        <a class="chip" href="https://arxiv.org/list/cs.RO/new" target="_blank" rel="noopener">arXiv Robotics</a>
       </div>
-      <div class="results"><p id="count" role="status"></p><button class="text-button" id="compare" type="button">对比当前结果</button></div>
-      <div id="papers" class="paper-grid"></div>
-      <noscript><p>请启用 JavaScript 以使用期次切换、搜索和论文精读。</p></noscript>
-    </section>
-    <section class="frame radar" id="radar" aria-labelledby="radar-title">
-      <div class="section-title"><div><div class="eyebrow simple">TREND RADAR</div><h2 id="radar-title">热点雷达</h2></div><span class="batch">arXiv · cs.RO</span></div>
-      <p class="section-note">按最近 14 天的 arXiv 公布记录识别重复出现的研究方向。至少 3 篇、2 个公布日且有不同作者信号，才建立动态专题；社区点赞不计入。</p>
-      <p class="scope" id="radar-status" role="status">正在读取热点快照…</p>
+      <p id="radar-status" class="muted" role="status">Loading…</p>
       <div id="radar-topics" class="radar-topics"></div>
-      <p class="archive-note">在这里推荐的论文来自标题和摘要筛选，不等同于人工精读，也不代表质量或下载量排名。</p>
+      <details id="trend-method" class="issue-brief"><summary>Selection criteria</summary><p>Rolling 14-day window. A topic needs at least 3 arXiv papers, 2 announcement dates, and 3 non-overlapping author groups. Robotica upvotes help rank qualifying topics; they are not counted as additional papers.</p></details>
     </section>
-    <section class="frame archive" id="history" aria-labelledby="archive-title">
-      <div class="section-title"><div><div class="eyebrow simple">ARCHIVE</div><h2 id="archive-title">往期归档</h2></div></div>
+    <section id="history" data-panel hidden aria-labelledby="archive-title">
+      <h1 id="archive-title">Archive</h1>
       <div id="archive-list" class="archive-list"></div>
-      <p class="archive-note">导航、VLA、世界模型和数据基础设施等往期内容仍可搜索；「专题选读」不算作当日首发。</p>
     </section>
+    <noscript><p>Enable JavaScript to browse the digest.</p></noscript>
   </main>
-  <footer><div class="frame foot"><span>具身智能论文日报</span><span>按 arXiv 公布批次整理 · 以论文原文与官方项目页为准</span><a href="#top">回到顶部</a></div></footer>
-  <dialog id="detail"><div class="dialog-bar"><span id="reader-label">论文精读</span><button type="button" id="close" aria-label="关闭阅读面板">×</button></div><div id="detail-body"></div></dialog>
 </body>
 </html>
