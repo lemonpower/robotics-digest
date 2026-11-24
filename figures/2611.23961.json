@@ -1,0 +1,35 @@
+{
+  "version": "v1",
+  "figures": [
+    {
+      "src": "https://arxiv.org/html/2611.23961v1/intro.png",
+      "caption": "Figure 1",
+      "anchor": "S1.F1"
+    },
+    {
+      "src": "https://arxiv.org/html/2611.23961v1/framework.png",
+      "caption": "Figure 2",
+      "anchor": "S3.F2"
+    },
+    {
+      "src": "https://arxiv.org/html/2611.23961v1/encoder.png",
+      "caption": "Figure 3",
+      "anchor": "S3.F3"
+    },
+    {
+      "src": "https://arxiv.org/html/2611.23961v1/fig3.png",
+      "caption": "Figure 4",
+      "anchor": "S4.F4"
+    },
+    {
+      "src": "https://arxiv.org/html/2611.23961v1/pose.png",
+      "caption": "Figure 5",
+      "anchor": "S4.F5"
+    },
+    {
+      "src": "https://arxiv.org/html/2611.23961v1/Ho-OO-Relation.png",
+      "caption": "Figure 6",
+      "anchor": "S4.F6"
+    }
+  ]
+}

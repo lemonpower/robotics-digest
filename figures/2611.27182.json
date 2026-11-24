@@ -1,0 +1,20 @@
+{
+  "version": "v1",
+  "figures": [
+    {
+      "src": "https://arxiv.org/html/2611.27182v1/method.png",
+      "caption": "Figure 2",
+      "anchor": "S2.F2"
+    },
+    {
+      "src": "https://arxiv.org/html/2611.27182v1/task_disturbances.png",
+      "caption": "Figure 3",
+      "anchor": "S3.F3"
+    },
+    {
+      "src": "https://arxiv.org/html/2611.27182v1/real_episode.png",
+      "caption": "Figure 5",
+      "anchor": "S4.F5"
+    }
+  ]
+}

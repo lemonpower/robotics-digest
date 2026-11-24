@@ -1,0 +1,30 @@
+{
+  "version": "v1",
+  "figures": [
+    {
+      "src": "https://arxiv.org/html/2611.26744v1/figures/teaser_3x4.png",
+      "caption": "Figure 1",
+      "anchor": "S0.F1"
+    },
+    {
+      "src": "https://arxiv.org/html/2611.26744v1/figures/fig2_system.png",
+      "caption": "Figure 2",
+      "anchor": "S3.F2"
+    },
+    {
+      "src": "https://arxiv.org/html/2611.26744v1/figures/fig3_combined.png",
+      "caption": "Figure 3",
+      "anchor": "S5.F3"
+    },
+    {
+      "src": "https://arxiv.org/html/2611.26744v1/figures/plastic_box_sc.png",
+      "caption": "Figure 4",
+      "anchor": "S6.F4"
+    },
+    {
+      "src": "https://arxiv.org/html/2611.26744v1/figures/fig_libero.png",
+      "caption": "Figure 5",
+      "anchor": "S6.F5"
+    }
+  ]
+}

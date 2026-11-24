@@ -1,0 +1,80 @@
+{
+  "version": "v1",
+  "figures": [
+    {
+      "src": "https://arxiv.org/html/2611.26054v1/figures/task.png",
+      "caption": "Fig. 1",
+      "anchor": "S1.F1"
+    },
+    {
+      "src": "https://arxiv.org/html/2611.26054v1/figures/start_state.png",
+      "caption": "Fig. 2",
+      "anchor": "S3.F2"
+    },
+    {
+      "src": "https://arxiv.org/html/2611.26054v1/figures/figure_reward.png",
+      "caption": "论文插图",
+      "anchor": "S6.F3"
+    },
+    {
+      "src": "https://arxiv.org/html/2611.26054v1/figures/figure_step.png",
+      "caption": "论文插图",
+      "anchor": "S6.F3"
+    },
+    {
+      "src": "https://arxiv.org/html/2611.26054v1/figures/figure_2_board_speed_v2.png",
+      "caption": "论文插图",
+      "anchor": "S6.F4"
+    },
+    {
+      "src": "https://arxiv.org/html/2611.26054v1/figures/figure_2_push_progress_v2.png",
+      "caption": "论文插图",
+      "anchor": "S6.F4"
+    },
+    {
+      "src": "https://arxiv.org/html/2611.26054v1/figures/figure_2_trunk_speed_v2.png",
+      "caption": "论文插图",
+      "anchor": "S6.F4"
+    },
+    {
+      "src": "https://arxiv.org/html/2611.26054v1/figures/figure_2_xor_stance_v2.png",
+      "caption": "论文插图",
+      "anchor": "S6.F4"
+    },
+    {
+      "src": "https://arxiv.org/html/2611.26054v1/figures/figure_3_board_oob.png",
+      "caption": "论文插图",
+      "anchor": "S6.F5"
+    },
+    {
+      "src": "https://arxiv.org/html/2611.26054v1/figures/figure_3_board_foot.png",
+      "caption": "论文插图",
+      "anchor": "S6.F5"
+    },
+    {
+      "src": "https://arxiv.org/html/2611.26054v1/figures/figure_3_yaw.png",
+      "caption": "论文插图",
+      "anchor": "S6.F5"
+    },
+    {
+      "src": "https://arxiv.org/html/2611.26054v1/figures/figure_3_both_feet.png",
+      "caption": "论文插图",
+      "anchor": "S6.F5"
+    },
+    {
+      "src": "https://arxiv.org/html/2611.26054v1/figures/figure_3_btimeout.png",
+      "caption": "论文插图",
+      "anchor": "S6.F5"
+    },
+    {
+      "src": "https://arxiv.org/html/2611.26054v1/figures/sideview.png",
+      "caption": "Fig. 6",
+      "anchor": "S6.F6"
+    },
+    {
+      "src": "https://arxiv.org/html/2611.26054v1/figures/trajectory-central-merge-clean-labeled.png",
+      "caption": "Fig. 7",
+      "anchor": "S6.F7"
+    }
+  ]
+}

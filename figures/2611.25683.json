@@ -1,0 +1,25 @@
+{
+  "version": "v1",
+  "figures": [
+    {
+      "src": "https://arxiv.org/html/2611.25683v1/figures/new-method01.png",
+      "caption": "Figure 2",
+      "anchor": "S2.F2"
+    },
+    {
+      "src": "https://arxiv.org/html/2611.25683v1/figures/new-method02.png",
+      "caption": "Figure 3",
+      "anchor": "S3.F3"
+    },
+    {
+      "src": "https://arxiv.org/html/2611.25683v1/figures/progress.png",
+      "caption": "Figure 4",
+      "anchor": "S3.F4"
+    },
+    {
+      "src": "https://arxiv.org/html/2611.25683v1/figures/ablation_new.png",
+      "caption": "Figure 5",
+      "anchor": "S4.F5"
+    }
+  ]
+}

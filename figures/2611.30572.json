@@ -1,0 +1,90 @@
+{
+  "version": "v1",
+  "figures": [
+    {
+      "src": "https://arxiv.org/html/2611.30572v1/method_overview.png",
+      "caption": "Figure 2",
+      "anchor": "S3.F2"
+    },
+    {
+      "src": "https://arxiv.org/html/2611.30572v1/figures/main/qualitative_five_tasks.png",
+      "caption": "Figure 4",
+      "anchor": "S4.F4"
+    },
+    {
+      "src": "https://arxiv.org/html/2611.30572v1/action_coverage.png",
+      "caption": "Figure 5",
+      "anchor": "S4.F5"
+    },
+    {
+      "src": "https://arxiv.org/html/2611.30572v1/contact_shape_peaks.png",
+      "caption": "论文插图",
+      "anchor": "A1.SS4.SSS2.Px3.fig2"
+    },
+    {
+      "src": "https://arxiv.org/html/2611.30572v1/architecture.png",
+      "caption": "Figure 7",
+      "anchor": "A3.F7"
+    },
+    {
+      "src": "https://arxiv.org/html/2611.30572v1/pixel_alignment.png",
+      "caption": "Figure 8",
+      "anchor": "A3.SS3.SSS2.p2.fig1"
+    },
+    {
+      "src": "https://arxiv.org/html/2611.30572v1/figures/simulation/calibration_board.jpg",
+      "caption": "Figure 9",
+      "anchor": "A6.F9"
+    },
+    {
+      "src": "https://arxiv.org/html/2611.30572v1/figures/simulation/egg_pick_real.png",
+      "caption": "Figure 9",
+      "anchor": "A6.F9"
+    },
+    {
+      "src": "https://arxiv.org/html/2611.30572v1/figures/simulation/egg_pick_sim.png",
+      "caption": "Figure 9",
+      "anchor": "A6.F9"
+    },
+    {
+      "src": "https://arxiv.org/html/2611.30572v1/figures/simulation/task_sequences.jpg",
+      "caption": "Figure 10",
+      "anchor": "A6.F10"
+    },
+    {
+      "src": "https://arxiv.org/html/2611.30572v1/qualitative_chip_pick.png",
+      "caption": "Figure 11",
+      "anchor": "A8.F11"
+    },
+    {
+      "src": "https://arxiv.org/html/2611.30572v1/qualitative_egg_pick.png",
+      "caption": "Figure 12",
+      "anchor": "A8.F12"
+    },
+    {
+      "src": "https://arxiv.org/html/2611.30572v1/qualitative_charger_press.png",
+      "caption": "Figure 13",
+      "anchor": "A8.F13"
+    },
+    {
+      "src": "https://arxiv.org/html/2611.30572v1/qualitative_pullback_car.png",
+      "caption": "Figure 14",
+      "anchor": "A8.F14"
+    },
+    {
+      "src": "https://arxiv.org/html/2611.30572v1/qualitative_whiteboard_erase.png",
+      "caption": "Figure 15",
+      "anchor": "A8.F15"
+    },
+    {
+      "src": "https://arxiv.org/html/2611.30572v1/pull_drawer.png",
+      "caption": "Figure 16",
+      "anchor": "A8.F16"
+    },
+    {
+      "src": "https://arxiv.org/html/2611.30572v1/insert_usb.png",
+      "caption": "Figure 17",
+      "anchor": "A8.F17"
+    }
+  ]
+}

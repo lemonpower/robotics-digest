@@ -1,0 +1,35 @@
+{
+  "version": "v1",
+  "figures": [
+    {
+      "src": "https://arxiv.org/html/2611.22584v1/img1.png",
+      "caption": "Figure 1",
+      "anchor": "S0.F1"
+    },
+    {
+      "src": "https://arxiv.org/html/2611.22584v1/cvpr-teaser.png",
+      "caption": "Figure 2",
+      "anchor": "S0.F2"
+    },
+    {
+      "src": "https://arxiv.org/html/2611.22584v1/cvpr-main.png",
+      "caption": "Figure 3",
+      "anchor": "S1.F3"
+    },
+    {
+      "src": "https://arxiv.org/html/2611.22584v1/img2.png",
+      "caption": "Figure 4",
+      "anchor": "S2.F4"
+    },
+    {
+      "src": "https://arxiv.org/html/2611.22584v1/real-world-cvpr.png",
+      "caption": "Figure 6",
+      "anchor": "S3.F6"
+    },
+    {
+      "src": "https://arxiv.org/html/2611.22584v1/img/efficiency.png",
+      "caption": "Figure 7",
+      "anchor": "S3.F7"
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "version": "v1",
+  "figures": [
+    {
+      "src": "https://arxiv.org/html/2611.26302v1/ground_truth_maps.png",
+      "caption": "Fig. 2",
+      "anchor": "S6.F2"
+    }
+  ]
+}

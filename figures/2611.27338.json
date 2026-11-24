@@ -1,0 +1,80 @@
+{
+  "version": "v1",
+  "figures": [
+    {
+      "src": "https://arxiv.org/html/2611.27338v1/shutter_comparison_ten_seeds.png",
+      "caption": "Figure 1",
+      "anchor": "S0.F1"
+    },
+    {
+      "src": "https://arxiv.org/html/2611.27338v1/figures/full_system.jpeg",
+      "caption": "Figure 2",
+      "anchor": "S3.F2"
+    },
+    {
+      "src": "https://arxiv.org/html/2611.27338v1/task_overview.png",
+      "caption": "Figure 3",
+      "anchor": "S4.F3"
+    },
+    {
+      "src": "https://arxiv.org/html/2611.27338v1/screwing_comparison.png",
+      "caption": "Figure 4",
+      "anchor": "S4.F4"
+    },
+    {
+      "src": "https://arxiv.org/html/2611.27338v1/figures/table_climb_policy_strip.jpg",
+      "caption": "Figure 7",
+      "anchor": "S4.F7"
+    },
+    {
+      "src": "https://arxiv.org/html/2611.27338v1/carry_path_1_comparison.png",
+      "caption": "Figure 10",
+      "anchor": "A7.F10"
+    },
+    {
+      "src": "https://arxiv.org/html/2611.27338v1/carry_path_2_comparison.png",
+      "caption": "Figure 10",
+      "anchor": "A7.F10"
+    },
+    {
+      "src": "https://arxiv.org/html/2611.27338v1/carry_path_3_comparison.png",
+      "caption": "Figure 10",
+      "anchor": "A7.F10"
+    },
+    {
+      "src": "https://arxiv.org/html/2611.27338v1/beam_assembly_step1_comparison.png",
+      "caption": "Figure 11",
+      "anchor": "A8.F11"
+    },
+    {
+      "src": "https://arxiv.org/html/2611.27338v1/beam_assembly_step2_comparison.png",
+      "caption": "Figure 11",
+      "anchor": "A8.F11"
+    },
+    {
+      "src": "https://arxiv.org/html/2611.27338v1/x2.png",
+      "caption": "Figure 11",
+      "anchor": "A8.F11"
+    },
+    {
+      "src": "https://arxiv.org/html/2611.27338v1/tight_insertion_comparison.png",
+      "caption": "Figure 11",
+      "anchor": "A8.F11"
+    },
+    {
+      "src": "https://arxiv.org/html/2611.27338v1/other_controllers.png",
+      "caption": "Figure 12",
+      "anchor": "A9.F12"
+    },
+    {
+      "src": "https://arxiv.org/html/2611.27338v1/door_cube_comparison_ten_seeds.png",
+      "caption": "Figure 13",
+      "anchor": "A11.F13"
+    },
+    {
+      "src": "https://arxiv.org/html/2611.27338v1/hurdle_comparison_ten_seeds.png",
+      "caption": "Figure 14",
+      "anchor": "A11.F14"
+    }
+  ]
+}

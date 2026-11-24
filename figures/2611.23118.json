@@ -1,0 +1,25 @@
+{
+  "version": "v1",
+  "figures": [
+    {
+      "src": "https://arxiv.org/html/2611.23118v1/figures/fig02_heldout_episodes.png",
+      "caption": "Figure 2",
+      "anchor": "S5.F2"
+    },
+    {
+      "src": "https://arxiv.org/html/2611.23118v1/figures/fig05_variance_collapse.png",
+      "caption": "Figure 5",
+      "anchor": "S6.F5"
+    },
+    {
+      "src": "https://arxiv.org/html/2611.23118v1/figures/fig06_calibration.png",
+      "caption": "Figure 6",
+      "anchor": "S6.F6"
+    },
+    {
+      "src": "https://arxiv.org/html/2611.23118v1/figures/fig07_error_over_spread.png",
+      "caption": "Figure 7",
+      "anchor": "S6.F7"
+    }
+  ]
+}

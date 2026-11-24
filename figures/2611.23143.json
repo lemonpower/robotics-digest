@@ -1,0 +1,80 @@
+{
+  "version": "v1",
+  "figures": [
+    {
+      "src": "https://arxiv.org/html/2611.23143v1/teaser.png",
+      "caption": "Figure 1",
+      "anchor": "S0.F1"
+    },
+    {
+      "src": "https://arxiv.org/html/2611.23143v1/overview.png",
+      "caption": "Figure 2",
+      "anchor": "S3.F2"
+    },
+    {
+      "src": "https://arxiv.org/html/2611.23143v1/pipeline.png",
+      "caption": "论文插图",
+      "anchor": "S3.SS5.fig1"
+    },
+    {
+      "src": "https://arxiv.org/html/2611.23143v1/vis1.png",
+      "caption": "Figure 4",
+      "anchor": "S4.F4"
+    },
+    {
+      "src": "https://arxiv.org/html/2611.23143v1/augvideo.png",
+      "caption": "Figure 5",
+      "anchor": "S4.F5"
+    },
+    {
+      "src": "https://arxiv.org/html/2611.23143v1/rollout.png",
+      "caption": "Figure 7",
+      "anchor": "S4.F7"
+    },
+    {
+      "src": "https://arxiv.org/html/2611.23143v1/Virtualpoint.png",
+      "caption": "论文插图",
+      "anchor": "A1.SS2.fig1"
+    },
+    {
+      "src": "https://arxiv.org/html/2611.23143v1/sliding.png",
+      "caption": "Figure 10",
+      "anchor": "A3.F10"
+    },
+    {
+      "src": "https://arxiv.org/html/2611.23143v1/query.png",
+      "caption": "Figure 11",
+      "anchor": "A4.F11"
+    },
+    {
+      "src": "https://arxiv.org/html/2611.23143v1/transfer.png",
+      "caption": "Figure 12",
+      "anchor": "A4.F12"
+    },
+    {
+      "src": "https://arxiv.org/html/2611.23143v1/real_tracker.png",
+      "caption": "Figure 13",
+      "anchor": "A4.F13"
+    },
+    {
+      "src": "https://arxiv.org/html/2611.23143v1/vis2.png",
+      "caption": "Figure 14",
+      "anchor": "A4.F14"
+    },
+    {
+      "src": "https://arxiv.org/html/2611.23143v1/vis3.png",
+      "caption": "Figure 15",
+      "anchor": "A5.F15"
+    },
+    {
+      "src": "https://arxiv.org/html/2611.23143v1/task1_rollout.png",
+      "caption": "Figure 16",
+      "anchor": "A6.F16"
+    },
+    {
+      "src": "https://arxiv.org/html/2611.23143v1/task2_rollout.png",
+      "caption": "Figure 17",
+      "anchor": "A6.F17"
+    }
+  ]
+}

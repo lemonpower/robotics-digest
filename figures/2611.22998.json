@@ -1,0 +1,15 @@
+{
+  "version": "v1",
+  "figures": [
+    {
+      "src": "https://arxiv.org/html/2611.22998v1/architecture_dimensions_20261115.png",
+      "caption": "Fig. 1",
+      "anchor": "S1.F1"
+    },
+    {
+      "src": "https://arxiv.org/html/2611.22998v1/qualitative_annotations_20261109.png",
+      "caption": "Fig. 2",
+      "anchor": "S2.F2"
+    }
+  ]
+}

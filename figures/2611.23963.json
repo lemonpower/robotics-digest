@@ -1,0 +1,25 @@
+{
+  "version": "v1",
+  "figures": [
+    {
+      "src": "https://arxiv.org/html/2611.23963v1/Fig2-VTLA_svg-raw.png",
+      "caption": "Figure 2",
+      "anchor": "S2.F2"
+    },
+    {
+      "src": "https://arxiv.org/html/2611.23963v1/Fig3-VTLA_svg-raw.png",
+      "caption": "Figure 3",
+      "anchor": "S3.F3"
+    },
+    {
+      "src": "https://arxiv.org/html/2611.23963v1/Fig4-VTLA_svg-raw.png",
+      "caption": "Figure 4",
+      "anchor": "S4.F4"
+    },
+    {
+      "src": "https://arxiv.org/html/2611.23963v1/Fig5-GazeMatched_svg-raw.png",
+      "caption": "Figure 5",
+      "anchor": "S4.F5"
+    }
+  ]
+}

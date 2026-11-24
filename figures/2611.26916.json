@@ -1,0 +1,45 @@
+{
+  "version": "v1",
+  "figures": [
+    {
+      "src": "https://arxiv.org/html/2611.26916v1/figs/ego_hands_3x3.jpg",
+      "caption": "Figure 2",
+      "anchor": "S3.F2"
+    },
+    {
+      "src": "https://arxiv.org/html/2611.26916v1/figs/taxonomy_hours.png",
+      "caption": "论文插图",
+      "anchor": "S4.F4"
+    },
+    {
+      "src": "https://arxiv.org/html/2611.26916v1/figs/episode_lengths.png",
+      "caption": "论文插图",
+      "anchor": "S4.F4"
+    },
+    {
+      "src": "https://arxiv.org/html/2611.26916v1/figs/taxonomy_verticals.png",
+      "caption": "论文插图",
+      "anchor": "S4.F4"
+    },
+    {
+      "src": "https://arxiv.org/html/2611.26916v1/figs/faceblur_front.jpg",
+      "caption": "Figure 5",
+      "anchor": "S4.SS3.fig3"
+    },
+    {
+      "src": "https://arxiv.org/html/2611.26916v1/figs/ocal_device_hist.png",
+      "caption": "Figure 6",
+      "anchor": "S4.SS5.fig5"
+    },
+    {
+      "src": "https://arxiv.org/html/2611.26916v1/figs/faceblur_eye.jpg",
+      "caption": "Figure 9",
+      "anchor": "A3.F9"
+    },
+    {
+      "src": "https://arxiv.org/html/2611.26916v1/figs/faceblur_side.jpg",
+      "caption": "Figure 9",
+      "anchor": "A3.F9"
+    }
+  ]
+}
