@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
   push:
     branches: [main]
-    paths: ['scripts/radar.py', '.github/workflows/robotics-radar.yml', 'data.js', 'editorial.js']
+    paths: ['scripts/radar.py', '.github/workflows/robotics-radar.yml', 'data.js', 'editorial.js', 'reviews.js']
 
 permissions:
   contents: write
@@ -21,6 +21,10 @@ jobs:
     timeout-minutes: 12
     steps:
       - uses: actions/checkout@v4
+      - name: Install optional PDF figure extractor
+        run: |
+          python3 -m venv "$RUNNER_TEMP/figure-tools"
+          "$RUNNER_TEMP/figure-tools/bin/python" -m pip install 'PyMuPDF==1.26.7' || echo 'PDF crops unavailable; HTML figures and PDF links will still be used.'
       - name: Read and update the data branch
         shell: bash
         run: |
@@ -35,7 +39,7 @@ jobs:
             git worktree add --detach "$radar_checkout" HEAD
             git -C "$radar_checkout" switch --orphan radar-data
           fi
-          python3 "$source_checkout/scripts/radar.py" "$radar_checkout" --figures
+          "$RUNNER_TEMP/figure-tools/bin/python" "$source_checkout/scripts/radar.py" "$radar_checkout" --figures
           git -C "$radar_checkout" add --all
           if ! git -C "$radar_checkout" diff --cached --quiet; then
             git -C "$radar_checkout" -c user.name='github-actions[bot]' -c user.email='41898282+github-actions[bot]@users.noreply.github.com' commit -m 'Refresh arXiv robotics radar'

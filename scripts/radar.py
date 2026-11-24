@@ -217,7 +217,17 @@ def abstract_brief(value):
     sentences = re.split(r'(?<=[.!?])\s+(?=[A-Z])', value)
     method = next((s for s in sentences if re.search(r'\b(?:we (?:propose|introduce|present|develop)|our (?:method|approach))\b', s, re.I)), sentences[0])
     evidence = next((s for s in reversed(sentences) if s != method and re.search(r'\b(?:achiev\w+|outperform\w+|experiments? (?:show|demonstrate)|success rate)\b', s, re.I)), '')
-    return clean(method + ' ' + evidence)[:560]
+    output = clean(method + ' ' + evidence)
+    return output if len(output) <= 560 else output[:556].rsplit(' ',1)[0]+'…'
+
+
+def abstract_sections(value):
+    if not value:
+        return {}
+    sentences = re.split(r'(?<=[.!?])\s+(?=[A-Z])', value)
+    method = next((s for s in sentences if re.search(r'\b(?:we (?:propose|introduce|present|develop)|our (?:method|approach))\b', s, re.I)), '')
+    results = next((s for s in reversed(sentences) if s != method and re.search(r'\b(?:achiev\w+|outperform\w+|experiments? (?:show|demonstrate)|success rate)\b', s, re.I)), '')
+    return {**({'method':method} if method else {}), **({'results':results} if results else {}), 'depth':'Abstract brief'}
 
 
 def make_picks(latest, community, topics):
@@ -231,7 +241,7 @@ def make_picks(latest, community, topics):
     relevance = {p['id']: sum(bool(pattern.search(norm(p['title']))) for pattern in curated_rules) for p in latest}
     ranked = sorted(latest, key=lambda p: (p['id'] in community, community.get(p['id'], {}).get('upvotes', 0),
                                            relevance[p['id']], topical[p['id']], p['kind'] == 'new'), reverse=True)
-    return [{**public_paper(p, community.get(p['id'])), 'brief': abstract_brief(p['abstract']),
+    return [{**public_paper(p, community.get(p['id'])), 'brief': abstract_brief(p['abstract']), 'reading':abstract_sections(p['abstract']),
              'topics': paper_topics[p['id']][:3]} for p in ranked[:5] if p['abstract']]
 
 
@@ -242,20 +252,22 @@ def make_community_picks(community, history_by_id, latest_day, cached=None, live
     picks = []
     for p in sorted(recent, key=lambda p: (p['upvotes'], p['date']), reverse=True)[:3]:
         found = history_by_id.get(p['id'])
-        brief = abstract_brief(found['abstract']) if found and found['abstract'] else (cached or {}).get(p['id'], '')
+        abstract = found['abstract'] if found and found['abstract'] else ''
+        brief = abstract_brief(abstract) if abstract else (cached or {}).get(p['id'], '')
         if not brief and live:
             try:
                 time.sleep(3)
                 parser = AbstractMeta()
                 parser.feed(read_source('https://arxiv.org/abs/'+p['id'], 2_000_000).decode('utf-8','replace'))
-                excerpt = clean(''.join(parser.parts)).removeprefix('Abstract:').strip() or parser.abstract
-                if excerpt:
-                    brief = abstract_brief(excerpt)
+                abstract = clean(''.join(parser.parts)).removeprefix('Abstract:').strip() or parser.abstract
+                if abstract:
+                    brief = abstract_brief(abstract)
             except (HTTPError, URLError, TimeoutError, ValueError) as error:
                 print(f'Community pick abstract unavailable for {p["id"]}: {error}', flush=True)
                 if isinstance(error, HTTPError) and error.code in (429,503):
                     live = False
-        picks.append({**p,'brief':brief,'batch':found['batch'] if found else None})
+        picks.append({**p,'brief':brief,'abstract':abstract,'reading':abstract_sections(abstract),
+                      'batch':found['batch'] if found else None})
     return picks
 
 
@@ -307,15 +319,17 @@ def dump(target, obj):
     target.write_text(json.dumps(obj, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
 
 
-def acquire_figures(target, source_root):
+def acquire_figures(target, source_root, selected=()):
     source = (source_root/'data.js').read_text(encoding='utf-8') + (source_root/'editorial.js').read_text(encoding='utf-8')
     ids = set(re.findall(r"article\([\"'](\d{4}\.\d{4,5})[\"']", source))
-    for ident in sorted(ids - {'2610.28480'}):
+    selected_ids = {p['id'] for p in selected if ID.fullmatch(p['id'])}
+    for ident in [*sorted(selected_ids), *sorted(ids-selected_ids-{'2610.28480'})]:
         revision = 'v4' if ident == '2209.07753' else 'v1'
         path = target/'figures'/f'{ident}.json'
         if path.exists():
             continue
         url = f'https://arxiv.org/html/{ident}{revision}'
+        limited = False
         try:
             time.sleep(3)
             parser = Figures(url)
@@ -325,7 +339,78 @@ def acquire_figures(target, source_root):
         except (HTTPError, URLError, TimeoutError, ValueError) as exc:
             print(f'No HTML gallery for {ident}: {exc}', flush=True)
             if isinstance(exc, HTTPError) and exc.code in (429, 503):
-                break
+                limited = True
+        if not path.exists() and not limited and ident in selected_ids:
+            try:
+                time.sleep(3)
+                image = acquire_pdf_figure(target, ident, revision)
+                if image:
+                    dump(path, {'version':revision,'pdfPreview':image,'figures':[]})
+            except (ImportError, HTTPError, URLError, TimeoutError, ValueError, RuntimeError) as exc:
+                print(f'No verified PDF figure for {ident}: {exc}', flush=True)
+                limited = isinstance(exc, HTTPError) and exc.code in (429,503)
+        if limited:
+            break
+    for row in selected:
+        manifest = target/'figures'/f'{row["id"]}.json'
+        if not manifest.exists():
+            continue
+        content = json.loads(manifest.read_text(encoding='utf-8'))
+        if content.get('figures'):
+            item = content['figures'][0]
+            row.update(picture=item['src'],caption=item['caption'])
+        elif content.get('pdfPreview'):
+            row['pdfPreview'] = content['pdfPreview']
+
+
+def acquire_pdf_figure(target, ident, revision):
+    """Crop a bounded, detected Figure 1, not a synthetic replacement or full page."""
+    import fitz
+    data = read_source(f'https://arxiv.org/pdf/{ident}{revision}', 24_000_000)
+    if not data.startswith(b'%PDF-'):
+        return None
+    with fitz.open(stream=data, filetype='pdf') as document:
+        for number in range(min(document.page_count,6)):
+            page = document[number]
+            blocks = [b for b in page.get_text('blocks') if b[6]==0]
+            fraction = page.rect.width/2
+            for block in blocks:
+                if not re.match(r'^\s*(?:Figure|Fig\.)\s*1\s*[.:]', block[4]):
+                    continue
+                cap = fitz.Rect(block[:4])
+                lower = cap.y0-1
+                wide = cap.width > page.rect.width*.55
+                if wide:
+                    left,right = max(24, cap.x0-6),min(page.rect.width-24,cap.x1+6)
+                elif cap.x0 < fraction and cap.x1 <= fraction+7:
+                    left,right = max(24, cap.x0-7),fraction-3
+                elif cap.x0 >= fraction-7:
+                    left,right = fraction+3,min(page.rect.width-24,cap.x1+7)
+                else:
+                    continue
+                text_bottom = max((b[3] for b in blocks if b is not block and b[3] <= lower
+                                   and min(right,b[2])-max(left,b[0]) >= (right-left)*.15
+                                   and (len(b[4].split()) >= 12 or (b[2]-b[0]) >= (right-left)*.7)), default=46)
+                if not 51 <= lower-text_bottom <= 410:
+                    continue
+                candidate = fitz.Rect(left,text_bottom+2,right,lower)
+                graphics = [fitz.Rect(i['bbox']) for i in page.get_image_info()]
+                graphics.extend(d['rect'] for d in page.get_drawings())
+                hits = [r & candidate for r in graphics if r.intersects(candidate)]
+                if not hits:
+                    continue
+                fused = hits[0]
+                for rect in hits[1:]:
+                    fused |= rect
+                if fused.width < 100 or fused.height < 42 or lower-fused.y1 > 39:
+                    continue
+                clip = (fitz.Rect(fused.x0-4,fused.y0-4,fused.x1+4,min(lower,fused.y1+4)) & candidate)
+                file = f'media/{ident}-figure-1.jpg'
+                dest = target/file
+                dest.parent.mkdir(parents=True,exist_ok=True)
+                page.get_pixmap(matrix=fitz.Matrix(2,2),clip=clip,alpha=False).save(str(dest),jpg_quality=86)
+                return {'file':file,'page':page.number+1}
+    return None
 
 
 def main():
@@ -382,13 +467,18 @@ def main():
                     'roboticaUpdated': community_at if community else None,
                     'roboticaStatus': 'live' if robotica_ok else 'cached' if community else 'unavailable',
                     'topics': current, 'archivedTopics': archive}
+        editions = last_snapshot.get('editions',{}).copy()
+        prior_day = last_snapshot.get('latestBatch')
+        if prior_day and prior_day != latest:
+            editions[prior_day] = {key:last_snapshot.get(key,[]) for key in ('picks','communityPicks')}
+        snapshot['editions'] = {day:item for day,item in editions.items() if day >= past and day != latest}
+        if args.figures:
+            acquire_figures(root,Path(__file__).resolve().parents[1],snapshot['picks']+snapshot['communityPicks'])
         dump(state_file, history)
         dump(snapshot_file, snapshot)
         print(f'{latest}: {len(recent)} unique papers, {len(snapshot["topics"])} topics')
     else:
         print('No announcements in feed; leaving the snapshot unpublished.')
-    if args.figures:
-        acquire_figures(root, Path(__file__).resolve().parents[1])
 
 
 if __name__ == '__main__':

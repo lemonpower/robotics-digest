@@ -14,6 +14,6 @@ GitHub Pages 静态站。三个长期专题：Tactile Sensing、Robot RL（含 S
 
 在滚动 14 天内，方向至少有 3 篇、2 个公布日、3 组无重叠署名的论文才成专题。匹配依据是标题、摘要与重复术语。Robotica 官方 Articles API 提供社区点赞；按 arXiv 编号匹配后只影响排序，不重复计入论文数量。缺少 Robotica 数据时，arXiv 收录继续运行。符合门槛的专题由顶部 Trending Topics 直达，退热后进入 Past topics。
 
-Daily 保留人工解读，并从同批次补入最多 5 篇（含人工解读）的条目；近期高赞论文单列为 Community picks。自动条目只做基于作者摘要的摘录，不伪装成全文精读，也不把旧论文归入当天批次。
+Daily 每期最多 5 篇，同批次使用统一的图文卡片和独立论文页；Community Picks 保留同样的版式，仍不混入当天首发。reviews.js 可补充有原文支持的中文解读、英文关键词和官方演示。有 arXiv HTML 时使用原图；有 PDF 但无 HTML 图片时尝试从可识别的 Figure 1 裁取原图；没有可靠素材则链接 PDF。自动文字来自原摘要，不冒充全文分析。自动期次保留最近 28 天。
 
 工作流把公开 JSON 写入 `radar-data` 分支，前端直接读取，不依赖机器人触发 Pages 重新发布。无需 PAT；需允许 Actions 使用 `contents: write`。本地可运行 `python3 scripts/radar.py <输出目录> --rss-file <测试源>`。

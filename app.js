@@ -5,6 +5,7 @@ const appUrl = new URL($("paper-page") ? "../" : "./", location.href);
 const params = new URLSearchParams(location.search);
 const descending = [...issues].sort((a,b) => b.date.localeCompare(a.date));
 const byId = new Map(issues.flatMap(issue => issue.papers.map(p => [p.id,{p,issue}])));
+let liveSnapshot=null;
 const focused = Object.values(focusTopics).map(t => t.name);
 const catalog = [...new Set([...focused,...otherTopics.map(t => t.name),"Robot Foundation Models"])];
 const oldNames = {
@@ -19,7 +20,7 @@ const trendNames = {
   teleoperation:"Teleoperation", "multi-robot":"Multi-Robot Collaboration"
 };
 const norm = s => String(s ?? "").trim().toLowerCase();
-const detail = p => editorial[p.id] ?? {};
+const detail = p => editorial[p.id] ?? reviewNotes[p.id] ?? {};
 const version = p => detail(p).version ?? "v1";
 const arxiv = p => "https://arxiv.org/abs/"+p.id;
 const pdf = p => "https://arxiv.org/pdf/"+p.id+version(p);
@@ -68,7 +69,7 @@ function paperUrl(id,issue,topic,query){
 }
 function topicNames(p){
   const core=focusTopics[p.track]?.name;
-  const raw=detail(p).keywords ?? otherTopics.filter(t=>t.keywords.test(p.en+" "+p.summary)).map(t=>t.name);
+  const raw=p.keywords ?? detail(p).keywords ?? otherTopics.filter(t=>t.keywords.test(p.en+" "+p.summary)).map(t=>t.name);
   return [...new Set([core,detail(p).group,...raw].filter(Boolean))];
 }
 const group = p => detail(p).group || focusTopics[p.track]?.name || topicNames(p)[0] || "Robotics";
@@ -81,6 +82,74 @@ function paperChips(p,kw=topicNames(p)){
   const bar=el("div",null,"chips");
   for(const word of kw)bar.append(a(word,searchUrl({topic:word}),"chip"));
   return bar;
+}
+
+function readable(value){
+  return String(value??"").replace(/\\times\b/g,"×").replace(/\\%/g,"%").replace(/\$/g,"");
+}
+function automaticPaper(row){
+  const notes=reviewNotes[row.id]??{};
+  const tags=[...new Set([...(notes.keywords??[]),...(row.topics??[])])];
+  const catalogMatches=[
+    ["Tactile Sensing",/tactile|visuotactile|tactinf|t-tac|fingertip sensing/i],
+    ["Robot RL",/reinforcement learning|policy gradient|\bPPO\b|\bRL\b/i],
+    ["Agentic Robots",/agentic robot|code as policies|agent.?as.?policy|coding agents?[^.]*robot control/i],
+    ...otherTopics.map(t=>[t.name,t.keywords]),
+    ["Humanoid Control",/humanoid|whole-body control/i],
+    ["Motion Generation",/motion generation|motion tracking|motion mamba/i]
+  ];
+  const context=(row.title??"")+" "+(row.abstract??row.brief??"");
+  for(const [name,rx] of catalogMatches)if(rx.test(context)&&!tags.includes(name))tags.push(name);
+  if(!tags.length){
+    const prefix=(row.title??"").match(/^([A-Za-z][A-Za-z0-9.-]{2,22}):/);
+    tags.push(prefix?.[1]??"Robotics");
+  }
+  const track=Object.keys(focusTopics).find(key=>tags.includes(focusTopics[key].name))??"shared";
+  return {
+    id:row.id,name:notes.name??row.title,en:row.title,track,keywords:tags.slice(0,6),
+    first:notes.first??"",batch:row.batch,date:row.date,kind:row.kind,upvotes:row.upvotes,
+    authors:notes.authors??row.authors??[],project:notes.project??row.project,
+    picture:notes.picture??row.picture??(row.pdfPreview?.file?radarDataUrl(row.pdfPreview.file):null),
+    caption:notes.caption??row.caption??(row.pdfPreview?"Original paper · PDF page "+row.pdfPreview.page:""),
+    pdfPage:row.pdfPreview?.page,
+    summary:notes.summary??readable(row.brief||row.abstract||""),
+    abstract:readable(row.abstract||""),
+    why:notes.why??readable(row.reading?.why),
+    method:notes.method??readable(row.reading?.method),
+    result:notes.results??readable(row.reading?.results),
+    caveat:notes.caveat??readable(row.reading?.limitations),
+    metric:notes.metric??"",
+    sourceDepth:notes.depth??row.reading?.depth??"Abstract brief"
+  };
+}
+function sameBatch(){
+  const papers=selectedIssue.papers;
+  const edition=batchData(selectedIssue.batch);
+  if(!edition)return papers;
+  const ids=new Set(papers.map(p=>p.id));
+  const extra=(edition.picks??[]).filter(p=>validId(p.id)&&!ids.has(p.id)).slice(0,Math.max(0,5-papers.length));
+  return [...papers,...extra.map(automaticPaper)];
+}
+function communityPapers(){
+  const edition=batchData(selectedIssue.batch);
+  if(!edition)return [];
+  const used=new Set(sameBatch().map(p=>p.id));
+  return (edition.communityPicks??[]).filter(p=>validId(p.id)&&!used.has(p.id)).slice(0,3).map(automaticPaper);
+}
+function batchData(day){
+  if(!day||!liveSnapshot)return null;
+  return day===liveSnapshot.latestBatch?liveSnapshot:liveSnapshot.editions?.[day];
+}
+function snapshotRows(data){
+  return [...(data?.picks??[]),...(data?.communityPicks??[]),
+    ...Object.values(data?.editions??{}).flatMap(ed=>[...(ed.picks??[]),...(ed.communityPicks??[])])];
+}
+function studyPapers(){
+  const papers=new Map([...byId.values()].map(({p})=>[p.id,p]));
+  for(const row of snapshotRows(liveSnapshot)){
+    if(validId(row.id)&&!papers.has(row.id))papers.set(row.id,automaticPaper(row));
+  }
+  return [...papers.values()];
 }
 
 const motion=matchMedia("(prefers-reduced-motion: reduce)");
@@ -135,7 +204,12 @@ function media(p,{clip,index=0,compact=false,auto=true}={}){
     if(!compact && p.caption)f.append(lang("figcaption",p.caption));
   }
   if(!safeHTTPS(clip?.src)){
-    if(!picture && !p.project)return null;
+    if(!picture && !p.project){
+      if(!compact)return null;
+      f.classList.add("media-unavailable");
+      f.append(a("Figures in original PDF",pdf(p),"media-fallback",true));
+      return f;
+    }
     still();return f;
   }
   const shell=el("div",null,"video-shell");
@@ -201,8 +275,13 @@ function renderCard(p,query){
   const title=el("h3");
   title.append(a(p.en,paperUrl(p.id,selectedIssue.key,selectedTopic,query),"paper-title"));
   copy.append(title);
-  if(p.author)copy.append(el("p",authors(p,true),"authors"));
-  copy.append(el("time",formatDate(p.first),"muted"),lang("p",p.summary,"card-summary"));
+  const names=authors(p,true);
+  if(names)copy.append(el("p",names,"authors"));
+  const date=p.first?formatDate(p.first):(p.batch?"arXiv batch · "+formatDate(p.batch):formatDate(p.date));
+  const kind=[date,p.sourceDepth,Number.isInteger(p.upvotes)?"Robotica · "+p.upvotes+" upvotes":""].filter(Boolean);
+  if(kind.length)copy.append(el("p",kind.join(" · "),"muted"));
+  if(p.summary)copy.append(lang("p",p.summary,"card-summary"));
+  else copy.append(a("Read abstract on arXiv",arxiv(p),"subtle-link",true));
   copy.append(paperChips(p));
   const m=media(p,{clip:detail(p).videos?.[0],compact:true});
   if(m)row.append(m);else row.classList.add("no-media");
@@ -222,14 +301,15 @@ function updateIndex(sync=false){
   $("brief").hidden=cross||!selectedIssue.insights?.length||selectedIssue.papers.length<2;
   $("insights").replaceChildren(...(selectedIssue.insights??[]).map(([, ,blurb])=>lang("p",blurb)));
   const needles=norm(raw).split(/\s+/).filter(Boolean);
-  const source=cross?[...byId.values()].map(x=>x.p).sort((a,b)=>b.first.localeCompare(a.first)):selectedIssue.papers;
+  const source=cross?studyPapers().sort((a,b)=>(b.first||b.batch||b.date||"").localeCompare(a.first||a.batch||a.date||"")):sameBatch();
   const shown=source.filter(p=>{
     const words=topicNames(p);
     if(selectedTopic&&!words.includes(selectedTopic))return false;
-    const text=norm([p.en,p.name,p.author,p.id,p.summary,p.method,...words].join(" "));
+    const text=norm([p.en,p.name,authors(p),p.id,p.summary,p.method,...words].join(" "));
     return needles.every(token=>text.includes(token));
   });
   $("count").textContent=shown.length+(shown.length===1?" paper":" papers");
+  if(!cross&&shown.length)$("issue-label").textContent+=" · "+$("count").textContent;
   const buckets=new Map();
   for(const p of shown){
     const key=selectedTopic||group(p);
@@ -244,9 +324,9 @@ function updateIndex(sync=false){
     return block;
   });
   $("papers").replaceChildren(...(groups.length?groups:selectedIssue.automated&&!cross?[]:[el("p","No matching papers.","muted empty")]));
-  pruneMedia();
   renderCompare(shown);
-  loadDailyPicks();
+  renderCommunity(cross?[]:communityPapers(),raw);
+  pruneMedia();
 }
 function renderCompare(rows){
   $("compare").hidden=rows.length<2;
@@ -266,10 +346,11 @@ function renderCompare(rows){
 }
 
 function loadTopics(){
-  const usedTopics=new Set([...byId.values()].flatMap(({p})=>topicNames(p)));
+  const papers=studyPapers();
+  const usedTopics=new Set(papers.flatMap(topicNames));
   $("topic-list").replaceChildren();
   for(const name of catalog.filter(t=>usedTopics.has(t))){
-    const n=[...byId.values()].filter(({p})=>topicNames(p).includes(name)).length;
+    const n=papers.filter(p=>topicNames(p).includes(name)).length;
     const card=a("",searchUrl({topic:name}),"topic-entry");
     card.append(el("strong",name),el("span",n+(n===1?" paper":" papers")));
     $("topic-list").append(card);
@@ -297,12 +378,7 @@ function showIndex(){
     return;
   }
   $("search").value=params.get("q")??"";
-  for(const issue of descending){
-    const option=el("option",editionName(issue));option.value=issue.key;$("issue").append(option);
-    const entry=a("",searchUrl({issue:issue.key}),"archive-entry");
-    entry.append(el("time",formatDate(issue.batch??issue.date)),el("strong",titleOf(issue)),el("span",issue.papers.length+(issue.papers.length===1?" paper":" papers")));
-    $("archive-list").append(entry);
-  }
+  renderEditions();
   $("issue").addEventListener("change",event=>{
     selectedIssue=descending.find(x=>x.key===event.target.value)??issueDefault;
     selectedTopic="";$("search").value="";updateIndex(true);
@@ -313,55 +389,58 @@ function showIndex(){
   window.addEventListener("hashchange",selectNav);
   selectNav();
   getSnapshot().then(data=>{
-    if(validEdition(data?.latestBatch)&&!descending.some(i=>i.batch===data.latestBatch)){
-      const latest={key:data.latestBatch,batch:data.latestBatch,date:data.latestBatch,title:"Latest Papers",automated:true,papers:[]};
-      descending.unshift(latest);
-      const option=el("option",editionName(latest));option.value=latest.key;$("issue").prepend(option);
-      if(params.get("issue")===latest.key||(!params.has("issue")&&!selectedTopic&&!$("search").value.trim()&&selectedIssue===issueDefault)){
-        selectedIssue=latest;updateIndex();
-      }
+    liveSnapshot=data;
+    for(const day of [data?.latestBatch,...Object.keys(data?.editions??{})]){
+      if(validEdition(day)&&!descending.some(i=>i.batch===day))descending.push({key:day,batch:day,date:day,title:"Daily Papers",automated:true,papers:[]});
     }
-    addNavTopics(data);
+    descending.sort((a,b)=>b.date.localeCompare(a.date));
+    const requested=descending.find(i=>i.key===params.get("issue"));
+    const latest=descending.find(i=>i.batch===data?.latestBatch);
+    if(requested)selectedIssue=requested;
+    else if(latest && !selectedTopic&&!$("search").value.trim()&&selectedIssue===issueDefault)selectedIssue=latest;
+    renderEditions();
+    loadTopics();updateIndex();addNavTopics(data);
   });
+}
+function renderEditions(){
+  const options=[], archive=[];
+  for(const issue of [...descending].sort((a,b)=>Number(Boolean(b.batch))-Number(Boolean(a.batch))||b.date.localeCompare(a.date))){
+    const option=el("option",editionName(issue));option.value=issue.key;options.push(option);
+    const entry=a("",searchUrl({issue:issue.key}),"archive-entry");
+    const edition=batchData(issue.batch);
+    const count=Math.min(5,new Set([...issue.papers.map(p=>p.id),...(edition?.picks??[]).map(p=>p.id)]).size);
+    entry.append(el("time",formatDate(issue.batch??issue.date)),el("strong",titleOf(issue)),el("span",count+(count===1?" paper":" papers")));
+    archive.push(entry);
+  }
+  $("issue").replaceChildren(...options);$("archive-list").replaceChildren(...archive);
 }
 const validEdition = day => /^\d{4}-\d{2}-\d{2}$/.test(day??"");
 async function showPaper(){
   const body=$("paper-body");
   $("back-to-digest").href=searchUrl({issue:params.get("issue"),topic:params.get("topic"),q:params.get("q")});
-  const paper=byId.get(params.get("id"));
-  if(!paper){
-    const id=params.get("id");
-    if(!validId(id)){body.append(el("h1","Paper not found"));return;}
+  const id=params.get("id");
+  if(!validId(id)){body.append(el("h1","Paper not found"));return;}
+  let p=byId.get(id)?.p;
+  if(!p){
     body.append(el("p","Loading paper…","muted"));
     const snapshot=await getSnapshot();
-    const listed=[...(snapshot?.picks??[]),...(snapshot?.latestPapers??[]),...(snapshot?.communityPicks??[]),
+    const listed=[...snapshotRows(snapshot),...(snapshot?.latestPapers??[]),
       ...[...(snapshot?.topics??[]),...(snapshot?.archivedTopics??[])].flatMap(t=>t.papers??[])].find(p=>p.id===id);
     body.replaceChildren();
     if(!listed){
       body.append(el("h1","Paper details"),summaryLink("Open on arXiv",arxiv({id})));
       return;
     }
-    document.title=listed.title+" · Robotics Digest";
-    const head=el("header",null,"reader-header");
-    head.append(el("h1",listed.title));
-    if(authors(listed))head.append(el("p",authors(listed),"authors"));
-    const date=listed.batch?"arXiv batch · "+formatDate(listed.batch):formatDate(listed.date);
-    const facts=[date,Number.isInteger(listed.upvotes)?"Robotica · "+listed.upvotes+" upvotes":""].filter(Boolean).join(" · ");
-    if(facts)head.append(el("p",facts,"muted"));
-    const sources=el("div",null,"chips");
-    sources.append(summaryLink("arXiv",arxiv(listed)),summaryLink("PDF","https://arxiv.org/pdf/"+listed.id));
-    head.append(sources);body.append(head);
-    if(listed.brief)body.append(section("Abstract Brief",listed.brief));
-    if(listed.abstract)body.append(section("Abstract",listed.abstract));
-    if(!listed.abstract&&!listed.brief)body.append(a("Read the abstract on arXiv",arxiv(listed),"subtle-link",true));
-    return;
+    p=automaticPaper(listed);
   }
-  const {p}=paper;
   const data=detail(p);
   document.title=p.en+" · Robotics Digest";
   const head=el("header",null,"reader-header");
-  head.append(el("h1",p.en),el("p",authors(p),"authors"));
-  const facts=el("p",formatDate(p.first)+(data.revision?" · "+version(p)+" updated "+formatDate(data.revision):""),"muted");
+  head.append(el("h1",p.en));
+  if(authors(p))head.append(el("p",authors(p),"authors"));
+  const date=p.first?formatDate(p.first):p.batch?"arXiv batch · "+formatDate(p.batch):formatDate(p.date);
+  const facts=el("p",[date,data.revision?version(p)+" updated "+formatDate(data.revision):"",p.sourceDepth,
+      Number.isInteger(p.upvotes)?"Robotica · "+p.upvotes+" upvotes":""].filter(Boolean).join(" · "),"muted");
   head.append(facts);
   const links=el("div",null,"chips reader-links");
   links.append(summaryLink("arXiv",arxiv(p)),summaryLink("PDF",pdf(p)));
@@ -371,10 +450,17 @@ async function showPaper(){
   const mainMedia=media(p,{clip:data.videos?.[0]});
   if(mainMedia){mainMedia.classList.add("hero-media");body.append(mainMedia);}
   const recap=el("p",null,"tldr");
-  recap.append(el("strong","TL;DR"),lang("span",p.summary));
+  recap.append(el("strong","TL;DR"),p.summary?lang("span",p.summary):a("Read abstract on arXiv",arxiv(p),null,true));
   body.append(recap);
-  if(data.why)body.append(section("What they do",data.why));
-  body.append(section("How it works",p.method),section("Results",data.results??p.result),section("Limitations",p.caveat));
+  if(data.why||p.why)body.append(section("What they do",data.why??p.why));
+  for(const [name,content] of [["How it works",p.method],["Results",data.results??p.result],["Limitations",p.caveat]]){
+    if(content)body.append(section(name,content));
+  }
+  if(p.abstract && p.sourceDepth){
+    const disclosure=el("details",null,"issue-brief");
+    disclosure.append(el("summary","Original abstract"),lang("p",p.abstract));
+    body.append(disclosure);
+  }
   if(data.videos?.length>1){
     const more=section("Videos",null,true);
     const layout=el("div",null,"video-grid");
@@ -411,7 +497,7 @@ function fillGallery(p,gallery){
   const data=detail(p), collected=new Map();
   for(const item of data.figures??[])collected.set(item.src,item);
   if(p.picture&&!collected.has(p.picture))collected.set(p.picture,{src:p.picture,caption:p.caption});
-  const fallback=a("View figures in the PDF",pdf(p),"subtle-link",true);
+  const fallback=a("View figures in the PDF",pdf(p)+(p.pdfPage?"#page="+p.pdfPage:""),"subtle-link",true);
   const render=()=>gallery.replaceChildren(...[...collected.values()].map(figure),fallback);
   render();
   readJSON("figures/"+p.id+".json").then(manifest=>{
@@ -459,28 +545,10 @@ function itemRow(p,{full=false,community=false}={}){
   if(community&&!p.brief)article.append(a("Read arXiv abstract",arxiv(p),"subtle-link",true));
   return article;
 }
-async function loadDailyPicks(){
+function renderCommunity(papers,query){
   const dest=$("daily-picks");
-  if(!dest) return;
-  if(selectedTopic||$("search").value.trim()) {dest.hidden=true;return;}
-  const issue=selectedIssue;
-  const extra=await getSnapshot();
-  if(issue!==selectedIssue||selectedTopic||$("search").value.trim())return;
-  if(!extra?.latestBatch||issue.batch!==extra.latestBatch){dest.hidden=true;return;}
-  const prefs=new Set(issue.papers.map(p=>p.id));
-  const curated=(extra.picks??[]).filter(p=>!prefs.has(p.id)).slice(0,Math.max(0,5-issue.papers.length));
-  const community=(extra.communityPicks??[]).filter(p=>!prefs.has(p.id)).slice(0,3);
-  const children=[];
-  if(curated.length){
-    const block=section(issue.automated?"Daily picks":"More from this batch");
-    block.append(el("p","Abstract briefs","muted"),...curated.map(p=>itemRow(p)).filter(Boolean));children.push(block);
-  }
-  if(community.length){
-    const block=section("Community picks");
-    block.append(el("p","Recent papers · not necessarily in this batch","muted"),...community.map(p=>itemRow(p,{community:true})).filter(Boolean));children.push(block);
-  }
-  dest.replaceChildren(...children);
-  dest.hidden=!children.length;
+  dest.hidden=!papers.length;
+  dest.replaceChildren(...(papers.length?[el("h2","Community Picks"),el("p","Recent papers from Robotica","muted"),...papers.map(p=>renderCard(p,query))]:[]));
 }
 let radarDrawn=false;
 async function renderRadar(){
@@ -515,7 +583,7 @@ function trendCard(t){
   n.id="trend-"+t.id;
   const h=el("summary",trendNames[t.id]??t.name);
   h.append(el("span",t.count+" papers · "+t.batches+" dates"+(t.communityCount?" · "+t.communityCount+" on Robotica":"")));
-  n.append(h,...(t.papers??[]).map(p=>itemRow(p,{full:true})).filter(Boolean));
+  n.append(h,...(t.papers??[]).filter(row=>validId(row.id)).map(row=>renderCard(byId.get(row.id)?.p??automaticPaper(row),"")));
   return n;
 }
 
