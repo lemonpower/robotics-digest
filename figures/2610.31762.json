@@ -1,0 +1,60 @@
+{
+  "version": "v1",
+  "figures": [
+    {
+      "src": "https://arxiv.org/html/2610.31762v1/2610.31762v1/representnav_teaser_vlnverse.png",
+      "caption": "Figure 1",
+      "anchor": "S0.F1"
+    },
+    {
+      "src": "https://arxiv.org/html/2610.31762v1/2610.31762v1/representnav_pipeline.png",
+      "caption": "Figure 2",
+      "anchor": "S3.F2"
+    },
+    {
+      "src": "https://arxiv.org/html/2610.31762v1/2610.31762v1/representnav_realworld_panels.png",
+      "caption": "Figure 3",
+      "anchor": "S4.F3"
+    },
+    {
+      "src": "https://arxiv.org/html/2610.31762v1/2610.31762v1/representnav_rr_rgb_overlay6_terms.png",
+      "caption": "Figure 4",
+      "anchor": "S5.F4"
+    },
+    {
+      "src": "https://arxiv.org/html/2610.31762v1/2610.31762v1/representnav_readouts_iclr.png",
+      "caption": "Figure 5",
+      "anchor": "S5.F5"
+    },
+    {
+      "src": "https://arxiv.org/html/2610.31762v1/2610.31762v1/pointgoal_ours_trajectories_baseline_comparison.png",
+      "caption": "Figure 7",
+      "anchor": "A1.F7"
+    },
+    {
+      "src": "https://arxiv.org/html/2610.31762v1/2610.31762v1/fig11_readouts_appendix_renamed_20260923.png",
+      "caption": "Figure 9",
+      "anchor": "A2.F9"
+    },
+    {
+      "src": "https://arxiv.org/html/2610.31762v1/2610.31762v1/track_bbox_raw_comparison.png",
+      "caption": "Figure 10",
+      "anchor": "A2.F10"
+    },
+    {
+      "src": "https://arxiv.org/html/2610.31762v1/2610.31762v1/representnav_robot_platform_bumi_latency.png",
+      "caption": "Figure 14",
+      "anchor": "A3.F14"
+    },
+    {
+      "src": "https://arxiv.org/html/2610.31762v1/2610.31762v1/representnav_realworld_cross_task_with_track.png",
+      "caption": "Figure 15",
+      "anchor": "A3.F15"
+    },
+    {
+      "src": "https://arxiv.org/html/2610.31762v1/2610.31762v1/fig15_realworld_12_prompts.png",
+      "caption": "Figure 16",
+      "anchor": "A3.F16"
+    }
+  ]
+}

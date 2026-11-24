@@ -1,0 +1,15 @@
+{
+  "version": "v1",
+  "figures": [
+    {
+      "src": "https://arxiv.org/html/2611.20452v1/2611.20452v1/images/xmimic_teaser.png",
+      "caption": "Fig. 1",
+      "anchor": "S0.F1"
+    },
+    {
+      "src": "https://arxiv.org/html/2611.20452v1/2611.20452v1/images/xsoma_teaser.png",
+      "caption": "Fig. 1",
+      "anchor": "S0.F1"
+    }
+  ]
+}

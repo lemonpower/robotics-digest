@@ -1,0 +1,45 @@
+{
+  "version": "v1",
+  "figures": [
+    {
+      "src": "https://arxiv.org/html/2610.31779v1/2610.31779v1/release_pull_figure.png",
+      "caption": "Figure 1",
+      "anchor": "S0.F1"
+    },
+    {
+      "src": "https://arxiv.org/html/2610.31779v1/2610.31779v1/release_capabilities.png",
+      "caption": "Figure 3",
+      "anchor": "S2.F3"
+    },
+    {
+      "src": "https://arxiv.org/html/2610.31779v1/2610.31779v1/pipeline_comparison.png",
+      "caption": "Figure 4",
+      "anchor": "S2.F4"
+    },
+    {
+      "src": "https://arxiv.org/html/2610.31779v1/2610.31779v1/qualitative_capabilities_release.png",
+      "caption": "Figure 5",
+      "anchor": "S3.F5"
+    },
+    {
+      "src": "https://arxiv.org/html/2610.31779v1/2610.31779v1/release_episode_sequence.png",
+      "caption": "Figure 8",
+      "anchor": "A5.F8"
+    },
+    {
+      "src": "https://arxiv.org/html/2610.31779v1/2610.31779v1/episode_annotation_demo.png",
+      "caption": "Figure 9",
+      "anchor": "A5.F9"
+    },
+    {
+      "src": "https://arxiv.org/html/2610.31779v1/2610.31779v1/annotation_qualitative.png",
+      "caption": "Figure 10",
+      "anchor": "A5.F10"
+    },
+    {
+      "src": "https://arxiv.org/html/2610.31779v1/2610.31779v1/reward_qualitative.png",
+      "caption": "Figure 11",
+      "anchor": "A5.F11"
+    }
+  ]
+}
