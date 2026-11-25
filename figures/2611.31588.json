@@ -1,0 +1,35 @@
+{
+  "version": "v1",
+  "figures": [
+    {
+      "src": "https://arxiv.org/html/2611.31588v1/arch_figure_comparison.png",
+      "caption": "Fig. 2",
+      "anchor": "S1.F2"
+    },
+    {
+      "src": "https://arxiv.org/html/2611.31588v1/task-teaser-states-wide.png",
+      "caption": "Fig. 4",
+      "anchor": "S5.F4"
+    },
+    {
+      "src": "https://arxiv.org/html/2611.31588v1/generalization-summary-by-distribution-labels.png",
+      "caption": "Fig. 5",
+      "anchor": "S5.F5"
+    },
+    {
+      "src": "https://arxiv.org/html/2611.31588v1/init-state-heatmaps.png",
+      "caption": "Fig. 6",
+      "anchor": "S5.F6"
+    },
+    {
+      "src": "https://arxiv.org/html/2611.31588v1/pickcube-real-ood-borders.png",
+      "caption": "Fig. 7",
+      "anchor": "S6.F7"
+    },
+    {
+      "src": "https://arxiv.org/html/2611.31588v1/representative-first-50-preview-standardized-likelihood.png",
+      "caption": "Fig. 8",
+      "anchor": "S6.F8"
+    }
+  ]
+}

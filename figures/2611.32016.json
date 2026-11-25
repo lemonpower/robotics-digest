@@ -1,0 +1,55 @@
+{
+  "version": "v1",
+  "figures": [
+    {
+      "src": "https://arxiv.org/html/2611.32016v1/positioning_figure.png",
+      "caption": "Figure 2",
+      "anchor": "S1.F2"
+    },
+    {
+      "src": "https://arxiv.org/html/2611.32016v1/framework_figure.png",
+      "caption": "Figure 3",
+      "anchor": "S2.F3"
+    },
+    {
+      "src": "https://arxiv.org/html/2611.32016v1/feedback_execution_figure.png",
+      "caption": "Figure 5",
+      "anchor": "S4.F5"
+    },
+    {
+      "src": "https://arxiv.org/html/2611.32016v1/x1.png",
+      "caption": "Figure A4",
+      "anchor": "A2.F4"
+    },
+    {
+      "src": "https://arxiv.org/html/2611.32016v1/x2.png",
+      "caption": "Figure A5",
+      "anchor": "A2.F5"
+    },
+    {
+      "src": "https://arxiv.org/html/2611.32016v1/microwave_recovery.png",
+      "caption": "Figure A7",
+      "anchor": "A5.F7"
+    },
+    {
+      "src": "https://arxiv.org/html/2611.32016v1/paired_case_a.png",
+      "caption": "Figure A8",
+      "anchor": "A5.F8"
+    },
+    {
+      "src": "https://arxiv.org/html/2611.32016v1/paired_case_b.png",
+      "caption": "Figure A9",
+      "anchor": "A5.F9"
+    },
+    {
+      "src": "https://arxiv.org/html/2611.32016v1/paired_case_c.png",
+      "caption": "Figure A10",
+      "anchor": "A5.F10"
+    },
+    {
+      "src": "https://arxiv.org/html/2611.32016v1/paired_case_d.png",
+      "caption": "Figure A11",
+      "anchor": "A5.F11"
+    }
+  ]
+}

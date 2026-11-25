@@ -1,0 +1,65 @@
+{
+  "version": "v1",
+  "figures": [
+    {
+      "src": "https://arxiv.org/html/2611.31205v1/teaser.png",
+      "caption": "Figure 1",
+      "anchor": "S0.F1"
+    },
+    {
+      "src": "https://arxiv.org/html/2611.31205v1/architecture.png",
+      "caption": "Figure 2",
+      "anchor": "S3.F2"
+    },
+    {
+      "src": "https://arxiv.org/html/2611.31205v1/efficiency_filmstrips.png",
+      "caption": "Figure 3",
+      "anchor": "S5.F3"
+    },
+    {
+      "src": "https://arxiv.org/html/2611.31205v1/collaboration_filmstrips.png",
+      "caption": "Figure 4",
+      "anchor": "S5.F4"
+    },
+    {
+      "src": "https://arxiv.org/html/2611.31205v1/annotation_interface.png",
+      "caption": "Figure 6",
+      "anchor": "A2.F6"
+    },
+    {
+      "src": "https://arxiv.org/html/2611.31205v1/navigation_body_agent.png",
+      "caption": "Figure 7",
+      "anchor": "A4.F7"
+    },
+    {
+      "src": "https://arxiv.org/html/2611.31205v1/dataset_reasoning.png",
+      "caption": "Figure 8",
+      "anchor": "A5.F8"
+    },
+    {
+      "src": "https://arxiv.org/html/2611.31205v1/supplementary_fully_parallel.png",
+      "caption": "Figure 9",
+      "anchor": "A7.F9"
+    },
+    {
+      "src": "https://arxiv.org/html/2611.31205v1/supplementary_parallel_sequential_1.png",
+      "caption": "Figure 10",
+      "anchor": "A7.F10"
+    },
+    {
+      "src": "https://arxiv.org/html/2611.31205v1/supplementary_parallel_sequential_2.png",
+      "caption": "Figure 11",
+      "anchor": "A7.F11"
+    },
+    {
+      "src": "https://arxiv.org/html/2611.31205v1/supplementary_collaborative_1.png",
+      "caption": "Figure 12",
+      "anchor": "A7.F12"
+    },
+    {
+      "src": "https://arxiv.org/html/2611.31205v1/supplementary_collaborative_2.png",
+      "caption": "Figure 13",
+      "anchor": "A7.F13"
+    }
+  ]
+}

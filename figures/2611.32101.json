@@ -1,0 +1,35 @@
+{
+  "version": "v1",
+  "figures": [
+    {
+      "src": "https://arxiv.org/html/2611.32101v1/pipeline.png",
+      "caption": "Figure 2",
+      "anchor": "S2.F2"
+    },
+    {
+      "src": "https://arxiv.org/html/2611.32101v1/recon_quality.png",
+      "caption": "Figure 3",
+      "anchor": "S3.F3"
+    },
+    {
+      "src": "https://arxiv.org/html/2611.32101v1/realworld_rollout.png",
+      "caption": "Figure 5",
+      "anchor": "S3.F5"
+    },
+    {
+      "src": "https://arxiv.org/html/2611.32101v1/realcontact_quality.png",
+      "caption": "Figure 6",
+      "anchor": "S3.F6"
+    },
+    {
+      "src": "https://arxiv.org/html/2611.32101v1/retarget_double.png",
+      "caption": "Figure 7",
+      "anchor": "S8.F7"
+    },
+    {
+      "src": "https://arxiv.org/html/2611.32101v1/appendix_rollout_tactile_curve_force_palm.png",
+      "caption": "Figure 9",
+      "anchor": "S12.F9"
+    }
+  ]
+}

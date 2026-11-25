@@ -1,0 +1,15 @@
+{
+  "version": "v1",
+  "figures": [
+    {
+      "src": "https://arxiv.org/html/2611.30989v1/fig/WorldLeague_Task_Construction.png",
+      "caption": "Figure 2",
+      "anchor": "S3.F2"
+    },
+    {
+      "src": "https://arxiv.org/html/2611.30989v1/WorldLeague_Trajectories.png",
+      "caption": "Figure 4",
+      "anchor": "S4.F4"
+    }
+  ]
+}

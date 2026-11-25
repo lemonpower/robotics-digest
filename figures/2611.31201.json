@@ -1,0 +1,30 @@
+{
+  "version": "v1",
+  "figures": [
+    {
+      "src": "https://arxiv.org/html/2611.31201v1/harness_baselines.png",
+      "caption": "Figure 2",
+      "anchor": "S1.F2"
+    },
+    {
+      "src": "https://arxiv.org/html/2611.31201v1/embo-harness.png",
+      "caption": "Figure 4",
+      "anchor": "S3.F4"
+    },
+    {
+      "src": "https://arxiv.org/html/2611.31201v1/real_world_setup.png",
+      "caption": "Figure 5",
+      "anchor": "S3.F5"
+    },
+    {
+      "src": "https://arxiv.org/html/2611.31201v1/real_world_demos.png",
+      "caption": "Figure 8",
+      "anchor": "S8.F8"
+    },
+    {
+      "src": "https://arxiv.org/html/2611.31201v1/simulation_demos.png",
+      "caption": "Figure 9",
+      "anchor": "S8.F9"
+    }
+  ]
+}
