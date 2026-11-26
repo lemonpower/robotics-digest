@@ -4,7 +4,7 @@ const $ = id => document.getElementById(id);
 const appUrl = new URL($("paper-page") ? "../" : "./", location.href);
 const params = new URLSearchParams(location.search);
 const descending = [...issues].sort((a,b) => b.date.localeCompare(a.date));
-const byId = new Map(issues.flatMap(issue => issue.papers.map(p => [p.id,{p,issue}])));
+const byId = new Map(issues.flatMap(issue => [...issue.papers,...(issue.additional??[]),...(issue.community??[])].map(p => [p.id,{p,issue}])));
 let liveSnapshot=null;
 const focused = Object.values(focusTopics).map(t => t.name);
 const catalog = [...new Set([...focused,...otherTopics.map(t => t.name),"Robot Foundation Models"])];
@@ -28,11 +28,12 @@ const html = p => "https://arxiv.org/html/"+p.id+version(p);
 const EnglishDate = new Intl.DateTimeFormat("en",{year:"numeric",month:"short",day:"numeric",timeZone:"UTC"});
 const formatDate = day => /^\d{4}-\d{2}-\d{2}$/.test(day ?? "") ? EnglishDate.format(new Date(day+"T00:00:00Z")) : "";
 const titleOf = issue => oldNames[issue.key] ?? issue.title;
-const editionName = issue => issue.batch ? formatDate(issue.batch) : titleOf(issue);
+const editionName = issue => issue.curated ? formatDate(issue.date)+" · Beijing" : issue.batch ? formatDate(issue.batch) : titleOf(issue);
+const findIssue = key => descending.find(issue=>issue.key===key) ?? descending.find(issue=>issue.curated&&issue.date===key);
 const validId = id => /^\d{4}\.\d{4,5}$/.test(id ?? "");
 const safeHTTPS = s => typeof s==="string" && /^https:\/\//i.test(s);
 const issueDefault = descending.find(issue=>issue.batch);
-let selectedIssue = descending.find(issue=>issue.key===params.get("issue")) ?? issueDefault;
+let selectedIssue = findIssue(params.get("issue")) ?? issueDefault;
 let selectedTopic = params.get("topic") ?? focusTopics[params.get("track")]?.name ?? "";
 let snapshotPromise;
 
@@ -124,6 +125,7 @@ function automaticPaper(row){
 }
 function sameBatch(){
   const papers=selectedIssue.papers;
+  if(selectedIssue.curated)return papers;
   const edition=batchData(selectedIssue.batch);
   if(!edition)return papers;
   const ids=new Set(papers.map(p=>p.id));
@@ -135,6 +137,7 @@ function recordForCard(row){
   return saved?{...saved,batch:row.batch,kind:row.kind,upvotes:row.upvotes??saved.upvotes}:automaticPaper(row);
 }
 function communityPapers(){
+  if(selectedIssue.community)return selectedIssue.community;
   const edition=batchData(selectedIssue.batch);
   if(!edition)return [];
   const used=new Set(sameBatch().map(p=>p.id));
@@ -310,8 +313,10 @@ function updateIndex(sync=false){
   $("issue-title").textContent=selectedTopic || (raw ? "Search results" : titleOf(selectedIssue));
   const meta=infoFor(selectedIssue.batch);
   $("issue-label").textContent=cross?"":selectedIssue.batch?"arXiv batch · "+formatDate(selectedIssue.batch):selectedIssue.noAnnouncements?formatDate(selectedIssue.date):"Selected readings";
+  if(!cross&&selectedIssue.curated)$("issue-label").textContent="Beijing edition · "+formatDate(selectedIssue.date)+"  /  "+$("issue-label").textContent+" (ET)";
   const insights=(selectedIssue.insights??[]).map(([, ,blurb])=>lang("p",blurb));
-  if(meta?.signals?.length){
+  if(selectedIssue.curated&&selectedIssue.scope)insights.push(lang("p","检索："+selectedIssue.time+"。"+selectedIssue.scope));
+  if(!selectedIssue.curated&&meta?.signals?.length){
     const signal=meta.signals.map(k=>k.name+" "+k.count).join(" · ");
     insights.unshift(lang("p","题名中反复出现的方向："+signal+"。同一论文可以命中多个方向；这不是点赞或质量排序。"));
   }
@@ -345,7 +350,7 @@ function updateIndex(sync=false){
   });
   $("papers").replaceChildren(...(groups.length?groups:selectedIssue.noAnnouncements&&!cross?[el("p","arXiv Robotics published no new batch on this date.","muted empty")]:selectedIssue.automated&&!cross?[]:[el("p","No matching papers.","muted empty")]));
   renderCompare(shown);
-  renderCommunity(cross?[]:communityPapers(),raw);
+  renderCommunity(cross?[]:communityPapers(),cross?[]:(selectedIssue.additional??[]),raw);
   renderBatchIndex(cross?null:meta);
   pruneMedia();
 }
@@ -418,7 +423,7 @@ function showIndex(){
       if(validEdition(day)&&!descending.some(i=>i.key===day))descending.push({key:day,date:day,title:"No arXiv Batch",noAnnouncements:true,papers:[]});
     }
     descending.sort((a,b)=>b.date.localeCompare(a.date));
-    const requested=descending.find(i=>i.key===params.get("issue"));
+    const requested=findIssue(params.get("issue"));
     const latest=descending.find(i=>i.batch===data?.latestBatch);
     if(requested)selectedIssue=requested;
     else if(latest && !selectedTopic&&!$("search").value.trim()&&selectedIssue===issueDefault)selectedIssue=latest;
@@ -432,10 +437,10 @@ function renderEditions(){
     const option=el("option",issue.noAnnouncements?formatDate(issue.date)+" · No batch":editionName(issue));option.value=issue.key;options.push(option);
     const entry=a("",searchUrl({issue:issue.key}),"archive-entry");
     const edition=batchData(issue.batch);
-    const count=Math.min(5,new Set([...issue.papers.map(p=>p.id),...(edition?.picks??[]).map(p=>p.id)]).size);
+    const count=issue.curated?issue.papers.length:Math.min(5,new Set([...issue.papers.map(p=>p.id),...(edition?.picks??[]).map(p=>p.id)]).size);
     const meta=infoFor(issue.batch);
     const caption=issue.noAnnouncements?"No new papers":meta?.total?meta.total+" listed · "+count+" selected":count+(count===1?" paper":" papers");
-    entry.append(el("time",formatDate(issue.batch??issue.date)),el("strong",titleOf(issue)),el("span",caption));
+    entry.append(el("time",formatDate(issue.curated?issue.date:issue.batch??issue.date)),el("strong",titleOf(issue)),el("span",caption));
     archive.push(entry);
   }
   $("issue").replaceChildren(...options);$("archive-list").replaceChildren(...archive);
@@ -630,10 +635,13 @@ function itemRow(p,{full=false,community=false}={}){
   if(community&&!p.brief)article.append(a("Read arXiv abstract",arxiv(p),"subtle-link",true));
   return article;
 }
-function renderCommunity(papers,query){
+function renderCommunity(papers,additional,query){
   const dest=$("daily-picks");
-  dest.hidden=!papers.length;
-  dest.replaceChildren(...(papers.length?[el("h2","Community Picks"),el("p","Recent papers from Robotica","muted"),...papers.map(p=>renderCard(p,query))]:[]));
+  dest.hidden=!(papers.length||additional.length);
+  const sections=[];
+  if(additional.length)sections.push(el("h2","Additional Papers"),...additional.map(p=>renderCard(p,query)));
+  if(papers.length)sections.push(el("h2","Community Picks"),el("p","Recent papers from Robotica","muted"),...papers.map(p=>renderCard(p,query)));
+  dest.replaceChildren(...sections);
 }
 let radarDrawn=false;
 async function renderRadar(){

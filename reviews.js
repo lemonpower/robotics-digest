@@ -116,3 +116,414 @@ const reviewNotes = {
     caveat:"仿真提升与真机验证对应不同训练阶段，不能直接外推至同一真机任务集。"
   }
 };
+
+// Chinese edition for the November 25 arXiv batch, read on November 26 (Beijing).
+const nov26Edition = {
+  "key": "2026-11-25",
+  "date": "2026-11-26",
+  "batch": "2026-11-25",
+  "title": "Agentic Robots & Robot RL",
+  "curated": true,
+  "time": "08:34（北京时间）",
+  "scope": "arXiv Robotics：91 条新提交、20 条交叉收录、47 条修订；下方五篇均核对全文。",
+  "insights": [
+    [
+      "agentic",
+      "Agentic Robots",
+      "直接观察：Next-Manip 决定下一段动作由谁执行；Atomic Policy 根据技能执行结果决定是否重规划。两篇均报告定量真机对照。"
+    ],
+    [
+      "rl",
+      "Robot RL",
+      "直接观察：DynaMimic 直接改进 SuperMimic 的可微世界模型；DexWAC 联合训练动力学和价值函数；ReFocus 将练习分配给最难的步骤。"
+    ],
+    [
+      "shared",
+      "Research Outlook",
+      "趋势推断：固定低层控制器或地形输入，再改变高层调度或动力学模型，更容易解释收益来自哪里。"
+    ]
+  ],
+  "papers": [
+    {
+      "id": "2611.32533",
+      "name": "Next-Manip",
+      "en": "Next-Manip: On-Demand Agent-Policy Collaboration for Robotic Manipulation",
+      "authors": [
+        "Jiayi Liu",
+        "Ke Ye",
+        "Jiaming Zhou",
+        "Yufei Huang",
+        "Haotian Liang",
+        "Kun-Yu Lin",
+        "Junwei Liang"
+      ],
+      "track": "agentic",
+      "keywords": [
+        "Agentic Robots",
+        "Long Horizon",
+        "Robot Manipulation"
+      ],
+      "first": "2026-11-24",
+      "batch": "2026-11-25",
+      "summary": "把通用智能体与精细操作策略接到同一闭环。固定低层 π₀.₅ 权重，四项 xArm7 真机任务平均成功率从 28.75% 提到 77.5%。",
+      "why": "通用智能体适合处理歧义和失败，专用策略适合稳定执行精细动作。系统需要知道何时切换，而不是每段动作都询问大模型。",
+      "method": "将示范中的关键场景变化压缩成任务参考。轻量调度器读当前观测和参考，在每段动作前决定由 Astra 还是低层操作策略执行。",
+      "result": "xArm7：四项任务，每项每方法各 20 次，平均 77.5% 对 28.75%。RMBench 九项仿真：94.4% 对 EventVLA 的 67.9%。RoboDojo：随机分配执行权只有 30.00%，完整方法 59.58%；Astra 调用从 76.72 降至 28.80 次/回合。",
+      "caveat": "真机对照验证的是整套调度和任务参考，不能单独归因于门控。调度也要调用模型，Astra 调用量不是系统总成本。",
+      "metric": "77.5% vs 28.75% · 四项真机任务",
+      "picture": "https://arxiv.org/html/2611.32533v1/NextManip-teaser.png",
+      "caption": "图 1：根据任务上下文和最新观察，把下一动作段交给智能体或低层策略。",
+      "sourceDepth": "Reviewed paper"
+    },
+    {
+      "id": "2611.32813",
+      "name": "Atomic Policy",
+      "en": "Atomic Policy: Composing Atomic Manipulation Skills with Agentic Reasoning",
+      "authors": [
+        "Kaidi Zhang",
+        "Pengyuan Guo",
+        "Zhengtong Xu",
+        "Caiyi Zhang",
+        "Huayi Gou",
+        "Guanlin Huang",
+        "Aaron Lim",
+        "Anas Rafei",
+        "Yu She"
+      ],
+      "track": "agentic",
+      "keywords": [
+        "Agentic Robots",
+        "Long Horizon",
+        "Robot Manipulation"
+      ],
+      "first": "2026-11-24",
+      "batch": "2026-11-25",
+      "summary": "用符号计划组合抓取、放置等技能，并检查每个阶段的实际结果。真机分布外拼字任务中，Atomic + π₀.₅ 成功率 40%，端到端 π₀.₅ 为 0%。",
+      "why": "会执行某项技能并不等于会在正确时机对正确物体执行；前一步失败也会使原计划失效。",
+      "method": "视觉语言模型估计状态与目标，PDDL 规划器安排技能；低层按阶段读取文本、图像点位或两者。独立检查器验证执行进展，必要时重规划。",
+      "result": "Franka Panda 三项任务，每方法每任务各 10 次分布内、10 次分布外。分布外叠块 80% 对 70%，抽屉检索却是 50% 对 80%。Tabletop 仿真 64.0%，禁用重规划后 17.8%，移除点位后 4.4%。",
+      "caveat": "任务族仍需手工定义技能阶段、PDDL 域和检查提示；精细抓放依然受低层能力限制。",
+      "metric": "40% vs 0% · 分布外真机拼字",
+      "picture": "https://arxiv.org/html/2611.32813v1/architecture-v6.png",
+      "caption": "图 2：从符号规划、目标点定位到连续动作执行，结果返回检查器触发下一阶段或重规划。",
+      "sourceDepth": "Reviewed paper"
+    },
+    {
+      "id": "2611.32944",
+      "name": "DynaMimic",
+      "en": "DynaMimic: A Physics-Informed World Model for Humanoid Motion Tracking",
+      "authors": [
+        "Chaoyue Xing",
+        "Linyi Huang",
+        "Yiting He",
+        "Yixuan Yin",
+        "Siqi Hou",
+        "Yi Zhang",
+        "Liyuan Pan",
+        "Miaomiao Liu",
+        "Daqi Liu"
+      ],
+      "track": "rl",
+      "keywords": [
+        "Robot RL",
+        "Humanoid Control",
+        "World Models",
+        "Sim-to-Real"
+      ],
+      "first": "2026-11-24",
+      "batch": "2026-11-25",
+      "summary": "直接改进 SuperMimic 的可微世界模型：先预测接触力和力矩，再用刚体动力学推进。LAFAN1 仿真平均关节位置误差下降 18.6%。",
+      "why": "单纯拟合下一状态容易在支撑部位切换时累积误差。已知的刚体动力学不必从数据重新学习。",
+      "method": "网络预测候选支撑部位的接触力和力矩和残余广义力，用刚体方程积分；接触标注和状态轨迹共同监督模型。沿用 SuperMimic 的短想象轨迹反传优化，真机上只运行跟踪策略。",
+      "result": "LAFAN1 60 条完整动作：世界坐标 MPJPE 1,045.39 对 1,284.42 mm；A3 Parkour 22 条动作、相同高度图输入：56.28 对 66.15 mm；GRAIL 9,736 个片段：126.57 对 141.88 mm。LAFAN1 分段消融去掉前向动力学后是 277.50 对完整 240.63 mm。",
+      "caveat": "地形实验用的是训练参考动作库，不是未见动作评估。每方法每数据集单张 H800，不代表已证明训练提速。A3 起身、侧手翻、翻箱是演示，无真机成功率对照。",
+      "metric": "−18.6% MPJPE · LAFAN1 仿真",
+      "picture": "https://arxiv.org/html/2611.32944v1/pipeline-policy-terrain-input.png",
+      "caption": "图 2：接触预测结合物理积分，梯度经想象轨迹回传至策略。",
+      "sourceDepth": "Reviewed paper"
+    },
+    {
+      "id": "2611.32654",
+      "name": "DexWAC",
+      "en": "DexWAC: A Unified World-Actor-Critic Model for Dexterous Robot Manipulation",
+      "authors": [
+        "Hongjia Liu",
+        "Dacheng Zhou",
+        "Minghao Fu",
+        "Chuanjun Guo",
+        "Tianze Wang",
+        "Qingtao Liu",
+        "He Wang",
+        "Li Yi"
+      ],
+      "track": "rl",
+      "keywords": [
+        "Robot RL",
+        "World Models",
+        "Dexterous Manipulation"
+      ],
+      "first": "2026-11-24",
+      "batch": "2026-11-25",
+      "summary": "联合训练世界模型、动作策略和价值函数，再用模型生成的轨迹运行 PPO。DexJoCo 仿真成功率从 65.50% 提高到 67.75%；真机对照没有测试后续 PPO。",
+      "why": "预测未来图像不足以说明哪个动作更接近目标，分开训练策略和价值模型也难共享任务相关特征。",
+      "method": "预测动作段末端的视觉潜变量、本体状态、奖励和终止，其间不生成视频帧；再据执行中的成功与失败校准模型，比较想象 PPO 与 critic 候选排序。",
+      "result": "DexJoCo 8 项任务、3 个种子、每任务每种子 50 回合：PPO 67.75%，未更新 65.50%，Motus 66.83%。预训练消融移除 critic 为 60.75%，完整配置 68.00%。真机移蛋/取杯各 30 次，未做后续 PPO 的 DexWAC 为 50%/100%，π₀.₅ 为 20%/70%。",
+      "caveat": "仿真提升主要来自双臂任务，个别任务退化。不能把真机预训练模型的胜出归因于想象 PPO。",
+      "metric": "67.75% vs 65.50% · DexJoCo 仿真",
+      "picture": "https://arxiv.org/html/2611.32654v1/figures/dexrsi_workflow.png",
+      "caption": "图 1：区分联合预训练、模型校准和后续策略改进。",
+      "sourceDepth": "Reviewed paper"
+    },
+    {
+      "id": "2611.32639",
+      "name": "ReFocus",
+      "en": "ReFocus: Progress-Guided Adaptive Practice for Long-Horizon Robotic Manipulation Reinforcement Learning",
+      "authors": [
+        "Haoyuan Li",
+        "Wei Huang",
+        "Jiehong Lin",
+        "Shengrong Zhang",
+        "Chenzhi Liu",
+        "Shengchao Zhou",
+        "Hehe Fan",
+        "Xiaojuan Qi",
+        "Yi Yang"
+      ],
+      "track": "rl",
+      "keywords": [
+        "Robot RL",
+        "Long Horizon",
+        "Vision-Language-Action"
+      ],
+      "first": "2026-11-24",
+      "batch": "2026-11-25",
+      "summary": "先用全任务进度找瓶颈，再把交互分配给最需要练习的阶段。仿真 RoboCasa365 已见复合任务成功率 51.3%，StructRL 为 45.8%。",
+      "why": "只用最终成败训练长程策略，很难知道任务卡在哪一步，也浪费了在局部瓶颈上进行针对性练习的机会。",
+      "method": "显式记录子任务依赖与进度；全局 RL 定位瓶颈，局部 RL 在瓶颈前后增加练习，并用同一策略再做全任务验证。真机版改用 RECAP 加进度奖励与瓶颈片段过采样。",
+      "result": "LIBERO-Long 97.8% 对 StructRL 96.2%，去练习窗口后 96.8%。Unitree G1-D 真机烤面包成功率 95%，RECAP 70%，仅监督微调 30%；每方法每任务三组、每组 20 次。",
+      "caveat": "真机版没有复制仿真的在线 PPO 和中间状态重置，不应把真机提升归因于同一在线训练流程；RoboCasa365 用的是已见任务。",
+      "metric": "95% vs 70% · 真机烤面包",
+      "picture": "https://arxiv.org/html/2611.32639v1/method.png",
+      "caption": "图 2：反复进行全局诊断、局部练习和全任务验证。",
+      "sourceDepth": "Reviewed paper"
+    }
+  ],
+  "additional": [
+    {
+      "id": "2611.32101",
+      "name": "Ego2Real",
+      "en": "Ego2Real: Learning Bimanual Dexterous Manipulation from Egocentric Visuo-Tactile Demonstrations",
+      "authors": [
+        "Ange Bao",
+        "Haishan Zhang",
+        "Lingzi Xie",
+        "Shuang Li",
+        "Pei Zhao",
+        "Ling Shi",
+        "Bidan Huang"
+      ],
+      "track": "tactile",
+      "keywords": [
+        "Tactile Sensing",
+        "Robot RL",
+        "Dexterous Manipulation"
+      ],
+      "first": "2026-11-24",
+      "batch": "2026-11-25",
+      "summary": "通过带触觉手套的第一视角示范，把双手灵巧操作迁移到机器人手；触觉同时用于重建手—物接触和指导强化学习。",
+      "why": "仅凭视频难以判断手何时真正接触物体以及施力意图。",
+      "method": "先用触觉信号校正手部姿态和接触几何，再把人手的接触模式作为机器人训练奖励，而非直接复制人手动作。",
+      "result": "论文报告同时在重建和策略训练中加入触觉监督有助于提高操作成功率。",
+      "caveat": "这条解读依据原摘要，未列未核实的任务级数值；采集方案需要触觉手套。",
+      "metric": "",
+      "picture": "https://arxiv.org/html/2611.32101v1/pipeline.png",
+      "caption": "Figure 2",
+      "abstract": "Learning dexterous manipulation from egocentric human demonstrations offers a scalable path toward robot skill acquisition. Vision alone, however, provides limited information about physical contacts and the demonstrator's force intent, leading to ambiguities in interpreting hand-object interactions. Capturing human touch via tactile sensing is therefore crucial for reliable human-to-robot dexterous skill transfer. We present Ego2Real, a framework that leverages egocentric demonstrations and tactile gloves to transfer bimanual dexterous manipulation skills to robotic hands. Ego2Real incorporates tactile supervision at two complementary stages: (1) tactile-guided hand-object interaction reconstruction, which uses measured tactile signals to refine hand poses and contact geometry; and (2) contact-informed reinforcement learning, which translates human contact patterns into robotic contact rewards. By combining refined motion references with physical contact rewards during training, Ego2Real guides anthropomorphic robotic hands to emulate demonstrated contact behaviors while adapting to their own morphology and actuation. Experiments show that incorporating tactile supervision into both reconstruction and policy learning yields higher manipulation success rates, underscoring the importance of enriching egocentric demonstrations with tactile observations to improve their quality and transferability.",
+      "sourceDepth": "Abstract brief"
+    },
+    {
+      "id": "2611.31588",
+      "name": "DRIFT",
+      "en": "One Phase Is Enough: Sim-to-Real Transfer with Direct Visual Reinforcement Learning",
+      "authors": [
+        "John Marangola",
+        "Antonia Bronars",
+        "Younghyo Park",
+        "Stephen Andrews",
+        "Kushal Kedia",
+        "Pulkit Agrawal"
+      ],
+      "track": "rl",
+      "keywords": [
+        "Robot RL",
+        "Sim-to-Real",
+        "Visual Reinforcement Learning"
+      ],
+      "first": "2026-11-23",
+      "batch": "2026-11-25",
+      "summary": "冻结预训练视觉编码器，直接从图像做低层策略强化学习，无须先训练特权状态教师再蒸馏。三项真机操作任务平均成功率相对提升 58.8%。",
+      "why": "两阶段蒸馏会让能看见特权状态的教师和只有图像的学生能力不匹配。",
+      "method": "训练直接使用部署时可用的图像，冻结视觉骨干，用快速栅格化仿真渲染学习控制头。",
+      "result": "与匹配架构、观察和计算预算的两阶段蒸馏相比，真机三项任务平均相对提高 58.8%；这是相对提升，不是 58.8 个百分点。",
+      "caveat": "真机证据来自三项操作任务，不能直接推广到其他机器人形态或长程任务。",
+      "metric": "",
+      "picture": "https://arxiv.org/html/2611.31588v1/arch_figure_comparison.png",
+      "caption": "Fig. 2",
+      "abstract": "Sim-to-real reinforcement learning (RL) has enabled impressive robotic behaviors, yet deploying policies directly from vision remains challenging. A common approach first trains a teacher policy with RL using privileged state observations, then distills its behavior into a vision-based student via imitation. However, the resulting student can substantially underperform its teacher. Directly training visual policies with RL offers a promising alternative, but learning task-relevant visual representations from scratch can be sample-inefficient, making one-phase visual RL intractable. We propose DRIFT, a simple recipe for efficient one-phase visual RL using image observations available at test time. Our key insight is to use frozen, pretrained foundation vision encoders, allowing RL to focus on learning control from existing visual representations. Freezing the encoder avoids costly backpropagation through the vision backbone, while its pretrained representations enable real-world transfer from fast, rasterized simulation rendering. Under matched architectures, observations, and compute budgets, DRIFT outperforms two-phase distillation and achieves a 58.8% relative improvement in average real-world success rate across three manipulation tasks. Controlled simulation evaluations demonstrate that DRIFT's relative advantage grows from roughly 9% in-distribution to over 61% under out-of-distribution shifts, suggesting that stronger generalization contributes to superior real-world transfer. Project website: https://jmarangola.github.io/one-phase-visual-rl/",
+      "sourceDepth": "Abstract brief"
+    },
+    {
+      "id": "2611.32016",
+      "name": "RoboHarness-RL",
+      "en": "RoboHarness-RL: Agentic Reinforcement Learning for VLM-Based Robot Manipulation",
+      "authors": [
+        "Liyang Li",
+        "Mingyu Liu",
+        "Xiaoman Li",
+        "Zhiyue Zhao",
+        "Jin-Chuan Shi",
+        "Canyu Zhao",
+        "Haokai Zhang",
+        "Jinyuan Tian",
+        "Linhao Zhong",
+        "Hao Chen",
+        "Chunhua Shen"
+      ],
+      "track": "agentic",
+      "keywords": [
+        "Agentic Robots",
+        "Robot RL",
+        "Tool Use"
+      ],
+      "first": "2026-11-24",
+      "batch": "2026-11-25",
+      "summary": "用多轮强化学习让 Qwen3.5-9B 根据执行反馈调整下一次机器人控制工具调用，无需额外的 VLA 或世界动作模型。",
+      "why": "小型开源视觉语言模型能使用控制工具，但错误后容易重复无效调用。",
+      "method": "先在成功教师轨迹上监督微调，再用任务结果奖励做多轮 RL；LiteHarness 用分层记忆控制上下文长度，将感知、规划和控制工具接入闭环。",
+      "result": "仿真成功率：RoboTwin 干净场景 31.2%→44.0%，未见随机场景 26.4%→38.0%；LIBERO-Pro 57.8%→73.3%，分别与同骨干监督微调版对比。",
+      "caveat": "这些对照来自仿真；随机双臂场景仍明显落后于论文报告的更强模型。",
+      "metric": "",
+      "picture": "https://arxiv.org/html/2611.32016v1/positioning_figure.png",
+      "caption": "Figure 2",
+      "abstract": "Agentic harnesses enable frontier vision-language models (VLMs) to manipulate robots through perception, planning, and control tools, yet achieving comparable performance with compact open-weight VLMs remains challenging. We present RoboHarness-RL, an agentic reinforcement learning framework for improving VLM-based robot manipulation through tool calls. Starting from supervised fine-tuning on successful teacher demonstrations, the VLM further improves through multi-turn reinforcement learning with task-outcome rewards, without relying on vision-language-action models or world action models. To support efficient multi-turn training, we develop LiteHarness, which uses hierarchical memory to keep interaction contexts compact while preserving task performance. With Qwen3.5-9B, RL raises success from 31.2% to 44.0% on RoboTwin 2.0 and from 57.8% to 73.3% on LIBERO-Pro; these gains extend to randomized RoboTwin scenes unseen during training (26.4% to 38.0%). Behavioral analysis further shows that RL reduces repetitive-call rates by up to $4\\times$, shortens successful executions, and improves recovery from negative feedback. Project page: https://aim-uofa.github.io/RoboHarness-RL/",
+      "sourceDepth": "Reviewed paper"
+    },
+    {
+      "id": "2611.32476",
+      "name": "ViTacLab",
+      "en": "ViTacLab: Physically Consistent Visuo-Tactile Simulation, Benchmarking, and Representation Learning for Robotic Manipulation",
+      "authors": [
+        "Linjing You",
+        "Zeming Yang",
+        "Zhenhao Shen",
+        "Shengqiang Xu",
+        "Guanda Li",
+        "Wenxuan Li",
+        "Jiyu Guo",
+        "Jasper Lu",
+        "Kyle Xu",
+        "Shawn Xie",
+        "Junjie Zhu",
+        "Siyu Wu",
+        "Jian Liu",
+        "Changhao Zhang",
+        "Rongchong Li",
+        "Zeyi Li",
+        "Hengshuang Zhao",
+        "Ruihai Wu"
+      ],
+      "track": "tactile",
+      "keywords": [
+        "Tactile Sensing",
+        "Dexterous Manipulation",
+        "Sim-to-Real"
+      ],
+      "first": "2026-11-24",
+      "batch": "2026-11-25",
+      "summary": "把触觉仿真、操作基准和多传感器策略放到一套框架中；对照实验中，法向和切向力误差分别从 2.31、1.85 N 降到 0.42、0.53 N。",
+      "why": "触觉仿真既要跟真实接触力吻合，也要支持够快的并行数据生成。",
+      "method": "从 PhysX 接触结果重建法向与切向力，约束摩擦和合力；用共享表示对齐阵列力传感器与触觉图像。",
+      "result": "上述数字是受控压入与传感器滑动测试的均方根误差，不是操作成功率。论文另报告若干接触密集任务获益。",
+      "caveat": "高度依赖触觉的任务绝对成功率仍低；不要把传感器拟合精度等同于控制性能。",
+      "metric": "",
+      "picture": "https://arxiv.org/html/2611.32476v1/vitaclab-teaser.png",
+      "caption": "Fig. 1",
+      "abstract": "Tactile sensing is essential for contact-rich robotic manipulation, but existing visuo-tactile simulators trade physical fidelity for scalability, and benchmarks largely focus on two-finger grippers. We present ViTacLab, a framework comprising ViTacSim, ViTacBench, and ViTacPolicy. ViTacSim uses a tri-modal tactile primitive: a global sparse contact-force lattice, a local dense force array, and tactile images. Anchored to PhysX contact-solver outputs, it corrects normal inconsistency through local stiffness alignment and reconstructs tangential forces under decoupled slip-stick regimes while preserving GPU parallelism. A joint projection preserves the sparse wrench and enforces local friction cones. ViTacBench spans parallel grippers, dexterous hands, and bimanual systems, with tasks ranging from vision-dominant to tactile-dominant regimes. ViTacPolicy aggregates variable numbers of heterogeneous tactile inputs using spatial-pose embeddings and a Transformer, and aligns force-array and tactile-image modalities through a two-stream VQ-VAE with a shared codebook. Controlled Hertzian-reference indentation and real-sensor sliding tests reduce normal and tangential force RMSE from 2.31 and 1.85 N to 0.42 and 0.53 N, respectively. Throughput reaches 2,482.9 tactile-pipeline FPS at 256 parallel environments. Simulation and real-world experiments show gains on several contact-rich tasks, while low absolute success on tactile-dominant tasks highlights the remaining difficulty of purely tactile control.",
+      "sourceDepth": "Abstract brief"
+    }
+  ],
+  "community": [
+    {
+      "id": "2611.30989",
+      "name": "WorldLeague",
+      "en": "WorldLeague: Benchmarking Physical Agency",
+      "track": "shared",
+      "keywords": [
+        "Robotics Benchmark",
+        "Physical Agency"
+      ],
+      "first": "2026-11-23",
+      "batch": "2026-11-24",
+      "upvotes": 136,
+      "summary": "用 60 个仿真任务同时衡量物理目标进度和最终成功，避免只看问答正确率。",
+      "why": "系统可能给出正确答案，却没有做出任务要求的搜索或操作。",
+      "method": "在同一组目标上容纳视觉语言模型、VLA 和世界动作模型的执行接口，按真实轨迹量化达成进度。",
+      "result": "13 个受测系统中，Claude Fable 5.2 达成 13/60 个目标、平均互动分 28.58/100；视觉语言模型答对全部终问的回合中，71.8% 的互动分仍为零。",
+      "caveat": "这是仿真评测基准，不是新的机器人闭环控制方法，也没有真机结果。",
+      "metric": "",
+      "picture": "https://arxiv.org/html/2611.30989v1/fig/WorldLeague_Task_Construction.png",
+      "caption": "Figure 2",
+      "abstract": "AI systems can now operate Blender, follow instructions in complex video games, and manipulate objects with robot arms. What range of physical goals can today's AI systems achieve autonomously? Answering this question requires testing systems on tasks that demand different combinations of perception, memory, planning, and action. We introduce \\textbf{WorldLeague}, a benchmark that compares AI systems on a common set of \\textbf{60 simulated robot tasks} by measuring progress toward each task's physical goal from the robot's trajectory. Robots explore scenes to gather evidence in \\textbf{WorldSeek}, rearrange objects in \\textbf{WorldShape}, and adapt to changes in \\textbf{WorldShift}. Tying these goals to a single control interface limits which AI systems can be compared. In WorldLeague, vision-language models (VLMs) choose targets and motions, while vision-language-action models (VLAs) and world-action models (WAMs) use their native controls. For each of six capability dimensions, we measure how much progress a system makes toward its goals (Interactive Score) and how often it achieves them (physical success rate). Together, these measures form the system's \\emph{Physical Agency Profile}. Among 13 representative AI systems, Claude Fable 5.2 achieves 13 of the 60 goals and earns the highest mean Interactive Score (28.58/100). Fable leads in four dimensions, while GPT-6.1-Sol and GPT-6-Astra tie for first on rule-following tasks. Even when VLMs answer every final question correctly, they receive an Interactive Score of zero in 71.8\\% of those episodes. WorldLeague gives Embodied AI, Physical AI, and Agentic AI a shared basis for comparing what AI systems achieve autonomously, from partial progress toward a physical goal to full goal completion. Project Webpage: https://xyangzhou.github.io/WorldLeague",
+      "sourceDepth": "Abstract brief"
+    },
+    {
+      "id": "2611.31201",
+      "name": "Embo-Harness",
+      "en": "Embo-Harness: Towards Understanding Frontier-Model-as-Policy Harness",
+      "track": "agentic",
+      "keywords": [
+        "Agentic Robots",
+        "Robot Manipulation",
+        "Spatial Reasoning"
+      ],
+      "first": "2026-11-23",
+      "batch": "2026-11-24",
+      "upvotes": 98,
+      "summary": "让通用模型从多视角观察直接输出末端目标，再由低层控制执行。RoboLab-120 仿真成功率 83.3%，四项真机零样本任务合计 15/20。",
+      "why": "模型直接给关节角、目标位姿或高层计划时，执行表现不一定相同。",
+      "method": "模型输出短段末端绝对目标，低层负责逆运动学和轨迹插值；执行后更新观察继续决策。",
+      "result": "仿真 83.3% 对 SenseNova-RoboRSI 57.1%；真机 15/20 对论文自设基线 7/20。",
+      "caveat": "只测一套桌面真机，极小开关与遮挡下的精确定位仍容易失败。",
+      "metric": "",
+      "picture": "https://arxiv.org/html/2611.31201v1/harness_baselines.png",
+      "caption": "Figure 2",
+      "abstract": "Frontier multimodal models exhibit extraordinary generalization in generating robot actions from observations and instructions, enabling a new paradigm in which they serve directly as policies within closed-loop robotic harnesses. However, the design principles of such harnesses, and the capabilities underlying their strong performance, remain unclear. We present Embo-Harness, a framework for systematically studying frontier-model-as-policy harnesses. We investigate four components of the robotic agentic loop, namely, prompting, planning, action execution, and tool use, and distill six empirical findings into a practical recipe. This recipe prioritizes interfaces that exploit the model's native visual reasoning and tool-use capabilities over handcrafted plans, skills, or action priors, and identifies effective choices for action representation, chunking, reasoning effort, visual observations, short multi-action sequences, and policy refinement. On RoboLab-120, Embo-Harness achieves an 83.3\\% success rate, outperforming the strongest reported baseline by 26.2 percentage points. It also succeeds in 15 of 20 zero-shot trials across four real-world manipulation tasks. Beyond performance, controlled interventions indicate that the studied model depends more strongly on accurate spatial target estimation than on explicit low-level joint or trajectory generation. These results provide both a practical recipe for building strong frontier-model-as-policy harnesses and a clearer account of the capabilities that drive their performance.",
+      "sourceDepth": "Reviewed paper"
+    },
+    {
+      "id": "2611.31205",
+      "name": "ACAP",
+      "en": "ACAP: Asynchronous Coding Agents for Efficient Robot Control",
+      "track": "agentic",
+      "keywords": [
+        "Agentic Robots",
+        "Bimanual Manipulation",
+        "Multi-Agent Coordination"
+      ],
+      "first": "2026-11-23",
+      "batch": "2026-11-24",
+      "upvotes": 47,
+      "summary": "给同一台机器人的手臂等控制组分配异步智能体。25 个真机任务／平台设置中，平均任务时间成本从 19.04 分钟降到 13.67 分钟。",
+      "why": "只用一个智能体会串行化可并行操作，但固定分工也难处理两臂物理耦合。",
+      "method": "各成员独立观测、推理和生成程序，上层协调器根据反馈切换控制权；必要时统一接管耦合的部件。",
+      "result": "72 次真机运行中任务平均时间成本降低 28.2%；额外 90 次重复试验中，六项任务平均时间成本均低于单智能体。",
+      "caveat": "这是任务级时间成本，不是伺服延迟或开放环境的安全保证。",
+      "metric": "",
+      "picture": "https://arxiv.org/html/2611.31205v1/teaser.png",
+      "caption": "Figure 1",
+      "abstract": "Coding agents can construct and revise robot behavior during execution, but using one agent for the whole robot can delay otherwise independent work. We introduce Asynchronous Coding Agents as Policy (ACAP), an asynchronous framework that organizes one robot as a team of persistent agents. Each member reasons and acts for a configurable control group, such as an arm with its gripper or the torso and chassis, enabling asynchronous reasoning and execution. However, different robot components often have physical dependencies that require coordination. To address this challenge, ACAP introduces a hyper-agent that assigns tasks, coordinates dependencies, and dynamically allocates control between the lead and member agents. This allows independent work to progress concurrently while supporting tightly coupled manipulation when necessary. Across 72 real-world rollouts covering 25 task/platform settings, ACAP reduces task-balanced time cost by 28.2% compared with a single-agent Direct Policy, with improvements across Fully Parallel, Parallel-Sequential, and Collaborative tasks. Across all eight Collaborative settings, ACAP also achieves lower mean time cost than Fixed Delegation, where only member agents can control their assigned groups. An additional 90-rollout study shows lower mean 30-minute-capped time cost than Direct on all six tasks. We further demonstrate mobile manipulation using the same member interface for chassis and torso control. We present the framework and a real-world rollout dataset containing observations, generated programs, actions, and feedback to support research on how coding agents reason and act in the physical world.",
+      "sourceDepth": "Reviewed paper"
+    }
+  ]
+};
+issues.push(nov26Edition);
