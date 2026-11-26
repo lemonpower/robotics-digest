@@ -1,0 +1,80 @@
+{
+  "version": "v1",
+  "figures": [
+    {
+      "src": "https://arxiv.org/html/2611.32649v1/framework_img.png",
+      "caption": "Figure 2",
+      "anchor": "S3.F2"
+    },
+    {
+      "src": "https://arxiv.org/html/2611.32649v1/harness_img.png",
+      "caption": "Figure 3",
+      "anchor": "S3.F3"
+    },
+    {
+      "src": "https://arxiv.org/html/2611.32649v1/fig/supp_ex/cua_A.jpg",
+      "caption": "Figure 6",
+      "anchor": "A1.F6"
+    },
+    {
+      "src": "https://arxiv.org/html/2611.32649v1/fig/supp_ex/cua_B.jpg",
+      "caption": "Figure 6",
+      "anchor": "A1.F6"
+    },
+    {
+      "src": "https://arxiv.org/html/2611.32649v1/fig/supp_ex/cua_C.jpg",
+      "caption": "Figure 6",
+      "anchor": "A1.F6"
+    },
+    {
+      "src": "https://arxiv.org/html/2611.32649v1/fig/supp_ex/cua_R.jpg",
+      "caption": "Figure 6",
+      "anchor": "A1.F6"
+    },
+    {
+      "src": "https://arxiv.org/html/2611.32649v1/fig/supp_ex/cua_I.jpg",
+      "caption": "Figure 6",
+      "anchor": "A1.F6"
+    },
+    {
+      "src": "https://arxiv.org/html/2611.32649v1/fig/supp_ex/cua_E.jpg",
+      "caption": "Figure 6",
+      "anchor": "A1.F6"
+    },
+    {
+      "src": "https://arxiv.org/html/2611.32649v1/fig/supp_ex/rua_A.jpg",
+      "caption": "Figure 6",
+      "anchor": "A1.F6"
+    },
+    {
+      "src": "https://arxiv.org/html/2611.32649v1/fig/supp_ex/rua_B.jpg",
+      "caption": "Figure 6",
+      "anchor": "A1.F6"
+    },
+    {
+      "src": "https://arxiv.org/html/2611.32649v1/fig/supp_ex/rua_C.jpg",
+      "caption": "Figure 6",
+      "anchor": "A1.F6"
+    },
+    {
+      "src": "https://arxiv.org/html/2611.32649v1/fig/supp_ex/rua_R.jpg",
+      "caption": "Figure 6",
+      "anchor": "A1.F6"
+    },
+    {
+      "src": "https://arxiv.org/html/2611.32649v1/fig/supp_ex/rua_I.jpg",
+      "caption": "Figure 6",
+      "anchor": "A1.F6"
+    },
+    {
+      "src": "https://arxiv.org/html/2611.32649v1/fig/supp_ex/rua_E.jpg",
+      "caption": "Figure 6",
+      "anchor": "A1.F6"
+    },
+    {
+      "src": "https://arxiv.org/html/2611.32649v1/fig/supp_case.jpg",
+      "caption": "Figure 7",
+      "anchor": "A8.F7"
+    }
+  ]
+}

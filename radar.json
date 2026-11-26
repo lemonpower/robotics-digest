@@ -1645,7 +1645,8 @@
         "Huan-ang Gao",
         "Meng-Hao Guo",
         "Shuojin Yang"
-      ]
+      ],
+      "upvotes": 20
     },
     {
       "id": "2611.32650",
@@ -1714,10 +1715,65 @@
         "Wen Gao",
         "Yonghong Tian",
         "Weihao Yu"
-      ]
+      ],
+      "upvotes": 28
     }
   ],
   "picks": [
+    {
+      "id": "2611.33010",
+      "title": "Embodied AI Fails the Mirror Test: How a Simple Mirror Breaks Robot Policies",
+      "abstract": "Can a simple mirror expose the limitations of today's robotic manipulation policies? Inspired by the mirror self-recognition test in animal cognition, we investigate whether robot policies can reliably manipulate physical objects in scenes containing their reflections. We introduce RoboDojo-Mirror, a benchmark built on RoboDojo that preserves task objectives, success criteria, and policy checkpoints while comparing a mirror-free baseline with single-mirror, dual-mirror, and mirrored-tabletop conditions. Across five policies spanning Vision-Language-Action models, World Action Models, and agentic policies, every mirror condition reduces aggregate success rates: averaged over the three conditions, the drop ranges from 10.8 to 56.7 percentage points across policies, and it reaches 62.5 points on the mirrored tabletop. Because a mirror is also a physical obstacle, we compare it against geometrically matched non-reflective panels; 50--88\\% of mirror-specific failures occur without recorded robot--panel contact, so direct collisions alone do not explain the degradation. Trajectory and contact analyses instead reveal recurring behaviors consistent with phantom targeting of reflected objects and spatial mislocalization of real ones. Targeted diagnostics further characterize grasping near reflections, policy-dependent pushing progress, and physical-target interaction under main-camera occlusion. Real-robot experiments with $\\pi_{0.5}$ and FastWAM also show lower overall success rates under the upright-mirror and mirrored-tabletop conditions. These findings reveal a shared vulnerability to reflective environments across diverse robot policies and motivate reflection-aware evaluation of embodied intelligence. Code is available at https://github.com/iPPLab/robodojo-mirror.",
+      "batch": "2026-11-25",
+      "kind": "cross",
+      "authors": [
+        "Xuanchen Liu",
+        "Hejun Zhang",
+        "Boxuan Dong",
+        "Ying Wu",
+        "Heshuai Li",
+        "Wen Gao",
+        "Yonghong Tian",
+        "Weihao Yu"
+      ],
+      "upvotes": 28,
+      "brief": "We introduce RoboDojo-Mirror, a benchmark built on RoboDojo that preserves task objectives, success criteria, and policy checkpoints while comparing a mirror-free baseline with single-mirror, dual-mirror, and mirrored-tabletop conditions.",
+      "reading": {
+        "method": "We introduce RoboDojo-Mirror, a benchmark built on RoboDojo that preserves task objectives, success criteria, and policy checkpoints while comparing a mirror-free baseline with single-mirror, dual-mirror, and mirrored-tabletop conditions.",
+        "depth": "Abstract brief"
+      },
+      "topics": [],
+      "picture": "https://arxiv.org/html/2611.33010v1/benchmark_construction_v6_libero_4_resized.png",
+      "caption": "Figure 2"
+    },
+    {
+      "id": "2611.32649",
+      "title": "ICLWorld: Benchmarking In-Context Learning of Agents from Digital to Physical Worlds",
+      "abstract": "In-context learning (ICL) lets agents acquire new rules from context and adapt to user-specific requirements at inference time. The same frontier agents now operate both computers and robots, yet their ICL remains insufficiently assessed: existing benchmarks are largely offline, rely on text or static images, and risk training-data contamination, while robot evaluations are limited to method-level ablations. We present ICLWorld, an online benchmark that evaluates the ICL of agents from digital to physical worlds, covering computer use and robot use, together with UIverse, a unified harness that turns every environment into a user interface. We build 30 environments, record 630 demonstration videos (10+ hours), and design 160 tasks with customized, often counter-intuitive rules that cannot be satisfied without learning from the context. Each task comes with three rule versions, given as text or video, and we test generalization at three levels, from replaying the demonstration to new instances and unseen environments. Across six frontier models, the strongest agents, Claude Opus 5.5 and GPT-6 Astra, succeed on 82% and 76% of computer-use runs but only 27% and 26% of robot-use runs, and a no-rule control reduces success to at most 8%. GPT-6 Astra succeeds under all three rule versions on only 38% of computer-use tasks, half its rate under a single rule, and answers 98% of robot rule questions correctly yet completes only 20% of these tasks. Frontier agents learn rules comparably well from video and from text and transfer them across environments, whereas weaker agents rely on text and lose most of their video-based success once the demonstrated situation is resampled. These findings reveal substantial gaps between the digital and the physical world and between identifying a rule and acting on it.",
+      "batch": "2026-11-25",
+      "kind": "cross",
+      "authors": [
+        "Qingle Liu",
+        "Jieming Li",
+        "Pei-lin Li",
+        "Shenghan Zheng",
+        "Ruize Yang",
+        "Sunqi Fan",
+        "Deyao Hong",
+        "Huan-ang Gao",
+        "Meng-Hao Guo",
+        "Shuojin Yang"
+      ],
+      "upvotes": 20,
+      "brief": "We present ICLWorld, an online benchmark that evaluates the ICL of agents from digital to physical worlds, covering computer use and robot use, together with UIverse, a unified harness that turns every environment into a user interface.",
+      "reading": {
+        "method": "We present ICLWorld, an online benchmark that evaluates the ICL of agents from digital to physical worlds, covering computer use and robot use, together with UIverse, a unified harness that turns every environment into a user interface.",
+        "depth": "Abstract brief"
+      },
+      "topics": [],
+      "picture": "https://arxiv.org/html/2611.32649v1/framework_img.png",
+      "caption": "Figure 2"
+    },
     {
       "id": "2611.32101",
       "title": "Ego2Real: Learning Bimanual Dexterous Manipulation from Egocentric Visuo-Tactile Demonstrations",
@@ -1802,114 +1858,13 @@
       ],
       "picture": "https://arxiv.org/html/2611.31588v1/arch_figure_comparison.png",
       "caption": "Fig. 2"
-    },
-    {
-      "id": "2611.32016",
-      "title": "RoboHarness-RL: Agentic Reinforcement Learning for VLM-Based Robot Manipulation",
-      "abstract": "Agentic harnesses enable frontier vision-language models (VLMs) to manipulate robots through perception, planning, and control tools, yet achieving comparable performance with compact open-weight VLMs remains challenging. We present RoboHarness-RL, an agentic reinforcement learning framework for improving VLM-based robot manipulation through tool calls. Starting from supervised fine-tuning on successful teacher demonstrations, the VLM further improves through multi-turn reinforcement learning with task-outcome rewards, without relying on vision-language-action models or world action models. To support efficient multi-turn training, we develop LiteHarness, which uses hierarchical memory to keep interaction contexts compact while preserving task performance. With Qwen3.5-9B, RL raises success from 31.2% to 44.0% on RoboTwin 2.0 and from 57.8% to 73.3% on LIBERO-Pro; these gains extend to randomized RoboTwin scenes unseen during training (26.4% to 38.0%). Behavioral analysis further shows that RL reduces repetitive-call rates by up to $4\\times$, shortens successful executions, and improves recovery from negative feedback. Project page: https://aim-uofa.github.io/RoboHarness-RL/",
-      "batch": "2026-11-25",
-      "kind": "new",
-      "authors": [
-        "Liyang Li",
-        "Mingyu Liu",
-        "Xiaoman Li",
-        "Zhiyue Zhao",
-        "Jin-Chuan Shi",
-        "Canyu Zhao",
-        "Haokai Zhang",
-        "Jinyuan Tian",
-        "Linhao Zhong",
-        "Hao Chen",
-        "Chunhua Shen"
-      ],
-      "brief": "We present RoboHarness-RL, an agentic reinforcement learning framework for improving VLM-based robot manipulation through tool calls. Agentic harnesses enable frontier vision-language models (VLMs) to manipulate robots through perception, planning, and control tools, yet achieving comparable performance with compact open-weight VLMs remains challenging.",
-      "reading": {
-        "method": "We present RoboHarness-RL, an agentic reinforcement learning framework for improving VLM-based robot manipulation through tool calls.",
-        "results": "Agentic harnesses enable frontier vision-language models (VLMs) to manipulate robots through perception, planning, and control tools, yet achieving comparable performance with compact open-weight VLMs remains challenging.",
-        "depth": "Abstract brief"
-      },
-      "topics": [
-        "Robot RL"
-      ],
-      "picture": "https://arxiv.org/html/2611.32016v1/positioning_figure.png",
-      "caption": "Figure 2"
-    },
-    {
-      "id": "2611.32476",
-      "title": "ViTacLab: Physically Consistent Visuo-Tactile Simulation, Benchmarking, and Representation Learning for Robotic Manipulation",
-      "abstract": "Tactile sensing is essential for contact-rich robotic manipulation, but existing visuo-tactile simulators trade physical fidelity for scalability, and benchmarks largely focus on two-finger grippers. We present ViTacLab, a framework comprising ViTacSim, ViTacBench, and ViTacPolicy. ViTacSim uses a tri-modal tactile primitive: a global sparse contact-force lattice, a local dense force array, and tactile images. Anchored to PhysX contact-solver outputs, it corrects normal inconsistency through local stiffness alignment and reconstructs tangential forces under decoupled slip-stick regimes while preserving GPU parallelism. A joint projection preserves the sparse wrench and enforces local friction cones. ViTacBench spans parallel grippers, dexterous hands, and bimanual systems, with tasks ranging from vision-dominant to tactile-dominant regimes. ViTacPolicy aggregates variable numbers of heterogeneous tactile inputs using spatial-pose embeddings and a Transformer, and aligns force-array and tactile-image modalities through a two-stream VQ-VAE with a shared codebook. Controlled Hertzian-reference indentation and real-sensor sliding tests reduce normal and tangential force RMSE from 2.31 and 1.85 N to 0.42 and 0.53 N, respectively. Throughput reaches 2,482.9 tactile-pipeline FPS at 256 parallel environments. Simulation and real-world experiments show gains on several contact-rich tasks, while low absolute success on tactile-dominant tasks highlights the remaining difficulty of purely tactile control.",
-      "batch": "2026-11-25",
-      "kind": "new",
-      "authors": [
-        "Linjing You",
-        "Zeming Yang",
-        "Zhenhao Shen",
-        "Shengqiang Xu",
-        "Guanda Li",
-        "Wenxuan Li",
-        "Jiyu Guo",
-        "Jasper Lu",
-        "Kyle Xu",
-        "Shawn Xie",
-        "Junjie Zhu",
-        "Siyu Wu",
-        "Jian Liu",
-        "Changhao Zhang",
-        "Rongchong Li",
-        "Zeyi Li",
-        "Hengshuang Zhao",
-        "Ruihai Wu"
-      ],
-      "brief": "We present ViTacLab, a framework comprising ViTacSim, ViTacBench, and ViTacPolicy. Simulation and real-world experiments show gains on several contact-rich tasks, while low absolute success on tactile-dominant tasks highlights the remaining difficulty of purely tactile control.",
-      "reading": {
-        "method": "We present ViTacLab, a framework comprising ViTacSim, ViTacBench, and ViTacPolicy.",
-        "results": "Simulation and real-world experiments show gains on several contact-rich tasks, while low absolute success on tactile-dominant tasks highlights the remaining difficulty of purely tactile control.",
-        "depth": "Abstract brief"
-      },
-      "topics": [
-        "Tactile Sensing"
-      ],
-      "picture": "https://arxiv.org/html/2611.32476v1/vitaclab-teaser.png",
-      "caption": "Fig. 1"
     }
   ],
   "communityPicks": [
     {
-      "id": "2611.30989",
-      "title": "WorldLeague: Benchmarking Physical Agency",
-      "upvotes": 136,
-      "date": "2026-11-23",
-      "brief": "We introduce \\textbf{WorldLeague}, a benchmark that compares AI systems on a common set of \\textbf{60 simulated robot tasks} by measuring progress toward each task's physical goal from the robot's trajectory. WorldLeague gives Embodied AI, Physical AI, and Agentic AI a shared basis for comparing what AI systems achieve autonomously, from partial progress toward a physical goal to full goal completion.",
-      "abstract": "AI systems can now operate Blender, follow instructions in complex video games, and manipulate objects with robot arms. What range of physical goals can today's AI systems achieve autonomously? Answering this question requires testing systems on tasks that demand different combinations of perception, memory, planning, and action. We introduce \\textbf{WorldLeague}, a benchmark that compares AI systems on a common set of \\textbf{60 simulated robot tasks} by measuring progress toward each task's physical goal from the robot's trajectory. Robots explore scenes to gather evidence in \\textbf{WorldSeek}, rearrange objects in \\textbf{WorldShape}, and adapt to changes in \\textbf{WorldShift}. Tying these goals to a single control interface limits which AI systems can be compared. In WorldLeague, vision-language models (VLMs) choose targets and motions, while vision-language-action models (VLAs) and world-action models (WAMs) use their native controls. For each of six capability dimensions, we measure how much progress a system makes toward its goals (Interactive Score) and how often it achieves them (physical success rate). Together, these measures form the system's \\emph{Physical Agency Profile}. Among 13 representative AI systems, Claude Fable 5.2 achieves 13 of the 60 goals and earns the highest mean Interactive Score (28.58/100). Fable leads in four dimensions, while GPT-6.1-Sol and GPT-6-Astra tie for first on rule-following tasks. Even when VLMs answer every final question correctly, they receive an Interactive Score of zero in 71.8\\% of those episodes. WorldLeague gives Embodied AI, Physical AI, and Agentic AI a shared basis for comparing what AI systems achieve autonomously, from partial progress toward a physical goal to full goal completion. Project Webpage: https://xyangzhou.github.io/WorldLeague",
-      "reading": {
-        "method": "We introduce \\textbf{WorldLeague}, a benchmark that compares AI systems on a common set of \\textbf{60 simulated robot tasks} by measuring progress toward each task's physical goal from the robot's trajectory.",
-        "results": "WorldLeague gives Embodied AI, Physical AI, and Agentic AI a shared basis for comparing what AI systems achieve autonomously, from partial progress toward a physical goal to full goal completion.",
-        "depth": "Abstract brief"
-      },
-      "batch": "2026-11-24",
-      "picture": "https://arxiv.org/html/2611.30989v1/fig/WorldLeague_Task_Construction.png",
-      "caption": "Figure 2"
-    },
-    {
-      "id": "2611.31201",
-      "title": "Embo-Harness: Towards Understanding Frontier-Model-as-Policy Harness",
-      "upvotes": 98,
-      "date": "2026-11-23",
-      "brief": "We present Embo-Harness, a framework for systematically studying frontier-model-as-policy harnesses. On RoboLab-120, Embo-Harness achieves an 83.3\\% success rate, outperforming the strongest reported baseline by 26.2 percentage points.",
-      "abstract": "Frontier multimodal models exhibit extraordinary generalization in generating robot actions from observations and instructions, enabling a new paradigm in which they serve directly as policies within closed-loop robotic harnesses. However, the design principles of such harnesses, and the capabilities underlying their strong performance, remain unclear. We present Embo-Harness, a framework for systematically studying frontier-model-as-policy harnesses. We investigate four components of the robotic agentic loop, namely, prompting, planning, action execution, and tool use, and distill six empirical findings into a practical recipe. This recipe prioritizes interfaces that exploit the model's native visual reasoning and tool-use capabilities over handcrafted plans, skills, or action priors, and identifies effective choices for action representation, chunking, reasoning effort, visual observations, short multi-action sequences, and policy refinement. On RoboLab-120, Embo-Harness achieves an 83.3\\% success rate, outperforming the strongest reported baseline by 26.2 percentage points. It also succeeds in 15 of 20 zero-shot trials across four real-world manipulation tasks. Beyond performance, controlled interventions indicate that the studied model depends more strongly on accurate spatial target estimation than on explicit low-level joint or trajectory generation. These results provide both a practical recipe for building strong frontier-model-as-policy harnesses and a clearer account of the capabilities that drive their performance.",
-      "reading": {
-        "method": "We present Embo-Harness, a framework for systematically studying frontier-model-as-policy harnesses.",
-        "results": "On RoboLab-120, Embo-Harness achieves an 83.3\\% success rate, outperforming the strongest reported baseline by 26.2 percentage points.",
-        "depth": "Abstract brief"
-      },
-      "batch": "2026-11-24",
-      "picture": "https://arxiv.org/html/2611.31201v1/harness_baselines.png",
-      "caption": "Figure 2"
-    },
-    {
       "id": "2611.31205",
       "title": "ACAP: Asynchronous Coding Agents for Efficient Robot Control",
-      "upvotes": 47,
+      "upvotes": 62,
       "date": "2026-11-23",
       "brief": "We introduce Asynchronous Coding Agents as Policy (ACAP), an asynchronous framework that organizes one robot as a team of persistent agents. Across all eight Collaborative settings, ACAP also achieves lower mean time cost than Fixed Delegation, where only member agents can control their assigned groups.",
       "abstract": "Coding agents can construct and revise robot behavior during execution, but using one agent for the whole robot can delay otherwise independent work. We introduce Asynchronous Coding Agents as Policy (ACAP), an asynchronous framework that organizes one robot as a team of persistent agents. Each member reasons and acts for a configurable control group, such as an arm with its gripper or the torso and chassis, enabling asynchronous reasoning and execution. However, different robot components often have physical dependencies that require coordination. To address this challenge, ACAP introduces a hyper-agent that assigns tasks, coordinates dependencies, and dynamically allocates control between the lead and member agents. This allows independent work to progress concurrently while supporting tightly coupled manipulation when necessary. Across 72 real-world rollouts covering 25 task/platform settings, ACAP reduces task-balanced time cost by 28.2% compared with a single-agent Direct Policy, with improvements across Fully Parallel, Parallel-Sequential, and Collaborative tasks. Across all eight Collaborative settings, ACAP also achieves lower mean time cost than Fixed Delegation, where only member agents can control their assigned groups. An additional 90-rollout study shows lower mean 30-minute-capped time cost than Direct on all six tasks. We further demonstrate mobile manipulation using the same member interface for chassis and torso control. We present the framework and a real-world rollout dataset containing observations, generated programs, actions, and feedback to support research on how coding agents reason and act in the physical world.",
@@ -1921,9 +1876,39 @@
       "batch": "2026-11-24",
       "picture": "https://arxiv.org/html/2611.31205v1/teaser.png",
       "caption": "Figure 1"
+    },
+    {
+      "id": "2611.30254",
+      "title": "Innata-0: A Native Embodied World System with Model-Agent Co-Design",
+      "upvotes": 44,
+      "date": "2026-11-23",
+      "brief": "To support reliable and adaptive behaviors in the physical world, we introduce Innata-0, a native embodied world system.",
+      "abstract": "The physical world is open-ended, dynamic, and partially observable. While foundation models have advanced embodied intelligence, standalone models struggle with long-horizon execution, and simply integrating models with agents may lead to inconsistencies between planning and physical control. To support reliable and adaptive behaviors in the physical world, we introduce Innata-0, a native embodied world system. Innata-0 jointly designs an embodied world-action model and an agent to combine their complementary strengths. The model, Innata-0-WAM, adopts a tri-tower Mixture-of-Transformers architecture that integrates understanding, prediction, and action generation. The agent, Innata-0-Agent, coordinates long-horizon execution through memory, verification, and recovery. A co-design protocol is further proposed to align model training with agent execution and leverage validated experiences to support subsequent adaptation and model improvement. Extensive evaluations demonstrate strong embodied capabilities across understanding, world prediction, and robotic manipulation. Innata-0 represents our first step toward physical intelligence, and we see it as the beginning of a much longer journey.",
+      "reading": {
+        "method": "To support reliable and adaptive behaviors in the physical world, we introduce Innata-0, a native embodied world system.",
+        "depth": "Abstract brief"
+      },
+      "batch": "2026-11-24",
+      "picture": "https://arxiv.org/html/2611.30254v1/04_tactile_data_pipeline.png",
+      "caption": "Figure 4"
+    },
+    {
+      "id": "2611.30898",
+      "title": "World Models as Native Latent Action Models",
+      "upvotes": 28,
+      "date": "2026-11-23",
+      "brief": "Large and diverse video sources, such as egocentric human video and heterogeneous robot recordings, carry rich dynamics but come either without actions or without a shared action space. With a 3.8B model, PAWlicy reaches a 93.6% average success rate on RoboTwin 2.0 trained with domain-randomized demonstrations, the highest among VLAs.",
+      "abstract": "Large and diverse video sources, such as egocentric human video and heterogeneous robot recordings, carry rich dynamics but come either without actions or without a shared action space. Latent action models (LAMs) can recover these dynamics, but they train their inverse- and forward-dynamics models (IDM, FDM) from scratch, trading off pixel reconstruction against latent capacity and accuracy. Pretrained video world models natively generate high-fidelity dynamics, yet represent them densely, entangled across all layers. Viewing the world model as a LAM, we show that these dynamics can be extracted with minimal changes to the model. Native LAM operates one pretrained video diffusion transformer as both IDM and FDM, with learnable dynamics registers as the only causal bridge between the two, and trains on counterfactual temporal pairs that differ in motion alone, so that the registers distill a video's dynamics into a compact native latent action. We further propose a pretraining paradigm for vision-language-action (VLA) policies, Pretraining Actions from World models (PAWlicy), in which Native LAM serves as a dynamics teacher on large-scale video; unlike world action models, it never generates video. Native latent actions outperform existing LAMs on the LARY benchmark in both action classification and control regression, and replay the same motion on new robots, in new scenes, and from human hands to robots, although no transfer objective is used in training. With a 3.8B model, PAWlicy reaches a 93.6% average success rate on RoboTwin 2.0 trained with domain-randomized demonstrations, the highest among VLAs. On RoboDojo, it is competitive on every dimension we evaluate, and its Precision, evaluated by us, is on par with the leading leaderboard entries. On real robots, it improves over the pi_0.5 baseline on both tasks. Both stages use only public data and a publicly released world model.",
+      "reading": {
+        "results": "With a 3.8B model, PAWlicy reaches a 93.6% average success rate on RoboTwin 2.0 trained with domain-randomized demonstrations, the highest among VLAs.",
+        "depth": "Abstract brief"
+      },
+      "batch": "2026-11-24",
+      "picture": "https://arxiv.org/html/2611.30898v1/teaser.png",
+      "caption": "Figure 1"
     }
   ],
-  "roboticaUpdated": "2026-11-25T08:19:37.314000+00:00",
+  "roboticaUpdated": "2026-11-26T04:15:44.887000+00:00",
   "roboticaStatus": "live",
   "topics": [
     {
@@ -1934,8 +1919,8 @@
       "batches": 6,
       "teams": 68,
       "previous": null,
-      "communityCount": 2,
-      "communityUpvotes": 163,
+      "communityCount": 1,
+      "communityUpvotes": 28,
       "papers": [
         {
           "id": "2611.31488",
@@ -2137,19 +2122,6 @@
           ]
         },
         {
-          "id": "2611.30989",
-          "title": "WorldLeague: Benchmarking Physical Agency",
-          "abstract": "AI systems can now operate Blender, follow instructions in complex video games, and manipulate objects with robot arms. What range of physical goals can today's AI systems achieve autonomously? Answering this question requires testing systems on tasks that demand different combinations of perception, memory, planning, and action. We introduce \\textbf{WorldLeague}, a benchmark that compares AI systems on a common set of \\textbf{60 simulated robot tasks} by measuring progress toward each task's physical goal from the robot's trajectory. Robots explore scenes to gather evidence in \\textbf{WorldSeek}, rearrange objects in \\textbf{WorldShape}, and adapt to changes in \\textbf{WorldShift}. Tying these goals to a single control interface limits which AI systems can be compared. In WorldLeague, vision-language models (VLMs) choose targets and motions, while vision-language-action models (VLAs) and world-action models (WAMs) use their native controls. For each of six capability dimensions, we measure how much progress a system makes toward its goals (Interactive Score) and how often it achieves them (physical success rate). Together, these measures form the system's \\emph{Physical Agency Profile}. Among 13 representative AI systems, Claude Fable 5.2 achieves 13 of the 60 goals and earns the highest mean Interactive Score (28.58/100). Fable leads in four dimensions, while GPT-6.1-Sol and GPT-6-Astra tie for first on rule-following tasks. Even when VLMs answer every final question correctly, they receive an Interactive Score of zero in 71.8\\% of those episodes. WorldLeague gives Embodied AI, Physical AI, and Agentic AI a shared basis for comparing what AI systems achieve autonomously, from partial progress toward a physical goal to full goal completion. Project Webpage: https://xyangzhou.github.io/WorldLeague",
-          "batch": "2026-11-24",
-          "kind": "new",
-          "authors": [
-            "Xinyang Zhou",
-            "Qi Li",
-            "Xinchao Wang"
-          ],
-          "upvotes": 136
-        },
-        {
           "id": "2611.30898",
           "title": "World Models as Native Latent Action Models",
           "abstract": "Large and diverse video sources, such as egocentric human video and heterogeneous robot recordings, carry rich dynamics but come either without actions or without a shared action space. Latent action models (LAMs) can recover these dynamics, but they train their inverse- and forward-dynamics models (IDM, FDM) from scratch, trading off pixel reconstruction against latent capacity and accuracy. Pretrained video world models natively generate high-fidelity dynamics, yet represent them densely, entangled across all layers. Viewing the world model as a LAM, we show that these dynamics can be extracted with minimal changes to the model. Native LAM operates one pretrained video diffusion transformer as both IDM and FDM, with learnable dynamics registers as the only causal bridge between the two, and trains on counterfactual temporal pairs that differ in motion alone, so that the registers distill a video's dynamics into a compact native latent action. We further propose a pretraining paradigm for vision-language-action (VLA) policies, Pretraining Actions from World models (PAWlicy), in which Native LAM serves as a dynamics teacher on large-scale video; unlike world action models, it never generates video. Native latent actions outperform existing LAMs on the LARY benchmark in both action classification and control regression, and replay the same motion on new robots, in new scenes, and from human hands to robots, although no transfer objective is used in training. With a 3.8B model, PAWlicy reaches a 93.6% average success rate on RoboTwin 2.0 trained with domain-randomized demonstrations, the highest among VLAs. On RoboDojo, it is competitive on every dimension we evaluate, and its Precision, evaluated by us, is on par with the leading leaderboard entries. On real robots, it improves over the pi_0.5 baseline on both tasks. Both stages use only public data and a publicly released world model.",
@@ -2167,7 +2139,7 @@
             "Zhonghua Wu",
             "Chen Change Loy"
           ],
-          "upvotes": 27
+          "upvotes": 28
         },
         {
           "id": "2611.28256",
@@ -2238,164 +2210,23 @@
             "Mingyu Guo",
             "Weisong Shi"
           ]
-        }
-      ],
-      "lastSeen": "2026-11-25"
-    },
-    {
-      "id": "agentic-robots",
-      "name": "Agentic Robots",
-      "rule": "Title and abstract matches",
-      "count": 7,
-      "batches": 5,
-      "teams": 7,
-      "previous": null,
-      "communityCount": 1,
-      "communityUpvotes": 98,
-      "papers": [
+        },
         {
-          "id": "2611.31201",
-          "title": "Embo-Harness: Towards Understanding Frontier-Model-as-Policy Harness",
-          "abstract": "Frontier multimodal models exhibit extraordinary generalization in generating robot actions from observations and instructions, enabling a new paradigm in which they serve directly as policies within closed-loop robotic harnesses. However, the design principles of such harnesses, and the capabilities underlying their strong performance, remain unclear. We present Embo-Harness, a framework for systematically studying frontier-model-as-policy harnesses. We investigate four components of the robotic agentic loop, namely, prompting, planning, action execution, and tool use, and distill six empirical findings into a practical recipe. This recipe prioritizes interfaces that exploit the model's native visual reasoning and tool-use capabilities over handcrafted plans, skills, or action priors, and identifies effective choices for action representation, chunking, reasoning effort, visual observations, short multi-action sequences, and policy refinement. On RoboLab-120, Embo-Harness achieves an 83.3\\% success rate, outperforming the strongest reported baseline by 26.2 percentage points. It also succeeds in 15 of 20 zero-shot trials across four real-world manipulation tasks. Beyond performance, controlled interventions indicate that the studied model depends more strongly on accurate spatial target estimation than on explicit low-level joint or trajectory generation. These results provide both a practical recipe for building strong frontier-model-as-policy harnesses and a clearer account of the capabilities that drive their performance.",
+          "id": "2611.28551",
+          "title": "PhysPPF: Learning Robotic Manipulation with Past, Present, and Future Physical Representations",
+          "abstract": "Vision-language-action (VLA) models have advanced robotic manipulation, yet complex tasks requiring both precise 3D contact and long-horizon coordination remain challenging. Most existing studies enhance spatial perception or temporal reasoning in VLAs separately. Spatial methods primarily inject geometric or affordance priors into current-frame perception without tracking multi-step transitions, while history-aware and world-model VLAs typically capture past context or future dynamics in 2D feature or pixel spaces, either lacking explicit 3D contact cues or incurring high generation overhead. To address this, we propose PhysPPF, a VLA framework that performs unified spatiotemporal modeling in a compact physical token space. Spatially, WWH (What-Where-How) distills pretrained perception teachers exclusively during training into compact token groups capturing what 3D structures occupy the scene, where to interact, and how the gripper should approach, without test-time 3D encoders. Temporally, operating directly in this WWH space without pixel reconstruction, PPF (Past-Present-Future) consolidates executed states into a bounded past physical memory and jointly infers present and future physical tokens via an asymmetric world model. Parallel gated branches then inject these past, present, and future representations into a flow-matching action expert to guide manipulation without cross-temporal interference. Extensive experiments on SimplerEnv, CALVIN, and LIBERO show that PhysPPF consistently outperforms existing spatial, history-aware, and world-model VLAs with modest latency and parameter overhead, improving over the StarVLA baseline by +17.2 points on SimplerEnv, +29.3 points on CALVIN, and +3.5 points on LIBERO.",
           "batch": "2026-11-24",
           "kind": "new",
           "authors": [
-            "Xiao-Ming Wu",
-            "Kang Liao",
-            "Yuexiao Ma",
-            "Taolin Zhang",
-            "Mingqian Zhou",
-            "Nuo Chen",
-            "Ziming Li",
-            "Yihang Luo",
-            "Rui Li",
-            "Zhonghua Wu",
-            "Tianyu Xie",
-            "Xiawu Zheng",
-            "Zhongang Cai",
-            "Zhi Hou",
-            "Chen Change Loy"
-          ],
-          "upvotes": 98
-        },
-        {
-          "id": "2611.30997",
-          "title": "Generalizing Agentic Robotics via Multi-Teacher On-Policy Distillation",
-          "abstract": "Building general-purpose robots is a central goal in robotics. Agentic robotics pursues this goal with planners that control robots through tool calls. However, existing methods either rely on proprietary models accessed through APIs, which incur high costs and latency, or post-train a planner with reinforcement learning (RL) in a single domain, requiring a separate specialist for each domain with incompatible tools. In large language model (LLM) post-training, multi-teacher on-policy distillation (MOPD) has been used to consolidate domain specialists into a single generalist. Yet whether MOPD can build a generalist planner for agentic robotics, how well it performs, and how it compares with other consolidation methods remain unexplored. In this paper, we systematically study these questions: we introduce Robo-MOPD, which trains a single student on closed-loop rollouts in simulation under token-level supervision from matching frozen specialists, and compare it with weight merging, off-policy specialist supervised fine-tuning (SFT), and multi-domain online RL. Experiments on LIBERO-PRO and RoboCasa365 show that a single 9B Robo-MOPD planner reaches 72.9% and 44.8% success (58.9% average), surpassing all consolidated baselines in average success and both 9B specialists on their respective benchmarks. Robo-MOPD excels on long-horizon tasks, outperforming multi-domain online RL by 13.0 percentage points on LIBERO-10.",
-          "batch": "2026-11-24",
-          "kind": "new",
-          "authors": [
-            "Xinxin Liu",
-            "Anh Dao",
-            "Wenrui Bao",
-            "Rafid Ahmed",
-            "Bingxin Xu",
-            "Ming Li",
-            "Chen Chen",
-            "Yuzhang Shang"
-          ]
-        },
-        {
-          "id": "2611.31002",
-          "title": "RoboUniverse-10K: Toward the Scaling Era of Agentic Robotics via Real-to-Sim Environments",
-          "abstract": "Agentic Robotics, in which foundation models act as coding agents to control robots through executable programs, has emerged as a compelling paradigm for embodied intelligence. Yet unlike software engineering, where massive executable environments power post-training, robotics remains constrained by small, manual benchmarks and in-distribution evaluation. To bridge this gap, we introduce RoboUniverse-10K, 10,807 interactive, resettable, and verifiable physics environments built from real-world videos via an automated Real2Sim and quality assurance pipeline. Each runs in an isolated, Harbor-compatible harness that hides privileged states and grading logic to mirror real-world sensing. From the same pipeline, we hold out 500 unseen tasks to establish RoboUniverse-Verified, an expert-verified zero-shot benchmark. Evaluating 11 closed- and open-source models reveals a huge gap: frontier models reach 85.8\\% success, while open-source baselines lag at 2.6\\% to 10.0\\%, bottlenecked by low-level grasping, deformable-object manipulation, and post-contact physical control. Finally, we collect about 17K multi-turn trajectories totaling 0.79B tokens with GPT-6 Astra and perform full-parameter supervised fine-tuning on Qwen3.6-35B-A3B, yielding RoboUniverse-35B-A3B. Our model achieves substantial zero-shot gains on RoboUniverse-Verified, lifting the success rate from 0.8\\% to 21.2\\%, while achieving zero-shot task completions across LIBERO-MAX, RoboCasa, RoboTwin 2.0, and a real Franka arm. We open-source the RL-ready environments and model to lay the foundation for large-scale reinforcement learning in Agentic Robotics.",
-          "batch": "2026-11-24",
-          "kind": "new",
-          "authors": [
-            "Jinkun Liu",
-            "Yingze Wang",
-            "Situ Wang",
-            "Deyao Hong",
-            "Mingju Gao",
-            "Wenyi Li",
-            "Yizhe Chi",
-            "Youjie Zheng",
-            "Kaisen Yang",
-            "Xiangyang Wang",
-            "Bingxiang He",
-            "Yuxin Zuo",
-            "Boyuan Chen",
-            "Yue Chen",
-            "Cheng Qian",
-            "Tianxing Chen",
-            "Huichi Zhou",
-            "Huaxiu Yao",
-            "Hao Tang",
-            "Hao Zhou",
-            "Ya-Qin Zhang",
-            "Calvin Xiao",
-            "Tiga Altman",
-            "Huan-ang Gao"
-          ]
-        },
-        {
-          "id": "2611.27182",
-          "title": "Tripwire: Robot Agents that Program Their Own Interrupts under Human Disturbance",
-          "abstract": "Agent harnesses are turn-based: the agent acts, waits for the result, then reasons. When the action invokes a pretrained robot policy, such as a vision-language-action (VLA) or world action model (WAM), the policy may react continuously to observations, but the agent cannot revisit its decision until the call returns. Meanwhile, a person may step into the robot's path or move the object it is about to grasp. Invoking the agent more often narrows this blind interval, but a reasoning model takes seconds per decision and most control steps need no new one. We propose TRIP, a training-free, event-driven harness in which the agent programs its own interrupts. With each call, the agent writes a tripwire: a lightweight, stateful Python program that runs alongside the policy, can query a compact VLM (for example, to locate a person and measure their distance), and decides whether the call continues or control returns to the agent. When it fires, the harness halts the policy and returns control with the reason; the agent then reassesses, adapts, and continues under a rewritten tripwire. We evaluate TRIP with three VLAs and one WAM on RoboHD, a benchmark of 168 RoboCasa365 scenes in which a simulated person disturbs the robot and any human-robot contact counts as failure. Compared with a turn-based harness using the same agent and tools, TRIP halves the rate of human contact with the strongest policy, raising safety from 61.3% to 81.3%, without sacrificing task success (38.7% vs. 31.0%). Real-robot experiments show that TRIP completes two manipulation tasks under human interference where the turn-based harness and the policy alone largely fail.",
-          "batch": "2026-11-23",
-          "kind": "new",
-          "primary": "cs.RO",
-          "authors": [
-            "Sunli Chen",
-            "Yun Zong",
-            "Qinhong Zhou",
-            "Xiaowen Qiu",
-            "Jiaben Chen",
-            "Zeyuan Yang",
-            "Chuang Gan"
-          ]
-        },
-        {
-          "id": "2611.26341",
-          "title": "Reasoning on Call: Efficient Agentic Robot Control for Long-Horizon Robot Manipulation",
-          "abstract": "Large multimodal models can support long-horizon robot manipulation, but frequent model calls incur substantial latency and token costs. The central challenge is determining when agent assistance or intervention is needed and whether errors require correcting robot execution, subtask planning, or both. To address this problem, we propose RoC (Reasoning on Call), an efficient framework that coordinates a low-level policy and a high-level reasoning agent through an online task-state monitor. The monitor combines temporal visual observations with ordered interaction memory to jointly estimate progress within the active subtask and predict its successor. These predictions guide event-triggered agent review for coordinated execution repair and plan revision. Verified outcomes govern memory updates and subtask transitions, allowing routine execution to remain with the policy while reasoning focuses on decisions requiring additional assessment. On RMBench, RoC improves task success rate by 24.0 percentage points and reduces token consumption by 65.3% compared with the strongest agent-based baseline. It also outperforms the strongest policy-based baseline by 15.1 percentage points in task success rate. Real-world experiments further validate its effectiveness across three long-horizon manipulation tasks. Overall, RoC supports efficient agent intervention and coordinated recovery across execution and planning for long-horizon robot manipulation.",
-          "batch": "2026-11-20",
-          "kind": "new",
-          "primary": "cs.RO",
-          "authors": [
-            "Zilang Cen",
-            "Chao Tang",
-            "Fangcheng Liu",
-            "Weishi Mi",
-            "Wei Hao",
-            "JiaYu Xu",
-            "Dehao Huang",
-            "Yehui Tang",
-            "Xiaohui Cui",
-            "Tingguang Li",
-            "Xiaoyuan Zhang"
-          ]
-        },
-        {
-          "id": "2611.23855",
-          "title": "RoboBuilder: Agentic Robot Co-Design with Real-world Video Feedback in the Loop",
-          "abstract": "",
-          "batch": "2026-11-19",
-          "kind": "cross",
-          "primary": "cs.AI",
-          "authors": [
-            "Ghadi Nehme",
-            "Dahyun Nam",
-            "Akshay Govind Srinivasan",
-            "Faez Ahmed"
-          ]
-        },
-        {
-          "id": "2611.22584",
-          "title": "InteractVLA: Turning VLAs into Interactive Tools for Agentic Robotic Manipulation",
-          "abstract": "Existing agentic manipulation systems treat pretrained vision-language-action (VLA) policies as opaque, language-only primitives: when a policy call fails under unfamiliar instructions or scene perturbations, the agent cannot steer its behavior and is forced into futile retries or costly manual takeover. We present InteractVLA, a framework that turns pretrained flow-based VLAs into geometrically steerable and inspectable tools through a bidirectional geometric interface with vision-language agents. In the forward direction, test-time geometric guidance translates an agent-specified end-effector target into input gradients through the action expert via a differentiable command-to-pose mapping, while soft-time target alignment treats arrival time as a latent execution index to match the target pose without distorting the policy's approach motion. In the reverse direction, action-informed agentic refinement exposes generated action chunks and calibrated camera reprojections back to the agent, allowing it to diagnose spatial discrepancies, revise targets for subsequent VLA calls, or locally adjust motion segments on top of the guided trajectory. Making the VLA controllable not only boosts online agentic tool use, but also unlocks effective recursive self-improvement (RSI), achieving state-of-the-art performance of 99.4\\% on LIBERO-Plus, 48.62\\% on RoboDojo, and 89.4\\% on RoboCasa365. Project page: this https URL.",
-          "batch": "2026-11-18",
-          "kind": "new",
-          "primary": "cs.RO",
-          "authors": [
-            "Chen Zhao",
-            "Zipeng Ye",
-            "Shifeng Bao",
-            "Yihan Lin",
-            "Haitao Shen",
-            "Yining Luo",
-            "Yuchen Xie",
-            "Jing Zhang"
+            "Junjie Li",
+            "Dawei Yan",
+            "Guoting Wei",
+            "Ruike Song",
+            "Lu Wang",
+            "Qingguo Chen",
+            "Zhenbo Luo",
+            "Haokui Zhang",
+            "Chunhua Shen"
           ]
         }
       ],
@@ -2410,7 +2241,7 @@
       "teams": 72,
       "previous": null,
       "communityCount": 1,
-      "communityUpvotes": 27,
+      "communityUpvotes": 28,
       "papers": [
         {
           "id": "2611.31901",
@@ -2619,7 +2450,7 @@
             "Zhonghua Wu",
             "Chen Change Loy"
           ],
-          "upvotes": 27
+          "upvotes": 28
         },
         {
           "id": "2611.28319",
@@ -3964,6 +3795,164 @@
       "lastSeen": "2026-11-25"
     },
     {
+      "id": "agentic-robots",
+      "name": "Agentic Robots",
+      "rule": "Title and abstract matches",
+      "count": 7,
+      "batches": 5,
+      "teams": 7,
+      "previous": null,
+      "communityCount": 0,
+      "communityUpvotes": 0,
+      "papers": [
+        {
+          "id": "2611.30997",
+          "title": "Generalizing Agentic Robotics via Multi-Teacher On-Policy Distillation",
+          "abstract": "Building general-purpose robots is a central goal in robotics. Agentic robotics pursues this goal with planners that control robots through tool calls. However, existing methods either rely on proprietary models accessed through APIs, which incur high costs and latency, or post-train a planner with reinforcement learning (RL) in a single domain, requiring a separate specialist for each domain with incompatible tools. In large language model (LLM) post-training, multi-teacher on-policy distillation (MOPD) has been used to consolidate domain specialists into a single generalist. Yet whether MOPD can build a generalist planner for agentic robotics, how well it performs, and how it compares with other consolidation methods remain unexplored. In this paper, we systematically study these questions: we introduce Robo-MOPD, which trains a single student on closed-loop rollouts in simulation under token-level supervision from matching frozen specialists, and compare it with weight merging, off-policy specialist supervised fine-tuning (SFT), and multi-domain online RL. Experiments on LIBERO-PRO and RoboCasa365 show that a single 9B Robo-MOPD planner reaches 72.9% and 44.8% success (58.9% average), surpassing all consolidated baselines in average success and both 9B specialists on their respective benchmarks. Robo-MOPD excels on long-horizon tasks, outperforming multi-domain online RL by 13.0 percentage points on LIBERO-10.",
+          "batch": "2026-11-24",
+          "kind": "new",
+          "authors": [
+            "Xinxin Liu",
+            "Anh Dao",
+            "Wenrui Bao",
+            "Rafid Ahmed",
+            "Bingxin Xu",
+            "Ming Li",
+            "Chen Chen",
+            "Yuzhang Shang"
+          ]
+        },
+        {
+          "id": "2611.31002",
+          "title": "RoboUniverse-10K: Toward the Scaling Era of Agentic Robotics via Real-to-Sim Environments",
+          "abstract": "Agentic Robotics, in which foundation models act as coding agents to control robots through executable programs, has emerged as a compelling paradigm for embodied intelligence. Yet unlike software engineering, where massive executable environments power post-training, robotics remains constrained by small, manual benchmarks and in-distribution evaluation. To bridge this gap, we introduce RoboUniverse-10K, 10,807 interactive, resettable, and verifiable physics environments built from real-world videos via an automated Real2Sim and quality assurance pipeline. Each runs in an isolated, Harbor-compatible harness that hides privileged states and grading logic to mirror real-world sensing. From the same pipeline, we hold out 500 unseen tasks to establish RoboUniverse-Verified, an expert-verified zero-shot benchmark. Evaluating 11 closed- and open-source models reveals a huge gap: frontier models reach 85.8\\% success, while open-source baselines lag at 2.6\\% to 10.0\\%, bottlenecked by low-level grasping, deformable-object manipulation, and post-contact physical control. Finally, we collect about 17K multi-turn trajectories totaling 0.79B tokens with GPT-6 Astra and perform full-parameter supervised fine-tuning on Qwen3.6-35B-A3B, yielding RoboUniverse-35B-A3B. Our model achieves substantial zero-shot gains on RoboUniverse-Verified, lifting the success rate from 0.8\\% to 21.2\\%, while achieving zero-shot task completions across LIBERO-MAX, RoboCasa, RoboTwin 2.0, and a real Franka arm. We open-source the RL-ready environments and model to lay the foundation for large-scale reinforcement learning in Agentic Robotics.",
+          "batch": "2026-11-24",
+          "kind": "new",
+          "authors": [
+            "Jinkun Liu",
+            "Yingze Wang",
+            "Situ Wang",
+            "Deyao Hong",
+            "Mingju Gao",
+            "Wenyi Li",
+            "Yizhe Chi",
+            "Youjie Zheng",
+            "Kaisen Yang",
+            "Xiangyang Wang",
+            "Bingxiang He",
+            "Yuxin Zuo",
+            "Boyuan Chen",
+            "Yue Chen",
+            "Cheng Qian",
+            "Tianxing Chen",
+            "Huichi Zhou",
+            "Huaxiu Yao",
+            "Hao Tang",
+            "Hao Zhou",
+            "Ya-Qin Zhang",
+            "Calvin Xiao",
+            "Tiga Altman",
+            "Huan-ang Gao"
+          ]
+        },
+        {
+          "id": "2611.31201",
+          "title": "Embo-Harness: Towards Understanding Frontier-Model-as-Policy Harness",
+          "abstract": "Frontier multimodal models exhibit extraordinary generalization in generating robot actions from observations and instructions, enabling a new paradigm in which they serve directly as policies within closed-loop robotic harnesses. However, the design principles of such harnesses, and the capabilities underlying their strong performance, remain unclear. We present Embo-Harness, a framework for systematically studying frontier-model-as-policy harnesses. We investigate four components of the robotic agentic loop, namely, prompting, planning, action execution, and tool use, and distill six empirical findings into a practical recipe. This recipe prioritizes interfaces that exploit the model's native visual reasoning and tool-use capabilities over handcrafted plans, skills, or action priors, and identifies effective choices for action representation, chunking, reasoning effort, visual observations, short multi-action sequences, and policy refinement. On RoboLab-120, Embo-Harness achieves an 83.3\\% success rate, outperforming the strongest reported baseline by 26.2 percentage points. It also succeeds in 15 of 20 zero-shot trials across four real-world manipulation tasks. Beyond performance, controlled interventions indicate that the studied model depends more strongly on accurate spatial target estimation than on explicit low-level joint or trajectory generation. These results provide both a practical recipe for building strong frontier-model-as-policy harnesses and a clearer account of the capabilities that drive their performance.",
+          "batch": "2026-11-24",
+          "kind": "new",
+          "authors": [
+            "Xiao-Ming Wu",
+            "Kang Liao",
+            "Yuexiao Ma",
+            "Taolin Zhang",
+            "Mingqian Zhou",
+            "Nuo Chen",
+            "Ziming Li",
+            "Yihang Luo",
+            "Rui Li",
+            "Zhonghua Wu",
+            "Tianyu Xie",
+            "Xiawu Zheng",
+            "Zhongang Cai",
+            "Zhi Hou",
+            "Chen Change Loy"
+          ]
+        },
+        {
+          "id": "2611.27182",
+          "title": "Tripwire: Robot Agents that Program Their Own Interrupts under Human Disturbance",
+          "abstract": "Agent harnesses are turn-based: the agent acts, waits for the result, then reasons. When the action invokes a pretrained robot policy, such as a vision-language-action (VLA) or world action model (WAM), the policy may react continuously to observations, but the agent cannot revisit its decision until the call returns. Meanwhile, a person may step into the robot's path or move the object it is about to grasp. Invoking the agent more often narrows this blind interval, but a reasoning model takes seconds per decision and most control steps need no new one. We propose TRIP, a training-free, event-driven harness in which the agent programs its own interrupts. With each call, the agent writes a tripwire: a lightweight, stateful Python program that runs alongside the policy, can query a compact VLM (for example, to locate a person and measure their distance), and decides whether the call continues or control returns to the agent. When it fires, the harness halts the policy and returns control with the reason; the agent then reassesses, adapts, and continues under a rewritten tripwire. We evaluate TRIP with three VLAs and one WAM on RoboHD, a benchmark of 168 RoboCasa365 scenes in which a simulated person disturbs the robot and any human-robot contact counts as failure. Compared with a turn-based harness using the same agent and tools, TRIP halves the rate of human contact with the strongest policy, raising safety from 61.3% to 81.3%, without sacrificing task success (38.7% vs. 31.0%). Real-robot experiments show that TRIP completes two manipulation tasks under human interference where the turn-based harness and the policy alone largely fail.",
+          "batch": "2026-11-23",
+          "kind": "new",
+          "primary": "cs.RO",
+          "authors": [
+            "Sunli Chen",
+            "Yun Zong",
+            "Qinhong Zhou",
+            "Xiaowen Qiu",
+            "Jiaben Chen",
+            "Zeyuan Yang",
+            "Chuang Gan"
+          ]
+        },
+        {
+          "id": "2611.26341",
+          "title": "Reasoning on Call: Efficient Agentic Robot Control for Long-Horizon Robot Manipulation",
+          "abstract": "Large multimodal models can support long-horizon robot manipulation, but frequent model calls incur substantial latency and token costs. The central challenge is determining when agent assistance or intervention is needed and whether errors require correcting robot execution, subtask planning, or both. To address this problem, we propose RoC (Reasoning on Call), an efficient framework that coordinates a low-level policy and a high-level reasoning agent through an online task-state monitor. The monitor combines temporal visual observations with ordered interaction memory to jointly estimate progress within the active subtask and predict its successor. These predictions guide event-triggered agent review for coordinated execution repair and plan revision. Verified outcomes govern memory updates and subtask transitions, allowing routine execution to remain with the policy while reasoning focuses on decisions requiring additional assessment. On RMBench, RoC improves task success rate by 24.0 percentage points and reduces token consumption by 65.3% compared with the strongest agent-based baseline. It also outperforms the strongest policy-based baseline by 15.1 percentage points in task success rate. Real-world experiments further validate its effectiveness across three long-horizon manipulation tasks. Overall, RoC supports efficient agent intervention and coordinated recovery across execution and planning for long-horizon robot manipulation.",
+          "batch": "2026-11-20",
+          "kind": "new",
+          "primary": "cs.RO",
+          "authors": [
+            "Zilang Cen",
+            "Chao Tang",
+            "Fangcheng Liu",
+            "Weishi Mi",
+            "Wei Hao",
+            "JiaYu Xu",
+            "Dehao Huang",
+            "Yehui Tang",
+            "Xiaohui Cui",
+            "Tingguang Li",
+            "Xiaoyuan Zhang"
+          ]
+        },
+        {
+          "id": "2611.23855",
+          "title": "RoboBuilder: Agentic Robot Co-Design with Real-world Video Feedback in the Loop",
+          "abstract": "",
+          "batch": "2026-11-19",
+          "kind": "cross",
+          "primary": "cs.AI",
+          "authors": [
+            "Ghadi Nehme",
+            "Dahyun Nam",
+            "Akshay Govind Srinivasan",
+            "Faez Ahmed"
+          ]
+        },
+        {
+          "id": "2611.22584",
+          "title": "InteractVLA: Turning VLAs into Interactive Tools for Agentic Robotic Manipulation",
+          "abstract": "Existing agentic manipulation systems treat pretrained vision-language-action (VLA) policies as opaque, language-only primitives: when a policy call fails under unfamiliar instructions or scene perturbations, the agent cannot steer its behavior and is forced into futile retries or costly manual takeover. We present InteractVLA, a framework that turns pretrained flow-based VLAs into geometrically steerable and inspectable tools through a bidirectional geometric interface with vision-language agents. In the forward direction, test-time geometric guidance translates an agent-specified end-effector target into input gradients through the action expert via a differentiable command-to-pose mapping, while soft-time target alignment treats arrival time as a latent execution index to match the target pose without distorting the policy's approach motion. In the reverse direction, action-informed agentic refinement exposes generated action chunks and calibrated camera reprojections back to the agent, allowing it to diagnose spatial discrepancies, revise targets for subsequent VLA calls, or locally adjust motion segments on top of the guided trajectory. Making the VLA controllable not only boosts online agentic tool use, but also unlocks effective recursive self-improvement (RSI), achieving state-of-the-art performance of 99.4\\% on LIBERO-Plus, 48.62\\% on RoboDojo, and 89.4\\% on RoboCasa365. Project page: this https URL.",
+          "batch": "2026-11-18",
+          "kind": "new",
+          "primary": "cs.RO",
+          "authors": [
+            "Chen Zhao",
+            "Zipeng Ye",
+            "Shifeng Bao",
+            "Yihan Lin",
+            "Haitao Shen",
+            "Yining Luo",
+            "Yuchen Xie",
+            "Jing Zhang"
+          ]
+        }
+      ],
+      "lastSeen": "2026-11-25"
+    },
+    {
       "id": "sim-real",
       "name": "Sim-to-Real",
       "rule": "Title and abstract matches",
@@ -4032,61 +4021,6 @@
       "lastSeen": "2026-11-25"
     },
     {
-      "id": "phrase-9f26a89357c8",
-      "name": "Benchmarking Physical",
-      "rule": "Recurring title phrase",
-      "count": 3,
-      "batches": 2,
-      "teams": 3,
-      "previous": null,
-      "communityCount": 1,
-      "communityUpvotes": 136,
-      "papers": [
-        {
-          "id": "2611.32803",
-          "title": "MRBench: Benchmarking Physical Necessity Reasoning in Heterogeneous Multi-Robot Manipulation",
-          "abstract": "Recent advances in multi-robot manipulation have shown how robots can collaborate to accomplish complex tasks. However, successful coordination does not reveal which robots are actually needed. The same task may require different teams as robot capabilities change, resources become unavailable, or objects replace robotic support. We argue that reliable multi-robot manipulation requires physical necessity reasoning: understanding what a task demands, which resources can fulfill those demands, and which are truly necessary. We introduce MRBench, a benchmark for physical necessity reasoning in heterogeneous multi-robot manipulation. It comprises eight tasks with distinct concurrency and reach constraints, each evaluated under five configurations that change the required resources while preserving the task goal. Our evaluation reveals that existing coordination agents perform well with reference teams but struggle when robot embodiments change or passive objects can replace robotic support. To address this gap, we propose MRScissors, which separates task requirements from measured physical capabilities and identifies minimal feasible teams through constrained search. Across two model backbones, MRScissors achieves 85.4% and 91.2% team-selection accuracy, outperforming the strongest baselines by 10.4 and 9.5 points, respectively. Together, these findings expose a critical gap between coordinating robots and understanding their physical necessity.",
-          "batch": "2026-11-25",
-          "kind": "new",
-          "authors": [
-            "Yanzhe Chen",
-            "Zhijun Cao",
-            "Ruihe An",
-            "Chang Gong",
-            "Mike Zheng Shou"
-          ]
-        },
-        {
-          "id": "2611.32152",
-          "title": "RoboProbe: Benchmarking Physical Plausibility of Robot World Models",
-          "abstract": "Evaluating the physical plausibility of generated videos is critical for reliable robotic planning with world models. These videos inform action proposal and assessment before real-world execution, so undetected physical violations can lead to erroneous assessments of action feasibility and safety. Yet current video generators often produce physically implausible interactions. Detecting such violations directly with vision-language models (VLMs) remains challenging as physical verification requires evidence-grounded spatiotemporal reasoning beyond high-level semantic understanding. We develop five law-specific metrics for evaluating physical plausibility by combining spatiotemporal evidence from segmentation, tracking, 3D geometry, or appearance comparisons with targeted VLM reasoning: Contact fidelity, Object persistence, Solidity, Robot deformation, and Object deformation. Building on this metric suite, we introduce RoboProbe, an agentic evaluation framework that coordinates metric execution and selectively refines evaluations through constrained actions. To evaluate the physical plausibility of robot world models, we further introduce RP-Bench, with 761 human-labeled generated videos and 130 real demonstrations of 239 manipulation tasks from 12 robot datasets. On RP-Bench, all five metrics achieve AUROCs above 0.85 and outperform the evaluated learned judges, prior evaluators, and a frames-only Gemini baseline. Applying these metrics to five video generators reveals distinct patterns of physical violations across models, in both violation types and frequencies.",
-          "batch": "2026-11-25",
-          "kind": "cross",
-          "authors": [
-            "Zhuoying Yang",
-            "Jiachen Ni",
-            "Yichen Guo",
-            "Xiaoshan Wu",
-            "Mengyu Wang"
-          ]
-        },
-        {
-          "id": "2611.30989",
-          "title": "WorldLeague: Benchmarking Physical Agency",
-          "abstract": "AI systems can now operate Blender, follow instructions in complex video games, and manipulate objects with robot arms. What range of physical goals can today's AI systems achieve autonomously? Answering this question requires testing systems on tasks that demand different combinations of perception, memory, planning, and action. We introduce \\textbf{WorldLeague}, a benchmark that compares AI systems on a common set of \\textbf{60 simulated robot tasks} by measuring progress toward each task's physical goal from the robot's trajectory. Robots explore scenes to gather evidence in \\textbf{WorldSeek}, rearrange objects in \\textbf{WorldShape}, and adapt to changes in \\textbf{WorldShift}. Tying these goals to a single control interface limits which AI systems can be compared. In WorldLeague, vision-language models (VLMs) choose targets and motions, while vision-language-action models (VLAs) and world-action models (WAMs) use their native controls. For each of six capability dimensions, we measure how much progress a system makes toward its goals (Interactive Score) and how often it achieves them (physical success rate). Together, these measures form the system's \\emph{Physical Agency Profile}. Among 13 representative AI systems, Claude Fable 5.2 achieves 13 of the 60 goals and earns the highest mean Interactive Score (28.58/100). Fable leads in four dimensions, while GPT-6.1-Sol and GPT-6-Astra tie for first on rule-following tasks. Even when VLMs answer every final question correctly, they receive an Interactive Score of zero in 71.8\\% of those episodes. WorldLeague gives Embodied AI, Physical AI, and Agentic AI a shared basis for comparing what AI systems achieve autonomously, from partial progress toward a physical goal to full goal completion. Project Webpage: https://xyangzhou.github.io/WorldLeague",
-          "batch": "2026-11-24",
-          "kind": "new",
-          "authors": [
-            "Xinyang Zhou",
-            "Qi Li",
-            "Xinchao Wang"
-          ],
-          "upvotes": 136
-        }
-      ],
-      "lastSeen": "2026-11-25"
-    },
-    {
       "id": "phrase-f84e9fe2a438",
       "name": "Latent Action",
       "rule": "Recurring title phrase",
@@ -4095,7 +4029,7 @@
       "teams": 6,
       "previous": null,
       "communityCount": 1,
-      "communityUpvotes": 27,
+      "communityUpvotes": 28,
       "papers": [
         {
           "id": "2611.30898",
@@ -4115,7 +4049,7 @@
             "Zhonghua Wu",
             "Chen Change Loy"
           ],
-          "upvotes": 27
+          "upvotes": 28
         },
         {
           "id": "2611.30907",
@@ -5709,9 +5643,245 @@
         }
       ],
       "lastSeen": "2026-11-25"
+    },
+    {
+      "id": "phrase-c61868c3e6a4",
+      "name": "Multi Agent",
+      "rule": "Recurring title phrase",
+      "count": 10,
+      "batches": 5,
+      "teams": 10,
+      "previous": null,
+      "communityCount": 0,
+      "communityUpvotes": 0,
+      "papers": [
+        {
+          "id": "2611.31561",
+          "title": "Sampling at Scale: Distributed Multi-Agent Trajectory Optimization",
+          "abstract": "Multi-agent trajectory optimization poses two coupled challenges: effectively exploring non-convex landscapes and scaling favorably to large teams of agents. Sampling-based methods are natural candidates for the exploration challenge but scale poorly with problem dimension. Moreover, their off-the-shelf integration into distributed optimization introduces a fundamental trade-off: sampling either fails to address the constraint-induced non-convexity or its search space grows with neighborhood size. We address this gap by introducing a $\\underline{D}\\text{istributed}$ $\\underline{S}\\text{ampling-based}$ $\\underline{T}\\text{rajectory}$ $\\underline{O}\\text{ptimization} \\ \\text{(DS-TO)}$ architecture built on a splitting mechanism tailored to sampling. Under this splitting, each agent samples only in its own control space, independent of neighborhood size, while still remaining exposed to both the constraint-induced non-convexity and the decisions of other agents. The resulting algorithm is fully decentralized, requiring only neighborhood communication, with all local updates executed in parallel across agents. Efficient variations, including parallel Jacobi updates within each agent's subproblem and single-step constraint linearization, further reduce computation. Experiments on 2D and 3D tasks with up to 1024 agents demonstrate improved exploration and constraint satisfaction over state-of-the-art derivative-based distributed optimization, and superior scalability to existing distributed sampling methods.",
+          "batch": "2026-11-25",
+          "kind": "new",
+          "authors": [
+            "Minchan Jung",
+            "Dimitrios S. Georgiou",
+            "Augustinos D. Saravanos",
+            "Evangelos A. Theodorou"
+          ]
+        },
+        {
+          "id": "2611.29037",
+          "title": "Distributed Interactive Conformal Prediction for Multi-Agent Systems",
+          "abstract": "Multi-agent systems increasingly rely on learning-enabled components and distributed algorithms for perception, estimation, and control, introducing uncertainty that makes it challenging to satisfy mission requirements. Conformal prediction quantifies uncertainty with distribution-free guarantees, but existing methods do not address the challenging combination of dependence among robots, distributed calibration, and the distribution shift induced when calibrated uncertainty bounds modify the closed-loop system. We introduce Multi-Agent Interactive Conformal Prediction (MA-ICP), a distributed framework for computing robustness margins in heterogeneous systems to satisfy mission requirements with high probability. MA-ICP aggregates robot-level nonconformity scores, which measure errors in modeled or estimated quantities, into one mission-level score per robot class, allowing dependence among robots within each mission. Mission-level scores and quantiles are computed using neighbor-to-neighbor communication in a finite number of communication rounds. Updating the robustness margins changes robot trajectories and distributed algorithm outputs, so we use class-dependent score sensitivities to upper bound the shift in mission-level scores. We then establish calibration-conditional coverage guarantees per robot class for the updated margins. We demonstrate MA-ICP on cooperative payload control, formation control with obstacle avoidance, and distributed target tracking missions.",
+          "batch": "2026-11-24",
+          "kind": "new",
+          "authors": [
+            "Daniel M. Cherenson",
+            "Dimitra Panagou"
+          ]
+        },
+        {
+          "id": "2611.29501",
+          "title": "MAWAM: Joint Imagination for Collaborative Robot Manipulation with a Multi-Agent World Action Model",
+          "abstract": "World action models (WAMs) excel at robot manipulation by imagining future observations and decoding actions from them, yet remain confined to a single embodied agent. In practice, manipulation often requires multiple robots to collaborate across disjoint workspaces, coupled timing, and heterogeneous embodiments. Such coordination demands both spatiotemporal alignment of future interactions and awareness of individual embodiment and role identities, whereas existing decentralized per-robot policies, flat centralized models, and multi-robot VLAs fail to unite both. To bridge this gap, we present MAWAM, a multi-agent world action model that jointly predicts the future observations of multiple embodiments and decodes each agent's actions from them for collaborative manipulation. Through an agent-axis curriculum, MAWAM expands a single-agent WAM along an agent dimension to coordinate teams under shared weights. Within one unified causal sequence, joint self-attention spans all agents to spatiotemporally align their imagined futures, while hierarchical language, identity encodings, and embodiment masks bind each stream to its role, identity, and embodiment. We further formalize multi-agent-necessary manipulation along three axes (why, when, and who) and develop MA-Task Harness, a coding-agent pipeline where mutually constraining generators and evaluators co-evolve customizable simulation-data and evaluation packages. Using this pipeline, we build MA-Bench across all axes with seven tasks, pairing joint success rate with role and collaboration scores for fine-grained analysis. On MA-Bench, MAWAM reaches 82.7% mean joint success, 30.7% above the strongest baseline, and achieves real-time closed-loop collaboration on a real heterogeneous robot team.",
+          "batch": "2026-11-24",
+          "kind": "new",
+          "authors": [
+            "Rongze Tang",
+            "Chenyu Zhou",
+            "Jianjie Fang",
+            "Ziming Liu",
+            "Zhaolu Wang",
+            "Ziyou Wang",
+            "Xvyuan Liu",
+            "Wei Wu",
+            "Chen Gao",
+            "Yong Li",
+            "Zhibo Chen"
+          ]
+        },
+        {
+          "id": "2611.29548",
+          "title": "Real-Time Kinodynamic Multi-Agent Motion Planning",
+          "abstract": "Coordinating large robot fleets, from warehouses to quadrotor swarms, requires collision-free trajectories that satisfy dynamic constraints and stay within speed and acceleration bounds. Existing kinodynamic multi-agent planners enforce these bounds during the search or through trajectory optimization after it, which limits fleet size and speed. We present Tickwise Actions to Kinodynamic Trajectories (TAKT), a framework that accounts for the dynamics before the search and reduces planning to a lattice search for double-integrator robots. TAKT analytically bounds the clearance lost when a discrete plan is smoothed and reserves this margin on the lattice. A closed-form convolution provably converts any valid plan into dynamically feasible trajectories with continuous-time collision avoidance. For robots spanning many lattice vertices, we introduce a diamond formulation that permits one-tick sideways yielding and adapt the Multi-Agent Path Finding (MAPF) solvers PIBT and LaCAM to it. With 50 robots, our planners run over 2,000 times faster than the strongest baseline in 2D halls and over 100 times in 3D, with comparable or lower makespan and cost. They plan about a thousand robots in seconds in 2D, and tens of seconds in 3D, and replan up to a thousand robots in real time.",
+          "batch": "2026-11-24",
+          "kind": "new",
+          "authors": [
+            "Jiarui Li",
+            "Runyu Zhang",
+            "Gioele Zardini"
+          ]
+        },
+        {
+          "id": "2611.26390",
+          "title": "SpecFlow: Flow Matching in the Acceleration Spectrum for Multi-Agent Trajectory Forecasting",
+          "abstract": "",
+          "batch": "2026-11-20",
+          "kind": "new",
+          "primary": "cs.RO",
+          "authors": [
+            "Ziyang Xu",
+            "Peng Han",
+            "Hai Zhou"
+          ]
+        },
+        {
+          "id": "2611.25105",
+          "title": "MAWAM: A Multi-Agent World-Action Model for Coordinated Manipulation",
+          "abstract": "",
+          "batch": "2026-11-20",
+          "kind": "new",
+          "primary": "cs.RO",
+          "authors": [
+            "Xianzhe Fan",
+            "Chi-Pin Huang",
+            "Fu-En Yang",
+            "Jing Wang",
+            "Yecheng Wu",
+            "Yu-Cheng Chou",
+            "Johan Bjorck",
+            "Linxi \"Jim\" Fan",
+            "Jan Kautz",
+            "Yu-Chiang Frank Wang",
+            "Zhiding Yu",
+            "Hengshuang Zhao",
+            "Zhiqi Li"
+          ]
+        },
+        {
+          "id": "2611.24876",
+          "title": "Learning to Interact in Multi-Agent Self-Play for Controllable Autonomous Driving Scenario Generation",
+          "abstract": "",
+          "batch": "2026-11-19",
+          "kind": "new",
+          "primary": "cs.RO",
+          "authors": [
+            "Beyazit Yalcinkaya",
+            "Ethan Pronovost",
+            "Maximilian Naumann",
+            "Marcell Vazquez-Chanlatte"
+          ]
+        },
+        {
+          "id": "2611.24108",
+          "title": "Asymmetric Decomposition for Multi-Agent Path Finding with Unassigned Agents",
+          "abstract": "",
+          "batch": "2026-11-19",
+          "kind": "new",
+          "primary": "cs.RO",
+          "authors": [
+            "Xi Jin",
+            "Chen Qian",
+            "Renjun Zhang",
+            "Guowei Wu",
+            "Xiaobo Li",
+            "Jun Jiang",
+            "Weiwei Shang"
+          ]
+        },
+        {
+          "id": "2611.23911",
+          "title": "Scalable Iterative Multi-Agent Path Finding under Turn Constraints",
+          "abstract": "",
+          "batch": "2026-11-19",
+          "kind": "new",
+          "primary": "cs.RO",
+          "authors": [
+            "Zheyu Tao",
+            "Chunlong Yu",
+            "Yicheng Hu"
+          ]
+        },
+        {
+          "id": "2611.22138",
+          "title": "RoboTeam: Benchmarking Vision-Based Multi-Agent Control of Many Robot Arms in Real Time",
+          "abstract": "",
+          "batch": "2026-11-18",
+          "kind": "new",
+          "primary": "cs.RO",
+          "authors": [
+            "Changxuan Fan",
+            "Zhongwei Xie",
+            "Boyi Zhang",
+            "Shaoli Hu",
+            "Chang Xu",
+            "Xiyu Ren",
+            "Yufei Li",
+            "Qiao Xiao",
+            "Huihao Jing",
+            "Kawai Chung",
+            "Wenbin Hu",
+            "Hongyu Luo",
+            "Lingyun Xie",
+            "Yisen Gao",
+            "Chunyang Li",
+            "Haoyu Huang",
+            "Wuganjing Song",
+            "Yuxuan Liu",
+            "Chiu Yeung Tang",
+            "Fangneng Zhan",
+            "Xi Yang"
+          ]
+        }
+      ],
+      "lastSeen": "2026-11-25"
     }
   ],
   "archivedTopics": [
+    {
+      "id": "phrase-9f26a89357c8",
+      "name": "Benchmarking Physical",
+      "rule": "Recurring title phrase",
+      "count": 3,
+      "batches": 2,
+      "teams": 3,
+      "previous": null,
+      "communityCount": 1,
+      "communityUpvotes": 136,
+      "papers": [
+        {
+          "id": "2611.32803",
+          "title": "MRBench: Benchmarking Physical Necessity Reasoning in Heterogeneous Multi-Robot Manipulation",
+          "abstract": "Recent advances in multi-robot manipulation have shown how robots can collaborate to accomplish complex tasks. However, successful coordination does not reveal which robots are actually needed. The same task may require different teams as robot capabilities change, resources become unavailable, or objects replace robotic support. We argue that reliable multi-robot manipulation requires physical necessity reasoning: understanding what a task demands, which resources can fulfill those demands, and which are truly necessary. We introduce MRBench, a benchmark for physical necessity reasoning in heterogeneous multi-robot manipulation. It comprises eight tasks with distinct concurrency and reach constraints, each evaluated under five configurations that change the required resources while preserving the task goal. Our evaluation reveals that existing coordination agents perform well with reference teams but struggle when robot embodiments change or passive objects can replace robotic support. To address this gap, we propose MRScissors, which separates task requirements from measured physical capabilities and identifies minimal feasible teams through constrained search. Across two model backbones, MRScissors achieves 85.4% and 91.2% team-selection accuracy, outperforming the strongest baselines by 10.4 and 9.5 points, respectively. Together, these findings expose a critical gap between coordinating robots and understanding their physical necessity.",
+          "batch": "2026-11-25",
+          "kind": "new",
+          "authors": [
+            "Yanzhe Chen",
+            "Zhijun Cao",
+            "Ruihe An",
+            "Chang Gong",
+            "Mike Zheng Shou"
+          ]
+        },
+        {
+          "id": "2611.32152",
+          "title": "RoboProbe: Benchmarking Physical Plausibility of Robot World Models",
+          "abstract": "Evaluating the physical plausibility of generated videos is critical for reliable robotic planning with world models. These videos inform action proposal and assessment before real-world execution, so undetected physical violations can lead to erroneous assessments of action feasibility and safety. Yet current video generators often produce physically implausible interactions. Detecting such violations directly with vision-language models (VLMs) remains challenging as physical verification requires evidence-grounded spatiotemporal reasoning beyond high-level semantic understanding. We develop five law-specific metrics for evaluating physical plausibility by combining spatiotemporal evidence from segmentation, tracking, 3D geometry, or appearance comparisons with targeted VLM reasoning: Contact fidelity, Object persistence, Solidity, Robot deformation, and Object deformation. Building on this metric suite, we introduce RoboProbe, an agentic evaluation framework that coordinates metric execution and selectively refines evaluations through constrained actions. To evaluate the physical plausibility of robot world models, we further introduce RP-Bench, with 761 human-labeled generated videos and 130 real demonstrations of 239 manipulation tasks from 12 robot datasets. On RP-Bench, all five metrics achieve AUROCs above 0.85 and outperform the evaluated learned judges, prior evaluators, and a frames-only Gemini baseline. Applying these metrics to five video generators reveals distinct patterns of physical violations across models, in both violation types and frequencies.",
+          "batch": "2026-11-25",
+          "kind": "cross",
+          "authors": [
+            "Zhuoying Yang",
+            "Jiachen Ni",
+            "Yichen Guo",
+            "Xiaoshan Wu",
+            "Mengyu Wang"
+          ]
+        },
+        {
+          "id": "2611.30989",
+          "title": "WorldLeague: Benchmarking Physical Agency",
+          "abstract": "AI systems can now operate Blender, follow instructions in complex video games, and manipulate objects with robot arms. What range of physical goals can today's AI systems achieve autonomously? Answering this question requires testing systems on tasks that demand different combinations of perception, memory, planning, and action. We introduce \\textbf{WorldLeague}, a benchmark that compares AI systems on a common set of \\textbf{60 simulated robot tasks} by measuring progress toward each task's physical goal from the robot's trajectory. Robots explore scenes to gather evidence in \\textbf{WorldSeek}, rearrange objects in \\textbf{WorldShape}, and adapt to changes in \\textbf{WorldShift}. Tying these goals to a single control interface limits which AI systems can be compared. In WorldLeague, vision-language models (VLMs) choose targets and motions, while vision-language-action models (VLAs) and world-action models (WAMs) use their native controls. For each of six capability dimensions, we measure how much progress a system makes toward its goals (Interactive Score) and how often it achieves them (physical success rate). Together, these measures form the system's \\emph{Physical Agency Profile}. Among 13 representative AI systems, Claude Fable 5.2 achieves 13 of the 60 goals and earns the highest mean Interactive Score (28.58/100). Fable leads in four dimensions, while GPT-6.1-Sol and GPT-6-Astra tie for first on rule-following tasks. Even when VLMs answer every final question correctly, they receive an Interactive Score of zero in 71.8\\% of those episodes. WorldLeague gives Embodied AI, Physical AI, and Agentic AI a shared basis for comparing what AI systems achieve autonomously, from partial progress toward a physical goal to full goal completion. Project Webpage: https://xyangzhou.github.io/WorldLeague",
+          "batch": "2026-11-24",
+          "kind": "new",
+          "authors": [
+            "Xinyang Zhou",
+            "Qi Li",
+            "Xinchao Wang"
+          ],
+          "upvotes": 136
+        }
+      ],
+      "lastSeen": "2026-11-25"
+    },
     {
       "id": "phrase-d909c2d95ff5",
       "name": "Humanoid Control",

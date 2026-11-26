@@ -1,0 +1,35 @@
+{
+  "version": "v1",
+  "figures": [
+    {
+      "src": "https://arxiv.org/html/2611.30254v1/04_tactile_data_pipeline.png",
+      "caption": "Figure 4",
+      "anchor": "S2.F4"
+    },
+    {
+      "src": "https://arxiv.org/html/2611.30254v1/13_agent_architecture.png",
+      "caption": "Figure 13",
+      "anchor": "S4.F13"
+    },
+    {
+      "src": "https://arxiv.org/html/2611.30254v1/15_robocasa365_robodojo_recovery_cases.png",
+      "caption": "Figure 15",
+      "anchor": "S5.F15"
+    },
+    {
+      "src": "https://arxiv.org/html/2611.30254v1/16_scene_action_captions.png",
+      "caption": "Figure 8.1",
+      "anchor": "S8.F1"
+    },
+    {
+      "src": "https://arxiv.org/html/2611.30254v1/18_hand_training_sources.png",
+      "caption": "Figure 10.1",
+      "anchor": "S10.F1"
+    },
+    {
+      "src": "https://arxiv.org/html/2611.30254v1/20_hand_qualitative_cases.png",
+      "caption": "Figure 10.3",
+      "anchor": "S10.F3"
+    }
+  ]
+}

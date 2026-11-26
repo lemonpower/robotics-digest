@@ -1,0 +1,85 @@
+{
+  "version": "v1",
+  "figures": [
+    {
+      "src": "https://arxiv.org/html/2611.30898v1/teaser.png",
+      "caption": "Figure 1",
+      "anchor": "S0.F1"
+    },
+    {
+      "src": "https://arxiv.org/html/2611.30898v1/method.png",
+      "caption": "Figure 2",
+      "anchor": "S2.F2"
+    },
+    {
+      "src": "https://arxiv.org/html/2611.30898v1/pawlicy.png",
+      "caption": "Figure 3",
+      "anchor": "S3.F3"
+    },
+    {
+      "src": "https://arxiv.org/html/2611.30898v1/transfer.png",
+      "caption": "Figure 4",
+      "anchor": "S4.F4"
+    },
+    {
+      "src": "https://arxiv.org/html/2611.30898v1/interp.png",
+      "caption": "Figure 5",
+      "anchor": "S4.F5"
+    },
+    {
+      "src": "https://arxiv.org/html/2611.30898v1/gen_compare.png",
+      "caption": "Figure 6",
+      "anchor": "S4.F6"
+    },
+    {
+      "src": "https://arxiv.org/html/2611.30898v1/figures/supp_cf/move_start.jpg",
+      "caption": "Figure 7",
+      "anchor": "S4.F7"
+    },
+    {
+      "src": "https://arxiv.org/html/2611.30898v1/figures/supp_cf/move_end.jpg",
+      "caption": "Figure 7",
+      "anchor": "S4.F7"
+    },
+    {
+      "src": "https://arxiv.org/html/2611.30898v1/figures/supp_cf/move_np.jpg",
+      "caption": "Figure 7",
+      "anchor": "S4.F7"
+    },
+    {
+      "src": "https://arxiv.org/html/2611.30898v1/figures/supp_cf/move_p2k.jpg",
+      "caption": "Figure 7",
+      "anchor": "S4.F7"
+    },
+    {
+      "src": "https://arxiv.org/html/2611.30898v1/figures/supp_cf/move_final.jpg",
+      "caption": "Figure 7",
+      "anchor": "S4.F7"
+    },
+    {
+      "src": "https://arxiv.org/html/2611.30898v1/figures/supp_cf/still_start.jpg",
+      "caption": "Figure 7",
+      "anchor": "S4.F7"
+    },
+    {
+      "src": "https://arxiv.org/html/2611.30898v1/figures/supp_cf/still_end.jpg",
+      "caption": "Figure 7",
+      "anchor": "S4.F7"
+    },
+    {
+      "src": "https://arxiv.org/html/2611.30898v1/figures/supp_cf/still_np.jpg",
+      "caption": "Figure 7",
+      "anchor": "S4.F7"
+    },
+    {
+      "src": "https://arxiv.org/html/2611.30898v1/figures/supp_cf/still_p2k.jpg",
+      "caption": "Figure 7",
+      "anchor": "S4.F7"
+    },
+    {
+      "src": "https://arxiv.org/html/2611.30898v1/figures/supp_cf/still_final.jpg",
+      "caption": "Figure 7",
+      "anchor": "S4.F7"
+    }
+  ]
+}

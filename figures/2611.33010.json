@@ -1,0 +1,30 @@
+{
+  "version": "v1",
+  "figures": [
+    {
+      "src": "https://arxiv.org/html/2611.33010v1/benchmark_construction_v6_libero_4_resized.png",
+      "caption": "Figure 2",
+      "anchor": "S3.F2"
+    },
+    {
+      "src": "https://arxiv.org/html/2611.33010v1/mirror_angle_images.png",
+      "caption": "Figure 7",
+      "anchor": "A1.F7"
+    },
+    {
+      "src": "https://arxiv.org/html/2611.33010v1/eight_tasks_four_conditions_dual_updated.png",
+      "caption": "Figure 8",
+      "anchor": "A2.F8"
+    },
+    {
+      "src": "https://arxiv.org/html/2611.33010v1/panel_ablation.png",
+      "caption": "Figure 9",
+      "anchor": "A3.F9"
+    },
+    {
+      "src": "https://arxiv.org/html/2611.33010v1/floating_panel.png",
+      "caption": "Figure 13",
+      "anchor": "A6.F13"
+    }
+  ]
+}

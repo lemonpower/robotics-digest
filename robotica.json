@@ -1,34 +1,28 @@
 {
-  "fetchedAt": "2026-11-25T08:19:37.314000+00:00",
+  "fetchedAt": "2026-11-26T04:15:44.887000+00:00",
   "papers": {
-    "2611.30989": {
-      "id": "2611.30989",
-      "title": "WorldLeague: Benchmarking Physical Agency",
-      "upvotes": 136,
-      "date": "2026-11-23"
-    },
-    "2611.31201": {
-      "id": "2611.31201",
-      "title": "Embo-Harness: Towards Understanding Frontier-Model-as-Policy Harness",
-      "upvotes": 98,
-      "date": "2026-11-23"
-    },
     "2611.31205": {
       "id": "2611.31205",
       "title": "ACAP: Asynchronous Coding Agents for Efficient Robot Control",
-      "upvotes": 47,
+      "upvotes": 62,
       "date": "2026-11-23"
     },
-    "2611.26389": {
-      "id": "2611.26389",
-      "title": "ViDecide: Teaching Video Diffusion Models to Reason and Plan Step by Step",
-      "upvotes": 43,
-      "date": "2026-11-19"
+    "2611.30254": {
+      "id": "2611.30254",
+      "title": "Innata-0: A Native Embodied World System with Model-Agent Co-Design",
+      "upvotes": 44,
+      "date": "2026-11-23"
+    },
+    "2611.33010": {
+      "id": "2611.33010",
+      "title": "Embodied AI Fails the Mirror Test: How a Simple Mirror Breaks Robot Policies",
+      "upvotes": 28,
+      "date": "2026-11-24"
     },
     "2611.30898": {
       "id": "2611.30898",
       "title": "World Models as Native Latent Action Models",
-      "upvotes": 27,
+      "upvotes": 28,
       "date": "2026-11-23"
     },
     "2611.18639": {
@@ -36,6 +30,12 @@
       "title": "SynthDCB: World Distillation for Scalable Device Control Benchmarking",
       "upvotes": 25,
       "date": "2026-11-19"
+    },
+    "2611.32649": {
+      "id": "2611.32649",
+      "title": "ICLWorld: Benchmarking In-Context Learning of Agents from Digital to Physical Worlds",
+      "upvotes": 20,
+      "date": "2026-11-24"
     }
   }
 }
