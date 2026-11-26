@@ -1,0 +1,30 @@
+{
+  "version": "v1",
+  "figures": [
+    {
+      "src": "https://arxiv.org/html/2611.34778v1/fig_online.png",
+      "caption": "Figure 4",
+      "anchor": "S4.F4"
+    },
+    {
+      "src": "https://arxiv.org/html/2611.34778v1/fig_improve.png",
+      "caption": "Figure 7",
+      "anchor": "S5.F7"
+    },
+    {
+      "src": "https://arxiv.org/html/2611.34778v1/fig_supp_qualitative_rd.png",
+      "caption": "Figure 13",
+      "anchor": "A7.F13"
+    },
+    {
+      "src": "https://arxiv.org/html/2611.34778v1/fig_supp_qualitative_rc.png",
+      "caption": "Figure 14",
+      "anchor": "A7.F14"
+    },
+    {
+      "src": "https://arxiv.org/html/2611.34778v1/fig_supp_real_yam.png",
+      "caption": "Figure 17",
+      "anchor": "A10.F17"
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "version": "v1",
+  "figures": [
+    {
+      "src": "https://arxiv.org/html/2611.33915v1/SEEK_framework_ppt1_intro.png",
+      "caption": "Figure 1",
+      "anchor": "S0.F1"
+    },
+    {
+      "src": "https://arxiv.org/html/2611.33915v1/SEEK_framework_ppt2_method.png",
+      "caption": "Figure 2",
+      "anchor": "S3.F2"
+    },
+    {
+      "src": "https://arxiv.org/html/2611.33915v1/case_study_deposit_coin.png",
+      "caption": "Figure 4",
+      "anchor": "S4.F4"
+    },
+    {
+      "src": "https://arxiv.org/html/2611.33915v1/real_robot_setup.png",
+      "caption": "Figure 5",
+      "anchor": "S4.F5"
+    }
+  ]
+}

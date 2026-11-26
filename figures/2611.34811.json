@@ -1,0 +1,25 @@
+{
+  "version": "v1",
+  "figures": [
+    {
+      "src": "https://arxiv.org/html/2611.34811v1/01_hogwam_overview.png",
+      "caption": "Figure 1",
+      "anchor": "S0.F1"
+    },
+    {
+      "src": "https://arxiv.org/html/2611.34811v1/04_hog_target_construction.png",
+      "caption": "Figure 2",
+      "anchor": "S3.F2"
+    },
+    {
+      "src": "https://arxiv.org/html/2611.34811v1/07_franka_tasks.png",
+      "caption": "Figure 4",
+      "anchor": "S4.F4"
+    },
+    {
+      "src": "https://arxiv.org/html/2611.34811v1/06_robotwin_plus_protocol.png",
+      "caption": "Figure S1",
+      "anchor": "A2.SS2.p2.fig1"
+    }
+  ]
+}

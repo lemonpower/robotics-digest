@@ -1,0 +1,25 @@
+{
+  "version": "v1",
+  "figures": [
+    {
+      "src": "https://arxiv.org/html/2611.33144v1/fig-teaser.png",
+      "caption": "Figure 1",
+      "anchor": "S0.F1"
+    },
+    {
+      "src": "https://arxiv.org/html/2611.33144v1/fig-method.png",
+      "caption": "Figure 2",
+      "anchor": "S3.F2"
+    },
+    {
+      "src": "https://arxiv.org/html/2611.33144v1/fig-r2s2r.png",
+      "caption": "Figure 5",
+      "anchor": "S5.F5"
+    },
+    {
+      "src": "https://arxiv.org/html/2611.33144v1/fig-real.png",
+      "caption": "Figure 6",
+      "anchor": "S5.F6"
+    }
+  ]
+}

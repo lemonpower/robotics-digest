@@ -1,0 +1,25 @@
+{
+  "version": "v1",
+  "figures": [
+    {
+      "src": "https://arxiv.org/html/2611.33229v1/Stage1_visualization.png",
+      "caption": "Figure 3",
+      "anchor": "S5.F3"
+    },
+    {
+      "src": "https://arxiv.org/html/2611.33229v1/environments.png",
+      "caption": "Figure 4",
+      "anchor": "A1.F4"
+    },
+    {
+      "src": "https://arxiv.org/html/2611.33229v1/manipulation_rollouts.png",
+      "caption": "Figure 6",
+      "anchor": "A1.F6"
+    },
+    {
+      "src": "https://arxiv.org/html/2611.33229v1/skill_rollouts.png",
+      "caption": "Figure 7",
+      "anchor": "A1.F7"
+    }
+  ]
+}
