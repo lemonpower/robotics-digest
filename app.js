@@ -294,7 +294,8 @@ function renderCard(p,query){
   const date=p.first?formatDate(p.first):(p.batch?"arXiv batch · "+formatDate(p.batch):formatDate(p.date));
   const kind=[date,p.sourceDepth,Number.isInteger(p.upvotes)?"Robotica · "+p.upvotes+" upvotes":""].filter(Boolean);
   if(kind.length)copy.append(el("p",kind.join(" · "),"muted"));
-  if(p.summary)copy.append(lang("p",p.summary,"card-summary"));
+  const summary=p.cardSummary??p.summary;
+  if(summary)copy.append(lang("p",summary,"card-summary"));
   else copy.append(a("Read abstract on arXiv",arxiv(p),"subtle-link",true));
   copy.append(paperChips(p));
   const m=media(p,{clip:detail(p).videos?.[0],compact:true});
@@ -327,7 +328,7 @@ function updateIndex(sync=false){
   const shown=source.filter(p=>{
     const words=topicNames(p);
     if(selectedTopic&&!words.includes(selectedTopic))return false;
-    const text=norm([p.en,p.name,authors(p),p.id,p.summary,p.method,...words].join(" "));
+    const text=norm([p.en,p.name,authors(p),p.id,p.cardSummary,p.summary,p.method,...words].join(" "));
     return needles.every(token=>text.includes(token));
   });
   $("count").textContent=shown.length+(shown.length===1?" paper":" papers");
@@ -534,13 +535,15 @@ async function showPaper(){
   head.append(facts);
   const links=el("div",null,"chips reader-links");
   links.append(summaryLink("arXiv",arxiv(p)),summaryLink("PDF",pdf(p)));
+  if(p.abstractZh)links.append(summaryLink("Full text",html(p)));
   if(p.project && safeHTTPS(p.project))links.append(summaryLink("Project page",p.project));
   head.append(links,paperChips(p));
   body.append(head);
   const mainMedia=media(p,{clip:data.videos?.[0]});
   if(mainMedia){mainMedia.classList.add("hero-media");body.append(mainMedia);}
   const recap=el("p",null,"tldr");
-  recap.append(el("strong","TL;DR"),p.summary?lang("span",p.summary):a("Read abstract on arXiv",arxiv(p),null,true));
+  const abstract=p.abstractZh??p.summary;
+  recap.append(el("strong",p.abstractZh?"Abstract":"TL;DR"),abstract?lang("span",abstract):a("Read abstract on arXiv",arxiv(p),null,true));
   body.append(recap);
   if(data.why||p.why)body.append(section("What they do",data.why??p.why));
   for(const [name,content] of [["How it works",p.method],["Results",data.results??p.result],["Limitations",p.caveat]]){
@@ -548,7 +551,13 @@ async function showPaper(){
   }
   if(p.abstract && p.sourceDepth){
     const disclosure=el("details",null,"issue-brief");
-    disclosure.append(el("summary","Original abstract"),lang("p",p.abstract));
+    disclosure.append(el("summary",p.originalReading?"Original English":"Original abstract"));
+    if(p.originalReading)disclosure.append(el("h3","Original abstract"));
+    disclosure.append(lang("p",p.abstract));
+    for(const [key,label] of [["why","What they do"],["method","How it works"],["results","Results"],["limitations","Limitations"]]){
+      const content=p.originalReading?.[key];
+      if(content)disclosure.append(lang("p",label+": "+readable(content)));
+    }
     body.append(disclosure);
   }
   if(data.videos?.length>1){
@@ -569,7 +578,9 @@ function section(title,content,part=false){
   if(Array.isArray(content)){
     const ul=el("ul");for(const line of content)ul.append(lang("li",line));
     n.append(ul);
-  }else if(content)n.append(lang("p",content));
+  }else if(content){
+    for(const paragraph of String(content).split(/\n\s*\n/).filter(Boolean))n.append(lang("p",paragraph));
+  }
   return n;
 }
 function figure(item){
