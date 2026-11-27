@@ -1,23 +1,17 @@
 {
-  "fetchedAt": "2026-11-26T16:09:28.174000+00:00",
+  "fetchedAt": "2026-11-27T16:14:25.277000+00:00",
   "papers": {
-    "2611.31205": {
-      "id": "2611.31205",
-      "title": "ACAP: Asynchronous Coding Agents for Efficient Robot Control",
-      "upvotes": 64,
-      "date": "2026-11-23"
-    },
     "2611.33144": {
       "id": "2611.33144",
       "title": "PyRUA-Dex: Learning Programmatic Policies for Dexterous Bimanual Manipulation with Coding Agents",
-      "upvotes": 43,
+      "upvotes": 42,
       "date": "2026-11-24"
     },
-    "2611.33010": {
-      "id": "2611.33010",
-      "title": "Embodied AI Fails the Mirror Test: How a Simple Mirror Breaks Robot Policies",
-      "upvotes": 33,
-      "date": "2026-11-24"
+    "2611.28732": {
+      "id": "2611.28732",
+      "title": "Entangle: Scaling Human-Video In-Context World-Action Models across Unseen Tasks and Contexts",
+      "upvotes": 34,
+      "date": "2026-11-25"
     },
     "2611.34811": {
       "id": "2611.34811",
@@ -28,12 +22,18 @@
     "2611.32649": {
       "id": "2611.32649",
       "title": "ICLWorld: Benchmarking In-Context Learning of Agents from Digital to Physical Worlds",
-      "upvotes": 20,
+      "upvotes": 21,
       "date": "2026-11-24"
     },
     "2611.33579": {
       "id": "2611.33579",
       "title": "DexEngine: Scaling Human Demonstrations into Physically Executable Whole-Robot Data",
+      "upvotes": 19,
+      "date": "2026-11-25"
+    },
+    "2611.34347": {
+      "id": "2611.34347",
+      "title": "AIRIS: Benchmarking Social Embodied Intelligence in Egocentric Streaming Videos",
       "upvotes": 17,
       "date": "2026-11-25"
     }

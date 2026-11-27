@@ -1,0 +1,50 @@
+{
+  "version": "v1",
+  "figures": [
+    {
+      "src": "https://arxiv.org/html/2611.28732v1/paired_dataset_overview.png",
+      "caption": "Figure 2",
+      "anchor": "S3.F2"
+    },
+    {
+      "src": "https://arxiv.org/html/2611.28732v1/model_architecture.png",
+      "caption": "Figure 3",
+      "anchor": "S4.F3"
+    },
+    {
+      "src": "https://arxiv.org/html/2611.28732v1/real_suite_overview_figure.png",
+      "caption": "Figure 4",
+      "anchor": "S5.F4"
+    },
+    {
+      "src": "https://arxiv.org/html/2611.28732v1/context_ood_overview.png",
+      "caption": "Figure 6",
+      "anchor": "S5.F6"
+    },
+    {
+      "src": "https://arxiv.org/html/2611.28732v1/cloth_rotation.png",
+      "caption": "Figure 7",
+      "anchor": "S5.F7"
+    },
+    {
+      "src": "https://arxiv.org/html/2611.28732v1/back_surface_wiping.png",
+      "caption": "Figure 8",
+      "anchor": "S5.F8"
+    },
+    {
+      "src": "https://arxiv.org/html/2611.28732v1/generated_context_case_figure.png",
+      "caption": "Figure 9",
+      "anchor": "S5.F9"
+    },
+    {
+      "src": "https://arxiv.org/html/2611.28732v1/pantomime_handover.png",
+      "caption": "Figure 10",
+      "anchor": "S5.F10"
+    },
+    {
+      "src": "https://arxiv.org/html/2611.28732v1/real_tasks.png",
+      "caption": "Figure 11",
+      "anchor": "S10.F11"
+    }
+  ]
+}

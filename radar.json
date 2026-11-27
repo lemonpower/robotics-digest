@@ -148,7 +148,7 @@
         "Kyoung Whan Choe",
         "Minsu Cho"
       ],
-      "upvotes": 17
+      "upvotes": 19
     },
     {
       "id": "2611.33586",
@@ -1724,7 +1724,7 @@
         "Kyoung Whan Choe",
         "Minsu Cho"
       ],
-      "upvotes": 17,
+      "upvotes": 19,
       "brief": "We present DexEngine, a simulation pipeline that turns human manipulation data into train-ready, physically executable arm-hand trajectories.",
       "reading": {
         "method": "We present DexEngine, a simulation pipeline that turns human manipulation data into train-ready, physically executable arm-hand trajectories.",
@@ -1828,25 +1828,9 @@
   ],
   "communityPicks": [
     {
-      "id": "2611.31205",
-      "title": "ACAP: Asynchronous Coding Agents for Efficient Robot Control",
-      "upvotes": 64,
-      "date": "2026-11-23",
-      "brief": "We introduce Asynchronous Coding Agents as Policy (ACAP), an asynchronous framework that organizes one robot as a team of persistent agents. Across all eight Collaborative settings, ACAP also achieves lower mean time cost than Fixed Delegation, where only member agents can control their assigned groups.",
-      "abstract": "Coding agents can construct and revise robot behavior during execution, but using one agent for the whole robot can delay otherwise independent work. We introduce Asynchronous Coding Agents as Policy (ACAP), an asynchronous framework that organizes one robot as a team of persistent agents. Each member reasons and acts for a configurable control group, such as an arm with its gripper or the torso and chassis, enabling asynchronous reasoning and execution. However, different robot components often have physical dependencies that require coordination. To address this challenge, ACAP introduces a hyper-agent that assigns tasks, coordinates dependencies, and dynamically allocates control between the lead and member agents. This allows independent work to progress concurrently while supporting tightly coupled manipulation when necessary. Across 72 real-world rollouts covering 25 task/platform settings, ACAP reduces task-balanced time cost by 28.2% compared with a single-agent Direct Policy, with improvements across Fully Parallel, Parallel-Sequential, and Collaborative tasks. Across all eight Collaborative settings, ACAP also achieves lower mean time cost than Fixed Delegation, where only member agents can control their assigned groups. An additional 90-rollout study shows lower mean 30-minute-capped time cost than Direct on all six tasks. We further demonstrate mobile manipulation using the same member interface for chassis and torso control. We present the framework and a real-world rollout dataset containing observations, generated programs, actions, and feedback to support research on how coding agents reason and act in the physical world.",
-      "reading": {
-        "method": "We introduce Asynchronous Coding Agents as Policy (ACAP), an asynchronous framework that organizes one robot as a team of persistent agents.",
-        "results": "Across all eight Collaborative settings, ACAP also achieves lower mean time cost than Fixed Delegation, where only member agents can control their assigned groups.",
-        "depth": "Abstract brief"
-      },
-      "batch": "2026-11-24",
-      "picture": "https://arxiv.org/html/2611.31205v1/teaser.png",
-      "caption": "Figure 1"
-    },
-    {
       "id": "2611.33144",
       "title": "PyRUA-Dex: Learning Programmatic Policies for Dexterous Bimanual Manipulation with Coding Agents",
-      "upvotes": 43,
+      "upvotes": 42,
       "date": "2026-11-24",
       "brief": "We present PyRUA-Dex, a framework that enables coding agents to develop dexterous manipulation through programmatic policy, without the need of demonstrations. In simulated environments, PyRUA-Dex achieves SOTA on Bench2Dex with a score of 72.9 and reaches 81.0% success on DexJoCo under full randomization, ahead of every trained policy on both benchmarks.",
       "abstract": "Learning for dexterous manipulation is limited by the scarcity of high-quality demonstrations: retargeting from human video is imprecise, teleoperation gives no force feedback to the operator, and exoskeleton-based collection is hard to scale up. We present PyRUA-Dex, a framework that enables coding agents to develop dexterous manipulation through programmatic policy, without the need of demonstrations. The programmatic policy is developed in two stages: during exploration, multiple agents explore in parallel for task skills and ways to compose them, and a distilling agent condenses the successful attempts into a task library and one program. During refinement, this program is improved through randomized layouts for enhanced robustness and execution efficiency. In simulated environments, PyRUA-Dex achieves SOTA on Bench2Dex with a score of 72.9 and reaches 81.0% success on DexJoCo under full randomization, ahead of every trained policy on both benchmarks. In real world experiments on a bimanual platform with two 22-DoF hands, PyRUA-Dex learns to play piano, write calligraphy, and other tasks efficiently: learning a new piece from sheet music takes as little as 30 minutes. These results suggest that PyRUA-Dex is an effective framework for developing dexterous manipulation policies with coding agents in the absence of high quality dexterous manipulation demonstrations.",
@@ -1860,22 +1844,38 @@
       "caption": "Figure 1"
     },
     {
-      "id": "2611.33010",
-      "title": "Embodied AI Fails the Mirror Test: How a Simple Mirror Breaks Robot Policies",
-      "upvotes": 33,
-      "date": "2026-11-24",
-      "brief": "We introduce RoboDojo-Mirror, a benchmark built on RoboDojo that preserves task objectives, success criteria, and policy checkpoints while comparing a mirror-free baseline with single-mirror, dual-mirror, and mirrored-tabletop conditions.",
-      "abstract": "Can a simple mirror expose the limitations of today's robotic manipulation policies? Inspired by the mirror self-recognition test in animal cognition, we investigate whether robot policies can reliably manipulate physical objects in scenes containing their reflections. We introduce RoboDojo-Mirror, a benchmark built on RoboDojo that preserves task objectives, success criteria, and policy checkpoints while comparing a mirror-free baseline with single-mirror, dual-mirror, and mirrored-tabletop conditions. Across five policies spanning Vision-Language-Action models, World Action Models, and agentic policies, every mirror condition reduces aggregate success rates: averaged over the three conditions, the drop ranges from 10.8 to 56.7 percentage points across policies, and it reaches 62.5 points on the mirrored tabletop. Because a mirror is also a physical obstacle, we compare it against geometrically matched non-reflective panels; 50--88\\% of mirror-specific failures occur without recorded robot--panel contact, so direct collisions alone do not explain the degradation. Trajectory and contact analyses instead reveal recurring behaviors consistent with phantom targeting of reflected objects and spatial mislocalization of real ones. Targeted diagnostics further characterize grasping near reflections, policy-dependent pushing progress, and physical-target interaction under main-camera occlusion. Real-robot experiments with $\\pi_{0.5}$ and FastWAM also show lower overall success rates under the upright-mirror and mirrored-tabletop conditions. These findings reveal a shared vulnerability to reflective environments across diverse robot policies and motivate reflection-aware evaluation of embodied intelligence. Code is available at https://github.com/iPPLab/robodojo-mirror.",
+      "id": "2611.28732",
+      "title": "Entangle: Scaling Human-Video In-Context World-Action Models across Unseen Tasks and Contexts",
+      "upvotes": 34,
+      "date": "2026-11-25",
+      "brief": "We present Entangle, an in-context world-action model that maps a single human video and current robot observations to future visual states and executable actions. Without task-specific fine-tuning, Entangle improves steadily as aligned training data scales, reaching an average score of 83.5/100 across six unseen tasks on an Astribot S1 robot, and achieves a 69.5% average success rate on seven unseen RoboTwin tasks, outperforming Zero-WAM by 22.6 percentage points.",
+      "abstract": "In-context learning (ICL) enables foundation models to perform unseen tasks from context without parameter updates. In robotic manipulation, a human video provides the context that specifies how a task should be performed. However, scaling human-video ICL on world-action models (WAMs) faces two challenges: task-level human-robot pairs are not temporally aligned with robot actions, and standard action losses allow policies to rely on initial-scene or task-identity shortcuts rather than tracking the context. We present Entangle, an in-context world-action model that maps a single human video and current robot observations to future visual states and executable actions. To scale temporally aligned training data, we convert recorded robot videos into matched human contexts via video-to-video generation, supplemented by real paired recordings. For model training, we combine variable-length video windows with an intra-task contrastive objective that distinguishes the paired action trajectory from other executions of the same task, preventing task-identity shortcuts. Without task-specific fine-tuning, Entangle improves steadily as aligned training data scales, reaching an average score of 83.5/100 across six unseen tasks on an Astribot S1 robot, and achieves a 69.5% average success rate on seven unseen RoboTwin tasks, outperforming Zero-WAM by 22.6 percentage points. Under Context-OOD, although trained only on scene-aligned pairs, Entangle transfers context-specified behaviors across rearranged layouts and substituted tools.",
       "reading": {
-        "method": "We introduce RoboDojo-Mirror, a benchmark built on RoboDojo that preserves task objectives, success criteria, and policy checkpoints while comparing a mirror-free baseline with single-mirror, dual-mirror, and mirrored-tabletop conditions.",
+        "method": "We present Entangle, an in-context world-action model that maps a single human video and current robot observations to future visual states and executable actions.",
+        "results": "Without task-specific fine-tuning, Entangle improves steadily as aligned training data scales, reaching an average score of 83.5/100 across six unseen tasks on an Astribot S1 robot, and achieves a 69.5% average success rate on seven unseen RoboTwin tasks, outperforming Zero-WAM by 22.6 percentage points.",
+        "depth": "Abstract brief"
+      },
+      "batch": "2026-11-24",
+      "picture": "https://arxiv.org/html/2611.28732v1/paired_dataset_overview.png",
+      "caption": "Figure 2"
+    },
+    {
+      "id": "2611.32649",
+      "title": "ICLWorld: Benchmarking In-Context Learning of Agents from Digital to Physical Worlds",
+      "upvotes": 21,
+      "date": "2026-11-24",
+      "brief": "We present ICLWorld, an online benchmark that evaluates the ICL of agents from digital to physical worlds, covering computer use and robot use, together with UIverse, a unified harness that turns every environment into a user interface.",
+      "abstract": "In-context learning (ICL) lets agents acquire new rules from context and adapt to user-specific requirements at inference time. The same frontier agents now operate both computers and robots, yet their ICL remains insufficiently assessed: existing benchmarks are largely offline, rely on text or static images, and risk training-data contamination, while robot evaluations are limited to method-level ablations. We present ICLWorld, an online benchmark that evaluates the ICL of agents from digital to physical worlds, covering computer use and robot use, together with UIverse, a unified harness that turns every environment into a user interface. We build 30 environments, record 630 demonstration videos (10+ hours), and design 160 tasks with customized, often counter-intuitive rules that cannot be satisfied without learning from the context. Each task comes with three rule versions, given as text or video, and we test generalization at three levels, from replaying the demonstration to new instances and unseen environments. Across six frontier models, the strongest agents, Claude Opus 5.5 and GPT-6 Astra, succeed on 82% and 76% of computer-use runs but only 27% and 26% of robot-use runs, and a no-rule control reduces success to at most 8%. GPT-6 Astra succeeds under all three rule versions on only 38% of computer-use tasks, half its rate under a single rule, and answers 98% of robot rule questions correctly yet completes only 20% of these tasks. Frontier agents learn rules comparably well from video and from text and transfer them across environments, whereas weaker agents rely on text and lose most of their video-based success once the demonstrated situation is resampled. These findings reveal substantial gaps between the digital and the physical world and between identifying a rule and acting on it.",
+      "reading": {
+        "method": "We present ICLWorld, an online benchmark that evaluates the ICL of agents from digital to physical worlds, covering computer use and robot use, together with UIverse, a unified harness that turns every environment into a user interface.",
         "depth": "Abstract brief"
       },
       "batch": "2026-11-25",
-      "picture": "https://arxiv.org/html/2611.33010v1/benchmark_construction_v6_libero_4_resized.png",
+      "picture": "https://arxiv.org/html/2611.32649v1/framework_img.png",
       "caption": "Figure 2"
     }
   ],
-  "roboticaUpdated": "2026-11-26T16:09:28.174000+00:00",
+  "roboticaUpdated": "2026-11-27T16:14:25.277000+00:00",
   "roboticaStatus": "live",
   "topics": [
     {
@@ -1887,7 +1887,7 @@
       "teams": 9,
       "previous": null,
       "communityCount": 1,
-      "communityUpvotes": 43,
+      "communityUpvotes": 42,
       "papers": [
         {
           "id": "2611.34884",
@@ -1935,7 +1935,7 @@
             "Enze Xie",
             "Daquan Zhou"
           ],
-          "upvotes": 43
+          "upvotes": 42
         },
         {
           "id": "2611.31782",
@@ -2074,6 +2074,340 @@
             "Masayoshi Tomizuka",
             "Ruihai Wu",
             "Wei Zhan"
+          ]
+        }
+      ],
+      "lastSeen": "2026-11-26"
+    },
+    {
+      "id": "world-models",
+      "name": "World Models",
+      "rule": "Title and abstract matches",
+      "count": 96,
+      "batches": 7,
+      "teams": 84,
+      "previous": null,
+      "communityCount": 1,
+      "communityUpvotes": 34,
+      "papers": [
+        {
+          "id": "2611.33710",
+          "title": "$\\mathrm{M}^{2}$-WAM: Efficient Hierarchical Memory Across Modalities and Timescales for World-Action Models",
+          "abstract": "Long-horizon robotic manipulation requires historical context, yet retaining extensive visual histories incurs growing storage and retrieval costs, while aggressive compression risks losing fine-grained information needed for subsequent decisions. Moreover, executed action histories capture intermediate behaviors that sparse visual observations may miss. Preserving this complementary context efficiently calls for modality-specific memory mechanisms that balance recent detail with long-term retention. To this end, we introduce $\\mathrm{M}^{2}$-WAM, a world-action model equipped with hierarchical visual and interaction memories. $\\mathrm{M}^{2}$-WAM preserves recent visual observations in dense short-term memory while consolidating entries evicted from this window into fixed-size associative long-term memory through gated delta updates. Within the same short- and long-term hierarchy, interaction memory encodes executed action prefixes into compact temporal representations, complementing visual observations with behavioral context. These complementary memories are integrated into world-action modeling through layer-wise retrieval, enabling memory-augmented action generation with a bounded online memory footprint independent of episode length. On the memory-dependent simulation benchmarks MIKASA-Robo and RMBench, $\\mathrm{M}^{2}$-WAM achieves +53.2% and +61.2% absolute improvements in average success rates over Fast-WAM, respectively. These gains extend to real-world manipulation, where $\\mathrm{M}^{2}$-WAM achieves a +29.3% absolute improvement over LingBot-VA in average success across three tasks. These results suggest that $\\mathrm{M}^{2}$-WAM offers a promising approach to efficient memory-augmented world-action modeling.",
+          "batch": "2026-11-26",
+          "kind": "new",
+          "authors": [
+            "Xiaopeng Zhang",
+            "Weiqi Yuan",
+            "Xin Zhu",
+            "Jiaxi Huang",
+            "Yueqi Hu",
+            "Yin Zhang",
+            "Jian Yao",
+            "Yanjie Li"
+          ]
+        },
+        {
+          "id": "2611.33925",
+          "title": "Beyond the Happy Path: Generalizing Robot World Models from Simulated Failures",
+          "abstract": "Robot world models are increasingly used to evaluate and plan policies, yet robot training data are dominated by successful demonstrations. Off the happy path, when a grasp is misaligned or mistimed and the object is pushed, tilted, or slips, their predictions break down. Across five pretrained action-conditioned models, object-motion error is at most 10.4% lower than that of a static baseline that copies the first frame, and two models are worse than this baseline. We present WorldReforge, which teaches world models what happens when manipulation goes wrong. We construct the Reforge dataset of 62k simulated trajectories by perturbing reference grasps in position, orientation, and closure timing, recording each resulting push, slip, or failed pickup with ground-truth object pose, contact, and surface points. WorldReforge turns this ground truth into two training signals without additional inference cost. Interaction Alignment focuses reconstruction on the small object and contact regions that a global loss underweights, and Surface Correspondence trains backbone features to follow the same physical surface points across frames. On Cosmos3 Nano, WorldReforge reduces object trajectory error by 28.2% overall and by 35.0% on unseen objects, and it lowers the error in predicting how two actions' outcomes diverge by 43.3%. Although trained only in simulation, it also improves reconstruction on DROID and on real failure videos. Controlled data studies show that failed contact and successful holding teach complementary physics: failed contact teaches how objects respond, and holding teaches how a grasped state persists. Our code, data, and models are available at aim-uofa.github.io/WorldReforge/.",
+          "batch": "2026-11-26",
+          "kind": "new",
+          "authors": [
+            "Zhiyue Zhao",
+            "Mingyu Liu",
+            "Bolin Zhang",
+            "Liyang Li",
+            "Guangyu Huang",
+            "Canyu Zhao",
+            "Jinchuan Shi",
+            "Haokai Zhang",
+            "Hao Chen",
+            "Chunhua Shen"
+          ]
+        },
+        {
+          "id": "2611.33963",
+          "title": "Targeted Adaptation of World-Action Models via Interaction and Motion Heads",
+          "abstract": "World-Action Models (WAMs) are a promising new paradigm of robot manipulation policies that jointly generate future video and actions. Successful manipulation requires both identifying where to interact and modeling how the robot and objects move. Yet standard adaptation methods, such as full fine-tuning and LoRA, do not explicitly select parameters aligned with these manipulation-specific capabilities. Motivated by this challenge, we discover two functionally specialized families of attention heads: Next-Interaction Heads, which localize upcoming grasp-and-release targets, and Motion Heads, which track movement across frames. Furthermore, we introduce HeadLight, a parameter-efficient refinement method that jointly adapts Next-Interaction Heads and Motion Heads. On RoboTwin tasks unseen during fine-tuning, HeadLight achieves 62.28% success, compared with 57.89% for full fine-tuning and 58.66% for LoRA, while updating only 1.1% of parameters. Inference-time ablations further validate the functional importance of these heads: ablating Motion Heads reduces manipulation success from 57.89% to 0.94%, while ablating Next-Interaction Heads lowers it to 40.61%, both substantially more than ablating equally many random heads. Finally, we show that our approach is effective across multiple WAM architectures and real-robot manipulation settings.",
+          "batch": "2026-11-26",
+          "kind": "new",
+          "authors": [
+            "Yuze Zhu",
+            "Jacky Li",
+            "Yusen Luo",
+            "Ken Jiankun Zheng",
+            "Chancharik Mitra",
+            "Trevor Darrell",
+            "Roei Herzig"
+          ]
+        },
+        {
+          "id": "2611.33993",
+          "title": "Aegis-VLA: Reliability-Gated Action Refinement via a Trajectory World Model for Dynamic Object Manipulation",
+          "abstract": "Dynamic object manipulation requires maintaining spatial and temporal alignment with targets that continue to move during inference and execution. Although future prediction can inform action correction, an accurate forecast does not establish whether modifying an existing action would be beneficial. We present Aegis-VLA, a world-model-guided vision-language-action (VLA) framework that generates predictive action corrections and separately determines whether and how strongly to apply them. A Trajectory World Model combines kinematic extrapolation with learned residual dynamics to predict object motion and estimate positional uncertainty. Discrepancy-Guided Action Refinement uses differences between history-only and base-action-conditioned end-effector forecasts to propose bounded arm corrections. A Reliability Gate learns when to admit corrections based on demonstration-relative improvements over base actions, and regulates their application during inference using predictive uncertainty and anticipated object--end-effector proximity. Rejected corrections preserve the corresponding base actions. Aegis-VLA introduces only approximately 2.45M trainable parameters. On the simulated Dynamic Object Manipulation (DOM) benchmark, Aegis-VLA achieves 56.72\\% success over 1,800 evaluation trials, exceeding our reproduced DynamicVLA baseline of 45.44\\% by 11.28 percentage points.",
+          "batch": "2026-11-26",
+          "kind": "new",
+          "authors": [
+            "Lennox Wei",
+            "Jiaqi Yao",
+            "Shixin Sun",
+            "Yuanzheng Zhang",
+            "Jianhua Han",
+            "Meng Tian",
+            "Shaohui Liu",
+            "Wangmeng Zuo"
+          ]
+        },
+        {
+          "id": "2611.34124",
+          "title": "WAtcher: Watching Ahead for Safe Robotic Manipulation with Efficient World-Action Models",
+          "abstract": "World-action models (WAMs) couple future imagination with action generation, but they execute every action chunk while ignoring the potential risk. To fill this gap, we present WAtcher, a safety-aware world-action framework in which the policy imagines the outcome of the candidate chunk before execution. For fast future preview, WAtcher builds on a compact WAM whose video expert imagines the visual outcome in only two denoising steps. In addition, we propose Safe-Guard, a lightweight module kept outside the WAM that scores each candidate chunk from its imagined outcome and triggers a bounded retreat when the risk is high. Safe-Guard is detachable and can be applied to other WAMs. To train Safe-Guard, we build an autonomous pipeline to collect hazard data from RoboTwin, LIBERO, and a real robot. Specifically, the pipeline perturbs expert demonstrations and labels each candidate chunk from the physical events recorded when it is executed, such as contacts and losses of support. Using the ~25,000 labeled windows from this pipeline, Safe-Guard reaches 92.1% balanced accuracy on a blind set, and cuts hazardous closed-loop trials on training tasks from 27.0% to 10.8% without lowering task success. On a held-out 300-question benchmark, it scores 94.2%, against 72.5% and 63.3% for zero-shot GPT-6-Astra and Claude Opus 5.5. WAtcher also reaches 90.4% and 82.4% average success on RoboTwin 2.0 and ManiSkill3, on par with or above leading WAMs, and 74.0% on five real-world tasks with Safe-Guard on, against 59.5% for $\\pi_{0.5}$. Project page: https://zyshan0929.github.io/WAtcher",
+          "batch": "2026-11-26",
+          "kind": "new",
+          "authors": [
+            "Ziyu Shan",
+            "Xiao Ma",
+            "Kangrui Yu",
+            "Changjie Wang",
+            "Gaoyuan Wu",
+            "Zaijia Yang",
+            "Chuanrui Zhang",
+            "Qirui Li",
+            "Yanbo Zhang",
+            "Duomin Wang",
+            "Ziwei Wang"
+          ]
+        },
+        {
+          "id": "2611.34130",
+          "title": "WorldPhy: Benchmarking Fine-Grained Physical Plausibility of World Models in Robotics",
+          "abstract": "World models are increasingly used in robotics to improve the performance of embodied models. Compared with general-purpose video generation, robotics places more stringent requirements on world models. Generated videos must satisfy fine-grained physical constraints on robot motion and object interactions. However, existing world model benchmarks can overlook robotics specific physical details and struggle to assess them accurately. To address this problem, we introduce WorldPhy, a world model benchmark for accurate, fine-grained evaluation of physical plausibility in robotics. Our benchmark contains 300 tasks, each consisting of an initial-frame image and a task instruction, covering diverse robotics scenes, task categories, viewpoints, and robot configurations. We further collect over 12K high-quality human annotations, and use them to train WorldPhyReward to accurately provide scores and reasons across six fine-grained physical dimensions and an instruction-following dimension. Comparisons with general VLMs and existing reward models show that WorldPhyReward better aligns with human ratings. We system- atically evaluate 13 frontier open and closed-source world models. The results reveal that current world models struggle to consistently maintain fine-grained physical plausibility across different robotics scenarios. Our code is available at https://github.com/chuziyuan139/ WorldPhy.",
+          "batch": "2026-11-26",
+          "kind": "new",
+          "authors": [
+            "Ziyuan Chu",
+            "Mingzhi Zheng",
+            "Kaiyue Zhang",
+            "Jinan Zhang",
+            "Linchao Zhu"
+          ]
+        },
+        {
+          "id": "2611.34288",
+          "title": "Rehearse in 3D, Render in 2D: Physically Consistent and Editable Robot World Models",
+          "abstract": "Embodied world models aim to predict future interactions that are both visually realistic and physically consistent. Yet explicit 3D motion prediction alone does not guarantee that object structure and contact relationships are preserved. Beyond motion prediction, 3D representations provide an explicit state space for imposing structural and physical constraints. Building on this insight, we introduce RehearsalWorld, an editable robot world model driven by 3D Interaction Rehearsal (3DIR). Given an initial RGB-D observation and robot actions, Interaction-Consistent Rehearsal (ICR) uses a pretrained 3D point-flow model as a motion prior. It refines the predicted trajectories through response-aware object grouping, persistent grasp memory, and contact structure refiner, preserving scene stability, object structure, and grasp attachments. Rehearsal-Aligned Video Generation (RAVG) then uses geometric projections of the rehearsal as temporal conditioning. We fine-tune a video generator on projection-video pairs to synthesize realistic interaction videos. Thanks to the decoupling of physical response from visual synthesis, RehearsalWorld also supports independent editing of material properties and camera viewpoints. Compared with PointWorld on real DROID grasping sequences, RehearsalWorld reduces gripper-relative offset by approximately 79% to 84% across deformable, articulated, and rigid objects and lowers reference motion error. For video prediction, it achieves a PSNR of 23.92 dB and an FVD of 149.",
+          "batch": "2026-11-26",
+          "kind": "new",
+          "authors": [
+            "Guangyu Liu",
+            "Hanzhang Wang",
+            "Huijia Zhang",
+            "Hanbei Zhan",
+            "Linjie Hu",
+            "Bin Xiao",
+            "Xuan Zhou",
+            "Dong Zhang",
+            "Hanwei Liu"
+          ]
+        },
+        {
+          "id": "2611.34302",
+          "title": "Co-World Model for Human-Video-to-Robot Transfer via Co-Constructed Shared Latent Dynamics",
+          "abstract": "Human videos are abundant and cheap to obtain, whereas robot trajectories remain scarce and costly, making zero-shot skill transfer from a single human demonstration an appealing route to scalable robot learning. Existing methods, however, either retarget human-specific geometry or match only static visual goals, and thus stumble over the cross-embodiment dynamics mismatch and the ungrounded action execution. We present the Co-World Model (CoWM), a predictive framework jointly optimized from paired yet unsynchronized human and robot streams. To bridge the cross-embodiment dynamics gap, CoWM disentangles each observation into a shared object-relation state and embodiment-specific context. It aligns latent actions across embodiments using effect-swap and action-sensitivity objectives,such that actions are matched by their predicted effects on the manipulated objects rather than by embodimentdependent kinematics. For grounded execution, a phase-aware receding-horizon controller estimates demonstration progress, projects the inferred human action prior onto the robot action-support density, and translates the resulting latent dynamics into executable robot commands. Extensive experiments in simulation and on two physical robot platforms demonstrate the effectiveness of CoWM, its cross-platform generalizability, and the contribution of each component. See the demo video in the supporting information for details.",
+          "batch": "2026-11-26",
+          "kind": "new",
+          "authors": [
+            "Xuetao Li",
+            "Xuan Jiang",
+            "Chen Liu",
+            "Zhongrui Rao",
+            "Yu Ling",
+            "Hui Wang",
+            "Sheng Liu",
+            "Miao Li"
+          ]
+        },
+        {
+          "id": "2611.34509",
+          "title": "Long-Horizon Planning with Latent World Models via Graph Anchors",
+          "abstract": "Latent world models plan in a compact latent space by predicting the outcomes of actions. Their planners judge a plan by the latent distance between its predicted end state and the goal image. We show that this distance fails in two distinct ways. First, it loses directional signal a few steps from the goal, causing distant goals to fail. Second, it weighs the robot arm over the manipulated object, causing manipulation to fail at contact. We measure both failures directly on recorded data by asking whether a lower latent distance corresponds to true progress toward the goal. Across five environments, six visual representations (including raw pixels and V-JEPA 2), and nine Meta-World tasks, this ranking test cleanly separates the two failures, and the graph distance to a goal predicts where closed-loop planning breaks down. Both failures share a single remedy: replacing the distant goal with a nearby target that lies on a recorded trajectory. We realize this principle with Graph Anchors, a training-free planner for frozen latent world models. It builds a sparse graph once over the model's own training frames and aims each planning step at a node a few moves ahead along the shortest path to the goal, keeping paths on recorded transitions wherever contact matters. On goals up to 400 steps away, Graph Anchors raise LeWM's success from 13% to 85% on PointMaze-Medium, from 8% to 87% on PointMaze-Large, and from 5% to 71% on Push-T, where stronger search toward the goal fails and where prior training-free planners break down under missing step horizons, subsampling shortcuts, or fragmented contact.",
+          "batch": "2026-11-26",
+          "kind": "new",
+          "authors": [
+            "Syed Nazmus Sakib",
+            "Abdul Monaf Chowdhury",
+            "Peizhen Li",
+            "Nafiul Haque",
+            "Chandak Chakma",
+            "Md Mehedi Hasan",
+            "Zehong Cao",
+            "Shifat E. Arman"
+          ]
+        },
+        {
+          "id": "2611.34597",
+          "title": "$\\mu$MPC: Microsecond-Scale Nonlinear and World Model Control from Edge to GPU via Koopman-Linearized Precompilation",
+          "abstract": "We present $\\mu$MPC, a fast model predictive control (MPC) framework that reduces online computation using learned Koopman-linearized dynamics. By precomputing finite-horizon control-to-output maps, $\\mu$MPC eliminates lifted-state trajectories, yielding an action-only Koopman-Compiled QP (KC-QP) with $Hn_u$ decision variables, independent of lifted dimension. A fixed, precomputed primal operator enables efficient primal-dual iterations using only matrix-vector products and projections, accommodating changing goals and constraints without refactorization. This efficiency also enables control-aware dynamics learning through differentiable KC-QPs in the training loop and batched DAgger-style data aggregation. $\\mu$MPC achieves solve times as low as $23\\mu$s on a desktop CPU and 24 ms onboard a 168 MHz Crazyflie microcontroller. It scales to 4096D quadruped control in under 5 ms, visual planning with 2048D world models in 0.4 ms, and collision-aware planning for 200 quadrotors at over 30 Hz on the GPU. Across these benchmarks, $\\mu$MPC achieves up to $108\\times$ faster constrained MPC and $1907\\times$ faster visuomotor planning than competing methods.",
+          "batch": "2026-11-26",
+          "kind": "new",
+          "authors": [
+            "Devesh Nath",
+            "Glen Chou"
+          ]
+        },
+        {
+          "id": "2611.33460",
+          "title": "Fast Muscle-Driven Whole-Body Motion Tracking with a Differentiable World Model",
+          "abstract": "Tracking motion capture with a whole-body musculoskeletal model means coordinating hundreds of muscles through contact, and current controllers take hours to days of GPU time to train, so every tuning decision is expensive. SuperMimic trains a tracking policy by backpropagating through the rollouts of a learned world model. We extend it to MS-Human-700 (700 muscles) and MyoFullBody (354 muscles), with MuJoCo's activation dynamics inside the world model. To make its training fast, our recipe takes the speedups developed for the Unitree G1, replaces three of their settings that fail on muscles, and adds four changes of our own: observations without muscle geometry, data collection concurrent with the updates, Beta exploration noise that keeps every excitation in $[0,1]$, and 50 Hz control. On one RTX 5090 it trains MS-Human-700 in 6.3 minutes to the held-out return that SuperMimic's published hyperparameters reach in 3.9 hours, 37$\\times$ sooner, and in 20 minutes to lower tracking errors than theirs after 10 hours. It trains MyoFullBody 34$\\times$ sooner without retuning. Ablations show what is specific to muscles: a higher policy learning rate stalls half of the runs, and clipped Gaussian noise adds a tonic co-contraction that Beta noise avoids. Finally, refining the policy's actions through the world model at test time lowers the position error by a further 26% with no held-out clip failing, and reaches the same return after 5.1 instead of 6.3 minutes of training. Code, the training recipe and videos are on the project page https://muscle-supermimic.beanpow.top.",
+          "batch": "2026-11-26",
+          "kind": "cross",
+          "authors": [
+            "Kaibo He",
+            "Maciej Bakowicz",
+            "Shihe Zhou",
+            "Yusen Feng",
+            "Yanan Sui",
+            "Dhanush Radhakrishnan"
+          ]
+        },
+        {
+          "id": "2611.33467",
+          "title": "SplatWAM: Splatting World Action Models for Real-Time 3D Imagination",
+          "abstract": "World models typically predict future observations in pixel or latent space, limiting their ability to directly represent true 3D scene evolution. We present SplatWAM (Splatting World Action Model), a generative world model that learns action-conditioned dynamics directly over compact 3D Gaussian primitives. A tokenizer SplatWAM-T first encodes a variable number of unposed views into a fixed budget of Gaussian tokens. A dynamics model SplatWAM-D then predicts future Gaussian states in a single forward pass per action, using log-Euclidean covariance coordinates and differentiable rendering supervision to facilitate learning in an explicit 3D space. Each predicted state can be rasterized from arbitrary viewpoints, enforcing a shared 3D representation across views by construction. On OGBench Scene, SplatWAM renders novel views 12x faster than video world models (~80 FPS on an RTX 5090) with up to 2.0 dB higher PSNR. We further introduce SplatWAM-P, a lightweight flow-matching policy head jointly trained with the dynamics model. Across 8 task suites, model-free Gaussian-token policies outperform pixel-based counterparts by up to 24.8 percentage points. SplatWAM-P improves over Latent Particle World Model (LPWM) by 12 percentage points and matches HIQL without a learned value function. On LIBERO, our ~1B model outperforms WorldVLA (~7B) and the robot-pretrained OpenVLA (~7B), while matching OpenVLA-OFT when both are trained without large-scale robot pretraining. Code and checkpoints will be released.",
+          "batch": "2026-11-26",
+          "kind": "cross",
+          "authors": [
+            "Frank Tsu-Fang Lu",
+            "Karthik Sundar Senthilkumar",
+            "Christopher Thirgood",
+            "Oscar Mendez",
+            "Simon Hadfield"
+          ]
+        },
+        {
+          "id": "2611.33779",
+          "title": "DuoWM:Integrating Dual 6-DoF Visual Flows into Action-Conditioned Drone World Model",
+          "abstract": "Action-conditioned video world models generate future observations from an initial frame and a camera trajectory, but often fail to align camera commands with visual dynamics or represent full 6-DoF scene transformations. We present DuoWM, a first-person drone video world model with two complementary visual conditions. Action flow projects future camera positions and orientations into each target frame, while Object flow forward-warps the initial observation and overlays local 6-DoF transformations to ground the induced scene motion. We further introduce transform-aware pretraining, which pairs object appearance with explicit transformation axes before standard RGB video training. On Sekai-drone dataset, DuoWM achieves the best results across video quality, 3D consistency, and trajectory following. Compared with Captain Safari, the state-of-the-art method, our approach reduces real-domain FVD and LPIPS by 17.2\\% and 21.6\\%, respectively, while improving game-domain AUC@30 from 0.5003 to 0.5719 and AUC@15 from 0.3088 to 0.3747.",
+          "batch": "2026-11-26",
+          "kind": "cross",
+          "authors": [
+            "Zixuan Li",
+            "Kangyao Huang",
+            "Meng Xu",
+            "Wan Tian",
+            "Xiaoyu Tang",
+            "Jinge Sun",
+            "Yingliang Yao",
+            "He Chen",
+            "Lingzhong Meng",
+            "Yunzhi Xue",
+            "Jingyu Chen"
+          ]
+        },
+        {
+          "id": "2611.33797",
+          "title": "DriftWAM: Faster World-Action Models via Action-Aware Video Drifting",
+          "abstract": "World-action models (WAMs) unify future video prediction and action generation for robotic control, but their reliance on iterative denoising incurs substantial inference costs. Distilling these models into few-step generators offers a promising route to efficient deployment, yet maintaining task performance under aggressive step reduction remains challenging. Existing methods rely on point-wise trajectory consistency distillation, which pursues high visual fidelity while leaving downstream action information unexploited in optimizing video generation, and also lacks explicit distribution-level alignment. To address this, we propose DriftWAM, a few-step WAM distillation framework that incorporates the actions induced by predicted videos into video learning. Specifically, DriftWAM integrates action-aware video drifting, which performs video distribution matching through a joint visual--action similarity kernel to steer sample evolution under the guidance of these induced actions, with action-guided video regularization, which leverages the compatible teacher--student matches identified by the joint kernel to backpropagate action-level gradients directly into the video generator. Evaluations on the RoboTwin 2.0 and LIBERO benchmarks, as well as in real-world robotic manipulation tasks, show that DriftWAM consistently outperforms prior consistency distillation methods across few-step settings at the same inference speed.",
+          "batch": "2026-11-26",
+          "kind": "cross",
+          "authors": [
+            "Minyang Li",
+            "Siyu Xu",
+            "Yunke Wang",
+            "Ying-Cong Chen",
+            "Chang Xu",
+            "Daochang Liu"
+          ]
+        },
+        {
+          "id": "2611.33799",
+          "title": "Dynamic Forcing: Learning Action-Grounded Sparse Dynamic Representations with Dense Future Guidance for World Action Models",
+          "abstract": "World action models (WAMs) support robot control through visual prediction, but dense future modeling repeatedly encodes static context already available in the current observation, while action-relevant changes are often spatially sparse. We study sparse dynamic representation learning, retaining the current observation as a contextual anchor and using a small set of compact dynamic tokens to represent anticipated changes. We develop CompactWAM, a sparse-dense joint predictive framework that enables sparse representation learning within a video-supervised shared backbone, without requiring a reconstruction objective for the sparse pathway. Since a limited token budget alone does not specify which information to retain, we introduce Dynamic Forcing, which pairs direct action supervision with privileged dense future guidance to promote action relevance and dynamic fidelity. While action prediction gradients directly drive compact tokens to capture control-relevant cues, dense future guidance further shapes them via action functional guidance that matches sparse and dense contributions to the action expert, and dynamics-aware distribution matching, which aligns temporal relational changes relative to a static reference. At inference, a single visual forward pass encodes current observations and compact dynamic tokens for action generation, eliminating dense future modeling. CompactWAM achieves 98.4\\% success on LIBERO and 77.9\\% on LIBERO-Plus, retaining respective success rates of 98.3\\% and 76.6\\% with only 9.2\\% of the dense future token budget. Evaluations on RoboTwin~2.0 and real-world manipulation further demonstrate the effectiveness of the learned sparse predictive representations.",
+          "batch": "2026-11-26",
+          "kind": "cross",
+          "authors": [
+            "Ziqiang Li",
+            "Shisheng Chen",
+            "Yunnan Wang",
+            "Wenyao Zhang",
+            "Zili Lin",
+            "Yuyang Zhang",
+            "Xudong Yang",
+            "Fangzhuo Jin",
+            "Chenyu Zhou",
+            "Wenjun Zeng",
+            "Xin Jin"
+          ]
+        },
+        {
+          "id": "2611.34054",
+          "title": "CARE-WM: Same-Horizon Self-Conditioning with Constraint-Adaptive Regularization for Latent World Models",
+          "abstract": "Planning with latent world models requires both accurate multi-step predictions and latent distances that reflect physical proximity to the goal. However, models are typically trained on ground-truth observations but must rely on their own imaginations during planning, while closer latent distances do not necessarily correspond to better task outcomes. Existing methods resort to auxiliary training objectives or additional task-cost readouts, which respectively incur extra training overhead or leave the latent geometry itself misaligned with task cost. We introduce CARE-WM, a drop-in training method that meets both requirements without additional supervision, a separate cost model, or any change to LeWM's architecture and Euclidean-cost planner. CARE-WM trains the predictor on its own predictions and adaptively calibrates the strength of latent regularization. With a single hyperparameter configuration, CARE-WM improves mean planning success over LeWM across all evaluated continuous-control tasks and matches or exceeds the best results of other LeWM-family methods on most tasks. Further analyses show lower open-loop latent prediction error and closer agreement between latent-cost rankings and physical task costs.",
+          "batch": "2026-11-26",
+          "kind": "cross",
+          "authors": [
+            "Yuchen Lin",
+            "Kai Zhao"
+          ]
+        },
+        {
+          "id": "2611.34422",
+          "title": "Can Visual World Models See Force?",
+          "abstract": "World models and vision-language-action policy models are increasingly proposed as foundations for robot manipulation. They predict how scenes evolve and which actions to take, yet successful manipulation depends not solely on following observable trajectories but also on the hidden variable of interaction force. Neurophysiology has shown that humans possess a visual prior for this hidden variable, motivating us to ask the question: Do the representations of visual foundation models also capture the forces involved in an interaction? We define force awareness as the ability of representations to (1) indicate when contact force is applied, (2) track how it changes during an interaction, and (3) reflect how large it is. We probe frozen image, video, world- and policy model representations with a lightweight readout trained on synchronized video and force measurements from two manipulation datasets. Our experiments show that most models capture when contact occurs but not how much force is being applied. Surprisingly, robot post-training does not improve this either, highlighting an important gap in current models capabilities.",
+          "batch": "2026-11-26",
+          "kind": "cross",
+          "authors": [
+            "Felix Tristram",
+            "Benjamin D. Killeen",
+            "Nassir Navab"
+          ]
+        },
+        {
+          "id": "2611.34644",
+          "title": "Motion Beyond Pixels: Learning Future Visual Representations for Object-Centric Dynamics",
+          "abstract": "Many embodied world models predict future states in latent spaces optimized for RGB reconstruction, which do not explicitly prioritize object-level semantics and geometry relevant to motion generation. We present MotionRep, a visual representation world model that jointly generates future DINO representations and 3D object flow, coupling semantic and geometric information with object-centric dynamics. To make high-dimensional DINO features amenable to generative modeling, we introduce DINO-VAE, which combines temporal and channel compression with latent regularization to produce compact latents while preserving semantic and geometric information. Conditioned on an initial observation, object query points, and a language instruction, a unified diffusion transformer predicts future visual representations and 3D object flow through joint attention. MotionRep employs asymmetric modality-specific noise schedules to keep the visual stream ahead of 3D object flow during joint denoising, allowing progressively refined future visual representations to guide flow generation. Experiments on simulated and real-world manipulation benchmarks demonstrate that MotionRep outperforms pixel-based baselines in 3D object flow accuracy and generalization to unseen scenes, while requiring only three denoising steps for inference. These results support predictive visual representations as an effective future-state space for object-centric dynamics modeling.",
+          "batch": "2026-11-26",
+          "kind": "cross",
+          "authors": [
+            "Chengzhi Zhao",
+            "Juelin Li",
+            "Zhennan Wang",
+            "Sheng Wang",
+            "Zhuoman Liu",
+            "Yuhao Lu",
+            "Jiongxu Chen",
+            "Haitang Feng",
+            "Yanjie Li",
+            "Lin Shao"
+          ]
+        },
+        {
+          "id": "2611.34739",
+          "title": "Was the Model Given the Right Action? Auditing and Repairing Action Interfaces in Navigation World Models",
+          "abstract": "World models are evaluated by predicting future observations from actions. These evaluations assume that actions are prepared the same way as during training, but an unchecked mismatch can make a model appear less accurate than it is. We audit this assumption in Navigation World Models (NWM) and find three interacting differences between its training and rollout code. Correcting the inputs, without retraining, reduces mean visual prediction error by 42%, measured with DreamSim on the RECON navigation dataset. The correction also changes the ranking of NWM checkpoints in an exploratory analysis and removes or reduces two alternative models' measured advantages. Correcting only the normalization offset instead increases error, showing why interacting mismatches must be checked together. To test whether sensitivity to input preparation extends beyond NWM, we deliberately introduce encoding errors into two alternative models; both become less accurate. We introduce ActRosetta, a tool that checks whether action encoding matches training, identifies supported causes of disagreement, and repairs inputs when sufficient information is available. Repair helps little where predictions barely respond to actions, the tool's diagnosis has limited coverage, and improved control remains unproven. For any action-conditioned world model, the lesson is the same: before reporting rollout error, verify that evaluation encodes actions exactly as training did.",
+          "batch": "2026-11-26",
+          "kind": "cross",
+          "authors": [
+            "Ajmain Istiak Apon",
+            "Md Mehedi Hasan",
+            "Sejuti Rahman"
+          ]
+        },
+        {
+          "id": "2611.31901",
+          "title": "PreWAM: Exploring the Design of Latent Future Prediction for World-Action Modeling",
+          "abstract": "World-action models combine action generation with future prediction, allowing visual transitions to serve as supervision for policy learning. Our controlled study of prediction spaces shows that spatially structured semantic features support better overall generalization under visual perturbations and make motion information more readily recoverable from learned predictive representations. Building on these observations, we introduce PreWAM, a world-action model that organizes future supervision around state changes in a prediction space defined by pretrained DINO features. Specifically, Residual World Prediction jointly learns source-relative changes and their resulting future states to emphasize dynamic information while preserving future-state semantics. Temporal-Scale Prediction conditions world queries on temporal distance to capture both short-term local motion and longer-horizon state evolution. These predictive objectives jointly shape a shared vision-language backbone with action supervision during pretraining and downstream policy learning. Experiments across the LIBERO benchmark family, SimplerEnv, RoboTwin 2.0, and real-world robotic manipulation demonstrate strong manipulation performance and improved generalization and robustness under diverse distribution shifts.",
+          "batch": "2026-11-25",
+          "kind": "new",
+          "authors": [
+            "Wan Chi",
+            "Sen Li",
+            "Zihang Cui",
+            "Chuqin Huang",
+            "Yunlong Wang",
+            "Nanshan Deng",
+            "Yanjun Huang"
           ]
         }
       ],
@@ -2408,340 +2742,6 @@
             "Kangan Qian",
             "Zihao Sheng",
             "Sikai Chen"
-          ]
-        }
-      ],
-      "lastSeen": "2026-11-26"
-    },
-    {
-      "id": "world-models",
-      "name": "World Models",
-      "rule": "Title and abstract matches",
-      "count": 96,
-      "batches": 7,
-      "teams": 84,
-      "previous": null,
-      "communityCount": 0,
-      "communityUpvotes": 0,
-      "papers": [
-        {
-          "id": "2611.33710",
-          "title": "$\\mathrm{M}^{2}$-WAM: Efficient Hierarchical Memory Across Modalities and Timescales for World-Action Models",
-          "abstract": "Long-horizon robotic manipulation requires historical context, yet retaining extensive visual histories incurs growing storage and retrieval costs, while aggressive compression risks losing fine-grained information needed for subsequent decisions. Moreover, executed action histories capture intermediate behaviors that sparse visual observations may miss. Preserving this complementary context efficiently calls for modality-specific memory mechanisms that balance recent detail with long-term retention. To this end, we introduce $\\mathrm{M}^{2}$-WAM, a world-action model equipped with hierarchical visual and interaction memories. $\\mathrm{M}^{2}$-WAM preserves recent visual observations in dense short-term memory while consolidating entries evicted from this window into fixed-size associative long-term memory through gated delta updates. Within the same short- and long-term hierarchy, interaction memory encodes executed action prefixes into compact temporal representations, complementing visual observations with behavioral context. These complementary memories are integrated into world-action modeling through layer-wise retrieval, enabling memory-augmented action generation with a bounded online memory footprint independent of episode length. On the memory-dependent simulation benchmarks MIKASA-Robo and RMBench, $\\mathrm{M}^{2}$-WAM achieves +53.2% and +61.2% absolute improvements in average success rates over Fast-WAM, respectively. These gains extend to real-world manipulation, where $\\mathrm{M}^{2}$-WAM achieves a +29.3% absolute improvement over LingBot-VA in average success across three tasks. These results suggest that $\\mathrm{M}^{2}$-WAM offers a promising approach to efficient memory-augmented world-action modeling.",
-          "batch": "2026-11-26",
-          "kind": "new",
-          "authors": [
-            "Xiaopeng Zhang",
-            "Weiqi Yuan",
-            "Xin Zhu",
-            "Jiaxi Huang",
-            "Yueqi Hu",
-            "Yin Zhang",
-            "Jian Yao",
-            "Yanjie Li"
-          ]
-        },
-        {
-          "id": "2611.33925",
-          "title": "Beyond the Happy Path: Generalizing Robot World Models from Simulated Failures",
-          "abstract": "Robot world models are increasingly used to evaluate and plan policies, yet robot training data are dominated by successful demonstrations. Off the happy path, when a grasp is misaligned or mistimed and the object is pushed, tilted, or slips, their predictions break down. Across five pretrained action-conditioned models, object-motion error is at most 10.4% lower than that of a static baseline that copies the first frame, and two models are worse than this baseline. We present WorldReforge, which teaches world models what happens when manipulation goes wrong. We construct the Reforge dataset of 62k simulated trajectories by perturbing reference grasps in position, orientation, and closure timing, recording each resulting push, slip, or failed pickup with ground-truth object pose, contact, and surface points. WorldReforge turns this ground truth into two training signals without additional inference cost. Interaction Alignment focuses reconstruction on the small object and contact regions that a global loss underweights, and Surface Correspondence trains backbone features to follow the same physical surface points across frames. On Cosmos3 Nano, WorldReforge reduces object trajectory error by 28.2% overall and by 35.0% on unseen objects, and it lowers the error in predicting how two actions' outcomes diverge by 43.3%. Although trained only in simulation, it also improves reconstruction on DROID and on real failure videos. Controlled data studies show that failed contact and successful holding teach complementary physics: failed contact teaches how objects respond, and holding teaches how a grasped state persists. Our code, data, and models are available at aim-uofa.github.io/WorldReforge/.",
-          "batch": "2026-11-26",
-          "kind": "new",
-          "authors": [
-            "Zhiyue Zhao",
-            "Mingyu Liu",
-            "Bolin Zhang",
-            "Liyang Li",
-            "Guangyu Huang",
-            "Canyu Zhao",
-            "Jinchuan Shi",
-            "Haokai Zhang",
-            "Hao Chen",
-            "Chunhua Shen"
-          ]
-        },
-        {
-          "id": "2611.33963",
-          "title": "Targeted Adaptation of World-Action Models via Interaction and Motion Heads",
-          "abstract": "World-Action Models (WAMs) are a promising new paradigm of robot manipulation policies that jointly generate future video and actions. Successful manipulation requires both identifying where to interact and modeling how the robot and objects move. Yet standard adaptation methods, such as full fine-tuning and LoRA, do not explicitly select parameters aligned with these manipulation-specific capabilities. Motivated by this challenge, we discover two functionally specialized families of attention heads: Next-Interaction Heads, which localize upcoming grasp-and-release targets, and Motion Heads, which track movement across frames. Furthermore, we introduce HeadLight, a parameter-efficient refinement method that jointly adapts Next-Interaction Heads and Motion Heads. On RoboTwin tasks unseen during fine-tuning, HeadLight achieves 62.28% success, compared with 57.89% for full fine-tuning and 58.66% for LoRA, while updating only 1.1% of parameters. Inference-time ablations further validate the functional importance of these heads: ablating Motion Heads reduces manipulation success from 57.89% to 0.94%, while ablating Next-Interaction Heads lowers it to 40.61%, both substantially more than ablating equally many random heads. Finally, we show that our approach is effective across multiple WAM architectures and real-robot manipulation settings.",
-          "batch": "2026-11-26",
-          "kind": "new",
-          "authors": [
-            "Yuze Zhu",
-            "Jacky Li",
-            "Yusen Luo",
-            "Ken Jiankun Zheng",
-            "Chancharik Mitra",
-            "Trevor Darrell",
-            "Roei Herzig"
-          ]
-        },
-        {
-          "id": "2611.33993",
-          "title": "Aegis-VLA: Reliability-Gated Action Refinement via a Trajectory World Model for Dynamic Object Manipulation",
-          "abstract": "Dynamic object manipulation requires maintaining spatial and temporal alignment with targets that continue to move during inference and execution. Although future prediction can inform action correction, an accurate forecast does not establish whether modifying an existing action would be beneficial. We present Aegis-VLA, a world-model-guided vision-language-action (VLA) framework that generates predictive action corrections and separately determines whether and how strongly to apply them. A Trajectory World Model combines kinematic extrapolation with learned residual dynamics to predict object motion and estimate positional uncertainty. Discrepancy-Guided Action Refinement uses differences between history-only and base-action-conditioned end-effector forecasts to propose bounded arm corrections. A Reliability Gate learns when to admit corrections based on demonstration-relative improvements over base actions, and regulates their application during inference using predictive uncertainty and anticipated object--end-effector proximity. Rejected corrections preserve the corresponding base actions. Aegis-VLA introduces only approximately 2.45M trainable parameters. On the simulated Dynamic Object Manipulation (DOM) benchmark, Aegis-VLA achieves 56.72\\% success over 1,800 evaluation trials, exceeding our reproduced DynamicVLA baseline of 45.44\\% by 11.28 percentage points.",
-          "batch": "2026-11-26",
-          "kind": "new",
-          "authors": [
-            "Lennox Wei",
-            "Jiaqi Yao",
-            "Shixin Sun",
-            "Yuanzheng Zhang",
-            "Jianhua Han",
-            "Meng Tian",
-            "Shaohui Liu",
-            "Wangmeng Zuo"
-          ]
-        },
-        {
-          "id": "2611.34124",
-          "title": "WAtcher: Watching Ahead for Safe Robotic Manipulation with Efficient World-Action Models",
-          "abstract": "World-action models (WAMs) couple future imagination with action generation, but they execute every action chunk while ignoring the potential risk. To fill this gap, we present WAtcher, a safety-aware world-action framework in which the policy imagines the outcome of the candidate chunk before execution. For fast future preview, WAtcher builds on a compact WAM whose video expert imagines the visual outcome in only two denoising steps. In addition, we propose Safe-Guard, a lightweight module kept outside the WAM that scores each candidate chunk from its imagined outcome and triggers a bounded retreat when the risk is high. Safe-Guard is detachable and can be applied to other WAMs. To train Safe-Guard, we build an autonomous pipeline to collect hazard data from RoboTwin, LIBERO, and a real robot. Specifically, the pipeline perturbs expert demonstrations and labels each candidate chunk from the physical events recorded when it is executed, such as contacts and losses of support. Using the ~25,000 labeled windows from this pipeline, Safe-Guard reaches 92.1% balanced accuracy on a blind set, and cuts hazardous closed-loop trials on training tasks from 27.0% to 10.8% without lowering task success. On a held-out 300-question benchmark, it scores 94.2%, against 72.5% and 63.3% for zero-shot GPT-6-Astra and Claude Opus 5.5. WAtcher also reaches 90.4% and 82.4% average success on RoboTwin 2.0 and ManiSkill3, on par with or above leading WAMs, and 74.0% on five real-world tasks with Safe-Guard on, against 59.5% for $\\pi_{0.5}$. Project page: https://zyshan0929.github.io/WAtcher",
-          "batch": "2026-11-26",
-          "kind": "new",
-          "authors": [
-            "Ziyu Shan",
-            "Xiao Ma",
-            "Kangrui Yu",
-            "Changjie Wang",
-            "Gaoyuan Wu",
-            "Zaijia Yang",
-            "Chuanrui Zhang",
-            "Qirui Li",
-            "Yanbo Zhang",
-            "Duomin Wang",
-            "Ziwei Wang"
-          ]
-        },
-        {
-          "id": "2611.34130",
-          "title": "WorldPhy: Benchmarking Fine-Grained Physical Plausibility of World Models in Robotics",
-          "abstract": "World models are increasingly used in robotics to improve the performance of embodied models. Compared with general-purpose video generation, robotics places more stringent requirements on world models. Generated videos must satisfy fine-grained physical constraints on robot motion and object interactions. However, existing world model benchmarks can overlook robotics specific physical details and struggle to assess them accurately. To address this problem, we introduce WorldPhy, a world model benchmark for accurate, fine-grained evaluation of physical plausibility in robotics. Our benchmark contains 300 tasks, each consisting of an initial-frame image and a task instruction, covering diverse robotics scenes, task categories, viewpoints, and robot configurations. We further collect over 12K high-quality human annotations, and use them to train WorldPhyReward to accurately provide scores and reasons across six fine-grained physical dimensions and an instruction-following dimension. Comparisons with general VLMs and existing reward models show that WorldPhyReward better aligns with human ratings. We system- atically evaluate 13 frontier open and closed-source world models. The results reveal that current world models struggle to consistently maintain fine-grained physical plausibility across different robotics scenarios. Our code is available at https://github.com/chuziyuan139/ WorldPhy.",
-          "batch": "2026-11-26",
-          "kind": "new",
-          "authors": [
-            "Ziyuan Chu",
-            "Mingzhi Zheng",
-            "Kaiyue Zhang",
-            "Jinan Zhang",
-            "Linchao Zhu"
-          ]
-        },
-        {
-          "id": "2611.34288",
-          "title": "Rehearse in 3D, Render in 2D: Physically Consistent and Editable Robot World Models",
-          "abstract": "Embodied world models aim to predict future interactions that are both visually realistic and physically consistent. Yet explicit 3D motion prediction alone does not guarantee that object structure and contact relationships are preserved. Beyond motion prediction, 3D representations provide an explicit state space for imposing structural and physical constraints. Building on this insight, we introduce RehearsalWorld, an editable robot world model driven by 3D Interaction Rehearsal (3DIR). Given an initial RGB-D observation and robot actions, Interaction-Consistent Rehearsal (ICR) uses a pretrained 3D point-flow model as a motion prior. It refines the predicted trajectories through response-aware object grouping, persistent grasp memory, and contact structure refiner, preserving scene stability, object structure, and grasp attachments. Rehearsal-Aligned Video Generation (RAVG) then uses geometric projections of the rehearsal as temporal conditioning. We fine-tune a video generator on projection-video pairs to synthesize realistic interaction videos. Thanks to the decoupling of physical response from visual synthesis, RehearsalWorld also supports independent editing of material properties and camera viewpoints. Compared with PointWorld on real DROID grasping sequences, RehearsalWorld reduces gripper-relative offset by approximately 79% to 84% across deformable, articulated, and rigid objects and lowers reference motion error. For video prediction, it achieves a PSNR of 23.92 dB and an FVD of 149.",
-          "batch": "2026-11-26",
-          "kind": "new",
-          "authors": [
-            "Guangyu Liu",
-            "Hanzhang Wang",
-            "Huijia Zhang",
-            "Hanbei Zhan",
-            "Linjie Hu",
-            "Bin Xiao",
-            "Xuan Zhou",
-            "Dong Zhang",
-            "Hanwei Liu"
-          ]
-        },
-        {
-          "id": "2611.34302",
-          "title": "Co-World Model for Human-Video-to-Robot Transfer via Co-Constructed Shared Latent Dynamics",
-          "abstract": "Human videos are abundant and cheap to obtain, whereas robot trajectories remain scarce and costly, making zero-shot skill transfer from a single human demonstration an appealing route to scalable robot learning. Existing methods, however, either retarget human-specific geometry or match only static visual goals, and thus stumble over the cross-embodiment dynamics mismatch and the ungrounded action execution. We present the Co-World Model (CoWM), a predictive framework jointly optimized from paired yet unsynchronized human and robot streams. To bridge the cross-embodiment dynamics gap, CoWM disentangles each observation into a shared object-relation state and embodiment-specific context. It aligns latent actions across embodiments using effect-swap and action-sensitivity objectives,such that actions are matched by their predicted effects on the manipulated objects rather than by embodimentdependent kinematics. For grounded execution, a phase-aware receding-horizon controller estimates demonstration progress, projects the inferred human action prior onto the robot action-support density, and translates the resulting latent dynamics into executable robot commands. Extensive experiments in simulation and on two physical robot platforms demonstrate the effectiveness of CoWM, its cross-platform generalizability, and the contribution of each component. See the demo video in the supporting information for details.",
-          "batch": "2026-11-26",
-          "kind": "new",
-          "authors": [
-            "Xuetao Li",
-            "Xuan Jiang",
-            "Chen Liu",
-            "Zhongrui Rao",
-            "Yu Ling",
-            "Hui Wang",
-            "Sheng Liu",
-            "Miao Li"
-          ]
-        },
-        {
-          "id": "2611.34509",
-          "title": "Long-Horizon Planning with Latent World Models via Graph Anchors",
-          "abstract": "Latent world models plan in a compact latent space by predicting the outcomes of actions. Their planners judge a plan by the latent distance between its predicted end state and the goal image. We show that this distance fails in two distinct ways. First, it loses directional signal a few steps from the goal, causing distant goals to fail. Second, it weighs the robot arm over the manipulated object, causing manipulation to fail at contact. We measure both failures directly on recorded data by asking whether a lower latent distance corresponds to true progress toward the goal. Across five environments, six visual representations (including raw pixels and V-JEPA 2), and nine Meta-World tasks, this ranking test cleanly separates the two failures, and the graph distance to a goal predicts where closed-loop planning breaks down. Both failures share a single remedy: replacing the distant goal with a nearby target that lies on a recorded trajectory. We realize this principle with Graph Anchors, a training-free planner for frozen latent world models. It builds a sparse graph once over the model's own training frames and aims each planning step at a node a few moves ahead along the shortest path to the goal, keeping paths on recorded transitions wherever contact matters. On goals up to 400 steps away, Graph Anchors raise LeWM's success from 13% to 85% on PointMaze-Medium, from 8% to 87% on PointMaze-Large, and from 5% to 71% on Push-T, where stronger search toward the goal fails and where prior training-free planners break down under missing step horizons, subsampling shortcuts, or fragmented contact.",
-          "batch": "2026-11-26",
-          "kind": "new",
-          "authors": [
-            "Syed Nazmus Sakib",
-            "Abdul Monaf Chowdhury",
-            "Peizhen Li",
-            "Nafiul Haque",
-            "Chandak Chakma",
-            "Md Mehedi Hasan",
-            "Zehong Cao",
-            "Shifat E. Arman"
-          ]
-        },
-        {
-          "id": "2611.34597",
-          "title": "$\\mu$MPC: Microsecond-Scale Nonlinear and World Model Control from Edge to GPU via Koopman-Linearized Precompilation",
-          "abstract": "We present $\\mu$MPC, a fast model predictive control (MPC) framework that reduces online computation using learned Koopman-linearized dynamics. By precomputing finite-horizon control-to-output maps, $\\mu$MPC eliminates lifted-state trajectories, yielding an action-only Koopman-Compiled QP (KC-QP) with $Hn_u$ decision variables, independent of lifted dimension. A fixed, precomputed primal operator enables efficient primal-dual iterations using only matrix-vector products and projections, accommodating changing goals and constraints without refactorization. This efficiency also enables control-aware dynamics learning through differentiable KC-QPs in the training loop and batched DAgger-style data aggregation. $\\mu$MPC achieves solve times as low as $23\\mu$s on a desktop CPU and 24 ms onboard a 168 MHz Crazyflie microcontroller. It scales to 4096D quadruped control in under 5 ms, visual planning with 2048D world models in 0.4 ms, and collision-aware planning for 200 quadrotors at over 30 Hz on the GPU. Across these benchmarks, $\\mu$MPC achieves up to $108\\times$ faster constrained MPC and $1907\\times$ faster visuomotor planning than competing methods.",
-          "batch": "2026-11-26",
-          "kind": "new",
-          "authors": [
-            "Devesh Nath",
-            "Glen Chou"
-          ]
-        },
-        {
-          "id": "2611.33460",
-          "title": "Fast Muscle-Driven Whole-Body Motion Tracking with a Differentiable World Model",
-          "abstract": "Tracking motion capture with a whole-body musculoskeletal model means coordinating hundreds of muscles through contact, and current controllers take hours to days of GPU time to train, so every tuning decision is expensive. SuperMimic trains a tracking policy by backpropagating through the rollouts of a learned world model. We extend it to MS-Human-700 (700 muscles) and MyoFullBody (354 muscles), with MuJoCo's activation dynamics inside the world model. To make its training fast, our recipe takes the speedups developed for the Unitree G1, replaces three of their settings that fail on muscles, and adds four changes of our own: observations without muscle geometry, data collection concurrent with the updates, Beta exploration noise that keeps every excitation in $[0,1]$, and 50 Hz control. On one RTX 5090 it trains MS-Human-700 in 6.3 minutes to the held-out return that SuperMimic's published hyperparameters reach in 3.9 hours, 37$\\times$ sooner, and in 20 minutes to lower tracking errors than theirs after 10 hours. It trains MyoFullBody 34$\\times$ sooner without retuning. Ablations show what is specific to muscles: a higher policy learning rate stalls half of the runs, and clipped Gaussian noise adds a tonic co-contraction that Beta noise avoids. Finally, refining the policy's actions through the world model at test time lowers the position error by a further 26% with no held-out clip failing, and reaches the same return after 5.1 instead of 6.3 minutes of training. Code, the training recipe and videos are on the project page https://muscle-supermimic.beanpow.top.",
-          "batch": "2026-11-26",
-          "kind": "cross",
-          "authors": [
-            "Kaibo He",
-            "Maciej Bakowicz",
-            "Shihe Zhou",
-            "Yusen Feng",
-            "Yanan Sui",
-            "Dhanush Radhakrishnan"
-          ]
-        },
-        {
-          "id": "2611.33467",
-          "title": "SplatWAM: Splatting World Action Models for Real-Time 3D Imagination",
-          "abstract": "World models typically predict future observations in pixel or latent space, limiting their ability to directly represent true 3D scene evolution. We present SplatWAM (Splatting World Action Model), a generative world model that learns action-conditioned dynamics directly over compact 3D Gaussian primitives. A tokenizer SplatWAM-T first encodes a variable number of unposed views into a fixed budget of Gaussian tokens. A dynamics model SplatWAM-D then predicts future Gaussian states in a single forward pass per action, using log-Euclidean covariance coordinates and differentiable rendering supervision to facilitate learning in an explicit 3D space. Each predicted state can be rasterized from arbitrary viewpoints, enforcing a shared 3D representation across views by construction. On OGBench Scene, SplatWAM renders novel views 12x faster than video world models (~80 FPS on an RTX 5090) with up to 2.0 dB higher PSNR. We further introduce SplatWAM-P, a lightweight flow-matching policy head jointly trained with the dynamics model. Across 8 task suites, model-free Gaussian-token policies outperform pixel-based counterparts by up to 24.8 percentage points. SplatWAM-P improves over Latent Particle World Model (LPWM) by 12 percentage points and matches HIQL without a learned value function. On LIBERO, our ~1B model outperforms WorldVLA (~7B) and the robot-pretrained OpenVLA (~7B), while matching OpenVLA-OFT when both are trained without large-scale robot pretraining. Code and checkpoints will be released.",
-          "batch": "2026-11-26",
-          "kind": "cross",
-          "authors": [
-            "Frank Tsu-Fang Lu",
-            "Karthik Sundar Senthilkumar",
-            "Christopher Thirgood",
-            "Oscar Mendez",
-            "Simon Hadfield"
-          ]
-        },
-        {
-          "id": "2611.33779",
-          "title": "DuoWM:Integrating Dual 6-DoF Visual Flows into Action-Conditioned Drone World Model",
-          "abstract": "Action-conditioned video world models generate future observations from an initial frame and a camera trajectory, but often fail to align camera commands with visual dynamics or represent full 6-DoF scene transformations. We present DuoWM, a first-person drone video world model with two complementary visual conditions. Action flow projects future camera positions and orientations into each target frame, while Object flow forward-warps the initial observation and overlays local 6-DoF transformations to ground the induced scene motion. We further introduce transform-aware pretraining, which pairs object appearance with explicit transformation axes before standard RGB video training. On Sekai-drone dataset, DuoWM achieves the best results across video quality, 3D consistency, and trajectory following. Compared with Captain Safari, the state-of-the-art method, our approach reduces real-domain FVD and LPIPS by 17.2\\% and 21.6\\%, respectively, while improving game-domain AUC@30 from 0.5003 to 0.5719 and AUC@15 from 0.3088 to 0.3747.",
-          "batch": "2026-11-26",
-          "kind": "cross",
-          "authors": [
-            "Zixuan Li",
-            "Kangyao Huang",
-            "Meng Xu",
-            "Wan Tian",
-            "Xiaoyu Tang",
-            "Jinge Sun",
-            "Yingliang Yao",
-            "He Chen",
-            "Lingzhong Meng",
-            "Yunzhi Xue",
-            "Jingyu Chen"
-          ]
-        },
-        {
-          "id": "2611.33797",
-          "title": "DriftWAM: Faster World-Action Models via Action-Aware Video Drifting",
-          "abstract": "World-action models (WAMs) unify future video prediction and action generation for robotic control, but their reliance on iterative denoising incurs substantial inference costs. Distilling these models into few-step generators offers a promising route to efficient deployment, yet maintaining task performance under aggressive step reduction remains challenging. Existing methods rely on point-wise trajectory consistency distillation, which pursues high visual fidelity while leaving downstream action information unexploited in optimizing video generation, and also lacks explicit distribution-level alignment. To address this, we propose DriftWAM, a few-step WAM distillation framework that incorporates the actions induced by predicted videos into video learning. Specifically, DriftWAM integrates action-aware video drifting, which performs video distribution matching through a joint visual--action similarity kernel to steer sample evolution under the guidance of these induced actions, with action-guided video regularization, which leverages the compatible teacher--student matches identified by the joint kernel to backpropagate action-level gradients directly into the video generator. Evaluations on the RoboTwin 2.0 and LIBERO benchmarks, as well as in real-world robotic manipulation tasks, show that DriftWAM consistently outperforms prior consistency distillation methods across few-step settings at the same inference speed.",
-          "batch": "2026-11-26",
-          "kind": "cross",
-          "authors": [
-            "Minyang Li",
-            "Siyu Xu",
-            "Yunke Wang",
-            "Ying-Cong Chen",
-            "Chang Xu",
-            "Daochang Liu"
-          ]
-        },
-        {
-          "id": "2611.33799",
-          "title": "Dynamic Forcing: Learning Action-Grounded Sparse Dynamic Representations with Dense Future Guidance for World Action Models",
-          "abstract": "World action models (WAMs) support robot control through visual prediction, but dense future modeling repeatedly encodes static context already available in the current observation, while action-relevant changes are often spatially sparse. We study sparse dynamic representation learning, retaining the current observation as a contextual anchor and using a small set of compact dynamic tokens to represent anticipated changes. We develop CompactWAM, a sparse-dense joint predictive framework that enables sparse representation learning within a video-supervised shared backbone, without requiring a reconstruction objective for the sparse pathway. Since a limited token budget alone does not specify which information to retain, we introduce Dynamic Forcing, which pairs direct action supervision with privileged dense future guidance to promote action relevance and dynamic fidelity. While action prediction gradients directly drive compact tokens to capture control-relevant cues, dense future guidance further shapes them via action functional guidance that matches sparse and dense contributions to the action expert, and dynamics-aware distribution matching, which aligns temporal relational changes relative to a static reference. At inference, a single visual forward pass encodes current observations and compact dynamic tokens for action generation, eliminating dense future modeling. CompactWAM achieves 98.4\\% success on LIBERO and 77.9\\% on LIBERO-Plus, retaining respective success rates of 98.3\\% and 76.6\\% with only 9.2\\% of the dense future token budget. Evaluations on RoboTwin~2.0 and real-world manipulation further demonstrate the effectiveness of the learned sparse predictive representations.",
-          "batch": "2026-11-26",
-          "kind": "cross",
-          "authors": [
-            "Ziqiang Li",
-            "Shisheng Chen",
-            "Yunnan Wang",
-            "Wenyao Zhang",
-            "Zili Lin",
-            "Yuyang Zhang",
-            "Xudong Yang",
-            "Fangzhuo Jin",
-            "Chenyu Zhou",
-            "Wenjun Zeng",
-            "Xin Jin"
-          ]
-        },
-        {
-          "id": "2611.34054",
-          "title": "CARE-WM: Same-Horizon Self-Conditioning with Constraint-Adaptive Regularization for Latent World Models",
-          "abstract": "Planning with latent world models requires both accurate multi-step predictions and latent distances that reflect physical proximity to the goal. However, models are typically trained on ground-truth observations but must rely on their own imaginations during planning, while closer latent distances do not necessarily correspond to better task outcomes. Existing methods resort to auxiliary training objectives or additional task-cost readouts, which respectively incur extra training overhead or leave the latent geometry itself misaligned with task cost. We introduce CARE-WM, a drop-in training method that meets both requirements without additional supervision, a separate cost model, or any change to LeWM's architecture and Euclidean-cost planner. CARE-WM trains the predictor on its own predictions and adaptively calibrates the strength of latent regularization. With a single hyperparameter configuration, CARE-WM improves mean planning success over LeWM across all evaluated continuous-control tasks and matches or exceeds the best results of other LeWM-family methods on most tasks. Further analyses show lower open-loop latent prediction error and closer agreement between latent-cost rankings and physical task costs.",
-          "batch": "2026-11-26",
-          "kind": "cross",
-          "authors": [
-            "Yuchen Lin",
-            "Kai Zhao"
-          ]
-        },
-        {
-          "id": "2611.34422",
-          "title": "Can Visual World Models See Force?",
-          "abstract": "World models and vision-language-action policy models are increasingly proposed as foundations for robot manipulation. They predict how scenes evolve and which actions to take, yet successful manipulation depends not solely on following observable trajectories but also on the hidden variable of interaction force. Neurophysiology has shown that humans possess a visual prior for this hidden variable, motivating us to ask the question: Do the representations of visual foundation models also capture the forces involved in an interaction? We define force awareness as the ability of representations to (1) indicate when contact force is applied, (2) track how it changes during an interaction, and (3) reflect how large it is. We probe frozen image, video, world- and policy model representations with a lightweight readout trained on synchronized video and force measurements from two manipulation datasets. Our experiments show that most models capture when contact occurs but not how much force is being applied. Surprisingly, robot post-training does not improve this either, highlighting an important gap in current models capabilities.",
-          "batch": "2026-11-26",
-          "kind": "cross",
-          "authors": [
-            "Felix Tristram",
-            "Benjamin D. Killeen",
-            "Nassir Navab"
-          ]
-        },
-        {
-          "id": "2611.34644",
-          "title": "Motion Beyond Pixels: Learning Future Visual Representations for Object-Centric Dynamics",
-          "abstract": "Many embodied world models predict future states in latent spaces optimized for RGB reconstruction, which do not explicitly prioritize object-level semantics and geometry relevant to motion generation. We present MotionRep, a visual representation world model that jointly generates future DINO representations and 3D object flow, coupling semantic and geometric information with object-centric dynamics. To make high-dimensional DINO features amenable to generative modeling, we introduce DINO-VAE, which combines temporal and channel compression with latent regularization to produce compact latents while preserving semantic and geometric information. Conditioned on an initial observation, object query points, and a language instruction, a unified diffusion transformer predicts future visual representations and 3D object flow through joint attention. MotionRep employs asymmetric modality-specific noise schedules to keep the visual stream ahead of 3D object flow during joint denoising, allowing progressively refined future visual representations to guide flow generation. Experiments on simulated and real-world manipulation benchmarks demonstrate that MotionRep outperforms pixel-based baselines in 3D object flow accuracy and generalization to unseen scenes, while requiring only three denoising steps for inference. These results support predictive visual representations as an effective future-state space for object-centric dynamics modeling.",
-          "batch": "2026-11-26",
-          "kind": "cross",
-          "authors": [
-            "Chengzhi Zhao",
-            "Juelin Li",
-            "Zhennan Wang",
-            "Sheng Wang",
-            "Zhuoman Liu",
-            "Yuhao Lu",
-            "Jiongxu Chen",
-            "Haitang Feng",
-            "Yanjie Li",
-            "Lin Shao"
-          ]
-        },
-        {
-          "id": "2611.34739",
-          "title": "Was the Model Given the Right Action? Auditing and Repairing Action Interfaces in Navigation World Models",
-          "abstract": "World models are evaluated by predicting future observations from actions. These evaluations assume that actions are prepared the same way as during training, but an unchecked mismatch can make a model appear less accurate than it is. We audit this assumption in Navigation World Models (NWM) and find three interacting differences between its training and rollout code. Correcting the inputs, without retraining, reduces mean visual prediction error by 42%, measured with DreamSim on the RECON navigation dataset. The correction also changes the ranking of NWM checkpoints in an exploratory analysis and removes or reduces two alternative models' measured advantages. Correcting only the normalization offset instead increases error, showing why interacting mismatches must be checked together. To test whether sensitivity to input preparation extends beyond NWM, we deliberately introduce encoding errors into two alternative models; both become less accurate. We introduce ActRosetta, a tool that checks whether action encoding matches training, identifies supported causes of disagreement, and repairs inputs when sufficient information is available. Repair helps little where predictions barely respond to actions, the tool's diagnosis has limited coverage, and improved control remains unproven. For any action-conditioned world model, the lesson is the same: before reporting rollout error, verify that evaluation encodes actions exactly as training did.",
-          "batch": "2026-11-26",
-          "kind": "cross",
-          "authors": [
-            "Ajmain Istiak Apon",
-            "Md Mehedi Hasan",
-            "Sejuti Rahman"
-          ]
-        },
-        {
-          "id": "2611.31901",
-          "title": "PreWAM: Exploring the Design of Latent Future Prediction for World-Action Modeling",
-          "abstract": "World-action models combine action generation with future prediction, allowing visual transitions to serve as supervision for policy learning. Our controlled study of prediction spaces shows that spatially structured semantic features support better overall generalization under visual perturbations and make motion information more readily recoverable from learned predictive representations. Building on these observations, we introduce PreWAM, a world-action model that organizes future supervision around state changes in a prediction space defined by pretrained DINO features. Specifically, Residual World Prediction jointly learns source-relative changes and their resulting future states to emphasize dynamic information while preserving future-state semantics. Temporal-Scale Prediction conditions world queries on temporal distance to capture both short-term local motion and longer-horizon state evolution. These predictive objectives jointly shape a shared vision-language backbone with action supervision during pretraining and downstream policy learning. Experiments across the LIBERO benchmark family, SimplerEnv, RoboTwin 2.0, and real-world robotic manipulation demonstrate strong manipulation performance and improved generalization and robustness under diverse distribution shifts.",
-          "batch": "2026-11-25",
-          "kind": "new",
-          "authors": [
-            "Wan Chi",
-            "Sen Li",
-            "Zihang Cui",
-            "Chuqin Huang",
-            "Yunlong Wang",
-            "Nanshan Deng",
-            "Yanjun Huang"
           ]
         }
       ],
@@ -4087,8 +4087,8 @@
       "batches": 3,
       "teams": 3,
       "previous": null,
-      "communityCount": 2,
-      "communityUpvotes": 107,
+      "communityCount": 1,
+      "communityUpvotes": 42,
       "papers": [
         {
           "id": "2611.34671",
@@ -4133,7 +4133,7 @@
             "Enze Xie",
             "Daquan Zhou"
           ],
-          "upvotes": 43
+          "upvotes": 42
         },
         {
           "id": "2611.31205",
@@ -4148,8 +4148,460 @@
             "Chengkai Jin",
             "Zhi Hou",
             "Xingang Pan"
+          ]
+        }
+      ],
+      "lastSeen": "2026-11-26"
+    },
+    {
+      "id": "phrase-76ce0db74d57",
+      "name": "World Action",
+      "rule": "Recurring title phrase",
+      "count": 33,
+      "batches": 7,
+      "teams": 30,
+      "previous": null,
+      "communityCount": 1,
+      "communityUpvotes": 34,
+      "papers": [
+        {
+          "id": "2611.33710",
+          "title": "$\\mathrm{M}^{2}$-WAM: Efficient Hierarchical Memory Across Modalities and Timescales for World-Action Models",
+          "abstract": "Long-horizon robotic manipulation requires historical context, yet retaining extensive visual histories incurs growing storage and retrieval costs, while aggressive compression risks losing fine-grained information needed for subsequent decisions. Moreover, executed action histories capture intermediate behaviors that sparse visual observations may miss. Preserving this complementary context efficiently calls for modality-specific memory mechanisms that balance recent detail with long-term retention. To this end, we introduce $\\mathrm{M}^{2}$-WAM, a world-action model equipped with hierarchical visual and interaction memories. $\\mathrm{M}^{2}$-WAM preserves recent visual observations in dense short-term memory while consolidating entries evicted from this window into fixed-size associative long-term memory through gated delta updates. Within the same short- and long-term hierarchy, interaction memory encodes executed action prefixes into compact temporal representations, complementing visual observations with behavioral context. These complementary memories are integrated into world-action modeling through layer-wise retrieval, enabling memory-augmented action generation with a bounded online memory footprint independent of episode length. On the memory-dependent simulation benchmarks MIKASA-Robo and RMBench, $\\mathrm{M}^{2}$-WAM achieves +53.2% and +61.2% absolute improvements in average success rates over Fast-WAM, respectively. These gains extend to real-world manipulation, where $\\mathrm{M}^{2}$-WAM achieves a +29.3% absolute improvement over LingBot-VA in average success across three tasks. These results suggest that $\\mathrm{M}^{2}$-WAM offers a promising approach to efficient memory-augmented world-action modeling.",
+          "batch": "2026-11-26",
+          "kind": "new",
+          "authors": [
+            "Xiaopeng Zhang",
+            "Weiqi Yuan",
+            "Xin Zhu",
+            "Jiaxi Huang",
+            "Yueqi Hu",
+            "Yin Zhang",
+            "Jian Yao",
+            "Yanjie Li"
+          ]
+        },
+        {
+          "id": "2611.33963",
+          "title": "Targeted Adaptation of World-Action Models via Interaction and Motion Heads",
+          "abstract": "World-Action Models (WAMs) are a promising new paradigm of robot manipulation policies that jointly generate future video and actions. Successful manipulation requires both identifying where to interact and modeling how the robot and objects move. Yet standard adaptation methods, such as full fine-tuning and LoRA, do not explicitly select parameters aligned with these manipulation-specific capabilities. Motivated by this challenge, we discover two functionally specialized families of attention heads: Next-Interaction Heads, which localize upcoming grasp-and-release targets, and Motion Heads, which track movement across frames. Furthermore, we introduce HeadLight, a parameter-efficient refinement method that jointly adapts Next-Interaction Heads and Motion Heads. On RoboTwin tasks unseen during fine-tuning, HeadLight achieves 62.28% success, compared with 57.89% for full fine-tuning and 58.66% for LoRA, while updating only 1.1% of parameters. Inference-time ablations further validate the functional importance of these heads: ablating Motion Heads reduces manipulation success from 57.89% to 0.94%, while ablating Next-Interaction Heads lowers it to 40.61%, both substantially more than ablating equally many random heads. Finally, we show that our approach is effective across multiple WAM architectures and real-robot manipulation settings.",
+          "batch": "2026-11-26",
+          "kind": "new",
+          "authors": [
+            "Yuze Zhu",
+            "Jacky Li",
+            "Yusen Luo",
+            "Ken Jiankun Zheng",
+            "Chancharik Mitra",
+            "Trevor Darrell",
+            "Roei Herzig"
+          ]
+        },
+        {
+          "id": "2611.34124",
+          "title": "WAtcher: Watching Ahead for Safe Robotic Manipulation with Efficient World-Action Models",
+          "abstract": "World-action models (WAMs) couple future imagination with action generation, but they execute every action chunk while ignoring the potential risk. To fill this gap, we present WAtcher, a safety-aware world-action framework in which the policy imagines the outcome of the candidate chunk before execution. For fast future preview, WAtcher builds on a compact WAM whose video expert imagines the visual outcome in only two denoising steps. In addition, we propose Safe-Guard, a lightweight module kept outside the WAM that scores each candidate chunk from its imagined outcome and triggers a bounded retreat when the risk is high. Safe-Guard is detachable and can be applied to other WAMs. To train Safe-Guard, we build an autonomous pipeline to collect hazard data from RoboTwin, LIBERO, and a real robot. Specifically, the pipeline perturbs expert demonstrations and labels each candidate chunk from the physical events recorded when it is executed, such as contacts and losses of support. Using the ~25,000 labeled windows from this pipeline, Safe-Guard reaches 92.1% balanced accuracy on a blind set, and cuts hazardous closed-loop trials on training tasks from 27.0% to 10.8% without lowering task success. On a held-out 300-question benchmark, it scores 94.2%, against 72.5% and 63.3% for zero-shot GPT-6-Astra and Claude Opus 5.5. WAtcher also reaches 90.4% and 82.4% average success on RoboTwin 2.0 and ManiSkill3, on par with or above leading WAMs, and 74.0% on five real-world tasks with Safe-Guard on, against 59.5% for $\\pi_{0.5}$. Project page: https://zyshan0929.github.io/WAtcher",
+          "batch": "2026-11-26",
+          "kind": "new",
+          "authors": [
+            "Ziyu Shan",
+            "Xiao Ma",
+            "Kangrui Yu",
+            "Changjie Wang",
+            "Gaoyuan Wu",
+            "Zaijia Yang",
+            "Chuanrui Zhang",
+            "Qirui Li",
+            "Yanbo Zhang",
+            "Duomin Wang",
+            "Ziwei Wang"
+          ]
+        },
+        {
+          "id": "2611.33467",
+          "title": "SplatWAM: Splatting World Action Models for Real-Time 3D Imagination",
+          "abstract": "World models typically predict future observations in pixel or latent space, limiting their ability to directly represent true 3D scene evolution. We present SplatWAM (Splatting World Action Model), a generative world model that learns action-conditioned dynamics directly over compact 3D Gaussian primitives. A tokenizer SplatWAM-T first encodes a variable number of unposed views into a fixed budget of Gaussian tokens. A dynamics model SplatWAM-D then predicts future Gaussian states in a single forward pass per action, using log-Euclidean covariance coordinates and differentiable rendering supervision to facilitate learning in an explicit 3D space. Each predicted state can be rasterized from arbitrary viewpoints, enforcing a shared 3D representation across views by construction. On OGBench Scene, SplatWAM renders novel views 12x faster than video world models (~80 FPS on an RTX 5090) with up to 2.0 dB higher PSNR. We further introduce SplatWAM-P, a lightweight flow-matching policy head jointly trained with the dynamics model. Across 8 task suites, model-free Gaussian-token policies outperform pixel-based counterparts by up to 24.8 percentage points. SplatWAM-P improves over Latent Particle World Model (LPWM) by 12 percentage points and matches HIQL without a learned value function. On LIBERO, our ~1B model outperforms WorldVLA (~7B) and the robot-pretrained OpenVLA (~7B), while matching OpenVLA-OFT when both are trained without large-scale robot pretraining. Code and checkpoints will be released.",
+          "batch": "2026-11-26",
+          "kind": "cross",
+          "authors": [
+            "Frank Tsu-Fang Lu",
+            "Karthik Sundar Senthilkumar",
+            "Christopher Thirgood",
+            "Oscar Mendez",
+            "Simon Hadfield"
+          ]
+        },
+        {
+          "id": "2611.33797",
+          "title": "DriftWAM: Faster World-Action Models via Action-Aware Video Drifting",
+          "abstract": "World-action models (WAMs) unify future video prediction and action generation for robotic control, but their reliance on iterative denoising incurs substantial inference costs. Distilling these models into few-step generators offers a promising route to efficient deployment, yet maintaining task performance under aggressive step reduction remains challenging. Existing methods rely on point-wise trajectory consistency distillation, which pursues high visual fidelity while leaving downstream action information unexploited in optimizing video generation, and also lacks explicit distribution-level alignment. To address this, we propose DriftWAM, a few-step WAM distillation framework that incorporates the actions induced by predicted videos into video learning. Specifically, DriftWAM integrates action-aware video drifting, which performs video distribution matching through a joint visual--action similarity kernel to steer sample evolution under the guidance of these induced actions, with action-guided video regularization, which leverages the compatible teacher--student matches identified by the joint kernel to backpropagate action-level gradients directly into the video generator. Evaluations on the RoboTwin 2.0 and LIBERO benchmarks, as well as in real-world robotic manipulation tasks, show that DriftWAM consistently outperforms prior consistency distillation methods across few-step settings at the same inference speed.",
+          "batch": "2026-11-26",
+          "kind": "cross",
+          "authors": [
+            "Minyang Li",
+            "Siyu Xu",
+            "Yunke Wang",
+            "Ying-Cong Chen",
+            "Chang Xu",
+            "Daochang Liu"
+          ]
+        },
+        {
+          "id": "2611.33799",
+          "title": "Dynamic Forcing: Learning Action-Grounded Sparse Dynamic Representations with Dense Future Guidance for World Action Models",
+          "abstract": "World action models (WAMs) support robot control through visual prediction, but dense future modeling repeatedly encodes static context already available in the current observation, while action-relevant changes are often spatially sparse. We study sparse dynamic representation learning, retaining the current observation as a contextual anchor and using a small set of compact dynamic tokens to represent anticipated changes. We develop CompactWAM, a sparse-dense joint predictive framework that enables sparse representation learning within a video-supervised shared backbone, without requiring a reconstruction objective for the sparse pathway. Since a limited token budget alone does not specify which information to retain, we introduce Dynamic Forcing, which pairs direct action supervision with privileged dense future guidance to promote action relevance and dynamic fidelity. While action prediction gradients directly drive compact tokens to capture control-relevant cues, dense future guidance further shapes them via action functional guidance that matches sparse and dense contributions to the action expert, and dynamics-aware distribution matching, which aligns temporal relational changes relative to a static reference. At inference, a single visual forward pass encodes current observations and compact dynamic tokens for action generation, eliminating dense future modeling. CompactWAM achieves 98.4\\% success on LIBERO and 77.9\\% on LIBERO-Plus, retaining respective success rates of 98.3\\% and 76.6\\% with only 9.2\\% of the dense future token budget. Evaluations on RoboTwin~2.0 and real-world manipulation further demonstrate the effectiveness of the learned sparse predictive representations.",
+          "batch": "2026-11-26",
+          "kind": "cross",
+          "authors": [
+            "Ziqiang Li",
+            "Shisheng Chen",
+            "Yunnan Wang",
+            "Wenyao Zhang",
+            "Zili Lin",
+            "Yuyang Zhang",
+            "Xudong Yang",
+            "Fangzhuo Jin",
+            "Chenyu Zhou",
+            "Wenjun Zeng",
+            "Xin Jin"
+          ]
+        },
+        {
+          "id": "2611.31705",
+          "title": "FoveaWAM: Role-Aware 4D World-Action Modeling for Dynamic Manipulation",
+          "abstract": "To manipulate a moving object, a policy must predict the scene at the moment its action executes, yet every millisecond spent predicting pushes that moment further away. Scene-level forecasts are computationally expensive, whereas target-centric forecasts can omit nearby objects that affect contact. Our key insight is that what a policy must predict decouples by role: only the target's pose, which determines contact, requires millimeter precision, while the surroundings matter primarily through the clearance they leave and the motion they impart. We present FoveaWAM, a native 4D world-action model that allocates precision according to these roles. Specifically, it models the target's past and future motion as a metric SE(3) trajectory, the surroundings as sparse 3D flow, and relies on the current frame for everything static. This compact representation lets FoveaWAM act in 15.1 ms on one RTX 5090, about 10 times faster than video world-action baselines, leaving substantially less time for the scene to evolve before action execution. To evaluate each policy under its own latency, we introduce OnTimeBench, a dynamic manipulation benchmark in which the scene keeps moving while the policy computes. FoveaWAM reaches 82.1% success on OnTimeBench, 20.8 points above the strongest baseline, and also leads on DOMINO and real-robot tasks. Project page: https://foveawam.github.io/",
+          "batch": "2026-11-25",
+          "kind": "new",
+          "authors": [
+            "Jiaqi Yin",
+            "Baoyue Zhang",
+            "Jiyuan Zhang",
+            "Wenxuan Liu",
+            "Zhaofei Yu",
+            "Yue Deng",
+            "Tiejun Huang"
+          ]
+        },
+        {
+          "id": "2611.31901",
+          "title": "PreWAM: Exploring the Design of Latent Future Prediction for World-Action Modeling",
+          "abstract": "World-action models combine action generation with future prediction, allowing visual transitions to serve as supervision for policy learning. Our controlled study of prediction spaces shows that spatially structured semantic features support better overall generalization under visual perturbations and make motion information more readily recoverable from learned predictive representations. Building on these observations, we introduce PreWAM, a world-action model that organizes future supervision around state changes in a prediction space defined by pretrained DINO features. Specifically, Residual World Prediction jointly learns source-relative changes and their resulting future states to emphasize dynamic information while preserving future-state semantics. Temporal-Scale Prediction conditions world queries on temporal distance to capture both short-term local motion and longer-horizon state evolution. These predictive objectives jointly shape a shared vision-language backbone with action supervision during pretraining and downstream policy learning. Experiments across the LIBERO benchmark family, SimplerEnv, RoboTwin 2.0, and real-world robotic manipulation demonstrate strong manipulation performance and improved generalization and robustness under diverse distribution shifts.",
+          "batch": "2026-11-25",
+          "kind": "new",
+          "authors": [
+            "Wan Chi",
+            "Sen Li",
+            "Zihang Cui",
+            "Chuqin Huang",
+            "Yunlong Wang",
+            "Nanshan Deng",
+            "Yanjun Huang"
+          ]
+        },
+        {
+          "id": "2611.32483",
+          "title": "CodeWAM: A Code World Action Model for End-to-End Autonomous Driving",
+          "abstract": "Driving world models anticipate action consequences through representations of how the world evolves. For autonomous driving, these representations must capture both the surrounding scene and the ego vehicle's motion under a candidate plan. We propose CodeWAM, a driving world model that incorporates executable code as part of its world representation. Code represents ego dynamics by expressing how the vehicle state evolves under plan execution, while a learned visual model captures scene-dependent consequences. Executing the code produces a candidate-conditioned motion sequence, which is evaluated relative to the prior plan and recorded motion history. The resulting execution consequences and learned scene outcomes jointly represent the candidate's future, enabling the planner to assess both what a plan may lead to and how the vehicle transitions into that future. The selected plan becomes part of the next decision's execution context, linking successive choices within the model. CodeWAM achieves 93.6 PDMS on NAVSIM v1 navtest, 92.1 EPDMS on v2 navtest, and 50.6 EPDMS on NAVHARD. Further experiments demonstrate improved pairwise execution consistency and gains on Hydra-MDP and DrivoR without additional training, supporting executable code as a complementary representation for driving world models.",
+          "batch": "2026-11-25",
+          "kind": "new",
+          "authors": [
+            "Zhisheng Chen",
+            "Jinpeng Wang",
+            "Beicheng Lou",
+            "Zhengwei Xie",
+            "Hao Wu",
+            "Rui Qian",
+            "Kun Wang",
+            "Vivian W. H. Wong"
+          ]
+        },
+        {
+          "id": "2611.32722",
+          "title": "AG-WAM: Attention-Guided World Action Model for Accurate and Efficient Robot Manipulation",
+          "abstract": "Recently developed World Action Models (WAMs) jointly predict future observations and robot actions, providing predictive context for control. However, existing WAMs typically learn implicit attention allocation with limited explicit action-relevant attention guidance, leading to limited performance. To unleash strong capabilities of WAMs, we introduce explicit attention guidance as a unifying principle and propose our Attention-Guided WAM (AG-WAM), an end-to-end framework with three plug-and-play attention guidance modules that directly reformulate internal attention paradigm in WAMs: the Content-Adaptive Predictive Attention module, the Guidance-Point Visual Attention module, and the State-Conditioned Text Attention module. Without any external plugin module adopted, our end-to-end framework with the unifying principle of explicit attention guidance boosts the accuracy and efficiency of WAMs. Without using any private embodied training data, our AG-WAM establishes new state-of-the-art performance on multiple public robotic manipulation benchmarks including LIBERO-X, LIBERO-Plus, and RoboTwin-2.0, significantly outperforming other methods, even those using massive private embodied training data by a notable margin, meanwhile notably improving training and inference efficiency.",
+          "batch": "2026-11-25",
+          "kind": "new",
+          "authors": [
+            "Hongcheng Zhang",
+            "Lei Sun",
+            "Songxuan Liu",
+            "Tengteng Pan",
+            "Yuqiang Zhai",
+            "Xianglong Xu",
+            "Jianya Guo",
+            "Xiao Song"
+          ]
+        },
+        {
+          "id": "2611.31740",
+          "title": "LeanWAM: Learning Latent World Action Models from Frozen Video Models",
+          "abstract": "World action models (WAMs) typically adapt large pretrained video generators to jointly predict future observations and robot actions, incurring substantial training and deployment costs. However, it remains unclear which future representations a policy actually needs and how compactly they can be represented. Our probing study shows that complementary future representations can be compressed into a few tokens while retaining most of their action-decoding performance. Motivated by this finding, we introduce LeanWAM, a latent WAM that transfers video priors from a frozen video generator to a lightweight policy via two-stage training. In the first stage, a Future Extractor compresses observed transitions into 32 predictive tokens. These tokens condition the frozen generator and are jointly shaped by action, RGB, semantic, and geometric supervision, while a compact readout of the generator's hidden states supplies complementary world tokens. The second stage distills both representations into the policy, which learns to predict them from current observations while generating actions. With 1.4B parameters and no large-scale embodied pretraining, LeanWAM outperforms strong vision-language-action (VLA) and WAM baselines on LIBERO, LIBERO-Plus, and RoboTwin~2.0. It predicts an action chunk in 25.1\\,ms on an A100 GPU, 12.3--41.5$\\times$ faster than representative WAMs. These results demonstrate that compact predictive supervision can transfer video priors to robust and efficient control.",
+          "batch": "2026-11-25",
+          "kind": "cross",
+          "authors": [
+            "Shaolong Li",
+            "Hongze Fu",
+            "Joyce Chai",
+            "Yinpei Dai"
+          ]
+        },
+        {
+          "id": "2611.31822",
+          "title": "G0.7: Scaling Up a Fast World Action Model with Long Context",
+          "abstract": "World action models (WAMs) adapt pretrained video generators for robot control by jointly predicting future camera frames and actions, transferring physical priors learned from video into manipulation policies. However, generating future frames before every action makes test-time inference too slow for closed-loop control, while most existing policies remain restricted to short observation histories. Building on Fast-WAM, which showed that video prediction shapes policy representations during training so that future frame synthesis can be skipped at deployment, we present G0.7, a generalist world action model scaled along two axes: extending the context window from a single observation to up to five minutes of history, and scaling pretraining to a large-scale corpus of robot teleoperation and human egocentric (ego) video. Across public simulation suites and real-robot deployments, direct action decoding (Fast mode) matches imagine-then-act (IDM) inference from the same checkpoint while running in 60 ms per 16-step action chunk on a single RTX 5090 (7.6x faster than IDM) and supporting pause-free real-time chunking. Performance scales consistently with pretraining data, with human ego video driving the largest gains in out-of-distribution generalization: G0.7 achieves a 70.8 mean score across five simulation benchmark suites, 48% and 54% zero-shot pick-and-place success on Galaxea R1 Pro and R1 Lite, 96.7% in-distribution and 93.3% out-of-distribution success on video-conditioned in-context learning tasks, and 86.9% mean task progress across seven real-world post-training tasks including multi-minute box folding, drink preparation, and product bagging.",
+          "batch": "2026-11-25",
+          "kind": "cross",
+          "authors": [
+            "Tianyuan Yuan",
+            "Baijun Ye",
+            "Shicheng Cao",
+            "Xing Nie",
+            "Xiaopeng Yu",
+            "Ke Dong",
+            "Zijie Zhao",
+            "Shenling Qiu",
+            "Yizhao Xu",
+            "Feiyang Xue",
+            "Haonan Liu",
+            "Haoyu Zhang",
+            "Haobo Jia",
+            "Zheng Liu",
+            "Anqi Yang",
+            "Jiahui Niu",
+            "Yue Sun",
+            "Tailai Cheng",
+            "Jianpeng Yu",
+            "Yang Wen",
+            "Longhao Wei",
+            "Zibin Dong",
+            "Shiduo Zhang",
+            "Yicheng Liu",
+            "Hang Zhao"
+          ]
+        },
+        {
+          "id": "2611.28732",
+          "title": "Entangle: Scaling Human-Video In-Context World-Action Models across Unseen Tasks and Contexts",
+          "abstract": "In-context learning (ICL) enables foundation models to perform unseen tasks from context without parameter updates. In robotic manipulation, a human video provides the context that specifies how a task should be performed. However, scaling human-video ICL on world-action models (WAMs) faces two challenges: task-level human-robot pairs are not temporally aligned with robot actions, and standard action losses allow policies to rely on initial-scene or task-identity shortcuts rather than tracking the context. We present Entangle, an in-context world-action model that maps a single human video and current robot observations to future visual states and executable actions. To scale temporally aligned training data, we convert recorded robot videos into matched human contexts via video-to-video generation, supplemented by real paired recordings. For model training, we combine variable-length video windows with an intra-task contrastive objective that distinguishes the paired action trajectory from other executions of the same task, preventing task-identity shortcuts. Without task-specific fine-tuning, Entangle improves steadily as aligned training data scales, reaching an average score of 83.5/100 across six unseen tasks on an Astribot S1 robot, and achieves a 69.5% average success rate on seven unseen RoboTwin tasks, outperforming Zero-WAM by 22.6 percentage points. Under Context-OOD, although trained only on scene-aligned pairs, Entangle transfers context-specified behaviors across rearranged layouts and substituted tools.",
+          "batch": "2026-11-24",
+          "kind": "new",
+          "authors": [
+            "Chendong Xiang",
+            "Chengwen Zhang",
+            "Ruowen Zhao",
+            "Zeyuan Wang",
+            "Shuhe Huang",
+            "Rongxu Cui",
+            "Min Zhao",
+            "Fan Bao",
+            "Hengkai Tan",
+            "Jun Zhu"
           ],
-          "upvotes": 64
+          "upvotes": 34
+        },
+        {
+          "id": "2611.28943",
+          "title": "SANA-Robot: Efficient World Action Model with Hybrid Memory",
+          "abstract": "World action models (WAMs) leverage the world knowledge of video generation models to improve action generation by aligning visual prediction with action prediction. However, their prediction overhead prevents real-time deployment on edge devices, and they usually lack an effective long-term memory. We introduce SANA-Robot, a 4.5B WAM with minute-level memory that runs in real time on edge devices, built on the following core designs: (1) hybrid memory at constant cost: our WAM relies on linear attention to maintain a global memory with a fixed-size state, and on sliding window softmax attention layers that propagate previous information, enabling high success rates on tasks requiring whole-episode memory while keeping an efficient and constant inference speed; (2) a unified model: by dynamically applying different noise levels to action and video tokens, SANA-Robot can serve not only as a policy but also as a world simulator; (3) a full-stack infrastructure for both memory training and inference, including efficient data packing and shuffling as well as memory-phase-based asynchronous execution. SANA-Robot achieves the best performance on the memory dimension of RoboDojo among models of medium size (about 5B) and the highest success rates on LIBERO-Plus, LIBERO-Pro and LIBERO-Max. In real-world deployment, SANA-Robot takes 135 ms per action chunk on an RTX 5090 with FP8 GEMMs and 115 ms with NVFP4 GEMMs, and achieves closed-loop, real-time asynchronous robot control at 30 Hz on edge devices, demonstrating both the efficiency and the effectiveness of SANA-Robot. Project page: https://nvlabs.github.io/Sana/Robot/",
+          "batch": "2026-11-24",
+          "kind": "new",
+          "authors": [
+            "Yuyang Zhao",
+            "Zekai Li",
+            "Yicheng Pan",
+            "Jiaming Tang",
+            "Zhuoyang Zhang",
+            "Jiaxu Xing",
+            "Moritz Reuss",
+            "Quanquan Peng",
+            "Junsong Chen",
+            "Enze Xie",
+            "Zhijian Liu",
+            "Song Han"
+          ]
+        },
+        {
+          "id": "2611.29277",
+          "title": "$\\zeta_0$: A Framework for World Action Models with Joint Scene and Body Foresight in Humanoid Control",
+          "abstract": "World Action Models anticipate visual outcomes to guide robot actions, yet humanoid interaction also depends on how the robot's body responds. Visual foresight alone can miss body motion, while latent-distance losses do not directly supervise action responses. We present $\\zeta_0$, a framework that turns vision-language-action policies into World Action Models by foreseeing future visual features and measured joint trajectories in a shared latent representation. During training, a teacher conditioned on recorded futures provides a reference action response, and dual-response transfer trains the causal predictor to match it through the teacher and the executing policy. All components are trained jointly, and deployment uses only causally predicted futures. On seven HumanoidArena tasks, $\\zeta_0$ built on $\\Psi_0$ and GR00T N1.7 reaches 63.6% and 79.5% mean success, 18.8 and 9.0 points above these bases. On six real-world tasks, it reaches 78.3% and 85.0%, gains of 16.7 and 10.0 points. On GR00T, its 79.5% tops all compared seven-task joint policies. Project page: https://chenyizhi123.github.io/zeta0-project/",
+          "batch": "2026-11-24",
+          "kind": "new",
+          "authors": [
+            "Yizhi Chen",
+            "Zhanxiang Cao",
+            "Yitong Wang",
+            "Junyu Liu",
+            "Hongchu Zeng",
+            "Xinyi Peng",
+            "Chuxuan Huang",
+            "Yicheng Su",
+            "Zihao Zhou",
+            "Shengcheng Fu",
+            "Haoyang Li",
+            "Liyun Yan",
+            "Tianyue Zhan",
+            "Jianming Ma",
+            "Yang Zhang",
+            "Keqi Zhu",
+            "Xiaxi Si",
+            "Jinming Yao",
+            "Qiao Sun",
+            "Shizeng Zhang",
+            "Jiangwei Zhong",
+            "Yue Gao"
+          ]
+        },
+        {
+          "id": "2611.29501",
+          "title": "MAWAM: Joint Imagination for Collaborative Robot Manipulation with a Multi-Agent World Action Model",
+          "abstract": "World action models (WAMs) excel at robot manipulation by imagining future observations and decoding actions from them, yet remain confined to a single embodied agent. In practice, manipulation often requires multiple robots to collaborate across disjoint workspaces, coupled timing, and heterogeneous embodiments. Such coordination demands both spatiotemporal alignment of future interactions and awareness of individual embodiment and role identities, whereas existing decentralized per-robot policies, flat centralized models, and multi-robot VLAs fail to unite both. To bridge this gap, we present MAWAM, a multi-agent world action model that jointly predicts the future observations of multiple embodiments and decodes each agent's actions from them for collaborative manipulation. Through an agent-axis curriculum, MAWAM expands a single-agent WAM along an agent dimension to coordinate teams under shared weights. Within one unified causal sequence, joint self-attention spans all agents to spatiotemporally align their imagined futures, while hierarchical language, identity encodings, and embodiment masks bind each stream to its role, identity, and embodiment. We further formalize multi-agent-necessary manipulation along three axes (why, when, and who) and develop MA-Task Harness, a coding-agent pipeline where mutually constraining generators and evaluators co-evolve customizable simulation-data and evaluation packages. Using this pipeline, we build MA-Bench across all axes with seven tasks, pairing joint success rate with role and collaboration scores for fine-grained analysis. On MA-Bench, MAWAM reaches 82.7% mean joint success, 30.7% above the strongest baseline, and achieves real-time closed-loop collaboration on a real heterogeneous robot team.",
+          "batch": "2026-11-24",
+          "kind": "new",
+          "authors": [
+            "Rongze Tang",
+            "Chenyu Zhou",
+            "Jianjie Fang",
+            "Ziming Liu",
+            "Zhaolu Wang",
+            "Ziyou Wang",
+            "Xvyuan Liu",
+            "Wei Wu",
+            "Chen Gao",
+            "Yong Li",
+            "Zhibo Chen"
+          ]
+        },
+        {
+          "id": "2611.30024",
+          "title": "FlexWAM: Learning Flexible Visual Routing for World Action Models",
+          "abstract": "Humans dynamically adjust their reliance on sensory modalities across manipulation stages. Although existing World Action Models (WAMs) fuse multi-camera observations, they struggle to adapt their reliance on individual views based on the current observations. This raises a central question: how can the action expert integrate complementary visual evidence while prioritizing the views most relevant to the current action? FlexWAM addresses this challenge through three modules. First, we alternate within-view and cross-view attention to capture view-specific dynamics and complementary cues. For action prediction, View-Routed Action Attention uses an observation-conditioned router to prioritize relevant views. To calibrate routing, we train a critic using counterfactual view credit, estimated from action loss sensitivity upon suppressing each view's contribution to action attention. We evaluate FlexWAM with two video backbones on five challenging real-world manipulation tasks across two robot platforms. The two variants improve mean task success by 16.4 and 23.0 percentage points over the strongest baseline. Project website: https://flexwam.github.io/.",
+          "batch": "2026-11-24",
+          "kind": "new",
+          "authors": [
+            "Mingyu Mei",
+            "Haojie Xu",
+            "Zibo Dai",
+            "Hongjie Fang",
+            "Shirun Tang",
+            "Zhengrui Lv",
+            "Yang Liu",
+            "Chen Guang",
+            "Xingyue Zhao",
+            "Huiliang Shen",
+            "Zaixing He"
+          ]
+        },
+        {
+          "id": "2611.30041",
+          "title": "Spiking World-Action Models for Robotic Manipulation",
+          "abstract": "World action models (WAMs) predict how the world responds to actions and offer a promising path toward general embodied intelligence, but they are large and run the network many times per plan, so they are hard to deploy on robots. Spiking neural networks (SNNs) compute with sparse binary spikes and use additions instead of multiplications, which saves power. However, existing WAMs use dense videos as the world state, so a spiking version would spend most of its computation on the background. We therefore introduce SpikingWAM, the first spiking WAM, which uses a sparse task skeleton as the world state. Inspired by biological motor control, which attends only to the key positions of a task, the Task Skeleton State (TSS) keeps the keypoints of the arm and the task objects, and a small spiking front end estimates the object keypoints from images. Body Frame Spike Coding (BFSC) and Grid Coincidence Attention (GCA) keep millimetre precision, and the Persistent Single Step Readout (PSR) runs the network once per plan. On the simulated benchmarks LIBERO, LIBERO-Plus and RoboTwin 2.0, SpikingWAM achieves competitive success rates with far less energy than ANN methods and surpasses all compared methods on LIBERO-Plus. Real robot experiments further confirm its effectiveness. These results show that a task skeleton lets spiking networks implement WAMs at very low energy, offering a new solution for low power embodied intelligence. Project page: https://wxqnl.github.io/spikingwam/",
+          "batch": "2026-11-24",
+          "kind": "new",
+          "authors": [
+            "Mingquan Liu",
+            "Peng Zhou",
+            "Shanming Yao",
+            "Shuai Wang",
+            "Simo Wu",
+            "Malu Zhang"
+          ]
+        },
+        {
+          "id": "2611.30204",
+          "title": "Counterfactual Velocity Steering for World Action Models",
+          "abstract": "Flow-based robot policies generate actions by repeatedly evaluating a conditional velocity field, so test-time bias correction seems simple: query the action expert under a task-agnostic condition and subtract that velocity from the task-conditioned prediction. We show this is often wrong. On Fast-WAM across 50 RoboTwin 2.0 tasks, mean-instruction predictions align strongly with task-conditioned velocities (cosine approximately 0.94-0.95). Averaging eight completed-state references barely cancels this direction: their mean norm is 98.3% of the mean individual norm. References thus contain a large shared transport component, not only harmful bias, and aggressive subtraction damages generation. We propose a same-state diagnostic and shrinkage analysis showing that the optimal correction scale depends on reference signal-to-noise. This motivates geometry-calibrated action debiasing, which removes only the component orthogonal to the task velocity and predicts a small task-dependent scale from instruction geometry. In controlled RoboTwin experiments, corrupting instructions still permits 25.1% success (50 tasks, 20 episodes), whereas dynamic visual corruption nearly eliminates success. A fixed centered orthogonal correction reaches 92.7% versus a 92.1% baseline in one randomized 1000-trial sweep, but gains are non-monotonic and within run-to-run variation. An angular scale pilot has an offline oracle-gated bound of 94.5%; its best learned online realization reaches 92.5%. These results identify shared flow and train-serve mismatch as central obstacles and provide a reproducible foundation for conditional correction.",
+          "batch": "2026-11-24",
+          "kind": "new",
+          "authors": [
+            "Xufeng Zhan",
+            "Yuanzhi Liang",
+            "Ye Lu",
+            "Haibin Huang",
+            "Chi Zhang",
+            "Xuelong Li"
+          ]
+        },
+        {
+          "id": "2611.31195",
+          "title": "VITA-WAM: Manifold-Aligned World-Action Modeling for Real-Time Robot Control",
+          "abstract": "World action model (WAM) is a promising paradigm for visuomotor control by jointly modeling world dynamics and actions. Notably, existing WAMs often rely on large generative models and iterative sampling which incur substantial latency for action generation, limiting real-time deployment. In particular, there are two root causes of inefficiency in conventional flow matching or diffusion based action models in WAMs: 1) transporting uninformative Gaussian noise into precise actions necessitating multiple ODE steps, and 2) repeatedly injecting task context through expensive cross-attention modules. Our key insight is that jointly learning and aligning the source and action manifolds streamlines the transport between them, substantially accelerating action generation. Building on this insight, we introduce VITA-WAM, a WAM architecture with manifold-aligned flow-matching (VITA flow matching) that directly transports latent observation representations containing visual, language, and proprioceptive information into latent actions. More specifically, a flow latent alignment (FLA) mechanism is employed to facilitate manifold alignment between latent observation and action representations, enabling accurate generation with few ODE steps. The resulting architecture also eliminates costly attention for observation conditioning during repeated denoising steps. Notably, with a single ODE step, VITA-WAM outperforms 10-step FastWAM by 21.47 pp on LIBERO-Plus and by 1.65 pp on LIBERO, achieving these gains through the FLA objective without distillation, while inferring at 55.67~ms latency, a $2.10\\times$ speedup compared to FastWAM.",
+          "batch": "2026-11-24",
+          "kind": "new",
+          "authors": [
+            "Boqi Zhao",
+            "Dechen Gao",
+            "Hanchu Zhou",
+            "Hang Wang",
+            "Junshan Zhang"
+          ]
+        }
+      ],
+      "lastSeen": "2026-11-26"
+    },
+    {
+      "id": "phrase-a77de8d6b639",
+      "name": "Human Video",
+      "rule": "Recurring title phrase",
+      "count": 3,
+      "batches": 2,
+      "teams": 3,
+      "previous": null,
+      "communityCount": 1,
+      "communityUpvotes": 34,
+      "papers": [
+        {
+          "id": "2611.34302",
+          "title": "Co-World Model for Human-Video-to-Robot Transfer via Co-Constructed Shared Latent Dynamics",
+          "abstract": "Human videos are abundant and cheap to obtain, whereas robot trajectories remain scarce and costly, making zero-shot skill transfer from a single human demonstration an appealing route to scalable robot learning. Existing methods, however, either retarget human-specific geometry or match only static visual goals, and thus stumble over the cross-embodiment dynamics mismatch and the ungrounded action execution. We present the Co-World Model (CoWM), a predictive framework jointly optimized from paired yet unsynchronized human and robot streams. To bridge the cross-embodiment dynamics gap, CoWM disentangles each observation into a shared object-relation state and embodiment-specific context. It aligns latent actions across embodiments using effect-swap and action-sensitivity objectives,such that actions are matched by their predicted effects on the manipulated objects rather than by embodimentdependent kinematics. For grounded execution, a phase-aware receding-horizon controller estimates demonstration progress, projects the inferred human action prior onto the robot action-support density, and translates the resulting latent dynamics into executable robot commands. Extensive experiments in simulation and on two physical robot platforms demonstrate the effectiveness of CoWM, its cross-platform generalizability, and the contribution of each component. See the demo video in the supporting information for details.",
+          "batch": "2026-11-26",
+          "kind": "new",
+          "authors": [
+            "Xuetao Li",
+            "Xuan Jiang",
+            "Chen Liu",
+            "Zhongrui Rao",
+            "Yu Ling",
+            "Hui Wang",
+            "Sheng Liu",
+            "Miao Li"
+          ]
+        },
+        {
+          "id": "2611.28732",
+          "title": "Entangle: Scaling Human-Video In-Context World-Action Models across Unseen Tasks and Contexts",
+          "abstract": "In-context learning (ICL) enables foundation models to perform unseen tasks from context without parameter updates. In robotic manipulation, a human video provides the context that specifies how a task should be performed. However, scaling human-video ICL on world-action models (WAMs) faces two challenges: task-level human-robot pairs are not temporally aligned with robot actions, and standard action losses allow policies to rely on initial-scene or task-identity shortcuts rather than tracking the context. We present Entangle, an in-context world-action model that maps a single human video and current robot observations to future visual states and executable actions. To scale temporally aligned training data, we convert recorded robot videos into matched human contexts via video-to-video generation, supplemented by real paired recordings. For model training, we combine variable-length video windows with an intra-task contrastive objective that distinguishes the paired action trajectory from other executions of the same task, preventing task-identity shortcuts. Without task-specific fine-tuning, Entangle improves steadily as aligned training data scales, reaching an average score of 83.5/100 across six unseen tasks on an Astribot S1 robot, and achieves a 69.5% average success rate on seven unseen RoboTwin tasks, outperforming Zero-WAM by 22.6 percentage points. Under Context-OOD, although trained only on scene-aligned pairs, Entangle transfers context-specified behaviors across rearranged layouts and substituted tools.",
+          "batch": "2026-11-24",
+          "kind": "new",
+          "authors": [
+            "Chendong Xiang",
+            "Chengwen Zhang",
+            "Ruowen Zhao",
+            "Zeyuan Wang",
+            "Shuhe Huang",
+            "Rongxu Cui",
+            "Min Zhao",
+            "Fan Bao",
+            "Hengkai Tan",
+            "Jun Zhu"
+          ],
+          "upvotes": 34
+        },
+        {
+          "id": "2611.29101",
+          "title": "DUO Policy: Bridging Human Video Coverage and Robot Precision for Fine-Grained Manipulation",
+          "abstract": "Human videos promise a scalable way to reduce expensive robot data collection, but the embodiment gap limits the resulting policies to coarse behaviors, and they fail at precise tasks such as insertion. Existing methods co-train or finetune a single policy on both data sources, treating each source as equally useful in every state: the policy either absorbs the embodiment error at precision-critical steps or spends scarce robot data relearning free-space motion. We observe that the value of each source depends on the state: human data is useful where precision requirements are low, while robot data is disproportionately valuable near precision-critical states. We therefore propose \\textbf{DUO Policy} (Dual-Actor Policy), which decouples a manipulation skill into a hand policy, pretrained on human videos for global free-space motion, and a robot policy, trained on sparse in-hand data for local precise corrections, with a gate learned from human interventions switching between them. This design is robust to moderate embodiment error in human data and generalizes to scene layouts beyond the coverage of the robot data. On tasks such as K-cup coffee making, desk cleanup, and cluttered candy sorting, DUO Policy outperforms the baseline with the highest average success by 12.9 percentage points over four simulated tasks and by 51.7 points over three real-world tasks, and matches robot-only training with 2.75$\\times$ less data-collection time. Project Webpage: https://mingxi-jia.github.io/duo_policy_site/",
+          "batch": "2026-11-24",
+          "kind": "new",
+          "authors": [
+            "Mingxi Jia",
+            "Patton Jiyang Yin",
+            "Haojie Huang",
+            "Ivy Xiao He",
+            "Xuanru Liu",
+            "Gefei Liu",
+            "Dian Wang",
+            "Stefanie Tellex"
+          ]
         }
       ],
       "lastSeen": "2026-11-26"
@@ -4786,390 +5238,6 @@
       "lastSeen": "2026-11-26"
     },
     {
-      "id": "phrase-76ce0db74d57",
-      "name": "World Action",
-      "rule": "Recurring title phrase",
-      "count": 33,
-      "batches": 7,
-      "teams": 30,
-      "previous": null,
-      "communityCount": 0,
-      "communityUpvotes": 0,
-      "papers": [
-        {
-          "id": "2611.33710",
-          "title": "$\\mathrm{M}^{2}$-WAM: Efficient Hierarchical Memory Across Modalities and Timescales for World-Action Models",
-          "abstract": "Long-horizon robotic manipulation requires historical context, yet retaining extensive visual histories incurs growing storage and retrieval costs, while aggressive compression risks losing fine-grained information needed for subsequent decisions. Moreover, executed action histories capture intermediate behaviors that sparse visual observations may miss. Preserving this complementary context efficiently calls for modality-specific memory mechanisms that balance recent detail with long-term retention. To this end, we introduce $\\mathrm{M}^{2}$-WAM, a world-action model equipped with hierarchical visual and interaction memories. $\\mathrm{M}^{2}$-WAM preserves recent visual observations in dense short-term memory while consolidating entries evicted from this window into fixed-size associative long-term memory through gated delta updates. Within the same short- and long-term hierarchy, interaction memory encodes executed action prefixes into compact temporal representations, complementing visual observations with behavioral context. These complementary memories are integrated into world-action modeling through layer-wise retrieval, enabling memory-augmented action generation with a bounded online memory footprint independent of episode length. On the memory-dependent simulation benchmarks MIKASA-Robo and RMBench, $\\mathrm{M}^{2}$-WAM achieves +53.2% and +61.2% absolute improvements in average success rates over Fast-WAM, respectively. These gains extend to real-world manipulation, where $\\mathrm{M}^{2}$-WAM achieves a +29.3% absolute improvement over LingBot-VA in average success across three tasks. These results suggest that $\\mathrm{M}^{2}$-WAM offers a promising approach to efficient memory-augmented world-action modeling.",
-          "batch": "2026-11-26",
-          "kind": "new",
-          "authors": [
-            "Xiaopeng Zhang",
-            "Weiqi Yuan",
-            "Xin Zhu",
-            "Jiaxi Huang",
-            "Yueqi Hu",
-            "Yin Zhang",
-            "Jian Yao",
-            "Yanjie Li"
-          ]
-        },
-        {
-          "id": "2611.33963",
-          "title": "Targeted Adaptation of World-Action Models via Interaction and Motion Heads",
-          "abstract": "World-Action Models (WAMs) are a promising new paradigm of robot manipulation policies that jointly generate future video and actions. Successful manipulation requires both identifying where to interact and modeling how the robot and objects move. Yet standard adaptation methods, such as full fine-tuning and LoRA, do not explicitly select parameters aligned with these manipulation-specific capabilities. Motivated by this challenge, we discover two functionally specialized families of attention heads: Next-Interaction Heads, which localize upcoming grasp-and-release targets, and Motion Heads, which track movement across frames. Furthermore, we introduce HeadLight, a parameter-efficient refinement method that jointly adapts Next-Interaction Heads and Motion Heads. On RoboTwin tasks unseen during fine-tuning, HeadLight achieves 62.28% success, compared with 57.89% for full fine-tuning and 58.66% for LoRA, while updating only 1.1% of parameters. Inference-time ablations further validate the functional importance of these heads: ablating Motion Heads reduces manipulation success from 57.89% to 0.94%, while ablating Next-Interaction Heads lowers it to 40.61%, both substantially more than ablating equally many random heads. Finally, we show that our approach is effective across multiple WAM architectures and real-robot manipulation settings.",
-          "batch": "2026-11-26",
-          "kind": "new",
-          "authors": [
-            "Yuze Zhu",
-            "Jacky Li",
-            "Yusen Luo",
-            "Ken Jiankun Zheng",
-            "Chancharik Mitra",
-            "Trevor Darrell",
-            "Roei Herzig"
-          ]
-        },
-        {
-          "id": "2611.34124",
-          "title": "WAtcher: Watching Ahead for Safe Robotic Manipulation with Efficient World-Action Models",
-          "abstract": "World-action models (WAMs) couple future imagination with action generation, but they execute every action chunk while ignoring the potential risk. To fill this gap, we present WAtcher, a safety-aware world-action framework in which the policy imagines the outcome of the candidate chunk before execution. For fast future preview, WAtcher builds on a compact WAM whose video expert imagines the visual outcome in only two denoising steps. In addition, we propose Safe-Guard, a lightweight module kept outside the WAM that scores each candidate chunk from its imagined outcome and triggers a bounded retreat when the risk is high. Safe-Guard is detachable and can be applied to other WAMs. To train Safe-Guard, we build an autonomous pipeline to collect hazard data from RoboTwin, LIBERO, and a real robot. Specifically, the pipeline perturbs expert demonstrations and labels each candidate chunk from the physical events recorded when it is executed, such as contacts and losses of support. Using the ~25,000 labeled windows from this pipeline, Safe-Guard reaches 92.1% balanced accuracy on a blind set, and cuts hazardous closed-loop trials on training tasks from 27.0% to 10.8% without lowering task success. On a held-out 300-question benchmark, it scores 94.2%, against 72.5% and 63.3% for zero-shot GPT-6-Astra and Claude Opus 5.5. WAtcher also reaches 90.4% and 82.4% average success on RoboTwin 2.0 and ManiSkill3, on par with or above leading WAMs, and 74.0% on five real-world tasks with Safe-Guard on, against 59.5% for $\\pi_{0.5}$. Project page: https://zyshan0929.github.io/WAtcher",
-          "batch": "2026-11-26",
-          "kind": "new",
-          "authors": [
-            "Ziyu Shan",
-            "Xiao Ma",
-            "Kangrui Yu",
-            "Changjie Wang",
-            "Gaoyuan Wu",
-            "Zaijia Yang",
-            "Chuanrui Zhang",
-            "Qirui Li",
-            "Yanbo Zhang",
-            "Duomin Wang",
-            "Ziwei Wang"
-          ]
-        },
-        {
-          "id": "2611.33467",
-          "title": "SplatWAM: Splatting World Action Models for Real-Time 3D Imagination",
-          "abstract": "World models typically predict future observations in pixel or latent space, limiting their ability to directly represent true 3D scene evolution. We present SplatWAM (Splatting World Action Model), a generative world model that learns action-conditioned dynamics directly over compact 3D Gaussian primitives. A tokenizer SplatWAM-T first encodes a variable number of unposed views into a fixed budget of Gaussian tokens. A dynamics model SplatWAM-D then predicts future Gaussian states in a single forward pass per action, using log-Euclidean covariance coordinates and differentiable rendering supervision to facilitate learning in an explicit 3D space. Each predicted state can be rasterized from arbitrary viewpoints, enforcing a shared 3D representation across views by construction. On OGBench Scene, SplatWAM renders novel views 12x faster than video world models (~80 FPS on an RTX 5090) with up to 2.0 dB higher PSNR. We further introduce SplatWAM-P, a lightweight flow-matching policy head jointly trained with the dynamics model. Across 8 task suites, model-free Gaussian-token policies outperform pixel-based counterparts by up to 24.8 percentage points. SplatWAM-P improves over Latent Particle World Model (LPWM) by 12 percentage points and matches HIQL without a learned value function. On LIBERO, our ~1B model outperforms WorldVLA (~7B) and the robot-pretrained OpenVLA (~7B), while matching OpenVLA-OFT when both are trained without large-scale robot pretraining. Code and checkpoints will be released.",
-          "batch": "2026-11-26",
-          "kind": "cross",
-          "authors": [
-            "Frank Tsu-Fang Lu",
-            "Karthik Sundar Senthilkumar",
-            "Christopher Thirgood",
-            "Oscar Mendez",
-            "Simon Hadfield"
-          ]
-        },
-        {
-          "id": "2611.33797",
-          "title": "DriftWAM: Faster World-Action Models via Action-Aware Video Drifting",
-          "abstract": "World-action models (WAMs) unify future video prediction and action generation for robotic control, but their reliance on iterative denoising incurs substantial inference costs. Distilling these models into few-step generators offers a promising route to efficient deployment, yet maintaining task performance under aggressive step reduction remains challenging. Existing methods rely on point-wise trajectory consistency distillation, which pursues high visual fidelity while leaving downstream action information unexploited in optimizing video generation, and also lacks explicit distribution-level alignment. To address this, we propose DriftWAM, a few-step WAM distillation framework that incorporates the actions induced by predicted videos into video learning. Specifically, DriftWAM integrates action-aware video drifting, which performs video distribution matching through a joint visual--action similarity kernel to steer sample evolution under the guidance of these induced actions, with action-guided video regularization, which leverages the compatible teacher--student matches identified by the joint kernel to backpropagate action-level gradients directly into the video generator. Evaluations on the RoboTwin 2.0 and LIBERO benchmarks, as well as in real-world robotic manipulation tasks, show that DriftWAM consistently outperforms prior consistency distillation methods across few-step settings at the same inference speed.",
-          "batch": "2026-11-26",
-          "kind": "cross",
-          "authors": [
-            "Minyang Li",
-            "Siyu Xu",
-            "Yunke Wang",
-            "Ying-Cong Chen",
-            "Chang Xu",
-            "Daochang Liu"
-          ]
-        },
-        {
-          "id": "2611.33799",
-          "title": "Dynamic Forcing: Learning Action-Grounded Sparse Dynamic Representations with Dense Future Guidance for World Action Models",
-          "abstract": "World action models (WAMs) support robot control through visual prediction, but dense future modeling repeatedly encodes static context already available in the current observation, while action-relevant changes are often spatially sparse. We study sparse dynamic representation learning, retaining the current observation as a contextual anchor and using a small set of compact dynamic tokens to represent anticipated changes. We develop CompactWAM, a sparse-dense joint predictive framework that enables sparse representation learning within a video-supervised shared backbone, without requiring a reconstruction objective for the sparse pathway. Since a limited token budget alone does not specify which information to retain, we introduce Dynamic Forcing, which pairs direct action supervision with privileged dense future guidance to promote action relevance and dynamic fidelity. While action prediction gradients directly drive compact tokens to capture control-relevant cues, dense future guidance further shapes them via action functional guidance that matches sparse and dense contributions to the action expert, and dynamics-aware distribution matching, which aligns temporal relational changes relative to a static reference. At inference, a single visual forward pass encodes current observations and compact dynamic tokens for action generation, eliminating dense future modeling. CompactWAM achieves 98.4\\% success on LIBERO and 77.9\\% on LIBERO-Plus, retaining respective success rates of 98.3\\% and 76.6\\% with only 9.2\\% of the dense future token budget. Evaluations on RoboTwin~2.0 and real-world manipulation further demonstrate the effectiveness of the learned sparse predictive representations.",
-          "batch": "2026-11-26",
-          "kind": "cross",
-          "authors": [
-            "Ziqiang Li",
-            "Shisheng Chen",
-            "Yunnan Wang",
-            "Wenyao Zhang",
-            "Zili Lin",
-            "Yuyang Zhang",
-            "Xudong Yang",
-            "Fangzhuo Jin",
-            "Chenyu Zhou",
-            "Wenjun Zeng",
-            "Xin Jin"
-          ]
-        },
-        {
-          "id": "2611.31705",
-          "title": "FoveaWAM: Role-Aware 4D World-Action Modeling for Dynamic Manipulation",
-          "abstract": "To manipulate a moving object, a policy must predict the scene at the moment its action executes, yet every millisecond spent predicting pushes that moment further away. Scene-level forecasts are computationally expensive, whereas target-centric forecasts can omit nearby objects that affect contact. Our key insight is that what a policy must predict decouples by role: only the target's pose, which determines contact, requires millimeter precision, while the surroundings matter primarily through the clearance they leave and the motion they impart. We present FoveaWAM, a native 4D world-action model that allocates precision according to these roles. Specifically, it models the target's past and future motion as a metric SE(3) trajectory, the surroundings as sparse 3D flow, and relies on the current frame for everything static. This compact representation lets FoveaWAM act in 15.1 ms on one RTX 5090, about 10 times faster than video world-action baselines, leaving substantially less time for the scene to evolve before action execution. To evaluate each policy under its own latency, we introduce OnTimeBench, a dynamic manipulation benchmark in which the scene keeps moving while the policy computes. FoveaWAM reaches 82.1% success on OnTimeBench, 20.8 points above the strongest baseline, and also leads on DOMINO and real-robot tasks. Project page: https://foveawam.github.io/",
-          "batch": "2026-11-25",
-          "kind": "new",
-          "authors": [
-            "Jiaqi Yin",
-            "Baoyue Zhang",
-            "Jiyuan Zhang",
-            "Wenxuan Liu",
-            "Zhaofei Yu",
-            "Yue Deng",
-            "Tiejun Huang"
-          ]
-        },
-        {
-          "id": "2611.31901",
-          "title": "PreWAM: Exploring the Design of Latent Future Prediction for World-Action Modeling",
-          "abstract": "World-action models combine action generation with future prediction, allowing visual transitions to serve as supervision for policy learning. Our controlled study of prediction spaces shows that spatially structured semantic features support better overall generalization under visual perturbations and make motion information more readily recoverable from learned predictive representations. Building on these observations, we introduce PreWAM, a world-action model that organizes future supervision around state changes in a prediction space defined by pretrained DINO features. Specifically, Residual World Prediction jointly learns source-relative changes and their resulting future states to emphasize dynamic information while preserving future-state semantics. Temporal-Scale Prediction conditions world queries on temporal distance to capture both short-term local motion and longer-horizon state evolution. These predictive objectives jointly shape a shared vision-language backbone with action supervision during pretraining and downstream policy learning. Experiments across the LIBERO benchmark family, SimplerEnv, RoboTwin 2.0, and real-world robotic manipulation demonstrate strong manipulation performance and improved generalization and robustness under diverse distribution shifts.",
-          "batch": "2026-11-25",
-          "kind": "new",
-          "authors": [
-            "Wan Chi",
-            "Sen Li",
-            "Zihang Cui",
-            "Chuqin Huang",
-            "Yunlong Wang",
-            "Nanshan Deng",
-            "Yanjun Huang"
-          ]
-        },
-        {
-          "id": "2611.32483",
-          "title": "CodeWAM: A Code World Action Model for End-to-End Autonomous Driving",
-          "abstract": "Driving world models anticipate action consequences through representations of how the world evolves. For autonomous driving, these representations must capture both the surrounding scene and the ego vehicle's motion under a candidate plan. We propose CodeWAM, a driving world model that incorporates executable code as part of its world representation. Code represents ego dynamics by expressing how the vehicle state evolves under plan execution, while a learned visual model captures scene-dependent consequences. Executing the code produces a candidate-conditioned motion sequence, which is evaluated relative to the prior plan and recorded motion history. The resulting execution consequences and learned scene outcomes jointly represent the candidate's future, enabling the planner to assess both what a plan may lead to and how the vehicle transitions into that future. The selected plan becomes part of the next decision's execution context, linking successive choices within the model. CodeWAM achieves 93.6 PDMS on NAVSIM v1 navtest, 92.1 EPDMS on v2 navtest, and 50.6 EPDMS on NAVHARD. Further experiments demonstrate improved pairwise execution consistency and gains on Hydra-MDP and DrivoR without additional training, supporting executable code as a complementary representation for driving world models.",
-          "batch": "2026-11-25",
-          "kind": "new",
-          "authors": [
-            "Zhisheng Chen",
-            "Jinpeng Wang",
-            "Beicheng Lou",
-            "Zhengwei Xie",
-            "Hao Wu",
-            "Rui Qian",
-            "Kun Wang",
-            "Vivian W. H. Wong"
-          ]
-        },
-        {
-          "id": "2611.32722",
-          "title": "AG-WAM: Attention-Guided World Action Model for Accurate and Efficient Robot Manipulation",
-          "abstract": "Recently developed World Action Models (WAMs) jointly predict future observations and robot actions, providing predictive context for control. However, existing WAMs typically learn implicit attention allocation with limited explicit action-relevant attention guidance, leading to limited performance. To unleash strong capabilities of WAMs, we introduce explicit attention guidance as a unifying principle and propose our Attention-Guided WAM (AG-WAM), an end-to-end framework with three plug-and-play attention guidance modules that directly reformulate internal attention paradigm in WAMs: the Content-Adaptive Predictive Attention module, the Guidance-Point Visual Attention module, and the State-Conditioned Text Attention module. Without any external plugin module adopted, our end-to-end framework with the unifying principle of explicit attention guidance boosts the accuracy and efficiency of WAMs. Without using any private embodied training data, our AG-WAM establishes new state-of-the-art performance on multiple public robotic manipulation benchmarks including LIBERO-X, LIBERO-Plus, and RoboTwin-2.0, significantly outperforming other methods, even those using massive private embodied training data by a notable margin, meanwhile notably improving training and inference efficiency.",
-          "batch": "2026-11-25",
-          "kind": "new",
-          "authors": [
-            "Hongcheng Zhang",
-            "Lei Sun",
-            "Songxuan Liu",
-            "Tengteng Pan",
-            "Yuqiang Zhai",
-            "Xianglong Xu",
-            "Jianya Guo",
-            "Xiao Song"
-          ]
-        },
-        {
-          "id": "2611.31740",
-          "title": "LeanWAM: Learning Latent World Action Models from Frozen Video Models",
-          "abstract": "World action models (WAMs) typically adapt large pretrained video generators to jointly predict future observations and robot actions, incurring substantial training and deployment costs. However, it remains unclear which future representations a policy actually needs and how compactly they can be represented. Our probing study shows that complementary future representations can be compressed into a few tokens while retaining most of their action-decoding performance. Motivated by this finding, we introduce LeanWAM, a latent WAM that transfers video priors from a frozen video generator to a lightweight policy via two-stage training. In the first stage, a Future Extractor compresses observed transitions into 32 predictive tokens. These tokens condition the frozen generator and are jointly shaped by action, RGB, semantic, and geometric supervision, while a compact readout of the generator's hidden states supplies complementary world tokens. The second stage distills both representations into the policy, which learns to predict them from current observations while generating actions. With 1.4B parameters and no large-scale embodied pretraining, LeanWAM outperforms strong vision-language-action (VLA) and WAM baselines on LIBERO, LIBERO-Plus, and RoboTwin~2.0. It predicts an action chunk in 25.1\\,ms on an A100 GPU, 12.3--41.5$\\times$ faster than representative WAMs. These results demonstrate that compact predictive supervision can transfer video priors to robust and efficient control.",
-          "batch": "2026-11-25",
-          "kind": "cross",
-          "authors": [
-            "Shaolong Li",
-            "Hongze Fu",
-            "Joyce Chai",
-            "Yinpei Dai"
-          ]
-        },
-        {
-          "id": "2611.31822",
-          "title": "G0.7: Scaling Up a Fast World Action Model with Long Context",
-          "abstract": "World action models (WAMs) adapt pretrained video generators for robot control by jointly predicting future camera frames and actions, transferring physical priors learned from video into manipulation policies. However, generating future frames before every action makes test-time inference too slow for closed-loop control, while most existing policies remain restricted to short observation histories. Building on Fast-WAM, which showed that video prediction shapes policy representations during training so that future frame synthesis can be skipped at deployment, we present G0.7, a generalist world action model scaled along two axes: extending the context window from a single observation to up to five minutes of history, and scaling pretraining to a large-scale corpus of robot teleoperation and human egocentric (ego) video. Across public simulation suites and real-robot deployments, direct action decoding (Fast mode) matches imagine-then-act (IDM) inference from the same checkpoint while running in 60 ms per 16-step action chunk on a single RTX 5090 (7.6x faster than IDM) and supporting pause-free real-time chunking. Performance scales consistently with pretraining data, with human ego video driving the largest gains in out-of-distribution generalization: G0.7 achieves a 70.8 mean score across five simulation benchmark suites, 48% and 54% zero-shot pick-and-place success on Galaxea R1 Pro and R1 Lite, 96.7% in-distribution and 93.3% out-of-distribution success on video-conditioned in-context learning tasks, and 86.9% mean task progress across seven real-world post-training tasks including multi-minute box folding, drink preparation, and product bagging.",
-          "batch": "2026-11-25",
-          "kind": "cross",
-          "authors": [
-            "Tianyuan Yuan",
-            "Baijun Ye",
-            "Shicheng Cao",
-            "Xing Nie",
-            "Xiaopeng Yu",
-            "Ke Dong",
-            "Zijie Zhao",
-            "Shenling Qiu",
-            "Yizhao Xu",
-            "Feiyang Xue",
-            "Haonan Liu",
-            "Haoyu Zhang",
-            "Haobo Jia",
-            "Zheng Liu",
-            "Anqi Yang",
-            "Jiahui Niu",
-            "Yue Sun",
-            "Tailai Cheng",
-            "Jianpeng Yu",
-            "Yang Wen",
-            "Longhao Wei",
-            "Zibin Dong",
-            "Shiduo Zhang",
-            "Yicheng Liu",
-            "Hang Zhao"
-          ]
-        },
-        {
-          "id": "2611.28732",
-          "title": "Entangle: Scaling Human-Video In-Context World-Action Models across Unseen Tasks and Contexts",
-          "abstract": "In-context learning (ICL) enables foundation models to perform unseen tasks from context without parameter updates. In robotic manipulation, a human video provides the context that specifies how a task should be performed. However, scaling human-video ICL on world-action models (WAMs) faces two challenges: task-level human-robot pairs are not temporally aligned with robot actions, and standard action losses allow policies to rely on initial-scene or task-identity shortcuts rather than tracking the context. We present Entangle, an in-context world-action model that maps a single human video and current robot observations to future visual states and executable actions. To scale temporally aligned training data, we convert recorded robot videos into matched human contexts via video-to-video generation, supplemented by real paired recordings. For model training, we combine variable-length video windows with an intra-task contrastive objective that distinguishes the paired action trajectory from other executions of the same task, preventing task-identity shortcuts. Without task-specific fine-tuning, Entangle improves steadily as aligned training data scales, reaching an average score of 83.5/100 across six unseen tasks on an Astribot S1 robot, and achieves a 69.5% average success rate on seven unseen RoboTwin tasks, outperforming Zero-WAM by 22.6 percentage points. Under Context-OOD, although trained only on scene-aligned pairs, Entangle transfers context-specified behaviors across rearranged layouts and substituted tools.",
-          "batch": "2026-11-24",
-          "kind": "new",
-          "authors": [
-            "Chendong Xiang",
-            "Chengwen Zhang",
-            "Ruowen Zhao",
-            "Zeyuan Wang",
-            "Shuhe Huang",
-            "Rongxu Cui",
-            "Min Zhao",
-            "Fan Bao",
-            "Hengkai Tan",
-            "Jun Zhu"
-          ]
-        },
-        {
-          "id": "2611.28943",
-          "title": "SANA-Robot: Efficient World Action Model with Hybrid Memory",
-          "abstract": "World action models (WAMs) leverage the world knowledge of video generation models to improve action generation by aligning visual prediction with action prediction. However, their prediction overhead prevents real-time deployment on edge devices, and they usually lack an effective long-term memory. We introduce SANA-Robot, a 4.5B WAM with minute-level memory that runs in real time on edge devices, built on the following core designs: (1) hybrid memory at constant cost: our WAM relies on linear attention to maintain a global memory with a fixed-size state, and on sliding window softmax attention layers that propagate previous information, enabling high success rates on tasks requiring whole-episode memory while keeping an efficient and constant inference speed; (2) a unified model: by dynamically applying different noise levels to action and video tokens, SANA-Robot can serve not only as a policy but also as a world simulator; (3) a full-stack infrastructure for both memory training and inference, including efficient data packing and shuffling as well as memory-phase-based asynchronous execution. SANA-Robot achieves the best performance on the memory dimension of RoboDojo among models of medium size (about 5B) and the highest success rates on LIBERO-Plus, LIBERO-Pro and LIBERO-Max. In real-world deployment, SANA-Robot takes 135 ms per action chunk on an RTX 5090 with FP8 GEMMs and 115 ms with NVFP4 GEMMs, and achieves closed-loop, real-time asynchronous robot control at 30 Hz on edge devices, demonstrating both the efficiency and the effectiveness of SANA-Robot. Project page: https://nvlabs.github.io/Sana/Robot/",
-          "batch": "2026-11-24",
-          "kind": "new",
-          "authors": [
-            "Yuyang Zhao",
-            "Zekai Li",
-            "Yicheng Pan",
-            "Jiaming Tang",
-            "Zhuoyang Zhang",
-            "Jiaxu Xing",
-            "Moritz Reuss",
-            "Quanquan Peng",
-            "Junsong Chen",
-            "Enze Xie",
-            "Zhijian Liu",
-            "Song Han"
-          ]
-        },
-        {
-          "id": "2611.29277",
-          "title": "$\\zeta_0$: A Framework for World Action Models with Joint Scene and Body Foresight in Humanoid Control",
-          "abstract": "World Action Models anticipate visual outcomes to guide robot actions, yet humanoid interaction also depends on how the robot's body responds. Visual foresight alone can miss body motion, while latent-distance losses do not directly supervise action responses. We present $\\zeta_0$, a framework that turns vision-language-action policies into World Action Models by foreseeing future visual features and measured joint trajectories in a shared latent representation. During training, a teacher conditioned on recorded futures provides a reference action response, and dual-response transfer trains the causal predictor to match it through the teacher and the executing policy. All components are trained jointly, and deployment uses only causally predicted futures. On seven HumanoidArena tasks, $\\zeta_0$ built on $\\Psi_0$ and GR00T N1.7 reaches 63.6% and 79.5% mean success, 18.8 and 9.0 points above these bases. On six real-world tasks, it reaches 78.3% and 85.0%, gains of 16.7 and 10.0 points. On GR00T, its 79.5% tops all compared seven-task joint policies. Project page: https://chenyizhi123.github.io/zeta0-project/",
-          "batch": "2026-11-24",
-          "kind": "new",
-          "authors": [
-            "Yizhi Chen",
-            "Zhanxiang Cao",
-            "Yitong Wang",
-            "Junyu Liu",
-            "Hongchu Zeng",
-            "Xinyi Peng",
-            "Chuxuan Huang",
-            "Yicheng Su",
-            "Zihao Zhou",
-            "Shengcheng Fu",
-            "Haoyang Li",
-            "Liyun Yan",
-            "Tianyue Zhan",
-            "Jianming Ma",
-            "Yang Zhang",
-            "Keqi Zhu",
-            "Xiaxi Si",
-            "Jinming Yao",
-            "Qiao Sun",
-            "Shizeng Zhang",
-            "Jiangwei Zhong",
-            "Yue Gao"
-          ]
-        },
-        {
-          "id": "2611.29501",
-          "title": "MAWAM: Joint Imagination for Collaborative Robot Manipulation with a Multi-Agent World Action Model",
-          "abstract": "World action models (WAMs) excel at robot manipulation by imagining future observations and decoding actions from them, yet remain confined to a single embodied agent. In practice, manipulation often requires multiple robots to collaborate across disjoint workspaces, coupled timing, and heterogeneous embodiments. Such coordination demands both spatiotemporal alignment of future interactions and awareness of individual embodiment and role identities, whereas existing decentralized per-robot policies, flat centralized models, and multi-robot VLAs fail to unite both. To bridge this gap, we present MAWAM, a multi-agent world action model that jointly predicts the future observations of multiple embodiments and decodes each agent's actions from them for collaborative manipulation. Through an agent-axis curriculum, MAWAM expands a single-agent WAM along an agent dimension to coordinate teams under shared weights. Within one unified causal sequence, joint self-attention spans all agents to spatiotemporally align their imagined futures, while hierarchical language, identity encodings, and embodiment masks bind each stream to its role, identity, and embodiment. We further formalize multi-agent-necessary manipulation along three axes (why, when, and who) and develop MA-Task Harness, a coding-agent pipeline where mutually constraining generators and evaluators co-evolve customizable simulation-data and evaluation packages. Using this pipeline, we build MA-Bench across all axes with seven tasks, pairing joint success rate with role and collaboration scores for fine-grained analysis. On MA-Bench, MAWAM reaches 82.7% mean joint success, 30.7% above the strongest baseline, and achieves real-time closed-loop collaboration on a real heterogeneous robot team.",
-          "batch": "2026-11-24",
-          "kind": "new",
-          "authors": [
-            "Rongze Tang",
-            "Chenyu Zhou",
-            "Jianjie Fang",
-            "Ziming Liu",
-            "Zhaolu Wang",
-            "Ziyou Wang",
-            "Xvyuan Liu",
-            "Wei Wu",
-            "Chen Gao",
-            "Yong Li",
-            "Zhibo Chen"
-          ]
-        },
-        {
-          "id": "2611.30024",
-          "title": "FlexWAM: Learning Flexible Visual Routing for World Action Models",
-          "abstract": "Humans dynamically adjust their reliance on sensory modalities across manipulation stages. Although existing World Action Models (WAMs) fuse multi-camera observations, they struggle to adapt their reliance on individual views based on the current observations. This raises a central question: how can the action expert integrate complementary visual evidence while prioritizing the views most relevant to the current action? FlexWAM addresses this challenge through three modules. First, we alternate within-view and cross-view attention to capture view-specific dynamics and complementary cues. For action prediction, View-Routed Action Attention uses an observation-conditioned router to prioritize relevant views. To calibrate routing, we train a critic using counterfactual view credit, estimated from action loss sensitivity upon suppressing each view's contribution to action attention. We evaluate FlexWAM with two video backbones on five challenging real-world manipulation tasks across two robot platforms. The two variants improve mean task success by 16.4 and 23.0 percentage points over the strongest baseline. Project website: https://flexwam.github.io/.",
-          "batch": "2026-11-24",
-          "kind": "new",
-          "authors": [
-            "Mingyu Mei",
-            "Haojie Xu",
-            "Zibo Dai",
-            "Hongjie Fang",
-            "Shirun Tang",
-            "Zhengrui Lv",
-            "Yang Liu",
-            "Chen Guang",
-            "Xingyue Zhao",
-            "Huiliang Shen",
-            "Zaixing He"
-          ]
-        },
-        {
-          "id": "2611.30041",
-          "title": "Spiking World-Action Models for Robotic Manipulation",
-          "abstract": "World action models (WAMs) predict how the world responds to actions and offer a promising path toward general embodied intelligence, but they are large and run the network many times per plan, so they are hard to deploy on robots. Spiking neural networks (SNNs) compute with sparse binary spikes and use additions instead of multiplications, which saves power. However, existing WAMs use dense videos as the world state, so a spiking version would spend most of its computation on the background. We therefore introduce SpikingWAM, the first spiking WAM, which uses a sparse task skeleton as the world state. Inspired by biological motor control, which attends only to the key positions of a task, the Task Skeleton State (TSS) keeps the keypoints of the arm and the task objects, and a small spiking front end estimates the object keypoints from images. Body Frame Spike Coding (BFSC) and Grid Coincidence Attention (GCA) keep millimetre precision, and the Persistent Single Step Readout (PSR) runs the network once per plan. On the simulated benchmarks LIBERO, LIBERO-Plus and RoboTwin 2.0, SpikingWAM achieves competitive success rates with far less energy than ANN methods and surpasses all compared methods on LIBERO-Plus. Real robot experiments further confirm its effectiveness. These results show that a task skeleton lets spiking networks implement WAMs at very low energy, offering a new solution for low power embodied intelligence. Project page: https://wxqnl.github.io/spikingwam/",
-          "batch": "2026-11-24",
-          "kind": "new",
-          "authors": [
-            "Mingquan Liu",
-            "Peng Zhou",
-            "Shanming Yao",
-            "Shuai Wang",
-            "Simo Wu",
-            "Malu Zhang"
-          ]
-        },
-        {
-          "id": "2611.30204",
-          "title": "Counterfactual Velocity Steering for World Action Models",
-          "abstract": "Flow-based robot policies generate actions by repeatedly evaluating a conditional velocity field, so test-time bias correction seems simple: query the action expert under a task-agnostic condition and subtract that velocity from the task-conditioned prediction. We show this is often wrong. On Fast-WAM across 50 RoboTwin 2.0 tasks, mean-instruction predictions align strongly with task-conditioned velocities (cosine approximately 0.94-0.95). Averaging eight completed-state references barely cancels this direction: their mean norm is 98.3% of the mean individual norm. References thus contain a large shared transport component, not only harmful bias, and aggressive subtraction damages generation. We propose a same-state diagnostic and shrinkage analysis showing that the optimal correction scale depends on reference signal-to-noise. This motivates geometry-calibrated action debiasing, which removes only the component orthogonal to the task velocity and predicts a small task-dependent scale from instruction geometry. In controlled RoboTwin experiments, corrupting instructions still permits 25.1% success (50 tasks, 20 episodes), whereas dynamic visual corruption nearly eliminates success. A fixed centered orthogonal correction reaches 92.7% versus a 92.1% baseline in one randomized 1000-trial sweep, but gains are non-monotonic and within run-to-run variation. An angular scale pilot has an offline oracle-gated bound of 94.5%; its best learned online realization reaches 92.5%. These results identify shared flow and train-serve mismatch as central obstacles and provide a reproducible foundation for conditional correction.",
-          "batch": "2026-11-24",
-          "kind": "new",
-          "authors": [
-            "Xufeng Zhan",
-            "Yuanzhi Liang",
-            "Ye Lu",
-            "Haibin Huang",
-            "Chi Zhang",
-            "Xuelong Li"
-          ]
-        },
-        {
-          "id": "2611.31195",
-          "title": "VITA-WAM: Manifold-Aligned World-Action Modeling for Real-Time Robot Control",
-          "abstract": "World action model (WAM) is a promising paradigm for visuomotor control by jointly modeling world dynamics and actions. Notably, existing WAMs often rely on large generative models and iterative sampling which incur substantial latency for action generation, limiting real-time deployment. In particular, there are two root causes of inefficiency in conventional flow matching or diffusion based action models in WAMs: 1) transporting uninformative Gaussian noise into precise actions necessitating multiple ODE steps, and 2) repeatedly injecting task context through expensive cross-attention modules. Our key insight is that jointly learning and aligning the source and action manifolds streamlines the transport between them, substantially accelerating action generation. Building on this insight, we introduce VITA-WAM, a WAM architecture with manifold-aligned flow-matching (VITA flow matching) that directly transports latent observation representations containing visual, language, and proprioceptive information into latent actions. More specifically, a flow latent alignment (FLA) mechanism is employed to facilitate manifold alignment between latent observation and action representations, enabling accurate generation with few ODE steps. The resulting architecture also eliminates costly attention for observation conditioning during repeated denoising steps. Notably, with a single ODE step, VITA-WAM outperforms 10-step FastWAM by 21.47 pp on LIBERO-Plus and by 1.65 pp on LIBERO, achieving these gains through the FLA objective without distillation, while inferring at 55.67~ms latency, a $2.10\\times$ speedup compared to FastWAM.",
-          "batch": "2026-11-24",
-          "kind": "new",
-          "authors": [
-            "Boqi Zhao",
-            "Dechen Gao",
-            "Hanchu Zhou",
-            "Hang Wang",
-            "Junshan Zhang"
-          ]
-        }
-      ],
-      "lastSeen": "2026-11-26"
-    },
-    {
       "id": "phrase-a8a7d01e2a31",
       "name": "Long Horizon",
       "rule": "Recurring title phrase",
@@ -5716,7 +5784,9 @@
         }
       ],
       "lastSeen": "2026-11-26"
-    },
+    }
+  ],
+  "archivedTopics": [
     {
       "id": "phrase-c61868c3e6a4",
       "name": "Multi Agent",
@@ -5922,9 +5992,7 @@
         }
       ],
       "lastSeen": "2026-11-26"
-    }
-  ],
-  "archivedTopics": [
+    },
     {
       "id": "phrase-9f26a89357c8",
       "name": "Benchmarking Physical",
