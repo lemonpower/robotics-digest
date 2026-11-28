@@ -1,10 +1,10 @@
 {
-  "fetchedAt": "2026-11-27T16:14:25.277000+00:00",
+  "fetchedAt": "2026-11-28T12:15:14.374000+00:00",
   "papers": {
     "2611.33144": {
       "id": "2611.33144",
       "title": "PyRUA-Dex: Learning Programmatic Policies for Dexterous Bimanual Manipulation with Coding Agents",
-      "upvotes": 42,
+      "upvotes": 43,
       "date": "2026-11-24"
     },
     "2611.28732": {
@@ -16,7 +16,7 @@
     "2611.34811": {
       "id": "2611.34811",
       "title": "HOG-WAM: Improving Visual Robustness through Future Gradient Prediction",
-      "upvotes": 22,
+      "upvotes": 23,
       "date": "2026-11-25"
     },
     "2611.32649": {
@@ -28,7 +28,7 @@
     "2611.33579": {
       "id": "2611.33579",
       "title": "DexEngine: Scaling Human Demonstrations into Physically Executable Whole-Robot Data",
-      "upvotes": 19,
+      "upvotes": 20,
       "date": "2026-11-25"
     },
     "2611.34347": {
